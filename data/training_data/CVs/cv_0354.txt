@@ -1,0 +1,33 @@
+Name: Isla Garcia
+Gender: Female
+Date of Birth: 1992-07-21
+Address: 325 Pinecrest Avenue, Austin, TX 54965, USA
+Email: isla.garcia92@mailhub.com
+Phone: +48-650-571-9883
+Target Role: BI Developer
+
+Professional Summary:
+Professional pursuing BI Developer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Has supported mentoring, planning, and coordination activities alongside individual technical work.
+
+Education:
+Bachelor of Science — Computer Science — Trinity College Dublin — 2020
+
+Experience:
+Business Intelligence Developer — Nova Dynamics — Austin, TX — 2020-01 to Present
+
+* Consolidated fragmented reporting into dashboards used by executives.
+* Improved data refresh reliability and reduced manual reporting effort by 17% while coordinating work across engineers and analysts.
+
+Skills:
+Technical: SSIS, DAX, Power BI, CI/CD, SQL, Python
+Methods: Dimensional modeling, ETL workflows, Dashboard design, KPI definition, Business analysis
+Management: Planning, Requirement gathering
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+Professional Scrum Master I
+IBM Data Analyst Professional Certificate
+AWS Cloud Practitioner

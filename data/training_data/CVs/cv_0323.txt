@@ -1,0 +1,41 @@
+Name: Nora Silva
+Gender: Female
+Date of Birth: 1990-10-23
+Address: 878 Maple Street, 74087 Milan, Italy
+Email: nora.silva90@inboxmail.net
+Phone: +351-926-944-8703
+Target Role: Data Engineer
+
+Professional Summary:
+Data Engineer with 7+ years of experience delivering reliable technical solutions and measurable business impact. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Used to learning new tools quickly when projects require broader technical coverage.
+
+Education:
+Bachelor of Science — Information Systems — University of Colorado Boulder — 2018
+
+Experience:
+Data Engineer — Quantum Labs — Milan, Italy — 2019-10 to 2022-06
+
+* Designed reliable ingestion jobs for operational and product datasets.
+* Implemented data quality checks that reduced downstream incidents.
+* Cut pipeline runtime by 16% through incremental processing improvements.
+* Supported analytics and ML teams with curated data models.
+
+Analytics Engineer — Core Works — Milan, Italy — 2023-09 to Present
+
+* Supported analytics and ML teams with curated data models.
+* Cut pipeline runtime by 27% through incremental processing improvements.
+* Implemented data quality checks that reduced downstream incidents.
+
+Skills:
+Technical: dbt, Notion, Cloud fundamentals, Python, Airflow, Spark, AWS, SQL
+Methods: Data modeling, Pipeline orchestration, Batch processing, ETL design, Data quality management
+Management: Cross-team coordination, Incident communication
+
+Languages:
+English — C2
+German — B1
+
+Certifications:
+Professional Scrum Master I
+Databricks Data Engineer Associate
+AWS Cloud Practitioner

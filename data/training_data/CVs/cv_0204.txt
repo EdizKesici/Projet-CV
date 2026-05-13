@@ -1,0 +1,32 @@
+Name: Victor Popescu
+Gender: Male
+Date of Birth: 2001-11-11
+Address: 94 Hillview Street, 63736 Dublin, Ireland
+Email: victor.popescu01@email.com
+Phone: +33-708-481-9180
+Target Role: Frontend Developer
+
+Professional Summary:
+Analytical professional targeting Frontend Developer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Human-Computer Interaction — University of Lagos — 2022
+
+Experience:
+Frontend Developer — Atlas Insight — Dublin, Ireland — 2024-08 to Present
+
+* Built reusable component libraries that accelerated feature delivery.
+* Partnered with designers to deliver accessible interfaces at scale.
+
+Skills:
+Technical: React, Next.js, HTML, CSS, TypeScript, JavaScript, Monitoring
+Methods: Responsive design, State management, Accessibility
+Management: Design collaboration, Requirement clarification, Sprint planning
+
+Languages:
+English — C2
+Spanish — B2
+
+Certifications:
+Meta Front-End Developer
+AWS Cloud Practitioner

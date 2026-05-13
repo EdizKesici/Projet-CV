@@ -1,0 +1,33 @@
+Name: Kenji Aliyev
+Gender: Male
+Date of Birth: 2003-05-28
+Address: 58 Maple Street, 14214 Amsterdam, Netherlands
+Email: kenji.aliyev03@inboxmail.net
+Phone: +353-960-853-9303
+Target Role: Frontend Developer
+
+Professional Summary:
+Frontend Developer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning. Interested in roles that combine execution, communication, and measurable business outcomes.
+
+Education:
+Bachelor of Arts — Human-Computer Interaction — University of Lagos — 2024
+
+Experience:
+Frontend Developer — North Systems — Amsterdam, Netherlands — 2025-09 to Present
+
+* Reduced UI defects through stronger test automation and QA collaboration.
+* Partnered with designers to deliver accessible interfaces at scale.
+* Improved page performance scores by 26% across key user journeys.
+
+Skills:
+Technical: Next.js, Testing Library, TypeScript, Cloud fundamentals, HTML, CSS
+Methods: State management, Responsive design, Accessibility, Component architecture, Performance optimization
+Management: Sprint planning, Design collaboration, Requirement clarification
+
+Languages:
+English — C2
+Spanish — B2
+
+Certifications:
+AWS Cloud Practitioner
+Professional Scrum Master I

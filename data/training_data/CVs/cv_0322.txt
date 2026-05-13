@@ -1,0 +1,32 @@
+Name: Zoe Popescu
+Gender: Female
+Date of Birth: 1996-10-12
+Address: 859 Birch Street, 57315 Milan, Italy
+Email: zoe.popescu96@inboxmail.net
+Phone: +33-946-179-9991
+Target Role: Software Engineer
+
+Professional Summary:
+Software Engineer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Master of Science — Information Systems — University of Lisbon — 2017
+
+Experience:
+Senior Software Engineer — Data Labs — Milan, Italy — 2018-07 to Present
+
+* Delivered software features that improved internal process efficiency by 20%.
+* Contributed to CI/CD and release quality across multiple services.
+* Collaborated on architectural improvements for long-term scalability.
+
+Skills:
+Technical: Docker, SQL, Git, Documentation
+Methods: Object-oriented design, Debugging, Agile delivery
+Management: Communication, Collaboration, Mentoring, Planning, Task coordination
+
+Languages:
+English — C2
+French — B2
+
+Certifications:
+AWS Certified Developer

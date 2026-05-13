@@ -1,0 +1,45 @@
+Name: David Patel
+Gender: Male
+Date of Birth: 1988-04-17
+Address: 544 Riverside Street, 61389 Lyon, France
+Email: david.patel88@email.com
+Phone: +48-936-202-8732
+Target Role: Software Engineer
+
+Professional Summary:
+Software Engineer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning. Interested in roles that combine execution, communication, and measurable business outcomes.
+
+Education:
+Master of Science — Software Engineering — Politecnico di Milano — 2013
+
+Experience:
+Software Engineer — Vector Analytics — Lyon, France — 2015-01 to 2018-03
+
+* Maintained core application modules with strong uptime and defect control.
+* Contributed to CI/CD and release quality across multiple services.
+* Collaborated on architectural improvements for long-term scalability.
+* Delivered software features that improved internal process efficiency by 23%.
+
+Software Developer — Data Solutions — Lyon, France — 2019-06 to 2022-01
+
+* Collaborated on architectural improvements for long-term scalability.
+* Contributed to CI/CD and release quality across multiple services.
+
+Senior Software Engineer — Blue Analytics — Lyon, France — 2023-10 to Present
+
+* Collaborated on architectural improvements for long-term scalability.
+* Delivered software features that improved internal process efficiency by 33%.
+* Contributed to CI/CD and release quality across multiple services.
+
+Skills:
+Technical: Bash, REST APIs, C#, Git, Java, Python, Docker
+Methods: Object-oriented design, System integration, Debugging, Testing, Documentation, Agile delivery
+Management: Mentoring, Planning, Stakeholder updates, Communication
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+Professional Scrum Master I
+Professional Scrum Developer

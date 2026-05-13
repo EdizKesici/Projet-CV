@@ -1,0 +1,32 @@
+Name: Arjun Kim
+Gender: Male
+Date of Birth: 1995-08-20
+Address: 469 Admiralty Street, 63953 Amsterdam, Netherlands
+Email: arjun.kim95@email.com
+Phone: +33-297-183-3979
+Target Role: Data Engineer
+
+Professional Summary:
+Professional pursuing Data Engineer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning. Used to learning new tools quickly when projects require broader technical coverage.
+
+Education:
+Master of Science — Computer Science — University of Lagos — 2016
+
+Experience:
+Senior Data Engineer — Vector Platform — Amsterdam, Netherlands — 2016-08 to Present
+
+* Implemented data quality checks that reduced downstream incidents.
+* Cut pipeline runtime by 32% through incremental processing improvements.
+* Designed reliable ingestion jobs for operational and product datasets.
+
+Skills:
+Technical: Python, Spark, SQL, AWS
+Methods: ETL design, Batch processing, Pipeline orchestration, Data quality management, Data modeling
+Management: Cross-team coordination, Incident communication, Documentation
+
+Languages:
+English — C2
+
+Certifications:
+Databricks Data Engineer Associate
+AWS Certified Data Analytics

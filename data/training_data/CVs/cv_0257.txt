@@ -1,0 +1,40 @@
+Name: Kenji Kim
+Gender: Male
+Date of Birth: 1990-09-26
+Address: 242 Maple Avenue, Denver, CO 49769, USA
+Email: kenji.kim90@inboxmail.net
+Phone: +1-549-765-6643
+Target Role: Software Engineer
+
+Professional Summary:
+Technology specialist with 7+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Science — Information Systems — University of Lagos — 2017
+
+Experience:
+Software Engineer — Quantum Insight — Denver, CO — 2019-06 to 2022-04
+
+* Delivered software features that improved internal process efficiency by 34%.
+* Maintained core application modules with strong uptime and defect control.
+* Collaborated on architectural improvements for long-term scalability.
+* Contributed to CI/CD and release quality across multiple services.
+
+Software Developer — Atlas Tech — Denver, CO — 2023-12 to Present
+
+* Delivered software features that improved internal process efficiency by 31%.
+* Maintained core application modules with strong uptime and defect control.
+* Contributed to CI/CD and release quality across multiple services.
+* Collaborated on architectural improvements for long-term scalability.
+
+Skills:
+Technical: REST APIs, Docker, Git, Java
+Methods: Object-oriented design, Agile delivery, Debugging, System integration
+Management: Planning, Collaboration, Communication
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+Professional Scrum Developer

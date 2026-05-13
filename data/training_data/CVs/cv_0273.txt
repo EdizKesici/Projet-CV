@@ -1,0 +1,41 @@
+Name: Maya Patel
+Gender: Female
+Date of Birth: 1991-10-04
+Address: 954 Cedar Street, 93376 Warsaw, Poland
+Email: maya.patel91@email.com
+Phone: +48-538-130-4152
+Target Role: Product Analyst
+
+Professional Summary:
+Professional pursuing Product Analyst opportunities with exposure to production environments, team delivery, and measurable operational improvements. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Comfortable contributing in environments with evolving priorities and shared ownership.
+
+Education:
+Master of Science — Statistics — Politecnico di Milano — 2020
+
+Experience:
+Product Analyst — Quantum Systems — Warsaw, Poland — 2020-10 to 2023-01
+
+* Connected product analytics findings to roadmap prioritization decisions.
+* Defined self-serve metrics for feature adoption and retention analysis.
+* Built experiment readouts used by product and design leadership.
+* Identified product funnel bottlenecks and improved conversion by 33%.
+
+Growth Analyst — Signal Insight — Warsaw, Poland — 2024-12 to Present
+
+* Defined self-serve metrics for feature adoption and retention analysis.
+* Identified product funnel bottlenecks and improved conversion by 16%.
+
+Skills:
+Technical: Notion, Mixpanel, Amplitude, SQL, Cloud fundamentals
+Methods: User behavior analysis, Funnel analysis, Product metrics, Cohort analysis
+Management: Planning, Stakeholder alignment, Communication, Cross-functional collaboration
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+Professional Scrum Master I
+Google Data Analytics Certificate
+Amplitude Foundations
+ITIL Foundation

@@ -1,0 +1,42 @@
+Name: Arjun Aliyev
+Gender: Male
+Date of Birth: 1994-10-08
+Address: 631 Oakridge Street, 25851 Dublin, Ireland
+Email: arjun.aliyev94@mailhub.com
+Phone: +31-340-463-7125
+Target Role: QA Engineer
+
+Professional Summary:
+QA Engineer with 6+ years of experience delivering reliable technical solutions and measurable business impact. Known for clear communication, structured problem solving, and strong execution in fast-moving environments.
+
+Education:
+Bachelor of Arts — Software Engineering — Politecnico di Milano — 2018
+
+Experience:
+QA Engineer — Blue Insight — Dublin, Ireland — 2020-08 to 2022-04
+
+* Reduced escaped defects by 32% by expanding regression coverage.
+* Improved release readiness through clearer test reporting.
+
+Software QA Analyst — Cloud Works — Dublin, Ireland — 2023-12 to 2024-11
+
+* Developed automation suites for critical API and UI flows.
+* Partnered with developers to reproduce and isolate production issues.
+
+Test Engineer — North Networks — Dublin, Ireland — 2025-08 to Present
+
+* Improved release readiness through clearer test reporting while coordinating work across engineers and analysts.
+* Partnered with developers to reproduce and isolate production issues.
+* Reduced escaped defects by 15% by expanding regression coverage.
+
+Skills:
+Technical: Selenium, Cypress, Python, Postman, Jira, SQL
+Methods: Documentation, Test automation, Defect tracking, Quality assurance
+Management: Risk communication, Prioritization
+
+Languages:
+English — C2
+French — B2
+
+Certifications:
+None listed

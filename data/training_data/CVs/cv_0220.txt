@@ -1,0 +1,31 @@
+Name: Daniel Kim
+Gender: Male
+Date of Birth: 1999-10-26
+Address: 65 Pinecrest Street, 52535 Lyon, France
+Email: daniel.kim99@email.com
+Phone: +31-258-208-5196
+Target Role: Cybersecurity Analyst
+
+Professional Summary:
+Cybersecurity Analyst focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Master of Science — Computer Science — University of Warsaw — 2023
+
+Experience:
+Cybersecurity Analyst — Quantum Systems — Lyon, France — 2024-03 to Present
+
+* Hardened access controls and baseline monitoring practices.
+* Supported incident investigations with structured evidence collection.
+
+Skills:
+Technical: Cloud fundamentals, Vulnerability scanning, IAM, Git, Wireshark
+Methods: Threat analysis, Incident response, Risk assessment
+Management: Documentation, Policy awareness, Task coordination, Incident communication, Cross-team coordination
+
+Languages:
+English — C2
+French — B2
+
+Certifications:
+None listed

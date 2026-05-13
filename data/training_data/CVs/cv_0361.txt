@@ -1,0 +1,47 @@
+Name: Hugo Okafor
+Gender: Male
+Date of Birth: 1989-01-14
+Address: 792 Admiralty Street, 67416 Warsaw, Poland
+Email: hugo.okafor89@email.com
+Phone: +1-681-294-8295
+Target Role: Data Scientist
+
+Professional Summary:
+Analytical professional targeting Data Scientist opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Interested in roles that combine execution, communication, and measurable business outcomes.
+
+Education:
+Master of Science — Computer Science — Trinity College Dublin — 2012
+
+Experience:
+Data Scientist — Quantum Solutions — Warsaw, Poland — 2014-04 to 2018-07
+
+* Translated ambiguous business questions into measurable ML experiments.
+* Improved model accuracy by 15% on a customer behavior prediction use case.
+* Delivered experimentation frameworks used to prioritize product changes.
+* Built production-ready models with monitoring for drift and data quality.
+
+Junior Data Scientist — Core Insight — Warsaw, Poland — 2019-12 to 2022-02
+
+* Improved model accuracy by 18% on a customer behavior prediction use case.
+* Built production-ready models with monitoring for drift and data quality.
+* Delivered experimentation frameworks used to prioritize product changes.
+
+Senior Data Scientist — Core Solutions — Warsaw, Poland — 2023-03 to Present
+
+* Translated ambiguous business questions into measurable ML experiments.
+* Improved model accuracy by 24% on a customer behavior prediction use case.
+* Delivered experimentation frameworks used to prioritize product changes.
+* Built production-ready models with monitoring for drift and data quality.
+
+Skills:
+Technical: TensorFlow, PyTorch, SQL, Spark
+Methods: Statistical inference, Experiment design, Forecasting, Model validation, Feature engineering
+Management: Project planning, Task coordination, Cross-functional communication, Mentoring, Stakeholder alignment
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+TensorFlow Developer Certificate
+Google Professional Data Engineer

@@ -1,0 +1,31 @@
+Name: Mateo Andersen
+Gender: Male
+Date of Birth: 2000-12-21
+Address: 852 Admiralty Street, 20114 Amsterdam, Netherlands
+Email: mateo.andersen00@mailhub.com
+Phone: +1-287-895-4760
+Target Role: Software Engineer
+
+Professional Summary:
+Software Engineer with 1+ years of experience delivering reliable technical solutions and measurable business impact. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Master of Science — Software Engineering — University of Texas at Austin — 2023
+
+Experience:
+Software Engineer — Signal Tech — Amsterdam, Netherlands — 2025-05 to Present
+
+* Collaborated on architectural improvements for long-term scalability.
+* Delivered software features that improved internal process efficiency by 28%.
+
+Skills:
+Technical: C#, Python, REST APIs
+Methods: Debugging, Testing, Root cause analysis, Object-oriented design, System integration
+Management: Mentoring, Communication, Collaboration
+
+Languages:
+English — C2
+
+Certifications:
+Professional Scrum Developer
+Azure Developer Associate

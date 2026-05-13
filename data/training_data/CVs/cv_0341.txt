@@ -1,0 +1,31 @@
+Name: Kenji Patel
+Gender: Male
+Date of Birth: 1999-12-18
+Address: 323 Oakridge Street, 52376 Lisbon, Portugal
+Email: kenji.patel99@email.com
+Phone: +33-530-749-1141
+Target Role: Cybersecurity Analyst
+
+Professional Summary:
+Professional pursuing Cybersecurity Analyst opportunities with exposure to production environments, team delivery, and measurable operational improvements. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Science — Cybersecurity — Trinity College Dublin — 2023
+
+Experience:
+Cybersecurity Analyst — Core Solutions — Lisbon, Portugal — 2023-02 to Present
+
+* Hardened access controls and baseline monitoring practices.
+* Reduced mean time to detect by 31% through stronger alert triage.
+* Supported incident investigations with structured evidence collection.
+
+Skills:
+Technical: SIEM, Vulnerability scanning, Cloud fundamentals, Wireshark, Jira
+Methods: Security monitoring, Threat analysis, Risk assessment, Log analysis
+Management: Incident communication, Cross-team coordination, Policy awareness, Documentation
+
+Languages:
+English — C2
+
+Certifications:
+None listed

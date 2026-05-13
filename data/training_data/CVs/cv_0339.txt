@@ -1,0 +1,47 @@
+Name: Clara Garcia
+Gender: Female
+Date of Birth: 1993-02-23
+Address: 280 Birch Street, 14716 Cologne, Germany
+Email: clara.garcia93@mailhub.com
+Phone: +33-616-268-3400
+Target Role: Product Analyst
+
+Professional Summary:
+Technology specialist with 8+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Has supported mentoring, planning, and coordination activities alongside individual technical work. Used to learning new tools quickly when projects require broader technical coverage.
+
+Education:
+Bachelor of Arts — Statistics — University of Amsterdam — 2016
+
+Experience:
+Product Analyst — Core Platform — Cologne, Germany — 2018-08 to 2020-03
+
+* Identified product funnel bottlenecks and improved conversion by 30% while coordinating work across engineers and analysts.
+* Defined self-serve metrics for feature adoption and retention analysis.
+* Built experiment readouts used by product and design leadership.
+
+Growth Analyst — North Systems — Cologne, Germany — 2021-04 to 2023-05
+
+* Built experiment readouts used by product and design leadership.
+* Identified product funnel bottlenecks and improved conversion by 29%.
+* Connected product analytics findings to roadmap prioritization decisions.
+* Defined self-serve metrics for feature adoption and retention analysis.
+
+Senior Product Analyst — Blue Systems — Cologne, Germany — 2024-05 to Present
+
+* Defined self-serve metrics for feature adoption and retention analysis.
+* Identified product funnel bottlenecks and improved conversion by 18%.
+* Connected product analytics findings to roadmap prioritization decisions.
+
+Skills:
+Technical: Python, Tableau, Looker
+Methods: Product metrics, User behavior analysis, Funnel analysis, Experimentation, Documentation
+Management: Communication, Stakeholder alignment, Cross-functional collaboration, Planning
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+Google Data Analytics Certificate
+Scrum Fundamentals Certified
+ITIL Foundation

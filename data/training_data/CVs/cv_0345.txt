@@ -1,0 +1,31 @@
+Name: Sophie Petrov
+Gender: Female
+Date of Birth: 1997-10-08
+Address: 72 Maple Street, 46366 Milan, Italy
+Email: sophie.petrov97@inboxmail.net
+Phone: +39-510-733-4180
+Target Role: ML Engineer
+
+Professional Summary:
+Professional pursuing ML Engineer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Science — Artificial Intelligence — University of Warsaw — 2021
+
+Experience:
+ML Engineer — Signal Analytics — Milan, Italy — 2023-02 to Present
+
+* Reduced model deployment time by 33% by standardizing CI/CD pipelines.
+* Improved observability for inference latency and feature freshness.
+
+Skills:
+Technical: Kubernetes, Python, AWS, Docker
+Methods: Feature stores, CI/CD, Model deployment, MLOps, Monitoring
+Management: Collaboration, Roadmap communication, Technical mentoring
+
+Languages:
+English — C2
+German — B1
+
+Certifications:
+None listed

@@ -1,0 +1,39 @@
+Name: Luca Novak
+Gender: Male
+Date of Birth: 1995-07-15
+Address: 421 Birch Street, 91885 Lisbon, Portugal
+Email: luca.novak95@mailhub.com
+Phone: +91-803-971-6055
+Target Role: Cybersecurity Analyst
+
+Professional Summary:
+Cybersecurity Analyst focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning. Used to learning new tools quickly when projects require broader technical coverage.
+
+Education:
+Master of Science — Computer Science — Indian Institute of Technology Delhi — 2021
+
+Experience:
+Cybersecurity Analyst — Cloud Works — Lisbon, Portugal — 2022-11 to 2024-09
+
+* Supported incident investigations with structured evidence collection.
+* Hardened access controls and baseline monitoring practices.
+* Reduced mean time to detect by 24% through stronger alert triage.
+* Improved vulnerability remediation reporting across infrastructure teams.
+
+Security Analyst — Blue Analytics — Lisbon, Portugal — 2025-07 to Present
+
+* Reduced mean time to detect by 22% through stronger alert triage.
+* Hardened access controls and baseline monitoring practices.
+
+Skills:
+Technical: IAM, Splunk, Python, Linux, Wireshark, Jira
+Methods: Log analysis, Incident response, Threat analysis, Risk assessment
+Management: Policy awareness, Incident communication, Documentation
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+Scrum Fundamentals Certified
+ITIL Foundation

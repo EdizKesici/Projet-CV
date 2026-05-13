@@ -1,0 +1,47 @@
+Name: Eva Popescu
+Gender: Female
+Date of Birth: 1991-11-07
+Address: 126 Pinecrest Street, 82347 Amsterdam, Netherlands
+Email: eva.popescu91@email.com
+Phone: +234-571-982-1541
+Target Role: Product Analyst
+
+Professional Summary:
+Professional pursuing Product Analyst opportunities with exposure to production environments, team delivery, and measurable operational improvements. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning. Interested in roles that combine execution, communication, and measurable business outcomes.
+
+Education:
+Bachelor of Science — Statistics — University of Lagos — 2017
+
+Experience:
+Product Analyst — Data Solutions — Amsterdam, Netherlands — 2017-12 to 2020-05
+
+* Connected product analytics findings to roadmap prioritization decisions.
+* Defined self-serve metrics for feature adoption and retention analysis.
+
+Growth Analyst — Data Insight — Amsterdam, Netherlands — 2021-02 to 2023-03
+
+* Identified product funnel bottlenecks and improved conversion by 13%.
+* Defined self-serve metrics for feature adoption and retention analysis.
+* Built experiment readouts used by product and design leadership.
+* Connected product analytics findings to roadmap prioritization decisions.
+
+Senior Product Analyst — Vector Dynamics — Amsterdam, Netherlands — 2024-09 to Present
+
+* Built experiment readouts used by product and design leadership.
+* Identified product funnel bottlenecks and improved conversion by 17%.
+* Connected product analytics findings to roadmap prioritization decisions.
+* Defined self-serve metrics for feature adoption and retention analysis.
+
+Skills:
+Technical: Excel, Amplitude, Tableau, Mixpanel, SQL
+Methods: Product metrics, Funnel analysis, User behavior analysis, Experimentation
+Management: Planning, Stakeholder alignment, Cross-functional collaboration
+
+Languages:
+English — C2
+French — B2
+
+Certifications:
+Amplitude Foundations
+AWS Cloud Practitioner
+Certified Analytics Professional

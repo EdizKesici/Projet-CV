@@ -1,0 +1,48 @@
+Name: Omar Schneider
+Gender: Male
+Date of Birth: 1983-01-26
+Address: 618 Oakridge Avenue, Denver, CO 21094, USA
+Email: omar.schneider83@inboxmail.net
+Phone: +48-944-268-2894
+Target Role: Data Engineer
+
+Professional Summary:
+Data Engineer with 12+ years of experience delivering reliable technical solutions and measurable business impact. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Science — Computer Science — University of Colorado Boulder — 2012
+
+Experience:
+Data Engineer — Blue Analytics — Denver, CO — 2014-10 to 2018-07
+
+* Cut pipeline runtime by 32% through incremental processing improvements.
+* Designed reliable ingestion jobs for operational and product datasets.
+* Supported analytics and ML teams with curated data models.
+* Implemented data quality checks that reduced downstream incidents.
+
+Analytics Engineer — North Analytics — Denver, CO — 2019-10 to 2022-08
+
+* Implemented data quality checks that reduced downstream incidents.
+* Supported analytics and ML teams with curated data models.
+
+Senior Data Engineer — Core Networks — Denver, CO — 2023-09 to Present
+
+* Supported analytics and ML teams with curated data models.
+* Designed reliable ingestion jobs for operational and product datasets.
+* Cut pipeline runtime by 18% through incremental processing improvements.
+* Implemented data quality checks that reduced downstream incidents.
+
+Skills:
+Technical: Airflow, Spark, AWS
+Methods: Data modeling, Pipeline orchestration, ETL design
+Management: Planning, Documentation, Stakeholder updates, Cross-team coordination, Incident communication
+
+Languages:
+English — C2
+Spanish — B2
+
+Certifications:
+Google Professional Data Engineer
+AWS Cloud Practitioner
+Databricks Data Engineer Associate
+Scrum Fundamentals Certified

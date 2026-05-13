@@ -1,0 +1,42 @@
+Name: Sophie Fischer
+Gender: Female
+Date of Birth: 1984-06-01
+Address: 686 Maple Street, 64994 Milan, Italy
+Email: sophie.fischer84@mailhub.com
+Phone: +234-895-486-8170
+Target Role: ML Engineer
+
+Professional Summary:
+ML Engineer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Interested in roles that combine execution, communication, and measurable business outcomes.
+
+Education:
+Master of Science — Computer Science — University of Amsterdam — 2012
+
+Experience:
+ML Engineer — Core Insight — Milan, Italy — 2013-07 to 2017-04
+
+* Reduced model deployment time by 34% by standardizing CI/CD pipelines.
+* Partnered with data scientists to convert prototypes into resilient services.
+* Improved observability for inference latency and feature freshness.
+
+Machine Learning Engineer — Quantum Insight — Milan, Italy — 2018-01 to 2022-10
+
+* Operationalized training and inference workflows for multiple production models.
+* Reduced model deployment time by 29% by standardizing CI/CD pipelines.
+
+Senior ML Engineer — Nova Dynamics — Milan, Italy — 2023-01 to Present
+
+* Operationalized training and inference workflows for multiple production models.
+* Reduced model deployment time by 29% by standardizing CI/CD pipelines.
+
+Skills:
+Technical: AWS, Kubernetes, MLflow, PyTorch, TensorFlow
+Methods: Feature stores, MLOps, CI/CD
+Management: Sprint planning, Collaboration, Planning, Roadmap communication
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+Google Professional Machine Learning Engineer

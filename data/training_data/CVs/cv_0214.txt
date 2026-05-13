@@ -1,0 +1,40 @@
+Name: Kenji Schneider
+Gender: Male
+Date of Birth: 1997-06-24
+Address: 634 Birch Street, 64868 Dublin, Ireland
+Email: kenji.schneider97@mailhub.com
+Phone: +91-291-721-2421
+Target Role: Backend Developer
+
+Professional Summary:
+Analytical professional targeting Backend Developer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning. Brings a practical approach to delivery, prioritization, and collaboration across teams.
+
+Education:
+Master of Science — Computer Science — University of Texas at Austin — 2020
+
+Experience:
+Backend Developer — Cloud Solutions — Dublin, Ireland — 2020-07 to 2023-10
+
+* Improved reliability of core backend services handling business-critical traffic.
+* Reduced API response time by 19% through query and caching improvements.
+* Designed service integrations used across multiple product teams.
+
+Backend Engineer — Atlas Networks — Dublin, Ireland — 2024-11 to Present
+
+* Reduced API response time by 28% through query and caching improvements.
+* Designed service integrations used across multiple product teams.
+* Expanded automated test coverage for payment and account workflows.
+* Improved reliability of core backend services handling business-critical traffic.
+
+Skills:
+Technical: Java, CI/CD, REST APIs, Python, Go, Docker
+Methods: Performance tuning, API design, Unit testing
+Management: Task estimation, Technical communication, Code review
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+Oracle Java Certification
+Azure Developer Associate

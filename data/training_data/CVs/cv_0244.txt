@@ -1,0 +1,43 @@
+Name: Lucia Bianchi
+Gender: Female
+Date of Birth: 1991-10-15
+Address: 357 Oakridge Street, 45357 Warsaw, Poland
+Email: lucia.bianchi91@inboxmail.net
+Phone: +31-862-621-6957
+Target Role: DevOps Engineer
+
+Professional Summary:
+Analytical professional targeting DevOps Engineer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning. Comfortable contributing in environments with evolving priorities and shared ownership.
+
+Education:
+Master of Science — Information Systems — Politecnico di Milano — 2014
+
+Experience:
+DevOps Engineer — Vector Insight — Warsaw, Poland — 2014-06 to 2018-06
+
+* Supported engineering teams during incidents and postmortem actions.
+* Reduced release lead time by 34% through CI/CD automation.
+* Improved platform reliability with stronger observability and runbooks.
+
+Platform Engineer — Blue Solutions — Warsaw, Poland — 2019-12 to 2022-06
+
+* Supported engineering teams during incidents and postmortem actions.
+* Reduced release lead time by 33% through CI/CD automation.
+* Improved platform reliability with stronger observability and runbooks.
+
+Senior DevOps Engineer — Nova Platform — Warsaw, Poland — 2023-11 to Present
+
+* Reduced release lead time by 13% through CI/CD automation.
+* Standardized infrastructure provisioning across environments.
+
+Skills:
+Technical: Docker, GitHub Actions, Kubernetes, Terraform, Python, AWS
+Methods: CI/CD, Automation, Monitoring
+Management: Documentation, Collaboration
+
+Languages:
+English — C2
+
+Certifications:
+HashiCorp Terraform Associate
+CKA

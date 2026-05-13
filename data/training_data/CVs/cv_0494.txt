@@ -1,0 +1,43 @@
+Name: Arjun Bianchi
+Gender: Male
+Date of Birth: 1994-07-03
+Address: 212 Hillview Street, 99746 Warsaw, Poland
+Email: arjun.bianchi94@email.com
+Phone: +91-925-659-2468
+Target Role: Data Analyst
+
+Professional Summary:
+Data Analyst focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Bachelor of Science — Applied Mathematics — University of Colorado Boulder — 2016
+
+Experience:
+Junior Data Analyst — Blue Labs — Warsaw, Poland — 2017-02 to 2020-03
+
+* Improved reporting efficiency by 21% through dashboard automation.
+* Built weekly KPI reports adopted by finance and commercial teams.
+
+Data Analyst — Quantum Platform — Warsaw, Poland — 2021-07 to 2023-03
+
+* Improved reporting efficiency by 13% through dashboard automation.
+* Built weekly KPI reports adopted by finance and commercial teams.
+* Designed analysis workflows that reduced data preparation time by 21%.
+
+Senior Data Analyst — Quantum Analytics — Warsaw, Poland — 2024-01 to Present
+
+* Built weekly KPI reports adopted by finance and commercial teams.
+* Validated source data quality and reduced recurring discrepancies across reports.
+
+Skills:
+Technical: R, Excel, Power BI, Looker
+Methods: A/B testing, Regression analysis, Data visualization, Dashboard design
+Management: Project coordination, Stakeholder updates, Stakeholder communication
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+Certified Analytics Professional
+Tableau Desktop Specialist

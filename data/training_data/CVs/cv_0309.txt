@@ -1,0 +1,39 @@
+Name: Daniel Aliyev
+Gender: Male
+Date of Birth: 1998-01-06
+Address: 859 Riverside Avenue, Denver, CO 42637, USA
+Email: daniel.aliyev98@mailhub.com
+Phone: +1-690-732-7664
+Target Role: BI Developer
+
+Professional Summary:
+Technology specialist with 4+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Interested in roles that combine execution, communication, and measurable business outcomes.
+
+Education:
+Master of Science — Computer Science — Indian Institute of Technology Delhi — 2020
+
+Experience:
+BI Developer — Blue Solutions — Denver, CO — 2022-04 to 2024-10
+
+* Consolidated fragmented reporting into dashboards used by executives.
+* Partnered with analysts to validate business definitions across domains.
+
+Business Intelligence Developer — Data Tech — Denver, CO — 2025-12 to Present
+
+* Translated stakeholder requests into reusable metrics and semantic layers.
+* Consolidated fragmented reporting into dashboards used by executives.
+* Partnered with analysts to validate business definitions across domains.
+* Improved data refresh reliability and reduced manual reporting effort by 34%.
+
+Skills:
+Technical: Power BI, SSIS, Tableau, SQL, Excel, DAX
+Methods: Dimensional modeling, ETL workflows, Dashboard design, Root cause analysis, KPI definition
+Management: Requirement gathering, Stakeholder communication
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+Microsoft Power BI Data Analyst
+Scrum Fundamentals Certified

@@ -1,0 +1,45 @@
+Name: Lucia Okafor
+Gender: Female
+Date of Birth: 1992-10-14
+Address: 917 Birch Street, 51682 Lyon, France
+Email: lucia.okafor92@mailhub.com
+Phone: +31-909-492-6671
+Target Role: Software Engineer
+
+Professional Summary:
+Software Engineer with 9+ years of experience delivering reliable technical solutions and measurable business impact. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Computer Science — University of Bonn — 2015
+
+Experience:
+Software Engineer — Nova Insight — Lyon, France — 2017-02 to 2020-10
+
+* Collaborated on architectural improvements for long-term scalability.
+* Maintained core application modules with strong uptime and defect control.
+* Contributed to CI/CD and release quality across multiple services.
+* Delivered software features that improved internal process efficiency by 17%.
+
+Software Developer — Core Dynamics — Lyon, France — 2021-10 to 2023-05
+
+* Delivered software features that improved internal process efficiency by 30%.
+* Collaborated on architectural improvements for long-term scalability.
+
+Senior Software Engineer — Blue Labs — Lyon, France — 2024-11 to Present
+
+* Contributed to CI/CD and release quality across multiple services.
+* Delivered software features that improved internal process efficiency by 30%.
+* Collaborated on architectural improvements for long-term scalability.
+
+Skills:
+Technical: Java, C#, Python, Docker, REST APIs
+Methods: System integration, Agile delivery, Object-oriented design, Testing
+Management: Planning, Task coordination, Mentoring
+
+Languages:
+English — C2
+French — B2
+
+Certifications:
+AWS Cloud Practitioner
+Professional Scrum Master I

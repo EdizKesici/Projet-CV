@@ -1,0 +1,38 @@
+Name: Camila Liu
+Gender: Female
+Date of Birth: 1996-01-15
+Address: 340 Oakridge Street, 75594 Amsterdam, Netherlands
+Email: camila.liu96@email.com
+Phone: +91-699-945-5364
+Target Role: Data Scientist
+
+Professional Summary:
+Technology specialist with 7+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Brings a practical approach to delivery, prioritization, and collaboration across teams.
+
+Education:
+Master of Science — Statistics — Politecnico di Milano — 2019
+
+Experience:
+Data Scientist — North Solutions — Amsterdam, Netherlands — 2019-12 to 2022-07
+
+* Translated ambiguous business questions into measurable ML experiments.
+* Built production-ready models with monitoring for drift and data quality.
+
+Junior Data Scientist — Core Systems — Amsterdam, Netherlands — 2023-12 to Present
+
+* Improved model accuracy by 18% on a customer behavior prediction use case.
+* Built production-ready models with monitoring for drift and data quality.
+* Translated ambiguous business questions into measurable ML experiments.
+* Delivered experimentation frameworks used to prioritize product changes.
+
+Skills:
+Technical: Confluence, SQL, Pandas, TensorFlow
+Methods: Model validation, Process improvement, Feature engineering, Forecasting, Statistical inference, Experiment design
+Management: Teamwork, Cross-functional communication, Project planning
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+Google Professional Data Engineer

@@ -1,0 +1,37 @@
+Name: Anna Andersen
+Gender: Female
+Date of Birth: 1998-01-26
+Address: 78 Riverside Street, 28991 Warsaw, Poland
+Email: anna.andersen98@mailhub.com
+Phone: +91-477-493-2255
+Target Role: QA Engineer
+
+Professional Summary:
+QA Engineer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Bachelor of Arts — Computer Science — University of Warsaw — 2019
+
+Experience:
+QA Engineer — Quantum Networks — Warsaw, Poland — 2021-08 to 2023-07
+
+* Developed automation suites for critical API and UI flows.
+* Partnered with developers to reproduce and isolate production issues.
+
+Test Engineer — Vector Works — Warsaw, Poland — 2024-12 to Present
+
+* Improved release readiness through clearer test reporting.
+* Partnered with developers to reproduce and isolate production issues.
+* Reduced escaped defects by 16% by expanding regression coverage.
+* Developed automation suites for critical API and UI flows.
+
+Skills:
+Technical: Python, Cloud fundamentals, API testing, Postman, SQL
+Methods: Defect tracking, Regression testing, Quality assurance, Test planning
+Management: Documentation, Prioritization, Risk communication, Cross-team coordination
+
+Languages:
+English — C2
+
+Certifications:
+None listed

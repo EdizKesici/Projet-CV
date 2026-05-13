@@ -1,0 +1,46 @@
+Name: Yusuf Hassan
+Gender: Male
+Date of Birth: 1988-06-25
+Address: 947 Riverside Avenue, Denver, CO 42845, USA
+Email: yusuf.hassan88@mailhub.com
+Phone: +234-620-805-1234
+Target Role: DevOps Engineer
+
+Professional Summary:
+Professional pursuing DevOps Engineer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Interested in roles that combine execution, communication, and measurable business outcomes.
+
+Education:
+Master of Science — Network Engineering — University of Lagos — 2013
+
+Experience:
+DevOps Engineer — Data Dynamics — Denver, CO — 2014-03 to 2018-11
+
+* Reduced release lead time by 27% through CI/CD automation.
+* Standardized infrastructure provisioning across environments.
+* Improved platform reliability with stronger observability and runbooks.
+
+Platform Engineer — Blue Dynamics — Denver, CO — 2019-12 to 2022-11
+
+* Improved platform reliability with stronger observability and runbooks.
+* Reduced release lead time by 14% through CI/CD automation.
+* Supported engineering teams during incidents and postmortem actions.
+* Standardized infrastructure provisioning across environments.
+
+Senior DevOps Engineer — Data Analytics — Denver, CO — 2023-10 to Present
+
+* Improved platform reliability with stronger observability and runbooks.
+* Standardized infrastructure provisioning across environments.
+* Reduced release lead time by 34% through CI/CD automation.
+
+Skills:
+Technical: Terraform, GitHub Actions, Linux, Docker, Python
+Methods: Automation, CI/CD, Incident response, Monitoring, Infrastructure as code
+Management: Technical mentoring, Documentation, Incident coordination, Collaboration
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+AWS Certified SysOps Administrator
+HashiCorp Terraform Associate

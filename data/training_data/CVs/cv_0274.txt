@@ -1,0 +1,42 @@
+Name: Yusuf Bianchi
+Gender: Male
+Date of Birth: 1989-11-23
+Address: 75 Cedar Street, 41187 Lisbon, Portugal
+Email: yusuf.bianchi89@inboxmail.net
+Phone: +48-434-215-5690
+Target Role: Software Engineer
+
+Professional Summary:
+Analytical professional targeting Software Engineer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning. Interested in roles that combine execution, communication, and measurable business outcomes.
+
+Education:
+Bachelor of Science — Software Engineering — University of Lisbon — 2017
+
+Experience:
+Software Engineer — Quantum Platform — Lisbon, Portugal — 2017-09 to 2020-09
+
+* Contributed to CI/CD and release quality across multiple services.
+* Maintained core application modules with strong uptime and defect control.
+* Collaborated on architectural improvements for long-term scalability.
+
+Software Developer — Signal Tech — Lisbon, Portugal — 2021-12 to 2023-08
+
+* Delivered software features that improved internal process efficiency by 16%.
+* Collaborated on architectural improvements for long-term scalability.
+
+Senior Software Engineer — Signal Analytics — Lisbon, Portugal — 2024-10 to Present
+
+* Contributed to CI/CD and release quality across multiple services.
+* Collaborated on architectural improvements for long-term scalability.
+* Delivered software features that improved internal process efficiency by 30%.
+
+Skills:
+Technical: REST APIs, Docker, SQL, Python
+Methods: Testing, System integration, Object-oriented design, Agile delivery
+Management: Planning, Communication, Mentoring
+
+Languages:
+English — C2
+
+Certifications:
+None listed

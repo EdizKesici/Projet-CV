@@ -1,0 +1,45 @@
+Name: Nathan Silva
+Gender: Male
+Date of Birth: 1995-09-15
+Address: 904 Admiralty Avenue, Denver, CO 51049, USA
+Email: nathan.silva95@email.com
+Phone: +48-400-215-7312
+Target Role: Cybersecurity Analyst
+
+Professional Summary:
+Technology specialist with 5+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Science — Computer Science — University of Warsaw — 2020
+
+Experience:
+Cybersecurity Analyst — Vector Platform — Denver, CO — 2021-08 to 2022-06
+
+* Hardened access controls and baseline monitoring practices.
+* Reduced mean time to detect by 27% through stronger alert triage.
+* Supported incident investigations with structured evidence collection.
+* Improved vulnerability remediation reporting across infrastructure teams.
+
+SOC Analyst — Blue Works — Denver, CO — 2023-10 to 2024-09
+
+* Supported incident investigations with structured evidence collection.
+* Hardened access controls and baseline monitoring practices.
+* Improved vulnerability remediation reporting across infrastructure teams.
+
+Security Analyst — Nova Insight — Denver, CO — 2025-09 to Present
+
+* Reduced mean time to detect by 27% through stronger alert triage.
+* Supported incident investigations with structured evidence collection.
+* Hardened access controls and baseline monitoring practices.
+
+Skills:
+Technical: SIEM, Linux, Vulnerability scanning, Wireshark, Python
+Methods: Security monitoring, Log analysis, Threat analysis
+Management: Incident communication, Documentation, Policy awareness, Cross-team coordination
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+GIAC Security Essentials

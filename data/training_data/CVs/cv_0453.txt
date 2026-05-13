@@ -1,0 +1,32 @@
+Name: Olivia Liu
+Gender: Female
+Date of Birth: 1999-11-05
+Address: 960 Park Street, 37452 Lyon, France
+Email: olivia.liu99@mailhub.com
+Phone: +1-758-566-1599
+Target Role: Backend Developer
+
+Professional Summary:
+Technology specialist with 1+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Information Technology — Indian Institute of Technology Delhi — 2023
+
+Experience:
+Backend Developer — Data Networks — Lyon, France — 2025-04 to Present
+
+* Designed service integrations used across multiple product teams.
+* Expanded automated test coverage for payment and account workflows.
+* Reduced API response time by 28% through query and caching improvements.
+
+Skills:
+Technical: Go, Java, Docker, Python, Bash
+Methods: API design, Performance tuning, System design, Unit testing
+Management: Task estimation, Stakeholder updates, Code review
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+AWS Certified Developer

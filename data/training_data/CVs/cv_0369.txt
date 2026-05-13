@@ -1,0 +1,35 @@
+Name: Anna Garcia
+Gender: Female
+Date of Birth: 2000-08-16
+Address: 14 Admiralty Street, 78700 Dublin, Ireland
+Email: anna.garcia00@inboxmail.net
+Phone: +33-951-337-7313
+Target Role: DevOps Engineer
+
+Professional Summary:
+Professional pursuing DevOps Engineer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Science — Network Engineering — University of Lisbon — 2024
+
+Experience:
+DevOps Engineer — Signal Platform — Dublin, Ireland — 2024-10 to Present
+
+* Standardized infrastructure provisioning across environments.
+* Reduced release lead time by 21% through CI/CD automation.
+* Improved platform reliability with stronger observability and runbooks.
+
+Skills:
+Technical: Linux, Python, REST APIs, Kubernetes, GitHub Actions
+Methods: Infrastructure as code, CI/CD, Monitoring, Automation, Incident response
+Management: Technical mentoring, Incident coordination, Communication
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+Scrum Fundamentals Certified
+AWS Certified SysOps Administrator
+CKA
+Professional Scrum Master I

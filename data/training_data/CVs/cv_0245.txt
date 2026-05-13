@@ -1,0 +1,34 @@
+Name: Isla Liu
+Gender: Female
+Date of Birth: 1990-11-19
+Address: 189 Linden Street, 41332 Lagos, Nigeria
+Email: isla.liu90@mailhub.com
+Phone: +1-716-881-3957
+Target Role: Data Scientist
+
+Professional Summary:
+Data Scientist with 12+ years of experience delivering reliable technical solutions and measurable business impact. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning. Used to learning new tools quickly when projects require broader technical coverage.
+
+Education:
+Master of Science — Computer Science — University of Texas at Austin — 2013
+
+Experience:
+Senior Data Scientist — Core Platform — Lagos, Nigeria — 2014-08 to Present
+
+* Improved model accuracy by 20% on a customer behavior prediction use case.
+* Translated ambiguous business questions into measurable ML experiments.
+
+Skills:
+Technical: scikit-learn, TensorFlow, Spark, REST APIs
+Methods: Forecasting, Model validation, Statistical inference, Feature engineering
+Management: Cross-functional communication, Stakeholder alignment, Project planning, Mentoring
+
+Languages:
+English — C2
+French — B2
+
+Certifications:
+AWS Cloud Practitioner
+Google Professional Data Engineer
+ITIL Foundation
+TensorFlow Developer Certificate

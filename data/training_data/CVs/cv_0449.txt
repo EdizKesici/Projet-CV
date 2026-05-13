@@ -1,0 +1,39 @@
+Name: Maya Kim
+Gender: Female
+Date of Birth: 2000-07-15
+Address: 395 Hillview Street, 83581 Lyon, France
+Email: maya.kim00@email.com
+Phone: +31-215-980-3540
+Target Role: Software Engineer
+
+Professional Summary:
+Software Engineer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Used to learning new tools quickly when projects require broader technical coverage.
+
+Education:
+Bachelor of Science — Information Systems — Trinity College Dublin — 2021
+
+Experience:
+Software Engineer — Data Systems — Lyon, France — 2021-02 to 2023-11
+
+* Contributed to CI/CD and release quality across multiple services.
+* Collaborated on architectural improvements for long-term scalability.
+* Maintained core application modules with strong uptime and defect control.
+
+Software Developer — Cloud Solutions — Lyon, France — 2024-08 to Present
+
+* Collaborated on architectural improvements for long-term scalability.
+* Delivered software features that improved internal process efficiency by 31%.
+* Maintained core application modules with strong uptime and defect control.
+
+Skills:
+Technical: SQL, Java, Monitoring, Docker, Python, Git, ETL basics, REST APIs
+Methods: Agile delivery, System integration, Object-oriented design
+Management: Communication, Mentoring, Collaboration, Planning
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+Google Data Analytics Certificate
+ITIL Foundation

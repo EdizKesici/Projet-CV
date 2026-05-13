@@ -1,0 +1,44 @@
+Name: Daniel Martinez
+Gender: Male
+Date of Birth: 1989-07-20
+Address: 84 Admiralty Avenue, Denver, CO 84081, USA
+Email: daniel.martinez89@email.com
+Phone: +353-658-913-7350
+Target Role: Cybersecurity Analyst
+
+Professional Summary:
+Professional pursuing Cybersecurity Analyst opportunities with exposure to production environments, team delivery, and measurable operational improvements. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Information Security — University of Lagos — 2018
+
+Experience:
+Cybersecurity Analyst — Vector Dynamics — Denver, CO — 2018-05 to 2020-03
+
+* Reduced mean time to detect by 30% through stronger alert triage.
+* Improved vulnerability remediation reporting across infrastructure teams.
+
+Security Analyst — Atlas Analytics — Denver, CO — 2021-05 to 2023-02
+
+* Supported incident investigations with structured evidence collection.
+* Reduced mean time to detect by 21% through stronger alert triage.
+* Hardened access controls and baseline monitoring practices.
+* Improved vulnerability remediation reporting across infrastructure teams.
+
+Senior Cybersecurity Analyst — Quantum Works — Denver, CO — 2024-09 to Present
+
+* Reduced mean time to detect by 25% through stronger alert triage.
+* Hardened access controls and baseline monitoring practices.
+
+Skills:
+Technical: Wireshark, Splunk, Vulnerability scanning, SIEM, IAM, Python
+Methods: Threat analysis, Incident response, Log analysis
+Management: Incident communication, Cross-team coordination
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+Certified Ethical Hacker
+CompTIA Security+

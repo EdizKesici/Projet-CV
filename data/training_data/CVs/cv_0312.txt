@@ -1,0 +1,39 @@
+Name: Camila Bianchi
+Gender: Female
+Date of Birth: 1992-11-03
+Address: 265 Cedar Street, 94235 Lyon, France
+Email: camila.bianchi92@inboxmail.net
+Phone: +39-607-823-1853
+Target Role: ML Engineer
+
+Professional Summary:
+ML Engineer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Software Engineering — University of Lisbon — 2019
+
+Experience:
+ML Engineer — Data Tech — Lyon, France — 2019-01 to 2022-10
+
+* Operationalized training and inference workflows for multiple production models.
+* Improved observability for inference latency and feature freshness.
+* Reduced model deployment time by 19% by standardizing CI/CD pipelines.
+
+Machine Learning Engineer — Core Platform — Lyon, France — 2023-07 to Present
+
+* Operationalized training and inference workflows for multiple production models.
+* Reduced model deployment time by 28% by standardizing CI/CD pipelines.
+* Partnered with data scientists to convert prototypes into resilient services.
+* Improved observability for inference latency and feature freshness.
+
+Skills:
+Technical: Docker, Kubernetes, Python, PyTorch, TensorFlow
+Methods: Monitoring, MLOps, CI/CD, Feature stores, Model deployment
+Management: Sprint planning, Technical mentoring
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+Google Professional Machine Learning Engineer

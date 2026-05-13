@@ -1,0 +1,40 @@
+Name: Clara Fischer
+Gender: Female
+Date of Birth: 1994-03-05
+Address: 310 Pinecrest Street, 46886 Lyon, France
+Email: clara.fischer94@inboxmail.net
+Phone: +1-315-257-7607
+Target Role: Frontend Developer
+
+Professional Summary:
+Professional pursuing Frontend Developer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Bachelor of Science — Human-Computer Interaction — Trinity College Dublin — 2017
+
+Experience:
+Frontend Developer — Nova Solutions — Lyon, France — 2019-03 to 2022-11
+
+* Reduced UI defects through stronger test automation and QA collaboration.
+* Improved page performance scores by 30% across key user journeys while coordinating work across engineers and analysts.
+
+Frontend Engineer — Atlas Dynamics — Lyon, France — 2023-12 to Present
+
+* Partnered with designers to deliver accessible interfaces at scale while coordinating work across engineers and analysts.
+* Built reusable component libraries that accelerated feature delivery.
+* Improved page performance scores by 14% across key user journeys while coordinating work across engineers and analysts.
+
+Skills:
+Technical: CSS, JavaScript, Testing Library, HTML, CI/CD
+Methods: Documentation, Accessibility, Responsive design, Component architecture
+Management: Sprint planning, Code review
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+Professional Scrum Master I
+AWS Cloud Practitioner
+ITIL Foundation
+Google Data Analytics Certificate

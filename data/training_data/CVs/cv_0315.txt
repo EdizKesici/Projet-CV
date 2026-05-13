@@ -1,0 +1,41 @@
+Name: Victor Hassan
+Gender: Male
+Date of Birth: 1991-03-02
+Address: 784 Oakridge Street, 64174 Warsaw, Poland
+Email: victor.hassan91@inboxmail.net
+Phone: +39-298-121-8951
+Target Role: Frontend Developer
+
+Professional Summary:
+Professional pursuing Frontend Developer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Computer Science — University of Bonn — 2019
+
+Experience:
+Frontend Developer — Quantum Works — Warsaw, Poland — 2020-06 to 2023-03
+
+* Reduced UI defects through stronger test automation and QA collaboration.
+* Partnered with designers to deliver accessible interfaces at scale.
+* Improved page performance scores by 20% across key user journeys.
+* Built reusable component libraries that accelerated feature delivery.
+
+Frontend Engineer — Core Works — Warsaw, Poland — 2024-09 to Present
+
+* Built reusable component libraries that accelerated feature delivery.
+* Partnered with designers to deliver accessible interfaces at scale.
+* Reduced UI defects through stronger test automation and QA collaboration.
+* Improved page performance scores by 26% across key user journeys.
+
+Skills:
+Technical: React, CSS, TypeScript
+Methods: Component architecture, State management, Performance optimization
+Management: Sprint planning, Code review, Design collaboration
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+Professional Scrum Master I
+AWS Cloud Practitioner

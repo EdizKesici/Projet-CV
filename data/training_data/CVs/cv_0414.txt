@@ -1,0 +1,32 @@
+Name: Nora Popescu
+Gender: Female
+Date of Birth: 2000-09-02
+Address: 216 Pinecrest Street, 88801 Bengaluru, India
+Email: nora.popescu00@inboxmail.net
+Phone: +48-319-742-3029
+Target Role: DevOps Engineer
+
+Professional Summary:
+Professional pursuing DevOps Engineer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Bachelor of Science — Software Engineering — Indian Institute of Technology Delhi — 2024
+
+Experience:
+DevOps Engineer — Nova Analytics — Bengaluru, India — 2024-05 to Present
+
+* Improved platform reliability with stronger observability and runbooks.
+* Supported engineering teams during incidents and postmortem actions.
+* Reduced release lead time by 17% through CI/CD automation.
+
+Skills:
+Technical: Terraform, Docker, Kubernetes
+Methods: Infrastructure as code, Incident response, Monitoring, Process improvement, Automation
+Management: Task coordination, Documentation, Technical mentoring, Collaboration, Incident coordination
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+AWS Certified SysOps Administrator

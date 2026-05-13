@@ -1,0 +1,36 @@
+Name: Nora Hassan
+Gender: Female
+Date of Birth: 1987-09-04
+Address: 432 Linden Street, 30245 Lagos, Nigeria
+Email: nora.hassan87@mailhub.com
+Phone: +48-702-951-2664
+Target Role: Data Scientist
+
+Professional Summary:
+Data Scientist with 8+ years of experience delivering reliable technical solutions and measurable business impact. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Statistics — Indian Institute of Technology Delhi — 2016
+
+Experience:
+Senior Data Scientist — Quantum Works — Lagos, Nigeria — 2018-07 to Present
+
+* Built production-ready models with monitoring for drift and data quality.
+* Improved model accuracy by 20% on a customer behavior prediction use case.
+* Delivered experimentation frameworks used to prioritize product changes.
+* Translated ambiguous business questions into measurable ML experiments.
+
+Skills:
+Technical: Spark, TensorFlow, SQL, Python
+Methods: Experiment design, Feature engineering, Model validation
+Management: Stakeholder alignment, Mentoring
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+AWS Cloud Practitioner
+Google Professional Data Engineer
+Scrum Fundamentals Certified
+AWS Certified Machine Learning

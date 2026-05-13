@@ -1,0 +1,47 @@
+Name: Anna Bianchi
+Gender: Female
+Date of Birth: 1993-03-17
+Address: 518 Riverside Street, 86022 Bengaluru, India
+Email: anna.bianchi93@inboxmail.net
+Phone: +1-268-544-1406
+Target Role: Backend Developer
+
+Professional Summary:
+Backend Developer with 6+ years of experience delivering reliable technical solutions and measurable business impact. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning. Interested in roles that combine execution, communication, and measurable business outcomes.
+
+Education:
+Bachelor of Science — Computer Science — University of Lagos — 2020
+
+Experience:
+Backend Developer — Data Tech — Bengaluru, India — 2020-05 to 2022-01
+
+* Improved reliability of core backend services handling business-critical traffic.
+* Reduced API response time by 16% through query and caching improvements.
+* Expanded automated test coverage for payment and account workflows.
+* Designed service integrations used across multiple product teams.
+
+Software Developer — North Tech — Bengaluru, India — 2023-09 to 2024-08
+
+* Improved reliability of core backend services handling business-critical traffic.
+* Reduced API response time by 18% through query and caching improvements.
+* Designed service integrations used across multiple product teams.
+* Expanded automated test coverage for payment and account workflows.
+
+Backend Engineer — Cloud Labs — Bengaluru, India — 2025-05 to Present
+
+* Reduced API response time by 31% through query and caching improvements.
+* Improved reliability of core backend services handling business-critical traffic.
+* Expanded automated test coverage for payment and account workflows.
+
+Skills:
+Technical: REST APIs, PostgreSQL, Go, Docker
+Methods: Microservices, Performance tuning, System design
+Management: Task estimation, Collaboration
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+Scrum Fundamentals Certified
+AWS Cloud Practitioner

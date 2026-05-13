@@ -1,0 +1,32 @@
+Name: Nora Dubois
+Gender: Female
+Date of Birth: 2004-11-04
+Address: 529 Riverside Street, 95145 Lagos, Nigeria
+Email: nora.dubois04@email.com
+Phone: +49-561-915-3869
+Target Role: Data Engineer
+
+Professional Summary:
+Data Engineer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Bachelor of Science — Computer Science — University of Amsterdam — 2025
+
+Experience:
+Data Engineer — Core Analytics — Lagos, Nigeria — 2025-08 to Present
+
+* Supported analytics and ML teams with curated data models.
+* Cut pipeline runtime by 22% through incremental processing improvements.
+* Implemented data quality checks that reduced downstream incidents.
+
+Skills:
+Technical: AWS, Jira, SQL, Spark, dbt
+Methods: Batch processing, Data modeling, Data quality management, ETL design, Pipeline orchestration
+Management: Cross-team coordination, Planning, Incident communication, Documentation, Teamwork
+
+Languages:
+English — C2
+Spanish — B2
+
+Certifications:
+Google Professional Data Engineer

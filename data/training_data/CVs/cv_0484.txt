@@ -1,0 +1,33 @@
+Name: Nadia Fischer
+Gender: Female
+Date of Birth: 2001-05-01
+Address: 142 Pinecrest Street, 53745 Bengaluru, India
+Email: nadia.fischer01@email.com
+Phone: +91-581-943-2947
+Target Role: BI Developer
+
+Professional Summary:
+Technology specialist with 1+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning. Interested in roles that combine execution, communication, and measurable business outcomes.
+
+Education:
+Bachelor of Science — Business Analytics — University of Amsterdam — 2023
+
+Experience:
+BI Developer — Vector Insight — Bengaluru, India — 2025-06 to Present
+
+* Partnered with analysts to validate business definitions across domains.
+* Consolidated fragmented reporting into dashboards used by executives.
+* Improved data refresh reliability and reduced manual reporting effort by 32%.
+
+Skills:
+Technical: SQL, Tableau, Power BI, Excel, Python, DAX
+Methods: Dimensional modeling, KPI definition, ETL workflows, Dashboard design
+Management: Stakeholder communication, Documentation
+
+Languages:
+English — C2
+Spanish — B2
+
+Certifications:
+IBM Data Analyst Professional Certificate
+Microsoft Power BI Data Analyst

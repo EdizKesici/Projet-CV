@@ -1,0 +1,39 @@
+Name: Kenji Andersen
+Gender: Male
+Date of Birth: 1997-02-01
+Address: 603 Hillview Street, 80335 Lagos, Nigeria
+Email: kenji.andersen97@inboxmail.net
+Phone: +33-285-136-8594
+Target Role: QA Engineer
+
+Professional Summary:
+QA Engineer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning. Comfortable contributing in environments with evolving priorities and shared ownership.
+
+Education:
+Bachelor of Arts — Computer Science — University of Amsterdam — 2020
+
+Experience:
+QA Engineer — Cloud Solutions — Lagos, Nigeria — 2020-09 to 2023-05
+
+* Improved release readiness through clearer test reporting.
+* Reduced escaped defects by 19% by expanding regression coverage.
+* Partnered with developers to reproduce and isolate production issues.
+
+Test Engineer — North Networks — Lagos, Nigeria — 2024-12 to Present
+
+* Improved release readiness through clearer test reporting.
+* Reduced escaped defects by 27% by expanding regression coverage.
+* Partnered with developers to reproduce and isolate production issues.
+* Developed automation suites for critical API and UI flows.
+
+Skills:
+Technical: Python, API testing, Selenium, SQL, Cypress
+Methods: Test automation, Test planning, Regression testing
+Management: Documentation, Cross-team coordination
+
+Languages:
+English — C2
+French — B2
+
+Certifications:
+Certified Agile Tester

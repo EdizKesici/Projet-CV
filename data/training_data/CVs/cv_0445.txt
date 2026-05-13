@@ -1,0 +1,45 @@
+Name: Zoe Andersen
+Gender: Female
+Date of Birth: 1996-09-04
+Address: 778 Riverside Street, 56044 Lisbon, Portugal
+Email: zoe.andersen96@inboxmail.net
+Phone: +33-492-571-8124
+Target Role: QA Engineer
+
+Professional Summary:
+QA Engineer with 9+ years of experience delivering reliable technical solutions and measurable business impact. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Science — Information Technology — University of Warsaw — 2017
+
+Experience:
+QA Engineer — Atlas Insight — Lisbon, Portugal — 2017-03 to 2020-08
+
+* Partnered with developers to reproduce and isolate production issues.
+* Improved release readiness through clearer test reporting.
+* Developed automation suites for critical API and UI flows.
+* Reduced escaped defects by 26% by expanding regression coverage.
+
+Test Engineer — Vector Solutions — Lisbon, Portugal — 2021-09 to 2023-08
+
+* Reduced escaped defects by 28% by expanding regression coverage.
+* Partnered with developers to reproduce and isolate production issues.
+* Developed automation suites for critical API and UI flows.
+* Improved release readiness through clearer test reporting.
+
+Senior QA Engineer — Data Labs — Lisbon, Portugal — 2024-06 to Present
+
+* Reduced escaped defects by 26% by expanding regression coverage.
+* Partnered with developers to reproduce and isolate production issues.
+
+Skills:
+Technical: API testing, Selenium, CI/CD, Jira, SQL, Postman, Python
+Methods: Test planning, Test automation, Defect tracking, Quality assurance
+Management: Documentation, Risk communication, Prioritization, Cross-team coordination
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+ISTQB Foundation Level

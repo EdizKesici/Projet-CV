@@ -1,0 +1,31 @@
+Name: Daniel Bianchi
+Gender: Male
+Date of Birth: 1997-12-16
+Address: 700 Admiralty Street, 80697 Cologne, Germany
+Email: daniel.bianchi97@mailhub.com
+Phone: +33-221-358-2933
+Target Role: BI Developer
+
+Professional Summary:
+Analytical professional targeting BI Developer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Capable of supporting team goals and handling recurring technical responsibilities.
+
+Education:
+Master of Science — Business Analytics — University of Texas at Austin — 2021
+
+Experience:
+BI Developer — Cloud Works — Cologne, Germany — 2023-11 to Present
+
+* Partnered with analysts to validate business definitions across domains.
+* Improved data refresh reliability and reduced manual reporting effort by 17%.
+
+Skills:
+Technical: Linux, Python, Power BI, DAX, Excel, Tableau, SQL
+Methods: KPI definition, ETL workflows, Dimensional modeling
+Management: Stakeholder communication, Documentation, Requirement gathering
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+IBM Data Analyst Professional Certificate

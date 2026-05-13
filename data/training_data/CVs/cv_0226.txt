@@ -1,0 +1,37 @@
+Name: Omar Martinez
+Gender: Male
+Date of Birth: 1997-05-07
+Address: 784 Park Street, 26527 Lyon, France
+Email: omar.martinez97@mailhub.com
+Phone: +1-816-571-3830
+Target Role: DevOps Engineer
+
+Professional Summary:
+DevOps Engineer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Network Engineering — University of Lagos — 2019
+
+Experience:
+DevOps Engineer — Atlas Solutions — Lyon, France — 2021-06 to 2023-04
+
+* Standardized infrastructure provisioning across environments.
+* Improved platform reliability with stronger observability and runbooks.
+
+Platform Engineer — Cloud Works — Lyon, France — 2024-03 to Present
+
+* Supported engineering teams during incidents and postmortem actions.
+* Improved platform reliability with stronger observability and runbooks.
+* Standardized infrastructure provisioning across environments.
+
+Skills:
+Technical: Linux, Docker, AWS
+Methods: Monitoring, CI/CD, Automation, Incident response, Infrastructure as code
+Management: Documentation, Collaboration
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+Professional Scrum Master I

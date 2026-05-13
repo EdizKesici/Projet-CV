@@ -1,0 +1,32 @@
+Name: Ethan Patel
+Gender: Male
+Date of Birth: 1989-01-24
+Address: 283 Pinecrest Street, 59855 Cologne, Germany
+Email: ethan.patel89@inboxmail.net
+Phone: +353-920-892-9380
+Target Role: Frontend Developer
+
+Professional Summary:
+Frontend Developer with 10+ years of experience delivering reliable technical solutions and measurable business impact. Known for clear communication, structured problem solving, and strong execution in fast-moving environments.
+
+Education:
+Master of Science — Information Technology — University of Lagos — 2015
+
+Experience:
+Senior Frontend Developer — Signal Labs — Cologne, Germany — 2016-04 to Present
+
+* Built reusable component libraries that accelerated feature delivery.
+* Partnered with designers to deliver accessible interfaces at scale.
+* Reduced UI defects through stronger test automation and QA collaboration.
+* Improved page performance scores by 32% across key user journeys.
+
+Skills:
+Technical: CSS, Next.js, Testing Library
+Methods: Responsive design, Performance optimization, State management, Accessibility, Component architecture
+Management: Requirement clarification, Design collaboration, Sprint planning, Code review
+
+Languages:
+English — C2
+
+Certifications:
+Professional Scrum Master I

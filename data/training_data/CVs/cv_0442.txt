@@ -1,0 +1,32 @@
+Name: Zoe Petrov
+Gender: Female
+Date of Birth: 2001-12-18
+Address: 170 Oakridge Street, 40392 Lisbon, Portugal
+Email: zoe.petrov01@inboxmail.net
+Phone: +49-921-339-8004
+Target Role: Product Analyst
+
+Professional Summary:
+Product Analyst focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Brings a practical approach to delivery, prioritization, and collaboration across teams.
+
+Education:
+Bachelor of Science — Business Analytics — University of Amsterdam — 2025
+
+Experience:
+Product Analyst — Signal Systems — Lisbon, Portugal — 2025-10 to Present
+
+* Connected product analytics findings to roadmap prioritization decisions.
+* Defined self-serve metrics for feature adoption and retention analysis.
+
+Skills:
+Technical: Mixpanel, Looker, Tableau, Python, Excel, Documentation, SQL
+Methods: Funnel analysis, User behavior analysis, Product metrics, Cohort analysis, Experimentation
+Management: Cross-functional collaboration, Planning, Stakeholder alignment
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+Professional Scrum Master I
+Google Data Analytics Certificate

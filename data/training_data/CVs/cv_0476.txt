@@ -1,0 +1,44 @@
+Name: Nadia Liu
+Gender: Female
+Date of Birth: 1991-11-09
+Address: 725 Oakridge Street, 42289 Lisbon, Portugal
+Email: nadia.liu91@mailhub.com
+Phone: +39-704-896-2925
+Target Role: DevOps Engineer
+
+Professional Summary:
+DevOps Engineer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Interested in roles that combine execution, communication, and measurable business outcomes.
+
+Education:
+Bachelor of Science — Network Engineering — University of Warsaw — 2019
+
+Experience:
+DevOps Engineer — Atlas Platform — Lisbon, Portugal — 2019-11 to 2021-08
+
+* Improved platform reliability with stronger observability and runbooks.
+* Standardized infrastructure provisioning across environments.
+
+Cloud Engineer — Signal Solutions — Lisbon, Portugal — 2022-12 to 2024-06
+
+* Reduced release lead time by 32% through CI/CD automation.
+* Improved platform reliability with stronger observability and runbooks.
+
+Platform Engineer — Core Networks — Lisbon, Portugal — 2025-10 to Present
+
+* Supported engineering teams during incidents and postmortem actions.
+* Standardized infrastructure provisioning across environments.
+* Improved platform reliability with stronger observability and runbooks.
+
+Skills:
+Technical: Python, Docker, Linux, Confluence, Kubernetes
+Methods: Infrastructure as code, Monitoring, Incident response, CI/CD, Automation
+Management: Incident coordination, Collaboration, Technical mentoring, Documentation
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+Google Data Analytics Certificate
+CKA
+AWS Cloud Practitioner

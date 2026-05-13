@@ -1,0 +1,33 @@
+Name: Julia Petrov
+Gender: Female
+Date of Birth: 1997-11-28
+Address: 774 Pinecrest Street, 11176 Warsaw, Poland
+Email: julia.petrov97@email.com
+Phone: +1-647-655-3296
+Target Role: Data Scientist
+
+Professional Summary:
+Analytical professional targeting Data Scientist opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Statistics — University of Lisbon — 2021
+
+Experience:
+Data Scientist — Core Solutions — Warsaw, Poland — 2023-08 to Present
+
+* Translated ambiguous business questions into measurable ML experiments.
+* Built production-ready models with monitoring for drift and data quality.
+* Improved model accuracy by 17% on a customer behavior prediction use case.
+
+Skills:
+Technical: Spark, SQL, Pandas, PyTorch, TensorFlow, scikit-learn
+Methods: Documentation, Model validation, Statistical inference, Experiment design, Feature engineering, Forecasting
+Management: Cross-functional communication, Project planning, Stakeholder updates, Stakeholder alignment, Mentoring
+
+Languages:
+English — C2
+French — B2
+
+Certifications:
+TensorFlow Developer Certificate
+Google Professional Data Engineer

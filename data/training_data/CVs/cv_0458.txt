@@ -1,0 +1,43 @@
+Name: Nathan Hassan
+Gender: Male
+Date of Birth: 1995-11-02
+Address: 670 Riverside Street, 64076 Cologne, Germany
+Email: nathan.hassan95@mailhub.com
+Phone: +39-296-181-9901
+Target Role: Cybersecurity Analyst
+
+Professional Summary:
+Cybersecurity Analyst focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Master of Science — Cybersecurity — Politecnico di Milano — 2016
+
+Experience:
+Cybersecurity Analyst — Atlas Networks — Cologne, Germany — 2018-09 to 2020-08
+
+* Improved vulnerability remediation reporting across infrastructure teams.
+* Hardened access controls and baseline monitoring practices.
+* Supported incident investigations with structured evidence collection.
+
+Security Analyst — Signal Tech — Cologne, Germany — 2021-12 to 2023-11
+
+* Hardened access controls and baseline monitoring practices.
+* Reduced mean time to detect by 18% through stronger alert triage.
+* Improved vulnerability remediation reporting across infrastructure teams.
+
+Senior Cybersecurity Analyst — Nova Solutions — Cologne, Germany — 2024-01 to Present
+
+* Supported incident investigations with structured evidence collection.
+* Hardened access controls and baseline monitoring practices.
+
+Skills:
+Technical: Splunk, Python, Wireshark, SIEM, Linux
+Methods: Risk assessment, Log analysis, Threat analysis, Documentation, Incident response
+Management: Documentation, Incident communication, Policy awareness, Cross-team coordination, Task coordination
+
+Languages:
+English — C2
+
+Certifications:
+Certified Ethical Hacker
+AWS Cloud Practitioner

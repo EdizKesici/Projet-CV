@@ -1,0 +1,43 @@
+Name: Ethan Hassan
+Gender: Male
+Date of Birth: 1987-11-16
+Address: 198 Oakridge Street, 37809 Milan, Italy
+Email: ethan.hassan87@email.com
+Phone: +353-470-276-4594
+Target Role: Frontend Developer
+
+Professional Summary:
+Frontend Developer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Science — Information Technology — Indian Institute of Technology Delhi — 2014
+
+Experience:
+Frontend Developer — North Networks — Milan, Italy — 2015-08 to 2018-10
+
+* Partnered with designers to deliver accessible interfaces at scale.
+* Improved page performance scores by 22% across key user journeys.
+
+Frontend Engineer — Quantum Labs — Milan, Italy — 2019-09 to 2022-03
+
+* Reduced UI defects through stronger test automation and QA collaboration.
+* Built reusable component libraries that accelerated feature delivery.
+* Improved page performance scores by 32% across key user journeys.
+
+Senior Frontend Developer — Core Insight — Milan, Italy — 2023-02 to Present
+
+* Reduced UI defects through stronger test automation and QA collaboration.
+* Partnered with designers to deliver accessible interfaces at scale.
+* Built reusable component libraries that accelerated feature delivery.
+
+Skills:
+Technical: JavaScript, TypeScript, React, Next.js, Linux
+Methods: State management, Responsive design, Performance optimization, Root cause analysis, Component architecture, Accessibility
+Management: Sprint planning, Code review, Requirement clarification
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+AWS Cloud Practitioner

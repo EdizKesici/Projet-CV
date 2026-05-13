@@ -1,0 +1,45 @@
+Name: Victor Hassan
+Gender: Male
+Date of Birth: 1996-03-12
+Address: 506 Park Street, 30600 Cologne, Germany
+Email: victor.hassan96@inboxmail.net
+Phone: +91-931-557-8505
+Target Role: QA Engineer
+
+Professional Summary:
+Technology specialist with 8+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Brings a practical approach to delivery, prioritization, and collaboration across teams.
+
+Education:
+Bachelor of Science — Software Engineering — Politecnico di Milano — 2018
+
+Experience:
+QA Engineer — Data Platform — Cologne, Germany — 2018-12 to 2020-05
+
+* Improved release readiness through clearer test reporting.
+* Partnered with developers to reproduce and isolate production issues.
+
+Test Engineer — Vector Works — Cologne, Germany — 2021-12 to 2023-08
+
+* Partnered with developers to reproduce and isolate production issues.
+* Improved release readiness through clearer test reporting.
+* Reduced escaped defects by 28% by expanding regression coverage.
+* Developed automation suites for critical API and UI flows.
+
+Senior QA Engineer — Vector Platform — Cologne, Germany — 2024-11 to Present
+
+* Partnered with developers to reproduce and isolate production issues.
+* Reduced escaped defects by 34% by expanding regression coverage.
+* Developed automation suites for critical API and UI flows.
+* Improved release readiness through clearer test reporting.
+
+Skills:
+Technical: Postman, Cypress, Python
+Methods: Agile collaboration, Defect tracking, Test planning, Regression testing
+Management: Cross-team coordination, Risk communication, Documentation
+
+Languages:
+English — C2
+Spanish — B2
+
+Certifications:
+Postman API Fundamentals

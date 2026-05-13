@@ -1,0 +1,43 @@
+Name: Zoe Andersen
+Gender: Female
+Date of Birth: 1996-04-10
+Address: 567 Riverside Street, 19859 Cologne, Germany
+Email: zoe.andersen96@email.com
+Phone: +351-684-681-3204
+Target Role: DevOps Engineer
+
+Professional Summary:
+Professional pursuing DevOps Engineer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Known for clear communication, structured problem solving, and strong execution in fast-moving environments.
+
+Education:
+Bachelor of Science — Software Engineering — University of Warsaw — 2018
+
+Experience:
+DevOps Engineer — Quantum Platform — Cologne, Germany — 2019-01 to 2021-02
+
+* Reduced release lead time by 13% through CI/CD automation.
+* Supported engineering teams during incidents and postmortem actions while coordinating work across engineers and analysts.
+* Improved platform reliability with stronger observability and runbooks.
+
+Cloud Engineer — Nova Systems — Cologne, Germany — 2022-01 to 2024-03
+
+* Improved platform reliability with stronger observability and runbooks.
+* Standardized infrastructure provisioning across environments.
+* Reduced release lead time by 24% through CI/CD automation.
+
+Platform Engineer — Nova Solutions — Cologne, Germany — 2025-01 to Present
+
+* Standardized infrastructure provisioning across environments while coordinating work across engineers and analysts.
+* Reduced release lead time by 21% through CI/CD automation while coordinating work across engineers and analysts.
+
+Skills:
+Technical: GitHub Actions, Terraform, Linux, Python, Docker
+Methods: Incident response, Monitoring, CI/CD, Infrastructure as code
+Management: Technical mentoring, Documentation
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+AWS Certified SysOps Administrator

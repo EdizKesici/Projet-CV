@@ -1,0 +1,33 @@
+Name: Iris Rossi
+Gender: Female
+Date of Birth: 2002-12-22
+Address: 404 Oakridge Avenue, Seattle, WA 15796, USA
+Email: iris.rossi02@mailhub.com
+Phone: +351-564-442-3808
+Target Role: Data Analyst
+
+Professional Summary:
+Technology specialist with 1+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning. Brings a practical approach to delivery, prioritization, and collaboration across teams.
+
+Education:
+Bachelor of Science — Data Analytics — Indian Institute of Technology Delhi — 2025
+
+Experience:
+Junior Data Analyst — Core Networks — Seattle, WA — 2025-03 to Present
+
+* Built weekly KPI reports adopted by finance and commercial teams.
+* Designed analysis workflows that reduced data preparation time by 34%.
+* Improved reporting efficiency by 28% through dashboard automation.
+
+Skills:
+Technical: Power BI, R, Git, Tableau, SQL
+Methods: Regression analysis, KPI tracking, Dashboard design, Data visualization, Documentation
+Management: Project coordination, Requirement gathering, Stakeholder communication, Prioritization
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+Google Data Analytics Certificate
+Professional Scrum Master I

@@ -1,0 +1,44 @@
+Name: David Silva
+Gender: Male
+Date of Birth: 1989-04-24
+Address: 790 Riverside Street, 43917 Cologne, Germany
+Email: david.silva89@mailhub.com
+Phone: +48-585-383-5307
+Target Role: Backend Developer
+
+Professional Summary:
+Backend Developer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Bachelor of Science — Information Technology — University of Colorado Boulder — 2018
+
+Experience:
+Backend Developer — Nova Solutions — Cologne, Germany — 2020-02 to 2022-03
+
+* Expanded automated test coverage for payment and account workflows.
+* Reduced API response time by 34% through query and caching improvements.
+
+Software Developer — Signal Tech — Cologne, Germany — 2023-12 to 2024-08
+
+* Designed service integrations used across multiple product teams.
+* Improved reliability of core backend services handling business-critical traffic.
+
+Backend Engineer — North Systems — Cologne, Germany — 2025-05 to Present
+
+* Reduced API response time by 28% through query and caching improvements.
+* Designed service integrations used across multiple product teams.
+* Improved reliability of core backend services handling business-critical traffic.
+* Expanded automated test coverage for payment and account workflows.
+
+Skills:
+Technical: Git, Redis, Go, Python
+Methods: Performance tuning, Microservices, System design, Unit testing, API design
+Management: Technical communication, Task estimation, Code review
+
+Languages:
+English — C2
+German — B1
+
+Certifications:
+ITIL Foundation
+Scrum Fundamentals Certified

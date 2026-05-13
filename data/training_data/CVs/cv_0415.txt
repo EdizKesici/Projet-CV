@@ -1,0 +1,40 @@
+Name: Olivia Andersen
+Gender: Female
+Date of Birth: 1995-04-13
+Address: 23 Park Street, 64908 Lisbon, Portugal
+Email: olivia.andersen95@inboxmail.net
+Phone: +1-515-843-6696
+Target Role: Data Analyst
+
+Professional Summary:
+Professional pursuing Data Analyst opportunities with exposure to production environments, team delivery, and measurable operational improvements. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Brings a practical approach to delivery, prioritization, and collaboration across teams.
+
+Education:
+Bachelor of Science — Economics — University of Texas at Austin — 2020
+
+Experience:
+Junior Data Analyst — Blue Platform — Lisbon, Portugal — 2020-02 to 2023-02
+
+* Built weekly KPI reports adopted by finance and commercial teams.
+* Improved reporting efficiency by 13% through dashboard automation.
+* Validated source data quality and reduced recurring discrepancies across reports.
+
+Data Analyst — Signal Works — Lisbon, Portugal — 2024-09 to Present
+
+* Improved reporting efficiency by 31% through dashboard automation.
+* Designed analysis workflows that reduced data preparation time by 18%.
+* Validated source data quality and reduced recurring discrepancies across reports.
+* Built weekly KPI reports adopted by finance and commercial teams.
+
+Skills:
+Technical: Monitoring, REST APIs, Python, Excel, R, Looker, Tableau, Power BI
+Methods: Data visualization, Dashboard design, A/B testing, KPI tracking
+Management: Stakeholder communication, Project coordination, Prioritization, Requirement gathering, Communication
+
+Languages:
+English — C2
+French — B2
+
+Certifications:
+Microsoft Power BI Data Analyst
+Certified Analytics Professional

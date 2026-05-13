@@ -1,0 +1,46 @@
+Name: Arjun Patel
+Gender: Male
+Date of Birth: 1997-12-07
+Address: 559 Birch Avenue, Austin, TX 81552, USA
+Email: arjun.patel97@mailhub.com
+Phone: +1-230-804-2471
+Target Role: Product Analyst
+
+Professional Summary:
+Product Analyst focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Known for clear communication, structured problem solving, and strong execution in fast-moving environments.
+
+Education:
+Bachelor of Science — Economics — Indian Institute of Technology Delhi — 2018
+
+Experience:
+Product Analyst — Core Systems — Austin, TX — 2018-07 to 2020-01
+
+* Defined self-serve metrics for feature adoption and retention analysis.
+* Connected product analytics findings to roadmap prioritization decisions.
+
+Growth Analyst — Signal Labs — Austin, TX — 2021-06 to 2023-05
+
+* Built experiment readouts used by product and design leadership.
+* Defined self-serve metrics for feature adoption and retention analysis.
+* Connected product analytics findings to roadmap prioritization decisions.
+* Identified product funnel bottlenecks and improved conversion by 23%.
+
+Senior Product Analyst — North Dynamics — Austin, TX — 2024-12 to Present
+
+* Defined self-serve metrics for feature adoption and retention analysis.
+* Connected product analytics findings to roadmap prioritization decisions.
+* Identified product funnel bottlenecks and improved conversion by 33%.
+* Built experiment readouts used by product and design leadership.
+
+Skills:
+Technical: Tableau, Amplitude, Excel, SQL, Mixpanel, Python
+Methods: Funnel analysis, Cohort analysis, Experimentation
+Management: Communication, Stakeholder alignment, Cross-functional collaboration, Planning
+
+Languages:
+English — C2
+French — B2
+
+Certifications:
+AWS Cloud Practitioner
+Amplitude Foundations

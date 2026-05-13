@@ -1,0 +1,33 @@
+Name: Thomas Aliyev
+Gender: Male
+Date of Birth: 1997-04-07
+Address: 794 Maple Street, 31851 Lyon, France
+Email: thomas.aliyev97@email.com
+Phone: +49-742-143-3492
+Target Role: Backend Developer
+
+Professional Summary:
+Backend Developer with 2+ years of experience delivering reliable technical solutions and measurable business impact. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Interested in roles that combine execution, communication, and measurable business outcomes.
+
+Education:
+Bachelor of Science — Information Technology — Indian Institute of Technology Delhi — 2022
+
+Experience:
+Backend Developer — Quantum Networks — Lyon, France — 2024-08 to Present
+
+* Expanded automated test coverage for payment and account workflows.
+* Reduced API response time by 29% through query and caching improvements.
+* Designed service integrations used across multiple product teams.
+* Improved reliability of core backend services handling business-critical traffic.
+
+Skills:
+Technical: Python, Notion, REST APIs, Docker, Java
+Methods: Performance tuning, API design, Microservices
+Management: Technical communication, Collaboration, Task estimation, Code review
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+None listed

@@ -1,0 +1,36 @@
+Name: Hannah Kim
+Gender: Female
+Date of Birth: 1996-04-22
+Address: 131 Cedar Street, 37618 Cologne, Germany
+Email: hannah.kim96@mailhub.com
+Phone: +33-430-231-4929
+Target Role: DevOps Engineer
+
+Professional Summary:
+Analytical professional targeting DevOps Engineer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning. Used to learning new tools quickly when projects require broader technical coverage.
+
+Education:
+Master of Science — Network Engineering — University of Lagos — 2021
+
+Experience:
+DevOps Engineer — Atlas Systems — Cologne, Germany — 2023-05 to Present
+
+* Reduced release lead time by 32% through CI/CD automation.
+* Standardized infrastructure provisioning across environments.
+* Supported engineering teams during incidents and postmortem actions.
+* Improved platform reliability with stronger observability and runbooks.
+
+Skills:
+Technical: GitHub Actions, Terraform, Kubernetes, Python, Linux, AWS
+Methods: Root cause analysis, Incident response, CI/CD, Automation
+Management: Incident coordination, Technical mentoring
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+HashiCorp Terraform Associate
+Scrum Fundamentals Certified
+CKA
+Professional Scrum Master I

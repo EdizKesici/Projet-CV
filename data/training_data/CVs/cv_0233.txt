@@ -1,0 +1,38 @@
+Name: Samuel Popescu
+Gender: Male
+Date of Birth: 1991-07-26
+Address: 780 Pinecrest Avenue, Austin, TX 15040, USA
+Email: samuel.popescu91@inboxmail.net
+Phone: +49-730-872-7387
+Target Role: Backend Developer
+
+Professional Summary:
+Professional pursuing Backend Developer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Computer Science — University of Amsterdam — 2020
+
+Experience:
+Backend Developer — Data Dynamics — Austin, TX — 2020-09 to 2023-06
+
+* Reduced API response time by 22% through query and caching improvements.
+* Designed service integrations used across multiple product teams.
+* Improved reliability of core backend services handling business-critical traffic.
+
+Backend Engineer — Quantum Labs — Austin, TX — 2024-06 to Present
+
+* Improved reliability of core backend services handling business-critical traffic.
+* Designed service integrations used across multiple product teams.
+
+Skills:
+Technical: Docker, Java, PostgreSQL, Go, REST APIs, Python
+Methods: Performance tuning, Unit testing, API design
+Management: Collaboration, Code review
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+Azure Developer Associate
+AWS Certified Developer

@@ -1,0 +1,45 @@
+Name: Zoe Bianchi
+Gender: Female
+Date of Birth: 1990-02-25
+Address: 927 Hillview Street, 73385 Amsterdam, Netherlands
+Email: zoe.bianchi90@email.com
+Phone: +1-281-273-1277
+Target Role: Software Engineer
+
+Professional Summary:
+Software Engineer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Interested in roles that combine execution, communication, and measurable business outcomes.
+
+Education:
+Bachelor of Science — Computer Science — Politecnico di Milano — 2018
+
+Experience:
+Software Engineer — Core Labs — Amsterdam, Netherlands — 2018-03 to 2020-06
+
+* Contributed to CI/CD and release quality across multiple services.
+* Delivered software features that improved internal process efficiency by 24%.
+* Maintained core application modules with strong uptime and defect control.
+
+Software Developer — Data Works — Amsterdam, Netherlands — 2021-12 to 2023-03
+
+* Collaborated on architectural improvements for long-term scalability.
+* Delivered software features that improved internal process efficiency by 25%.
+* Maintained core application modules with strong uptime and defect control.
+* Contributed to CI/CD and release quality across multiple services.
+
+Senior Software Engineer — Blue Insight — Amsterdam, Netherlands — 2024-11 to Present
+
+* Maintained core application modules with strong uptime and defect control.
+* Delivered software features that improved internal process efficiency by 24%.
+* Collaborated on architectural improvements for long-term scalability.
+
+Skills:
+Technical: Python, SQL, Java, Git, REST APIs
+Methods: Testing, Object-oriented design, Agile delivery
+Management: Planning, Collaboration
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+Professional Scrum Developer

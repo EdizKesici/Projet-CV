@@ -1,0 +1,40 @@
+Name: Samuel Popescu
+Gender: Male
+Date of Birth: 1991-08-11
+Address: 835 Park Street, 54389 Bengaluru, India
+Email: samuel.popescu91@email.com
+Phone: +39-966-691-8046
+Target Role: Product Analyst
+
+Professional Summary:
+Product Analyst focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Has supported mentoring, planning, and coordination activities alongside individual technical work. Comfortable contributing in environments with evolving priorities and shared ownership.
+
+Education:
+Master of Science — Economics — University of Bonn — 2018
+
+Experience:
+Product Analyst — Quantum Networks — Bengaluru, India — 2020-11 to 2023-07
+
+* Built experiment readouts used by product and design leadership.
+* Defined self-serve metrics for feature adoption and retention analysis while coordinating work across engineers and analysts.
+* Connected product analytics findings to roadmap prioritization decisions while coordinating work across engineers and analysts.
+
+Growth Analyst — Atlas Works — Bengaluru, India — 2024-12 to Present
+
+* Connected product analytics findings to roadmap prioritization decisions while coordinating work across engineers and analysts.
+* Defined self-serve metrics for feature adoption and retention analysis while coordinating work across engineers and analysts.
+* Built experiment readouts used by product and design leadership while coordinating work across engineers and analysts.
+
+Skills:
+Technical: Cloud fundamentals, Python, CI/CD, Looker, Excel, Mixpanel, SQL
+Methods: Funnel analysis, Product metrics, Cohort analysis, Experimentation, User behavior analysis
+Management: Stakeholder updates, Communication, Stakeholder alignment, Cross-functional collaboration
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+Google Data Analytics Certificate
+ITIL Foundation
+Certified Analytics Professional

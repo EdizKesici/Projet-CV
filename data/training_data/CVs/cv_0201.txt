@@ -1,0 +1,42 @@
+Name: Julia Okafor
+Gender: Female
+Date of Birth: 1994-01-06
+Address: 101 Pinecrest Street, 94871 Milan, Italy
+Email: julia.okafor94@email.com
+Phone: +48-303-837-3495
+Target Role: Frontend Developer
+
+Professional Summary:
+Technology specialist with 11+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Interested in roles that combine execution, communication, and measurable business outcomes.
+
+Education:
+Bachelor of Science — Software Engineering — Politecnico di Milano — 2015
+
+Experience:
+Frontend Developer — Atlas Dynamics — Milan, Italy — 2015-07 to 2018-06
+
+* Partnered with designers to deliver accessible interfaces at scale.
+* Reduced UI defects through stronger test automation and QA collaboration.
+
+Frontend Engineer — Vector Platform — Milan, Italy — 2019-12 to 2022-06
+
+* Built reusable component libraries that accelerated feature delivery.
+* Reduced UI defects through stronger test automation and QA collaboration.
+
+Senior Frontend Developer — North Dynamics — Milan, Italy — 2023-12 to Present
+
+* Partnered with designers to deliver accessible interfaces at scale.
+* Improved page performance scores by 12% across key user journeys.
+* Reduced UI defects through stronger test automation and QA collaboration.
+
+Skills:
+Technical: HTML, React, CSS
+Methods: Performance optimization, Component architecture, Problem solving, State management
+Management: Design collaboration, Code review
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+Professional Scrum Master I

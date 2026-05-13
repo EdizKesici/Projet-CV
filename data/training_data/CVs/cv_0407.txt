@@ -1,0 +1,38 @@
+Name: Hugo Petrov
+Gender: Male
+Date of Birth: 1995-06-09
+Address: 686 Pinecrest Street, 18503 Milan, Italy
+Email: hugo.petrov95@mailhub.com
+Phone: +1-526-822-5282
+Target Role: QA Engineer
+
+Professional Summary:
+Technology specialist with 4+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Arts — Computer Science — University of Bonn — 2021
+
+Experience:
+QA Engineer — Nova Analytics — Milan, Italy — 2022-03 to 2024-12
+
+* Partnered with developers to reproduce and isolate production issues.
+* Improved release readiness through clearer test reporting.
+* Reduced escaped defects by 23% by expanding regression coverage.
+* Developed automation suites for critical API and UI flows.
+
+Test Engineer — Atlas Solutions — Milan, Italy — 2025-12 to Present
+
+* Improved release readiness through clearer test reporting.
+* Partnered with developers to reproduce and isolate production issues.
+
+Skills:
+Technical: Selenium, Python, Notion, Cypress, API testing, Git
+Methods: Test planning, Defect tracking, Quality assurance, Regression testing, Test automation
+Management: Prioritization, Cross-team coordination, Documentation
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+ISTQB Foundation Level

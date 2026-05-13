@@ -1,0 +1,39 @@
+Name: Clara Fischer
+Gender: Female
+Date of Birth: 1998-01-18
+Address: 491 Hillview Street, 20285 Cologne, Germany
+Email: clara.fischer98@mailhub.com
+Phone: +353-458-295-9166
+Target Role: Data Scientist
+
+Professional Summary:
+Data Scientist with 4+ years of experience delivering reliable technical solutions and measurable business impact. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning. Interested in roles that combine execution, communication, and measurable business outcomes.
+
+Education:
+Bachelor of Science — Data Science — University of Colorado Boulder — 2022
+
+Experience:
+Data Scientist — Nova Dynamics — Cologne, Germany — 2022-09 to 2024-11
+
+* Improved model accuracy by 20% on a customer behavior prediction use case.
+* Built production-ready models with monitoring for drift and data quality.
+* Delivered experimentation frameworks used to prioritize product changes.
+* Translated ambiguous business questions into measurable ML experiments.
+
+Junior Data Scientist — Quantum Networks — Cologne, Germany — 2025-03 to Present
+
+* Improved model accuracy by 21% on a customer behavior prediction use case.
+* Translated ambiguous business questions into measurable ML experiments.
+
+Skills:
+Technical: Python, Pandas, TensorFlow, SQL
+Methods: Statistical inference, Experiment design, Forecasting
+Management: Cross-functional communication, Project planning
+
+Languages:
+English — C2
+German — B1
+
+Certifications:
+ITIL Foundation
+Google Data Analytics Certificate

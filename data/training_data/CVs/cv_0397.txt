@@ -1,0 +1,33 @@
+Name: Elena Santos
+Gender: Female
+Date of Birth: 1996-07-10
+Address: 221 Oakridge Street, 71018 Dublin, Ireland
+Email: elena.santos96@inboxmail.net
+Phone: +234-211-699-1562
+Target Role: ML Engineer
+
+Professional Summary:
+ML Engineer with 6+ years of experience delivering reliable technical solutions and measurable business impact. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Brings a practical approach to delivery, prioritization, and collaboration across teams.
+
+Education:
+Bachelor of Science — Software Engineering — University of Amsterdam — 2019
+
+Experience:
+Machine Learning Engineer — Nova Dynamics — Dublin, Ireland — 2020-01 to Present
+
+* Operationalized training and inference workflows for multiple production models.
+* Reduced model deployment time by 32% by standardizing CI/CD pipelines.
+
+Skills:
+Technical: PyTorch, AWS, Python, MLflow, Notion, CI/CD
+Methods: Model deployment, CI/CD, Monitoring, MLOps, Feature stores
+Management: Roadmap communication, Collaboration
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+CKA
+Professional Scrum Master I
+Scrum Fundamentals Certified

@@ -1,0 +1,43 @@
+Name: Victor Santos
+Gender: Male
+Date of Birth: 1986-04-27
+Address: 589 Cedar Street, 26088 Bengaluru, India
+Email: victor.santos86@mailhub.com
+Phone: +1-898-825-9887
+Target Role: Data Analyst
+
+Professional Summary:
+Technology specialist with 9+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning. Comfortable contributing in environments with evolving priorities and shared ownership.
+
+Education:
+Master of Science — Data Analytics — University of Warsaw — 2015
+
+Experience:
+Junior Data Analyst — Cloud Dynamics — Bengaluru, India — 2017-01 to 2020-06
+
+* Validated source data quality and reduced recurring discrepancies across reports.
+* Built weekly KPI reports adopted by finance and commercial teams.
+
+Data Analyst — Blue Insight — Bengaluru, India — 2021-05 to 2023-11
+
+* Improved reporting efficiency by 22% through dashboard automation.
+* Designed analysis workflows that reduced data preparation time by 18%.
+* Validated source data quality and reduced recurring discrepancies across reports.
+* Built weekly KPI reports adopted by finance and commercial teams.
+
+Senior Data Analyst — Vector Works — Bengaluru, India — 2024-10 to Present
+
+* Built weekly KPI reports adopted by finance and commercial teams.
+* Improved reporting efficiency by 31% through dashboard automation.
+
+Skills:
+Technical: Power BI, Excel, R, Python, Looker
+Methods: Regression analysis, A/B testing, Data visualization
+Management: Prioritization, Project coordination, Requirement gathering, Stakeholder communication
+
+Languages:
+English — C2
+Spanish — B2
+
+Certifications:
+Tableau Desktop Specialist

@@ -1,0 +1,32 @@
+Name: Yusuf Fischer
+Gender: Male
+Date of Birth: 2000-06-07
+Address: 470 Riverside Street, 31978 Milan, Italy
+Email: yusuf.fischer00@mailhub.com
+Phone: +49-261-709-5785
+Target Role: Backend Developer
+
+Professional Summary:
+Technology specialist with 3+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Used to learning new tools quickly when projects require broader technical coverage.
+
+Education:
+Master of Science — Computer Science — Indian Institute of Technology Delhi — 2023
+
+Experience:
+Backend Developer — Core Systems — Milan, Italy — 2023-01 to Present
+
+* Designed service integrations used across multiple product teams.
+* Reduced API response time by 26% through query and caching improvements.
+* Expanded automated test coverage for payment and account workflows.
+
+Skills:
+Technical: Python, Redis, Docker, REST APIs, Linux, Go
+Methods: API design, System design, Unit testing, Microservices, Problem solving, Performance tuning
+Management: Collaboration, Technical communication, Code review, Task estimation
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+None listed

@@ -1,0 +1,31 @@
+Name: Samuel Dubois
+Gender: Male
+Date of Birth: 2001-10-05
+Address: 32 Hillview Street, 65601 Bengaluru, India
+Email: samuel.dubois01@inboxmail.net
+Phone: +49-673-720-6136
+Target Role: Data Engineer
+
+Professional Summary:
+Data Engineer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Bachelor of Science — Software Engineering — Indian Institute of Technology Delhi — 2024
+
+Experience:
+Data Engineer — Signal Systems — Bengaluru, India — 2025-09 to Present
+
+* Designed reliable ingestion jobs for operational and product datasets.
+* Supported analytics and ML teams with curated data models.
+
+Skills:
+Technical: Spark, Kafka, SQL, AWS, dbt, Python
+Methods: Pipeline orchestration, Data modeling, ETL design, Batch processing
+Management: Planning, Documentation, Cross-team coordination
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+None listed

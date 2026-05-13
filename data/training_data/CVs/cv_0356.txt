@@ -1,0 +1,33 @@
+Name: Iris Silva
+Gender: Female
+Date of Birth: 1993-11-17
+Address: 29 Linden Street, 97076 Lyon, France
+Email: iris.silva93@mailhub.com
+Phone: +33-991-833-1920
+Target Role: BI Developer
+
+Professional Summary:
+BI Developer with 8+ years of experience delivering reliable technical solutions and measurable business impact. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning. Comfortable contributing in environments with evolving priorities and shared ownership.
+
+Education:
+Bachelor of Science — Information Systems — University of Colorado Boulder — 2017
+
+Experience:
+Senior BI Developer — Cloud Platform — Lyon, France — 2018-05 to Present
+
+* Consolidated fragmented reporting into dashboards used by executives.
+* Translated stakeholder requests into reusable metrics and semantic layers.
+* Partnered with analysts to validate business definitions across domains.
+* Improved data refresh reliability and reduced manual reporting effort by 33%.
+
+Skills:
+Technical: SQL, Excel, Python
+Methods: KPI definition, ETL workflows, Business analysis, Dimensional modeling, Dashboard design
+Management: Documentation, Stakeholder communication, Planning, Requirement gathering
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+IBM Data Analyst Professional Certificate

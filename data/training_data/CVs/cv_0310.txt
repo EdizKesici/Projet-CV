@@ -1,0 +1,33 @@
+Name: Olivia Hassan
+Gender: Female
+Date of Birth: 2000-11-21
+Address: 713 Park Street, 74429 Lagos, Nigeria
+Email: olivia.hassan00@inboxmail.net
+Phone: +49-777-298-3469
+Target Role: DevOps Engineer
+
+Professional Summary:
+DevOps Engineer with 2+ years of experience delivering reliable technical solutions and measurable business impact. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Science — Information Systems — University of Colorado Boulder — 2022
+
+Experience:
+DevOps Engineer — Quantum Dynamics — Lagos, Nigeria — 2024-02 to Present
+
+* Reduced release lead time by 15% through CI/CD automation.
+* Standardized infrastructure provisioning across environments.
+* Improved platform reliability with stronger observability and runbooks.
+* Supported engineering teams during incidents and postmortem actions.
+
+Skills:
+Technical: Linux, Docker, Python, Terraform, Cloud fundamentals
+Methods: CI/CD, Infrastructure as code, Incident response, Automation
+Management: Task coordination, Technical mentoring, Collaboration, Documentation, Incident coordination
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+None listed

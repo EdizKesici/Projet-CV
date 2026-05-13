@@ -1,0 +1,37 @@
+Name: David Santos
+Gender: Male
+Date of Birth: 1994-01-22
+Address: 939 Hillview Avenue, Seattle, WA 59517, USA
+Email: david.santos94@mailhub.com
+Phone: +351-730-591-5368
+Target Role: ML Engineer
+
+Professional Summary:
+Professional pursuing ML Engineer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Master of Science — Machine Learning — Politecnico di Milano — 2017
+
+Experience:
+ML Engineer — Vector Labs — Seattle, WA — 2019-02 to 2022-07
+
+* Improved observability for inference latency and feature freshness.
+* Reduced model deployment time by 27% by standardizing CI/CD pipelines.
+* Partnered with data scientists to convert prototypes into resilient services.
+
+Machine Learning Engineer — Core Networks — Seattle, WA — 2023-12 to Present
+
+* Partnered with data scientists to convert prototypes into resilient services.
+* Operationalized training and inference workflows for multiple production models.
+
+Skills:
+Technical: Docker, Python, TensorFlow, MLflow
+Methods: CI/CD, Model deployment, MLOps, Monitoring
+Management: Roadmap communication, Collaboration, Technical mentoring
+
+Languages:
+English — C2
+Spanish — B2
+
+Certifications:
+Google Professional Machine Learning Engineer

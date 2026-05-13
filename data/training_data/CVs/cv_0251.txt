@@ -1,0 +1,44 @@
+Name: David Bianchi
+Gender: Male
+Date of Birth: 1996-01-27
+Address: 163 Cedar Street, 45616 Lisbon, Portugal
+Email: david.bianchi96@inboxmail.net
+Phone: +234-970-305-7007
+Target Role: BI Developer
+
+Professional Summary:
+BI Developer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Comfortable contributing in environments with evolving priorities and shared ownership.
+
+Education:
+Bachelor of Science — Information Systems — University of Bonn — 2017
+
+Experience:
+BI Developer — Blue Systems — Lisbon, Portugal — 2019-03 to 2021-10
+
+* Translated stakeholder requests into reusable metrics and semantic layers.
+* Partnered with analysts to validate business definitions across domains.
+
+Reporting Developer — Cloud Labs — Lisbon, Portugal — 2022-07 to 2024-01
+
+* Translated stakeholder requests into reusable metrics and semantic layers.
+* Improved data refresh reliability and reduced manual reporting effort by 22%.
+
+Business Intelligence Developer — Atlas Dynamics — Lisbon, Portugal — 2025-07 to Present
+
+* Partnered with analysts to validate business definitions across domains.
+* Improved data refresh reliability and reduced manual reporting effort by 16%.
+* Consolidated fragmented reporting into dashboards used by executives.
+* Translated stakeholder requests into reusable metrics and semantic layers.
+
+Skills:
+Technical: Excel, SSIS, Tableau, SQL
+Methods: Dimensional modeling, KPI definition, Business analysis
+Management: Planning, Stakeholder communication, Requirement gathering, Documentation
+
+Languages:
+English — C2
+German — B1
+
+Certifications:
+Tableau Desktop Specialist
+Microsoft Power BI Data Analyst

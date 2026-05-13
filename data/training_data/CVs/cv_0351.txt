@@ -1,0 +1,37 @@
+Name: Anna Popescu
+Gender: Female
+Date of Birth: 1997-08-17
+Address: 450 Linden Street, 12283 Dublin, Ireland
+Email: anna.popescu97@mailhub.com
+Phone: +33-601-482-8531
+Target Role: Cybersecurity Analyst
+
+Professional Summary:
+Professional pursuing Cybersecurity Analyst opportunities with exposure to production environments, team delivery, and measurable operational improvements. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Science — Cybersecurity — University of Texas at Austin — 2020
+
+Experience:
+Cybersecurity Analyst — North Works — Dublin, Ireland — 2022-04 to 2024-02
+
+* Reduced mean time to detect by 19% through stronger alert triage.
+* Supported incident investigations with structured evidence collection.
+* Hardened access controls and baseline monitoring practices.
+
+Security Analyst — Signal Works — Dublin, Ireland — 2025-12 to Present
+
+* Hardened access controls and baseline monitoring practices.
+* Reduced mean time to detect by 12% through stronger alert triage.
+
+Skills:
+Technical: IAM, Wireshark, Python, Vulnerability scanning
+Methods: Security monitoring, Risk assessment, Threat analysis
+Management: Incident communication, Policy awareness
+
+Languages:
+English — C2
+French — B2
+
+Certifications:
+CompTIA Security+

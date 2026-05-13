@@ -1,0 +1,48 @@
+Name: Hugo Popescu
+Gender: Male
+Date of Birth: 1993-04-09
+Address: 523 Riverside Street, 51361 Bengaluru, India
+Email: hugo.popescu93@email.com
+Phone: +31-740-223-6521
+Target Role: Cybersecurity Analyst
+
+Professional Summary:
+Technology specialist with 8+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning. Used to learning new tools quickly when projects require broader technical coverage.
+
+Education:
+Bachelor of Science — Information Security — University of Colorado Boulder — 2016
+
+Experience:
+Cybersecurity Analyst — Quantum Systems — Bengaluru, India — 2018-02 to 2020-03
+
+* Reduced mean time to detect by 21% through stronger alert triage.
+* Supported incident investigations with structured evidence collection.
+* Improved vulnerability remediation reporting across infrastructure teams.
+* Hardened access controls and baseline monitoring practices.
+
+Security Analyst — Data Dynamics — Bengaluru, India — 2021-11 to 2023-10
+
+* Supported incident investigations with structured evidence collection.
+* Hardened access controls and baseline monitoring practices.
+* Reduced mean time to detect by 31% through stronger alert triage.
+* Improved vulnerability remediation reporting across infrastructure teams.
+
+Senior Cybersecurity Analyst — Atlas Solutions — Bengaluru, India — 2024-04 to Present
+
+* Reduced mean time to detect by 18% through stronger alert triage.
+* Supported incident investigations with structured evidence collection.
+* Improved vulnerability remediation reporting across infrastructure teams.
+* Hardened access controls and baseline monitoring practices.
+
+Skills:
+Technical: Python, SIEM, IAM, Wireshark, Linux, Splunk
+Methods: Risk assessment, Security monitoring, Threat analysis, Incident response
+Management: Cross-team coordination, Incident communication, Documentation
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+CompTIA Security+
+GIAC Security Essentials

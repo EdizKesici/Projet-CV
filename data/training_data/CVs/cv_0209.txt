@@ -1,0 +1,35 @@
+Name: Aisha Martinez
+Gender: Female
+Date of Birth: 2002-06-06
+Address: 103 Hillview Avenue, Denver, CO 72125, USA
+Email: aisha.martinez02@email.com
+Phone: +91-585-261-4224
+Target Role: Frontend Developer
+
+Professional Summary:
+Professional pursuing Frontend Developer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Human-Computer Interaction — University of Amsterdam — 2023
+
+Experience:
+Frontend Developer — Vector Tech — Denver, CO — 2023-04 to Present
+
+* Improved page performance scores by 26% across key user journeys.
+* Partnered with designers to deliver accessible interfaces at scale.
+* Reduced UI defects through stronger test automation and QA collaboration.
+
+Skills:
+Technical: React, JavaScript, Next.js, CSS, Testing Library
+Methods: Accessibility, Responsive design, State management, Performance optimization
+Management: Sprint planning, Design collaboration, Code review
+
+Languages:
+English — C2
+German — B1
+
+Certifications:
+Scrum Fundamentals Certified
+ITIL Foundation
+Professional Scrum Master I
+AWS Cloud Practitioner

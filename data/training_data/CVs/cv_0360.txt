@@ -1,0 +1,38 @@
+Name: Camila Petrov
+Gender: Female
+Date of Birth: 1996-01-18
+Address: 761 Oakridge Street, 42785 Bengaluru, India
+Email: camila.petrov96@email.com
+Phone: +234-929-283-1360
+Target Role: Cybersecurity Analyst
+
+Professional Summary:
+Cybersecurity Analyst focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Known for clear communication, structured problem solving, and strong execution in fast-moving environments.
+
+Education:
+Bachelor of Science — Computer Science — University of Bonn — 2018
+
+Experience:
+Cybersecurity Analyst — Nova Dynamics — Bengaluru, India — 2020-10 to 2023-10
+
+* Hardened access controls and baseline monitoring practices.
+* Reduced mean time to detect by 31% through stronger alert triage.
+* Supported incident investigations with structured evidence collection.
+
+Security Analyst — North Solutions — Bengaluru, India — 2024-07 to Present
+
+* Hardened access controls and baseline monitoring practices.
+* Supported incident investigations with structured evidence collection.
+
+Skills:
+Technical: IAM, Python, SIEM, Linux, Vulnerability scanning, Wireshark
+Methods: Threat analysis, Security monitoring, Risk assessment, Incident response, Log analysis, Documentation
+Management: Documentation, Policy awareness, Incident communication, Cross-team coordination
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+CompTIA Security+
+Certified Ethical Hacker

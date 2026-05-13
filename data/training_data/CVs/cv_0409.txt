@@ -1,0 +1,37 @@
+Name: Iris Rossi
+Gender: Female
+Date of Birth: 1994-04-18
+Address: 429 Hillview Street, 51865 Amsterdam, Netherlands
+Email: iris.rossi94@mailhub.com
+Phone: +351-433-863-9724
+Target Role: BI Developer
+
+Professional Summary:
+BI Developer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning. Brings a practical approach to delivery, prioritization, and collaboration across teams.
+
+Education:
+Master of Science — Statistics — Indian Institute of Technology Delhi — 2018
+
+Experience:
+BI Developer — Core Insight — Amsterdam, Netherlands — 2019-04 to 2022-12
+
+* Partnered with analysts to validate business definitions across domains.
+* Translated stakeholder requests into reusable metrics and semantic layers.
+
+Business Intelligence Developer — Nova Analytics — Amsterdam, Netherlands — 2023-10 to Present
+
+* Translated stakeholder requests into reusable metrics and semantic layers.
+* Consolidated fragmented reporting into dashboards used by executives.
+* Improved data refresh reliability and reduced manual reporting effort by 28%.
+
+Skills:
+Technical: DAX, SQL, ETL basics, Excel, Documentation, Python, SSIS
+Methods: Dimensional modeling, KPI definition, ETL workflows, Business analysis, Dashboard design
+Management: Stakeholder communication, Requirement gathering, Documentation
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+IBM Data Analyst Professional Certificate

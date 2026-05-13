@@ -1,0 +1,45 @@
+Name: Mateo Patel
+Gender: Male
+Date of Birth: 1993-05-19
+Address: 154 Hillview Avenue, Seattle, WA 53760, USA
+Email: mateo.patel93@mailhub.com
+Phone: +48-792-466-5658
+Target Role: QA Engineer
+
+Professional Summary:
+Analytical professional targeting QA Engineer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Arts — Information Technology — Indian Institute of Technology Delhi — 2018
+
+Experience:
+QA Engineer — Blue Analytics — Seattle, WA — 2018-02 to 2020-11
+
+* Developed automation suites for critical API and UI flows.
+* Improved release readiness through clearer test reporting.
+
+Test Engineer — Nova Networks — Seattle, WA — 2021-08 to 2023-07
+
+* Improved release readiness through clearer test reporting.
+* Developed automation suites for critical API and UI flows.
+* Partnered with developers to reproduce and isolate production issues.
+
+Senior QA Engineer — Nova Solutions — Seattle, WA — 2024-08 to Present
+
+* Partnered with developers to reproduce and isolate production issues.
+* Improved release readiness through clearer test reporting.
+
+Skills:
+Technical: API testing, Jira, Cypress, Postman, Cloud fundamentals, Python, SQL
+Methods: Defect tracking, Regression testing, Test automation
+Management: Cross-team coordination, Risk communication, Prioritization, Documentation
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+Google Data Analytics Certificate
+Postman API Fundamentals
+Scrum Fundamentals Certified
+Certified Agile Tester

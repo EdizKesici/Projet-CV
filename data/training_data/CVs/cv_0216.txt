@@ -1,0 +1,36 @@
+Name: Nathan Novak
+Gender: Male
+Date of Birth: 1996-11-21
+Address: 524 Pinecrest Street, 83321 Milan, Italy
+Email: nathan.novak96@email.com
+Phone: +234-853-669-7428
+Target Role: Cybersecurity Analyst
+
+Professional Summary:
+Technology specialist with 6+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning. Interested in roles that combine execution, communication, and measurable business outcomes.
+
+Education:
+Master of Science — Information Security — University of Lisbon — 2019
+
+Experience:
+Cybersecurity Analyst — Data Networks — Milan, Italy — 2020-09 to 2023-04
+
+* Supported incident investigations with structured evidence collection.
+* Improved vulnerability remediation reporting across infrastructure teams.
+
+Security Analyst — Signal Works — Milan, Italy — 2024-08 to Present
+
+* Supported incident investigations with structured evidence collection.
+* Hardened access controls and baseline monitoring practices.
+
+Skills:
+Technical: IAM, Splunk, Wireshark, Bash, Linux, SIEM
+Methods: Security monitoring, Incident response, Log analysis
+Management: Incident communication, Cross-team coordination, Documentation, Policy awareness
+
+Languages:
+English — C2
+German — B1
+
+Certifications:
+GIAC Security Essentials

@@ -1,0 +1,36 @@
+Name: David Popescu
+Gender: Male
+Date of Birth: 2000-01-16
+Address: 654 Maple Street, 44797 Amsterdam, Netherlands
+Email: david.popescu00@email.com
+Phone: +351-966-843-4142
+Target Role: Data Analyst
+
+Professional Summary:
+Professional pursuing Data Analyst opportunities with exposure to production environments, team delivery, and measurable operational improvements. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Bachelor of Science — Economics — Politecnico di Milano — 2021
+
+Experience:
+Junior Data Analyst — Core Tech — Amsterdam, Netherlands — 2021-10 to 2023-11
+
+* Built weekly KPI reports adopted by finance and commercial teams.
+* Improved reporting efficiency by 24% through dashboard automation.
+
+Data Analyst — Cloud Labs — Amsterdam, Netherlands — 2024-12 to Present
+
+* Designed analysis workflows that reduced data preparation time by 27%.
+* Improved reporting efficiency by 34% through dashboard automation.
+
+Skills:
+Technical: API integration, Power BI, Tableau, R, Python, SQL
+Methods: KPI tracking, Dashboard design, A/B testing, Regression analysis
+Management: Requirement gathering, Project coordination, Prioritization
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+None listed

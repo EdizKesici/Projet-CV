@@ -1,0 +1,33 @@
+Name: Luca Popescu
+Gender: Male
+Date of Birth: 1992-05-15
+Address: 116 Oakridge Avenue, Austin, TX 85051, USA
+Email: luca.popescu92@inboxmail.net
+Phone: +234-554-652-2804
+Target Role: Software Engineer
+
+Professional Summary:
+Software Engineer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning. Used to learning new tools quickly when projects require broader technical coverage.
+
+Education:
+Bachelor of Science — Computer Science — University of Lagos — 2013
+
+Experience:
+Senior Software Engineer — Vector Platform — Austin, TX — 2015-10 to Present
+
+* Maintained core application modules with strong uptime and defect control.
+* Contributed to CI/CD and release quality across multiple services.
+
+Skills:
+Technical: SQL, Docker, C#, Git, Python
+Methods: Object-oriented design, Agile delivery, Debugging, Testing
+Management: Communication, Planning, Mentoring, Collaboration
+
+Languages:
+English — C2
+Spanish — B2
+
+Certifications:
+AWS Certified Developer
+AWS Cloud Practitioner
+Professional Scrum Developer

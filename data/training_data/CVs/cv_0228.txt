@@ -1,0 +1,39 @@
+Name: Mateo Dubois
+Gender: Male
+Date of Birth: 1993-04-02
+Address: 351 Riverside Street, 46526 Cologne, Germany
+Email: mateo.dubois93@email.com
+Phone: +234-267-414-8124
+Target Role: ML Engineer
+
+Professional Summary:
+ML Engineer with 6+ years of experience delivering reliable technical solutions and measurable business impact. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Software Engineering — University of Warsaw — 2020
+
+Experience:
+ML Engineer — Cloud Insight — Cologne, Germany — 2020-08 to 2023-07
+
+* Reduced model deployment time by 34% by standardizing CI/CD pipelines.
+* Improved observability for inference latency and feature freshness.
+* Operationalized training and inference workflows for multiple production models.
+
+Machine Learning Engineer — Cloud Dynamics — Cologne, Germany — 2024-04 to Present
+
+* Reduced model deployment time by 27% by standardizing CI/CD pipelines.
+* Operationalized training and inference workflows for multiple production models.
+* Partnered with data scientists to convert prototypes into resilient services.
+* Improved observability for inference latency and feature freshness.
+
+Skills:
+Technical: AWS, MLflow, Docker, TensorFlow
+Methods: CI/CD, MLOps, Model deployment, Feature stores, Monitoring
+Management: Collaboration, Roadmap communication, Technical mentoring, Sprint planning
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+Google Professional Machine Learning Engineer

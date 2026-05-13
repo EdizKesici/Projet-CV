@@ -1,0 +1,33 @@
+Name: Aisha Dubois
+Gender: Female
+Date of Birth: 2000-01-12
+Address: 684 Cedar Street, 88652 Dublin, Ireland
+Email: aisha.dubois00@mailhub.com
+Phone: +48-582-121-7078
+Target Role: Frontend Developer
+
+Professional Summary:
+Professional pursuing Frontend Developer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning. Interested in roles that combine execution, communication, and measurable business outcomes.
+
+Education:
+Bachelor of Science — Computer Science — Trinity College Dublin — 2023
+
+Experience:
+Frontend Developer — Quantum Dynamics — Dublin, Ireland — 2025-05 to Present
+
+* Partnered with designers to deliver accessible interfaces at scale.
+* Built reusable component libraries that accelerated feature delivery.
+* Improved page performance scores by 28% across key user journeys.
+
+Skills:
+Technical: Testing Library, Linux, JavaScript, HTML, CSS, Git, Next.js
+Methods: Component architecture, Accessibility, Performance optimization, Responsive design
+Management: Design collaboration, Code review
+
+Languages:
+English — C2
+Spanish — B2
+
+Certifications:
+Meta Front-End Developer
+Professional Scrum Master I

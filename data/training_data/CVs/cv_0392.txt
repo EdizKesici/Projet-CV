@@ -1,0 +1,43 @@
+Name: Ethan Silva
+Gender: Male
+Date of Birth: 1993-04-03
+Address: 276 Admiralty Street, 37274 Lagos, Nigeria
+Email: ethan.silva93@email.com
+Phone: +33-550-562-7796
+Target Role: Data Analyst
+
+Professional Summary:
+Professional pursuing Data Analyst opportunities with exposure to production environments, team delivery, and measurable operational improvements. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Interested in roles that combine execution, communication, and measurable business outcomes.
+
+Education:
+Bachelor of Science — Economics — University of Lagos — 2015
+
+Experience:
+Junior Data Analyst — Cloud Labs — Lagos, Nigeria — 2017-01 to 2020-08
+
+* Improved reporting efficiency by 27% through dashboard automation.
+* Designed analysis workflows that reduced data preparation time by 12%.
+* Built weekly KPI reports adopted by finance and commercial teams.
+
+Data Analyst — Data Labs — Lagos, Nigeria — 2021-10 to 2023-08
+
+* Validated source data quality and reduced recurring discrepancies across reports.
+* Designed analysis workflows that reduced data preparation time by 16%.
+
+Senior Data Analyst — Blue Tech — Lagos, Nigeria — 2024-04 to Present
+
+* Validated source data quality and reduced recurring discrepancies across reports.
+* Designed analysis workflows that reduced data preparation time by 16%.
+* Improved reporting efficiency by 13% through dashboard automation.
+
+Skills:
+Technical: Looker, Power BI, Tableau, SQL, R, Excel
+Methods: A/B testing, Regression analysis, Dashboard design
+Management: Prioritization, Project coordination, Requirement gathering, Stakeholder communication
+
+Languages:
+English — C2
+German — B1
+
+Certifications:
+Certified Analytics Professional

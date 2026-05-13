@@ -1,0 +1,41 @@
+Name: Olivia Patel
+Gender: Female
+Date of Birth: 1989-06-03
+Address: 572 Hillview Street, 13095 Bengaluru, India
+Email: olivia.patel89@inboxmail.net
+Phone: +31-822-363-8687
+Target Role: Data Analyst
+
+Professional Summary:
+Technology specialist with 8+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Has supported mentoring, planning, and coordination activities alongside individual technical work.
+
+Education:
+Master of Science — Applied Mathematics — University of Bonn — 2018
+
+Experience:
+Junior Data Analyst — Core Analytics — Bengaluru, India — 2018-05 to 2020-09
+
+* Built weekly KPI reports adopted by finance and commercial teams.
+* Designed analysis workflows that reduced data preparation time by 23%.
+
+Data Analyst — Nova Labs — Bengaluru, India — 2021-02 to 2023-11
+
+* Improved reporting efficiency by 24% through dashboard automation.
+* Designed analysis workflows that reduced data preparation time by 14% while coordinating work across engineers and analysts.
+* Built weekly KPI reports adopted by finance and commercial teams while coordinating work across engineers and analysts.
+
+Senior Data Analyst — Quantum Networks — Bengaluru, India — 2024-03 to Present
+
+* Designed analysis workflows that reduced data preparation time by 18%.
+* Validated source data quality and reduced recurring discrepancies across reports.
+
+Skills:
+Technical: Linux, SQL, Tableau, Excel, Looker, Power BI, R
+Methods: Dashboard design, A/B testing, Documentation, Regression analysis
+Management: Planning, Prioritization, Project coordination, Requirement gathering, Stakeholder communication
+
+Languages:
+English — C2
+
+Certifications:
+Certified Analytics Professional

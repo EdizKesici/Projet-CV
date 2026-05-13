@@ -1,0 +1,32 @@
+Name: Nadia Liu
+Gender: Female
+Date of Birth: 2002-11-07
+Address: 420 Birch Street, 29459 Milan, Italy
+Email: nadia.liu02@email.com
+Phone: +351-825-612-1003
+Target Role: Data Engineer
+
+Professional Summary:
+Data Engineer with 2+ years of experience delivering reliable technical solutions and measurable business impact. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning. Brings a practical approach to delivery, prioritization, and collaboration across teams.
+
+Education:
+Bachelor of Science — Information Systems — Indian Institute of Technology Delhi — 2024
+
+Experience:
+Data Engineer — North Platform — Milan, Italy — 2024-11 to Present
+
+* Supported analytics and ML teams with curated data models.
+* Implemented data quality checks that reduced downstream incidents.
+* Designed reliable ingestion jobs for operational and product datasets.
+
+Skills:
+Technical: SQL, API integration, Spark, AWS, Kafka, dbt, Jira, Python
+Methods: ETL design, Pipeline orchestration, Batch processing, Data modeling, Agile collaboration
+Management: Cross-team coordination, Planning, Incident communication, Documentation
+
+Languages:
+English — C2
+French — B2
+
+Certifications:
+Scrum Fundamentals Certified

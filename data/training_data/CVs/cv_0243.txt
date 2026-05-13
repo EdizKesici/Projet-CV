@@ -1,0 +1,46 @@
+Name: Lucia Novak
+Gender: Female
+Date of Birth: 1994-05-06
+Address: 282 Admiralty Avenue, Denver, CO 31891, USA
+Email: lucia.novak94@mailhub.com
+Phone: +234-352-422-9620
+Target Role: Backend Developer
+
+Professional Summary:
+Analytical professional targeting Backend Developer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Science — Software Engineering — University of Lisbon — 2020
+
+Experience:
+Backend Developer — Vector Dynamics — Denver, CO — 2020-11 to 2022-09
+
+* Improved reliability of core backend services handling business-critical traffic.
+* Reduced API response time by 30% through query and caching improvements.
+* Designed service integrations used across multiple product teams.
+
+Software Developer — Blue Platform — Denver, CO — 2023-09 to 2024-04
+
+* Improved reliability of core backend services handling business-critical traffic.
+* Expanded automated test coverage for payment and account workflows.
+* Designed service integrations used across multiple product teams.
+
+Backend Engineer — North Analytics — Denver, CO — 2025-12 to Present
+
+* Expanded automated test coverage for payment and account workflows.
+* Designed service integrations used across multiple product teams.
+
+Skills:
+Technical: Agile tools, Python, Redis, PostgreSQL, Docker, Unit testing
+Methods: API design, Microservices, Performance tuning, System design, Unit testing
+Management: Collaboration, Task estimation
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+Scrum Fundamentals Certified
+AWS Certified Developer
+Oracle Java Certification
+Google Data Analytics Certificate

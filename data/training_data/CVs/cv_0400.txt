@@ -1,0 +1,32 @@
+Name: Mina Popescu
+Gender: Female
+Date of Birth: 1991-04-08
+Address: 623 Birch Avenue, Denver, CO 75127, USA
+Email: mina.popescu91@inboxmail.net
+Phone: +351-559-637-1689
+Target Role: ML Engineer
+
+Professional Summary:
+ML Engineer with 10+ years of experience delivering reliable technical solutions and measurable business impact. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning. Brings a practical approach to delivery, prioritization, and collaboration across teams.
+
+Education:
+Master of Science — Artificial Intelligence — University of Colorado Boulder — 2015
+
+Experience:
+Senior ML Engineer — Atlas Tech — Denver, CO — 2016-10 to Present
+
+* Partnered with data scientists to convert prototypes into resilient services.
+* Reduced model deployment time by 32% by standardizing CI/CD pipelines.
+* Operationalized training and inference workflows for multiple production models.
+
+Skills:
+Technical: Python, Docker, Kubernetes, AWS, Bash
+Methods: MLOps, Monitoring, Model deployment
+Management: Collaboration, Roadmap communication, Sprint planning, Stakeholder updates, Technical mentoring
+
+Languages:
+English — C2
+French — B2
+
+Certifications:
+CKA

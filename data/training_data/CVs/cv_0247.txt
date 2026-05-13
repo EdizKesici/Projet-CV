@@ -1,0 +1,33 @@
+Name: David Andersen
+Gender: Male
+Date of Birth: 1998-11-05
+Address: 527 Birch Street, 36205 Milan, Italy
+Email: david.andersen98@mailhub.com
+Phone: +234-217-562-6240
+Target Role: Data Engineer
+
+Professional Summary:
+Data Engineer with 6+ years of experience delivering reliable technical solutions and measurable business impact. Known for clear communication, structured problem solving, and strong execution in fast-moving environments.
+
+Education:
+Master of Science — Information Systems — Indian Institute of Technology Delhi — 2019
+
+Experience:
+Analytics Engineer — Cloud Platform — Milan, Italy — 2020-01 to Present
+
+* Designed reliable ingestion jobs for operational and product datasets.
+* Supported analytics and ML teams with curated data models.
+* Implemented data quality checks that reduced downstream incidents.
+
+Skills:
+Technical: Spark, Airflow, dbt, Kafka, Python, AWS
+Methods: Pipeline orchestration, ETL design, Data modeling
+Management: Planning, Documentation, Incident communication, Cross-team coordination
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+Databricks Data Engineer Associate
+ITIL Foundation

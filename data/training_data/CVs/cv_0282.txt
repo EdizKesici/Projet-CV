@@ -1,0 +1,38 @@
+Name: Marcus Silva
+Gender: Male
+Date of Birth: 1997-09-06
+Address: 396 Park Street, 72541 Milan, Italy
+Email: marcus.silva97@email.com
+Phone: +48-545-319-4513
+Target Role: Data Analyst
+
+Professional Summary:
+Analytical professional targeting Data Analyst opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Economics — Trinity College Dublin — 2018
+
+Experience:
+Junior Data Analyst — Core Systems — Milan, Italy — 2019-02 to 2022-09
+
+* Built weekly KPI reports adopted by finance and commercial teams.
+* Improved reporting efficiency by 31% through dashboard automation.
+* Validated source data quality and reduced recurring discrepancies across reports.
+
+Data Analyst — Data Networks — Milan, Italy — 2023-10 to Present
+
+* Built weekly KPI reports adopted by finance and commercial teams.
+* Improved reporting efficiency by 18% through dashboard automation.
+* Designed analysis workflows that reduced data preparation time by 25%.
+* Validated source data quality and reduced recurring discrepancies across reports.
+
+Skills:
+Technical: Power BI, Tableau, Python, Looker, Excel, R
+Methods: Dashboard design, A/B testing, Data visualization
+Management: Stakeholder communication, Task coordination, Requirement gathering
+
+Languages:
+English — C2
+
+Certifications:
+Certified Analytics Professional

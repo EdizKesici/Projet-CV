@@ -1,0 +1,45 @@
+Name: Samuel Martinez
+Gender: Male
+Date of Birth: 1984-09-01
+Address: 95 Oakridge Street, 79539 Lyon, France
+Email: samuel.martinez84@mailhub.com
+Phone: +39-336-357-6023
+Target Role: DevOps Engineer
+
+Professional Summary:
+Analytical professional targeting DevOps Engineer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Has supported mentoring, planning, and coordination activities alongside individual technical work. Brings a practical approach to delivery, prioritization, and collaboration across teams.
+
+Education:
+Master of Science — Network Engineering — University of Warsaw — 2014
+
+Experience:
+DevOps Engineer — Core Systems — Lyon, France — 2015-03 to 2018-02
+
+* Standardized infrastructure provisioning across environments.
+* Reduced release lead time by 31% through CI/CD automation.
+* Improved platform reliability with stronger observability and runbooks.
+
+Platform Engineer — Cloud Platform — Lyon, France — 2019-07 to 2022-03
+
+* Standardized infrastructure provisioning across environments.
+* Reduced release lead time by 28% through CI/CD automation.
+* Improved platform reliability with stronger observability and runbooks.
+
+Senior DevOps Engineer — Signal Labs — Lyon, France — 2023-05 to Present
+
+* Supported engineering teams during incidents and postmortem actions.
+* Improved platform reliability with stronger observability and runbooks.
+* Standardized infrastructure provisioning across environments.
+
+Skills:
+Technical: Terraform, Kubernetes, Linux, GitHub Actions, Python
+Methods: Incident response, Monitoring, CI/CD
+Management: Incident coordination, Technical mentoring, Collaboration, Documentation
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+CKA
+Professional Scrum Master I

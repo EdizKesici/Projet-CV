@@ -1,0 +1,42 @@
+Name: Elena Rossi
+Gender: Female
+Date of Birth: 1993-02-07
+Address: 388 Linden Street, 70417 Lagos, Nigeria
+Email: elena.rossi93@inboxmail.net
+Phone: +48-926-811-1513
+Target Role: Data Analyst
+
+Professional Summary:
+Analytical professional targeting Data Analyst opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Science — Applied Mathematics — University of Colorado Boulder — 2017
+
+Experience:
+Junior Data Analyst — Signal Systems — Lagos, Nigeria — 2017-02 to 2020-01
+
+* Designed analysis workflows that reduced data preparation time by 20%.
+* Built weekly KPI reports adopted by finance and commercial teams.
+
+Data Analyst — Vector Systems — Lagos, Nigeria — 2021-12 to 2023-06
+
+* Improved reporting efficiency by 32% through dashboard automation.
+* Designed analysis workflows that reduced data preparation time by 33%.
+
+Senior Data Analyst — Vector Dynamics — Lagos, Nigeria — 2024-08 to Present
+
+* Validated source data quality and reduced recurring discrepancies across reports.
+* Improved reporting efficiency by 23% through dashboard automation.
+
+Skills:
+Technical: Agile tools, Looker, Power BI, R, Python, Tableau, Excel
+Methods: Dashboard design, Regression analysis, KPI tracking, A/B testing, Data visualization
+Management: Requirement gathering, Planning, Project coordination, Stakeholder communication
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+Tableau Desktop Specialist
+Certified Analytics Professional

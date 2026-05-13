@@ -1,0 +1,34 @@
+Name: Kenji Hassan
+Gender: Male
+Date of Birth: 2000-05-09
+Address: 108 Linden Street, 63125 Cologne, Germany
+Email: kenji.hassan00@inboxmail.net
+Phone: +351-820-115-1340
+Target Role: Cybersecurity Analyst
+
+Professional Summary:
+Technology specialist with 3+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Known for clear communication, structured problem solving, and strong execution in fast-moving environments.
+
+Education:
+Bachelor of Science — Network Engineering — Indian Institute of Technology Delhi — 2022
+
+Experience:
+Cybersecurity Analyst — Core Networks — Cologne, Germany — 2023-03 to Present
+
+* Supported incident investigations with structured evidence collection.
+* Improved vulnerability remediation reporting across infrastructure teams.
+
+Skills:
+Technical: Linux, IAM, Vulnerability scanning, Splunk
+Methods: Log analysis, Incident response, Risk assessment, Threat analysis
+Management: Documentation, Incident communication
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+CompTIA Security+
+AWS Cloud Practitioner
+Certified Ethical Hacker
+Scrum Fundamentals Certified

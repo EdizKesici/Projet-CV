@@ -1,0 +1,38 @@
+Name: Marcus Patel
+Gender: Male
+Date of Birth: 1997-09-09
+Address: 670 Park Street, 64768 Dublin, Ireland
+Email: marcus.patel97@email.com
+Phone: +31-365-257-1186
+Target Role: Backend Developer
+
+Professional Summary:
+Analytical professional targeting Backend Developer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Software Engineering — University of Colorado Boulder — 2018
+
+Experience:
+Backend Developer — Signal Labs — Dublin, Ireland — 2020-05 to 2023-08
+
+* Designed service integrations used across multiple product teams.
+* Improved reliability of core backend services handling business-critical traffic.
+
+Backend Engineer — Core Works — Dublin, Ireland — 2024-06 to Present
+
+* Designed service integrations used across multiple product teams.
+* Improved reliability of core backend services handling business-critical traffic.
+* Expanded automated test coverage for payment and account workflows.
+* Reduced API response time by 28% through query and caching improvements.
+
+Skills:
+Technical: Go, Cloud fundamentals, Python, PostgreSQL, Notion, REST APIs, Redis, Docker
+Methods: API design, System design, Performance tuning, Microservices
+Management: Collaboration, Technical communication
+
+Languages:
+English — C2
+German — B1
+
+Certifications:
+AWS Certified Developer

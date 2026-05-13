@@ -1,0 +1,39 @@
+Name: Isla Aliyev
+Gender: Female
+Date of Birth: 1995-03-05
+Address: 107 Pinecrest Avenue, Seattle, WA 92084, USA
+Email: isla.aliyev95@inboxmail.net
+Phone: +1-801-542-1743
+Target Role: ML Engineer
+
+Professional Summary:
+Professional pursuing ML Engineer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Brings a practical approach to delivery, prioritization, and collaboration across teams.
+
+Education:
+Bachelor of Science — Software Engineering — University of Bonn — 2021
+
+Experience:
+ML Engineer — Blue Platform — Seattle, WA — 2022-07 to 2024-02
+
+* Partnered with data scientists to convert prototypes into resilient services.
+* Reduced model deployment time by 28% by standardizing CI/CD pipelines.
+* Operationalized training and inference workflows for multiple production models.
+* Improved observability for inference latency and feature freshness.
+
+Machine Learning Engineer — Signal Insight — Seattle, WA — 2025-10 to Present
+
+* Partnered with data scientists to convert prototypes into resilient services.
+* Reduced model deployment time by 25% by standardizing CI/CD pipelines.
+* Improved observability for inference latency and feature freshness.
+
+Skills:
+Technical: MLflow, Kubernetes, TensorFlow, Docker, PyTorch
+Methods: MLOps, CI/CD, Feature stores
+Management: Technical mentoring, Sprint planning, Collaboration, Roadmap communication, Task coordination
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+Google Professional Machine Learning Engineer

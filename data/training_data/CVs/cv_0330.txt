@@ -1,0 +1,36 @@
+Name: Maya Dubois
+Gender: Female
+Date of Birth: 1998-03-02
+Address: 538 Oakridge Street, 22771 Cologne, Germany
+Email: maya.dubois98@inboxmail.net
+Phone: +49-620-633-5492
+Target Role: DevOps Engineer
+
+Professional Summary:
+Professional pursuing DevOps Engineer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Capable of supporting team goals and handling recurring technical responsibilities.
+
+Education:
+Master of Science — Network Engineering — University of Bonn — 2022
+
+Experience:
+DevOps Engineer — Core Dynamics — Cologne, Germany — 2022-07 to 2024-09
+
+* Reduced release lead time by 34% through CI/CD automation.
+* Standardized infrastructure provisioning across environments.
+
+Platform Engineer — Quantum Insight — Cologne, Germany — 2025-12 to Present
+
+* Reduced release lead time by 30% through CI/CD automation.
+* Improved platform reliability with stronger observability and runbooks.
+
+Skills:
+Technical: Terraform, AWS, Jira, Docker, Python, Linux, Notion, Kubernetes
+Methods: CI/CD, Automation, Incident response, Infrastructure as code, Monitoring
+Management: Documentation, Technical mentoring, Incident coordination
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+None listed

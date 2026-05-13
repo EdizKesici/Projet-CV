@@ -1,0 +1,33 @@
+Name: Camila Hassan
+Gender: Female
+Date of Birth: 2002-10-04
+Address: 614 Birch Street, 18908 Lyon, France
+Email: camila.hassan02@email.com
+Phone: +48-758-279-1079
+Target Role: Data Scientist
+
+Professional Summary:
+Data Scientist with 2+ years of experience delivering reliable technical solutions and measurable business impact. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Science — Statistics — Trinity College Dublin — 2024
+
+Experience:
+Data Scientist — Cloud Works — Lyon, France — 2024-03 to Present
+
+* Improved model accuracy by 30% on a customer behavior prediction use case.
+* Delivered experimentation frameworks used to prioritize product changes.
+* Built production-ready models with monitoring for drift and data quality.
+
+Skills:
+Technical: TensorFlow, Spark, PyTorch
+Methods: Feature engineering, Experiment design, Statistical inference, Process improvement
+Management: Mentoring, Cross-functional communication, Stakeholder alignment, Stakeholder updates, Project planning
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+ITIL Foundation
+Google Data Analytics Certificate

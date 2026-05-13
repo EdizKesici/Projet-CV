@@ -1,0 +1,32 @@
+Name: Omar Garcia
+Gender: Male
+Date of Birth: 2001-06-02
+Address: 949 Birch Avenue, Seattle, WA 46409, USA
+Email: omar.garcia01@inboxmail.net
+Phone: +48-748-554-9209
+Target Role: Data Scientist
+
+Professional Summary:
+Professional pursuing Data Scientist opportunities with exposure to production environments, team delivery, and measurable operational improvements. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Statistics — University of Warsaw — 2024
+
+Experience:
+Data Scientist — Signal Platform — Seattle, WA — 2025-09 to Present
+
+* Translated ambiguous business questions into measurable ML experiments.
+* Built production-ready models with monitoring for drift and data quality.
+* Improved model accuracy by 21% on a customer behavior prediction use case.
+
+Skills:
+Technical: TensorFlow, Pandas, scikit-learn, PyTorch, Spark, Python
+Methods: Model validation, Statistical inference, Forecasting, Experiment design, Feature engineering
+Management: Cross-functional communication, Mentoring
+
+Languages:
+English — C2
+
+Certifications:
+AWS Cloud Practitioner
+AWS Certified Machine Learning

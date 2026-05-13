@@ -1,0 +1,48 @@
+Name: Samuel Okafor
+Gender: Male
+Date of Birth: 1991-04-10
+Address: 705 Maple Street, 20879 Dublin, Ireland
+Email: samuel.okafor91@mailhub.com
+Phone: +91-988-166-2847
+Target Role: Data Analyst
+
+Professional Summary:
+Data Analyst focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Comfortable contributing in environments with evolving priorities and shared ownership.
+
+Education:
+Bachelor of Science — Statistics — University of Amsterdam — 2016
+
+Experience:
+Junior Data Analyst — Atlas Analytics — Dublin, Ireland — 2017-11 to 2020-02
+
+* Improved reporting efficiency by 16% through dashboard automation.
+* Designed analysis workflows that reduced data preparation time by 33%.
+* Validated source data quality and reduced recurring discrepancies across reports.
+* Built weekly KPI reports adopted by finance and commercial teams.
+
+Data Analyst — Cloud Labs — Dublin, Ireland — 2021-04 to 2023-05
+
+* Built weekly KPI reports adopted by finance and commercial teams.
+* Improved reporting efficiency by 32% through dashboard automation.
+* Validated source data quality and reduced recurring discrepancies across reports.
+* Designed analysis workflows that reduced data preparation time by 32%.
+
+Senior Data Analyst — North Works — Dublin, Ireland — 2024-11 to Present
+
+* Improved reporting efficiency by 34% through dashboard automation.
+* Designed analysis workflows that reduced data preparation time by 19%.
+* Built weekly KPI reports adopted by finance and commercial teams.
+* Validated source data quality and reduced recurring discrepancies across reports.
+
+Skills:
+Technical: SQL, R, Python
+Methods: Dashboard design, Documentation, A/B testing, Regression analysis
+Management: Prioritization, Project coordination, Requirement gathering
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+Certified Analytics Professional
+Microsoft Power BI Data Analyst

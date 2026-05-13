@@ -1,0 +1,45 @@
+Name: Anna Dubois
+Gender: Female
+Date of Birth: 1996-09-05
+Address: 389 Oakridge Street, 92742 Lisbon, Portugal
+Email: anna.dubois96@inboxmail.net
+Phone: +91-262-669-6060
+Target Role: ML Engineer
+
+Professional Summary:
+ML Engineer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Bachelor of Science — Software Engineering — University of Colorado Boulder — 2017
+
+Experience:
+ML Engineer — Nova Solutions — Lisbon, Portugal — 2018-04 to 2020-05
+
+* Improved observability for inference latency and feature freshness.
+* Partnered with data scientists to convert prototypes into resilient services.
+
+Machine Learning Engineer — Blue Dynamics — Lisbon, Portugal — 2021-12 to 2023-08
+
+* Improved observability for inference latency and feature freshness.
+* Partnered with data scientists to convert prototypes into resilient services.
+* Reduced model deployment time by 25% by standardizing CI/CD pipelines.
+* Operationalized training and inference workflows for multiple production models.
+
+Senior ML Engineer — Atlas Dynamics — Lisbon, Portugal — 2024-03 to Present
+
+* Improved observability for inference latency and feature freshness.
+* Reduced model deployment time by 32% by standardizing CI/CD pipelines.
+* Partnered with data scientists to convert prototypes into resilient services.
+* Operationalized training and inference workflows for multiple production models.
+
+Skills:
+Technical: TensorFlow, MLflow, PyTorch, Kubernetes, Excel, Docker, Git, AWS
+Methods: Model deployment, Root cause analysis, MLOps, Monitoring
+Management: Roadmap communication, Planning, Sprint planning, Technical mentoring
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+AWS Certified Machine Learning

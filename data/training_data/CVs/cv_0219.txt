@@ -1,0 +1,32 @@
+Name: David Aliyev
+Gender: Male
+Date of Birth: 2000-12-18
+Address: 972 Birch Street, 75061 Lagos, Nigeria
+Email: david.aliyev00@mailhub.com
+Phone: +31-365-682-3420
+Target Role: Software Engineer
+
+Professional Summary:
+Technology specialist with 2+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning. Brings a practical approach to delivery, prioritization, and collaboration across teams.
+
+Education:
+Bachelor of Science — Software Engineering — University of Warsaw — 2023
+
+Experience:
+Software Engineer — Vector Insight — Lagos, Nigeria — 2024-08 to Present
+
+* Contributed to CI/CD and release quality across multiple services.
+* Collaborated on architectural improvements for long-term scalability.
+* Maintained core application modules with strong uptime and defect control.
+
+Skills:
+Technical: Java, Git, Docker
+Methods: Agile delivery, Debugging, System integration, Testing
+Management: Collaboration, Communication, Mentoring, Planning
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+Professional Scrum Developer

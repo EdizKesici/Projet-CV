@@ -1,0 +1,31 @@
+Name: David Schneider
+Gender: Male
+Date of Birth: 1992-09-23
+Address: 730 Linden Street, 50710 Amsterdam, Netherlands
+Email: david.schneider92@email.com
+Phone: +1-586-913-4066
+Target Role: Cybersecurity Analyst
+
+Professional Summary:
+Professional pursuing Cybersecurity Analyst opportunities with exposure to production environments, team delivery, and measurable operational improvements. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Used to learning new tools quickly when projects require broader technical coverage.
+
+Education:
+Bachelor of Science — Computer Science — Indian Institute of Technology Delhi — 2019
+
+Experience:
+Security Analyst — Core Systems — Amsterdam, Netherlands — 2021-09 to Present
+
+* Hardened access controls and baseline monitoring practices.
+* Reduced mean time to detect by 29% through stronger alert triage.
+
+Skills:
+Technical: CI/CD, Vulnerability scanning, Wireshark, Python, Linux, Splunk, IAM
+Methods: Threat analysis, Security monitoring, Incident response, Log analysis, Problem solving
+Management: Incident communication, Teamwork, Cross-team coordination, Policy awareness
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+None listed

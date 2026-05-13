@@ -1,0 +1,31 @@
+Name: Lucia Patel
+Gender: Female
+Date of Birth: 2002-12-18
+Address: 755 Hillview Avenue, Denver, CO 37687, USA
+Email: lucia.patel02@mailhub.com
+Phone: +48-266-181-1313
+Target Role: BI Developer
+
+Professional Summary:
+BI Developer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Science — Computer Science — Trinity College Dublin — 2023
+
+Experience:
+BI Developer — North Tech — Denver, CO — 2024-04 to Present
+
+* Consolidated fragmented reporting into dashboards used by executives.
+* Improved data refresh reliability and reduced manual reporting effort by 26%.
+
+Skills:
+Technical: Python, Tableau, Power BI
+Methods: ETL workflows, KPI definition, Business analysis, Dashboard design
+Management: Requirement gathering, Documentation, Stakeholder communication
+
+Languages:
+English — C2
+Spanish — B2
+
+Certifications:
+Microsoft Power BI Data Analyst

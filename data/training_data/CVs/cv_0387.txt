@@ -1,0 +1,39 @@
+Name: Iris Novak
+Gender: Female
+Date of Birth: 1998-03-11
+Address: 13 Admiralty Street, 84086 Warsaw, Poland
+Email: iris.novak98@email.com
+Phone: +351-578-653-3941
+Target Role: Data Engineer
+
+Professional Summary:
+Professional pursuing Data Engineer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Used to learning new tools quickly when projects require broader technical coverage.
+
+Education:
+Bachelor of Science — Information Systems — University of Texas at Austin — 2021
+
+Experience:
+Data Engineer — Cloud Works — Warsaw, Poland — 2022-08 to 2024-09
+
+* Supported analytics and ML teams with curated data models.
+* Implemented data quality checks that reduced downstream incidents.
+* Cut pipeline runtime by 28% through incremental processing improvements.
+
+Analytics Engineer — Core Analytics — Warsaw, Poland — 2025-11 to Present
+
+* Implemented data quality checks that reduced downstream incidents.
+* Designed reliable ingestion jobs for operational and product datasets.
+* Supported analytics and ML teams with curated data models.
+* Cut pipeline runtime by 30% through incremental processing improvements.
+
+Skills:
+Technical: AWS, Kafka, Python, API integration, Airflow, dbt, Documentation
+Methods: Data quality management, ETL design, Batch processing, Pipeline orchestration, Data modeling
+Management: Cross-team coordination, Documentation, Incident communication
+
+Languages:
+English — C2
+French — B2
+
+Certifications:
+None listed

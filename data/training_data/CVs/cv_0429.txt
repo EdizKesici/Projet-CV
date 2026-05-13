@@ -1,0 +1,39 @@
+Name: Anna Santos
+Gender: Female
+Date of Birth: 1999-06-07
+Address: 95 Riverside Street, 77971 Bengaluru, India
+Email: anna.santos99@mailhub.com
+Phone: +48-503-651-4918
+Target Role: DevOps Engineer
+
+Professional Summary:
+Professional pursuing DevOps Engineer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning. Used to learning new tools quickly when projects require broader technical coverage.
+
+Education:
+Bachelor of Science — Software Engineering — University of Bonn — 2022
+
+Experience:
+DevOps Engineer — Quantum Works — Bengaluru, India — 2022-10 to 2024-01
+
+* Improved platform reliability with stronger observability and runbooks.
+* Standardized infrastructure provisioning across environments.
+* Supported engineering teams during incidents and postmortem actions.
+
+Platform Engineer — Data Insight — Bengaluru, India — 2025-06 to Present
+
+* Reduced release lead time by 29% through CI/CD automation.
+* Improved platform reliability with stronger observability and runbooks.
+* Standardized infrastructure provisioning across environments.
+* Supported engineering teams during incidents and postmortem actions.
+
+Skills:
+Technical: Docker, GitHub Actions, Kubernetes, Terraform, AWS
+Methods: Infrastructure as code, Monitoring, CI/CD, Incident response
+Management: Collaboration, Technical mentoring, Incident coordination, Documentation
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+AWS Certified SysOps Administrator

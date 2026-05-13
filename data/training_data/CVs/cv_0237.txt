@@ -1,0 +1,43 @@
+Name: Victor Martinez
+Gender: Male
+Date of Birth: 1993-08-16
+Address: 690 Park Street, 81845 Lyon, France
+Email: victor.martinez93@email.com
+Phone: +49-209-549-4178
+Target Role: DevOps Engineer
+
+Professional Summary:
+DevOps Engineer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Has supported mentoring, planning, and coordination activities alongside individual technical work. Brings a practical approach to delivery, prioritization, and collaboration across teams.
+
+Education:
+Bachelor of Science — Information Systems — University of Lagos — 2014
+
+Experience:
+DevOps Engineer — Quantum Works — Lyon, France — 2016-01 to 2019-01
+
+* Reduced release lead time by 28% through CI/CD automation.
+* Standardized infrastructure provisioning across environments.
+
+Platform Engineer — Quantum Dynamics — Lyon, France — 2020-01 to 2023-01
+
+* Improved platform reliability with stronger observability and runbooks while coordinating work across engineers and analysts.
+* Reduced release lead time by 29% through CI/CD automation while coordinating work across engineers and analysts.
+
+Senior DevOps Engineer — Blue Insight — Lyon, France — 2024-07 to Present
+
+* Standardized infrastructure provisioning across environments.
+* Supported engineering teams during incidents and postmortem actions.
+
+Skills:
+Technical: AWS, Excel, REST APIs, Terraform, Linux, Kubernetes
+Methods: Incident response, Infrastructure as code, CI/CD, Automation, Monitoring
+Management: Collaboration, Incident coordination, Technical mentoring
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+CKA
+Scrum Fundamentals Certified
+AWS Cloud Practitioner

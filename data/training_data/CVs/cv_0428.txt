@@ -1,0 +1,32 @@
+Name: Hannah Costa
+Gender: Female
+Date of Birth: 2002-09-12
+Address: 669 Admiralty Street, 32490 Bengaluru, India
+Email: hannah.costa02@inboxmail.net
+Phone: +234-759-257-6005
+Target Role: DevOps Engineer
+
+Professional Summary:
+Analytical professional targeting DevOps Engineer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Capable of supporting team goals and handling recurring technical responsibilities.
+
+Education:
+Master of Science — Computer Science — University of Warsaw — 2023
+
+Experience:
+DevOps Engineer — Blue Tech — Bengaluru, India — 2024-12 to Present
+
+* Supported engineering teams during incidents and postmortem actions.
+* Standardized infrastructure provisioning across environments.
+
+Skills:
+Technical: Kubernetes, AWS, GitHub Actions, Terraform
+Methods: Infrastructure as code, Automation, Incident response, Monitoring
+Management: Incident coordination, Technical mentoring
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+AWS Cloud Practitioner
+Google Data Analytics Certificate

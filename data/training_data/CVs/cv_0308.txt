@@ -1,0 +1,33 @@
+Name: Mateo Fischer
+Gender: Male
+Date of Birth: 1999-09-24
+Address: 923 Hillview Street, 96286 Lyon, France
+Email: mateo.fischer99@email.com
+Phone: +234-654-226-9136
+Target Role: Backend Developer
+
+Professional Summary:
+Technology specialist with 2+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning. Comfortable contributing in environments with evolving priorities and shared ownership.
+
+Education:
+Master of Science — Computer Science — University of Amsterdam — 2024
+
+Experience:
+Backend Developer — Nova Labs — Lyon, France — 2024-01 to Present
+
+* Designed service integrations used across multiple product teams.
+* Expanded automated test coverage for payment and account workflows.
+* Reduced API response time by 34% through query and caching improvements.
+* Improved reliability of core backend services handling business-critical traffic.
+
+Skills:
+Technical: Java, Cloud fundamentals, Docker, Go, Redis
+Methods: System design, Performance tuning, Unit testing, API design
+Management: Technical communication, Task estimation, Code review, Collaboration
+
+Languages:
+English — C2
+German — B1
+
+Certifications:
+None listed

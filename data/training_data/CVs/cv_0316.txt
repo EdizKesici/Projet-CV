@@ -1,0 +1,37 @@
+Name: Adrian Schneider
+Gender: Male
+Date of Birth: 1991-04-15
+Address: 693 Pinecrest Avenue, Austin, TX 97314, USA
+Email: adrian.schneider91@mailhub.com
+Phone: +33-314-787-8573
+Target Role: Software Engineer
+
+Professional Summary:
+Technology specialist with 5+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Master of Science — Information Systems — University of Lisbon — 2019
+
+Experience:
+Software Engineer — Nova Analytics — Austin, TX — 2021-12 to 2023-12
+
+* Maintained core application modules with strong uptime and defect control.
+* Contributed to CI/CD and release quality across multiple services.
+* Delivered software features that improved internal process efficiency by 24%.
+
+Software Developer — North Platform — Austin, TX — 2024-04 to Present
+
+* Maintained core application modules with strong uptime and defect control.
+* Collaborated on architectural improvements for long-term scalability.
+
+Skills:
+Technical: SQL, C#, Python, Confluence, Git, REST APIs
+Methods: Agile delivery, Object-oriented design, Agile collaboration, System integration
+Management: Task coordination, Collaboration, Planning, Communication
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+AWS Certified Developer

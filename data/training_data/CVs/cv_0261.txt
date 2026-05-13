@@ -1,0 +1,43 @@
+Name: Mina Schneider
+Gender: Female
+Date of Birth: 1986-02-27
+Address: 314 Riverside Avenue, Austin, TX 86539, USA
+Email: mina.schneider86@email.com
+Phone: +39-406-696-1075
+Target Role: Data Engineer
+
+Professional Summary:
+Data Engineer with 10+ years of experience delivering reliable technical solutions and measurable business impact. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Brings a practical approach to delivery, prioritization, and collaboration across teams.
+
+Education:
+Bachelor of Science — Data Engineering — University of Amsterdam — 2014
+
+Experience:
+Data Engineer — Signal Analytics — Austin, TX — 2016-10 to 2019-05
+
+* Implemented data quality checks that reduced downstream incidents.
+* Designed reliable ingestion jobs for operational and product datasets.
+
+Analytics Engineer — Vector Systems — Austin, TX — 2020-11 to 2023-06
+
+* Designed reliable ingestion jobs for operational and product datasets.
+* Supported analytics and ML teams with curated data models.
+
+Senior Data Engineer — Cloud Works — Austin, TX — 2024-02 to Present
+
+* Cut pipeline runtime by 29% through incremental processing improvements.
+* Supported analytics and ML teams with curated data models.
+* Implemented data quality checks that reduced downstream incidents.
+
+Skills:
+Technical: SQL, Kafka, Airflow, Python
+Methods: Data modeling, Data quality management, Pipeline orchestration, Batch processing, ETL design
+Management: Documentation, Incident communication
+
+Languages:
+English — C2
+French — B2
+
+Certifications:
+Google Professional Data Engineer
+Databricks Data Engineer Associate

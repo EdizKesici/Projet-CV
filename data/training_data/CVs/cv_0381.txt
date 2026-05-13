@@ -1,0 +1,45 @@
+Name: Yusuf Silva
+Gender: Male
+Date of Birth: 1986-04-06
+Address: 375 Oakridge Avenue, Austin, TX 47524, USA
+Email: yusuf.silva86@inboxmail.net
+Phone: +234-546-756-6722
+Target Role: QA Engineer
+
+Professional Summary:
+Technology specialist with 9+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Bachelor of Arts — Information Technology — University of Lagos — 2016
+
+Experience:
+QA Engineer — Signal Dynamics — Austin, TX — 2017-05 to 2020-10
+
+* Partnered with developers to reproduce and isolate production issues.
+* Reduced escaped defects by 12% by expanding regression coverage.
+* Improved release readiness through clearer test reporting.
+
+Test Engineer — Signal Solutions — Austin, TX — 2021-12 to 2023-10
+
+* Improved release readiness through clearer test reporting.
+* Reduced escaped defects by 16% by expanding regression coverage.
+* Developed automation suites for critical API and UI flows.
+
+Senior QA Engineer — Core Platform — Austin, TX — 2024-01 to Present
+
+* Reduced escaped defects by 30% by expanding regression coverage.
+* Improved release readiness through clearer test reporting.
+* Developed automation suites for critical API and UI flows.
+
+Skills:
+Technical: Jira, Postman, SQL, Cypress
+Methods: Defect tracking, Test automation, Quality assurance, Regression testing, Test planning
+Management: Documentation, Prioritization, Cross-team coordination, Risk communication
+
+Languages:
+English — C2
+
+Certifications:
+Scrum Fundamentals Certified
+Postman API Fundamentals
+Certified Agile Tester

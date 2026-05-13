@@ -1,0 +1,39 @@
+Name: Nadia Petrov
+Gender: Female
+Date of Birth: 1993-03-05
+Address: 206 Pinecrest Street, 76155 Amsterdam, Netherlands
+Email: nadia.petrov93@inboxmail.net
+Phone: +351-718-766-6977
+Target Role: QA Engineer
+
+Professional Summary:
+Technology specialist with 4+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Capable of supporting team goals and handling recurring technical responsibilities.
+
+Education:
+Bachelor of Arts — Computer Science — University of Bonn — 2020
+
+Experience:
+QA Engineer — Vector Platform — Amsterdam, Netherlands — 2022-09 to 2024-05
+
+* Improved release readiness through clearer test reporting.
+* Developed automation suites for critical API and UI flows.
+* Reduced escaped defects by 26% by expanding regression coverage.
+
+Test Engineer — Data Tech — Amsterdam, Netherlands — 2025-05 to Present
+
+* Reduced escaped defects by 12% by expanding regression coverage.
+* Developed automation suites for critical API and UI flows.
+* Partnered with developers to reproduce and isolate production issues.
+* Improved release readiness through clearer test reporting.
+
+Skills:
+Technical: API testing, Jira, SQL, Python, Unit testing, Selenium
+Methods: Test planning, Defect tracking, Quality assurance, Regression testing, Test automation
+Management: Cross-team coordination, Prioritization, Documentation, Risk communication
+
+Languages:
+English — C2
+French — B2
+
+Certifications:
+ISTQB Foundation Level

@@ -1,0 +1,38 @@
+Name: David Schneider
+Gender: Male
+Date of Birth: 1997-04-08
+Address: 746 Linden Avenue, Denver, CO 53927, USA
+Email: david.schneider97@inboxmail.net
+Phone: +31-789-881-3089
+Target Role: Backend Developer
+
+Professional Summary:
+Backend Developer with 4+ years of experience delivering reliable technical solutions and measurable business impact. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Science — Computer Science — University of Colorado Boulder — 2021
+
+Experience:
+Backend Developer — North Dynamics — Denver, CO — 2022-03 to 2024-03
+
+* Expanded automated test coverage for payment and account workflows.
+* Designed service integrations used across multiple product teams.
+
+Backend Engineer — Cloud Labs — Denver, CO — 2025-12 to Present
+
+* Improved reliability of core backend services handling business-critical traffic.
+* Expanded automated test coverage for payment and account workflows.
+* Reduced API response time by 23% through query and caching improvements.
+* Designed service integrations used across multiple product teams.
+
+Skills:
+Technical: Redis, Python, REST APIs, PostgreSQL, Java, Go
+Methods: System design, Performance tuning, API design, Microservices
+Management: Collaboration, Code review, Stakeholder updates, Task estimation
+
+Languages:
+English — C2
+German — B1
+
+Certifications:
+None listed

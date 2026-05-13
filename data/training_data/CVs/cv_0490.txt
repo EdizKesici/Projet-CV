@@ -1,0 +1,35 @@
+Name: Sara Liu
+Gender: Female
+Date of Birth: 2000-03-13
+Address: 773 Park Street, 19394 Amsterdam, Netherlands
+Email: sara.liu00@mailhub.com
+Phone: +1-883-901-8457
+Target Role: Backend Developer
+
+Professional Summary:
+Backend Developer with 4+ years of experience delivering reliable technical solutions and measurable business impact. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Science — Information Technology — University of Warsaw — 2022
+
+Experience:
+Backend Engineer — Vector Platform — Amsterdam, Netherlands — 2022-02 to Present
+
+* Expanded automated test coverage for payment and account workflows.
+* Designed service integrations used across multiple product teams.
+* Improved reliability of core backend services handling business-critical traffic.
+* Reduced API response time by 18% through query and caching improvements.
+
+Skills:
+Technical: Notion, API integration, PostgreSQL, Java, Go
+Methods: Microservices, API design, Performance tuning, System design, Unit testing
+Management: Collaboration, Code review, Task estimation
+
+Languages:
+English — C2
+Spanish — B2
+
+Certifications:
+AWS Cloud Practitioner
+Professional Scrum Master I
+Azure Developer Associate

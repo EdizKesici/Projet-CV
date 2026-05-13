@@ -1,0 +1,45 @@
+Name: Elena Dubois
+Gender: Female
+Date of Birth: 1992-09-07
+Address: 946 Pinecrest Street, 89274 Lyon, France
+Email: elena.dubois92@email.com
+Phone: +234-512-487-6497
+Target Role: Software Engineer
+
+Professional Summary:
+Professional pursuing Software Engineer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Known for clear communication, structured problem solving, and strong execution in fast-moving environments.
+
+Education:
+Master of Science — Software Engineering — University of Amsterdam — 2015
+
+Experience:
+Software Engineer — Signal Solutions — Lyon, France — 2016-01 to 2019-08
+
+* Collaborated on architectural improvements for long-term scalability.
+* Delivered software features that improved internal process efficiency by 26%.
+* Maintained core application modules with strong uptime and defect control.
+
+Software Developer — North Platform — Lyon, France — 2020-12 to 2023-01
+
+* Delivered software features that improved internal process efficiency by 27%.
+* Contributed to CI/CD and release quality across multiple services.
+* Maintained core application modules with strong uptime and defect control.
+
+Senior Software Engineer — Cloud Dynamics — Lyon, France — 2024-11 to Present
+
+* Contributed to CI/CD and release quality across multiple services.
+* Delivered software features that improved internal process efficiency by 30%.
+
+Skills:
+Technical: Notion, Git, C#, Monitoring, Docker
+Methods: System integration, Debugging, Process improvement, Object-oriented design, Agile delivery, Testing
+Management: Communication, Mentoring, Planning, Collaboration
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+Azure Developer Associate
+Professional Scrum Master I
+AWS Certified Developer

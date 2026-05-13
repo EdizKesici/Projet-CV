@@ -1,0 +1,33 @@
+Name: David Garcia
+Gender: Male
+Date of Birth: 1989-11-13
+Address: 692 Oakridge Street, 33306 Bengaluru, India
+Email: david.garcia89@mailhub.com
+Phone: +91-279-369-5028
+Target Role: Frontend Developer
+
+Professional Summary:
+Analytical professional targeting Frontend Developer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Software Engineering — University of Warsaw — 2016
+
+Experience:
+Senior Frontend Developer — Atlas Tech — Bengaluru, India — 2016-10 to Present
+
+* Improved page performance scores by 20% across key user journeys.
+* Reduced UI defects through stronger test automation and QA collaboration.
+* Built reusable component libraries that accelerated feature delivery.
+* Partnered with designers to deliver accessible interfaces at scale.
+
+Skills:
+Technical: Testing Library, React, HTML
+Methods: Accessibility, State management, Root cause analysis, Responsive design, Component architecture, Performance optimization
+Management: Requirement clarification, Design collaboration, Sprint planning
+
+Languages:
+English — C2
+Spanish — B2
+
+Certifications:
+AWS Cloud Practitioner

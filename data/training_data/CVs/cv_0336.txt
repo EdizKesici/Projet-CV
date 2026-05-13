@@ -1,0 +1,38 @@
+Name: Iris Schneider
+Gender: Female
+Date of Birth: 1991-06-11
+Address: 352 Pinecrest Street, 25048 Warsaw, Poland
+Email: iris.schneider91@inboxmail.net
+Phone: +48-445-647-6521
+Target Role: Backend Developer
+
+Professional Summary:
+Professional pursuing Backend Developer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Interested in roles that combine execution, communication, and measurable business outcomes.
+
+Education:
+Bachelor of Science — Computer Science — University of Amsterdam — 2018
+
+Experience:
+Backend Developer — Cloud Analytics — Warsaw, Poland — 2020-05 to 2023-04
+
+* Improved reliability of core backend services handling business-critical traffic.
+* Designed service integrations used across multiple product teams.
+* Expanded automated test coverage for payment and account workflows.
+
+Backend Engineer — North Insight — Warsaw, Poland — 2024-12 to Present
+
+* Improved reliability of core backend services handling business-critical traffic.
+* Designed service integrations used across multiple product teams.
+
+Skills:
+Technical: Java, PostgreSQL, Docker, Documentation, Redis
+Methods: Performance tuning, System design, Unit testing
+Management: Technical communication, Collaboration, Teamwork, Task estimation
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+Scrum Fundamentals Certified
+Professional Scrum Master I

@@ -1,0 +1,34 @@
+Name: Zoe Fischer
+Gender: Female
+Date of Birth: 1993-02-09
+Address: 207 Riverside Avenue, Seattle, WA 63172, USA
+Email: zoe.fischer93@mailhub.com
+Phone: +234-469-853-6210
+Target Role: Cybersecurity Analyst
+
+Professional Summary:
+Cybersecurity Analyst with 8+ years of experience delivering reliable technical solutions and measurable business impact. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Bachelor of Science — Information Security — University of Bonn — 2017
+
+Experience:
+Senior Cybersecurity Analyst — North Solutions — Seattle, WA — 2018-03 to Present
+
+* Hardened access controls and baseline monitoring practices.
+* Supported incident investigations with structured evidence collection.
+
+Skills:
+Technical: Splunk, SIEM, Linux
+Methods: Incident response, Threat analysis, Risk assessment, Security monitoring
+Management: Task coordination, Cross-team coordination, Incident communication, Policy awareness
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+ITIL Foundation
+GIAC Security Essentials
+Professional Scrum Master I
+Certified Ethical Hacker

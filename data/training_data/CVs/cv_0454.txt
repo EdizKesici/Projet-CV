@@ -1,0 +1,46 @@
+Name: Iris Martinez
+Gender: Female
+Date of Birth: 1992-02-01
+Address: 961 Oakridge Street, 57792 Dublin, Ireland
+Email: iris.martinez92@email.com
+Phone: +39-662-399-9243
+Target Role: BI Developer
+
+Professional Summary:
+Technology specialist with 9+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Capable of supporting team goals and handling recurring technical responsibilities.
+
+Education:
+Bachelor of Science — Information Systems — University of Amsterdam — 2017
+
+Experience:
+BI Developer — Data Networks — Dublin, Ireland — 2017-04 to 2020-06
+
+* Partnered with analysts to validate business definitions across domains.
+* Consolidated fragmented reporting into dashboards used by executives.
+* Translated stakeholder requests into reusable metrics and semantic layers.
+* Improved data refresh reliability and reduced manual reporting effort by 16%.
+
+Business Intelligence Developer — Vector Networks — Dublin, Ireland — 2021-06 to 2023-10
+
+* Improved data refresh reliability and reduced manual reporting effort by 19%.
+* Translated stakeholder requests into reusable metrics and semantic layers.
+* Consolidated fragmented reporting into dashboards used by executives.
+
+Senior BI Developer — Vector Labs — Dublin, Ireland — 2024-03 to Present
+
+* Improved data refresh reliability and reduced manual reporting effort by 32%.
+* Partnered with analysts to validate business definitions across domains.
+* Consolidated fragmented reporting into dashboards used by executives.
+
+Skills:
+Technical: Tableau, API integration, DAX, SQL, Bash, SSIS
+Methods: Dashboard design, ETL workflows, Dimensional modeling
+Management: Requirement gathering, Documentation
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+IBM Data Analyst Professional Certificate
+Microsoft Power BI Data Analyst

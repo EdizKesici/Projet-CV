@@ -1,0 +1,33 @@
+Name: Omar Popescu
+Gender: Male
+Date of Birth: 1992-04-02
+Address: 590 Hillview Street, 38619 Lisbon, Portugal
+Email: omar.popescu92@inboxmail.net
+Phone: +33-546-973-6166
+Target Role: Data Engineer
+
+Professional Summary:
+Analytical professional targeting Data Engineer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning. Used to learning new tools quickly when projects require broader technical coverage.
+
+Education:
+Bachelor of Science — Software Engineering — University of Colorado Boulder — 2019
+
+Experience:
+Analytics Engineer — Signal Networks — Lisbon, Portugal — 2020-10 to Present
+
+* Designed reliable ingestion jobs for operational and product datasets.
+* Implemented data quality checks that reduced downstream incidents.
+* Cut pipeline runtime by 21% through incremental processing improvements.
+* Supported analytics and ML teams with curated data models.
+
+Skills:
+Technical: AWS, Python, dbt, Airflow, Kafka
+Methods: Data quality management, Pipeline orchestration, Batch processing
+Management: Cross-team coordination, Planning, Documentation, Incident communication
+
+Languages:
+English — C2
+German — B1
+
+Certifications:
+None listed

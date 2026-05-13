@@ -1,0 +1,39 @@
+Name: Nora Garcia
+Gender: Female
+Date of Birth: 1992-03-08
+Address: 204 Birch Street, 38274 Lisbon, Portugal
+Email: nora.garcia92@mailhub.com
+Phone: +234-691-922-6382
+Target Role: Backend Developer
+
+Professional Summary:
+Backend Developer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning. Comfortable contributing in environments with evolving priorities and shared ownership.
+
+Education:
+Master of Science — Computer Science — University of Bonn — 2018
+
+Experience:
+Backend Developer — Atlas Systems — Lisbon, Portugal — 2019-10 to 2022-11
+
+* Expanded automated test coverage for payment and account workflows.
+* Designed service integrations used across multiple product teams.
+* Improved reliability of core backend services handling business-critical traffic.
+
+Backend Engineer — Blue Dynamics — Lisbon, Portugal — 2023-11 to Present
+
+* Expanded automated test coverage for payment and account workflows.
+* Designed service integrations used across multiple product teams.
+* Improved reliability of core backend services handling business-critical traffic.
+* Reduced API response time by 32% through query and caching improvements.
+
+Skills:
+Technical: Python, Docker, REST APIs, Redis
+Methods: Performance tuning, Microservices, System design
+Management: Planning, Collaboration, Task estimation
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+None listed

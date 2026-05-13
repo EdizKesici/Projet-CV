@@ -1,0 +1,45 @@
+Name: Leo Hassan
+Gender: Male
+Date of Birth: 1990-05-16
+Address: 723 Oakridge Street, 74281 Cologne, Germany
+Email: leo.hassan90@email.com
+Phone: +353-899-315-9969
+Target Role: DevOps Engineer
+
+Professional Summary:
+DevOps Engineer with 8+ years of experience delivering reliable technical solutions and measurable business impact. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Network Engineering — University of Texas at Austin — 2016
+
+Experience:
+DevOps Engineer — North Solutions — Cologne, Germany — 2018-03 to 2020-08
+
+* Supported engineering teams during incidents and postmortem actions.
+* Improved platform reliability with stronger observability and runbooks.
+* Reduced release lead time by 21% through CI/CD automation.
+* Standardized infrastructure provisioning across environments.
+
+Platform Engineer — Data Works — Cologne, Germany — 2021-12 to 2023-12
+
+* Standardized infrastructure provisioning across environments.
+* Improved platform reliability with stronger observability and runbooks.
+
+Senior DevOps Engineer — Core Solutions — Cologne, Germany — 2024-08 to Present
+
+* Supported engineering teams during incidents and postmortem actions.
+* Improved platform reliability with stronger observability and runbooks.
+* Standardized infrastructure provisioning across environments.
+* Reduced release lead time by 22% through CI/CD automation.
+
+Skills:
+Technical: Docker, Terraform, Python
+Methods: Incident response, CI/CD, Infrastructure as code, Monitoring, Automation
+Management: Incident coordination, Technical mentoring, Collaboration, Documentation
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+HashiCorp Terraform Associate

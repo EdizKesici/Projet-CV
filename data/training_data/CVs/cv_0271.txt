@@ -1,0 +1,32 @@
+Name: Nadia Costa
+Gender: Female
+Date of Birth: 2002-05-17
+Address: 163 Birch Street, 71385 Milan, Italy
+Email: nadia.costa02@mailhub.com
+Phone: +353-691-829-8847
+Target Role: DevOps Engineer
+
+Professional Summary:
+Technology specialist with 2+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Information Systems — University of Lisbon — 2024
+
+Experience:
+DevOps Engineer — Blue Insight — Milan, Italy — 2024-01 to Present
+
+* Supported engineering teams during incidents and postmortem actions.
+* Reduced release lead time by 31% through CI/CD automation.
+
+Skills:
+Technical: Kubernetes, Confluence, Docker, Python, Linux, Agile tools
+Methods: Automation, Monitoring, CI/CD, Incident response
+Management: Collaboration, Documentation, Technical mentoring
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+AWS Certified SysOps Administrator
+HashiCorp Terraform Associate

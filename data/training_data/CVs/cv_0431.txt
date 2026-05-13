@@ -1,0 +1,33 @@
+Name: Omar Silva
+Gender: Male
+Date of Birth: 2000-04-08
+Address: 982 Oakridge Street, 37793 Lagos, Nigeria
+Email: omar.silva00@inboxmail.net
+Phone: +39-819-604-9958
+Target Role: Software Engineer
+
+Professional Summary:
+Analytical professional targeting Software Engineer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Capable of supporting team goals and handling recurring technical responsibilities.
+
+Education:
+Bachelor of Science — Software Engineering — Politecnico di Milano — 2022
+
+Experience:
+Software Engineer — Nova Insight — Lagos, Nigeria — 2024-08 to Present
+
+* Delivered software features that improved internal process efficiency by 30%.
+* Collaborated on architectural improvements for long-term scalability.
+* Maintained core application modules with strong uptime and defect control.
+* Contributed to CI/CD and release quality across multiple services.
+
+Skills:
+Technical: SQL, Java, Confluence, Agile tools, Git, REST APIs
+Methods: Debugging, Agile collaboration, System integration, Agile delivery, Testing, Object-oriented design
+Management: Planning, Mentoring, Communication
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+None listed

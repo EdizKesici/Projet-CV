@@ -1,0 +1,33 @@
+Name: Omar Patel
+Gender: Male
+Date of Birth: 1997-05-12
+Address: 970 Cedar Street, 98720 Bengaluru, India
+Email: omar.patel97@email.com
+Phone: +49-963-509-9329
+Target Role: Data Scientist
+
+Professional Summary:
+Analytical professional targeting Data Scientist opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Interested in roles that combine execution, communication, and measurable business outcomes.
+
+Education:
+Master of Science — Data Science — University of Colorado Boulder — 2019
+
+Experience:
+Junior Data Scientist — Core Dynamics — Bengaluru, India — 2019-01 to Present
+
+* Delivered experimentation frameworks used to prioritize product changes.
+* Translated ambiguous business questions into measurable ML experiments.
+
+Skills:
+Technical: Python, scikit-learn, PyTorch, Pandas, Spark
+Methods: Experiment design, Forecasting, Problem solving, Feature engineering, Model validation, Statistical inference
+Management: Planning, Stakeholder alignment, Project planning, Mentoring, Cross-functional communication
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+AWS Cloud Practitioner
+Google Professional Data Engineer
+AWS Certified Machine Learning

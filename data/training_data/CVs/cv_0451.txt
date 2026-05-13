@@ -1,0 +1,46 @@
+Name: Leila Schneider
+Gender: Female
+Date of Birth: 1990-12-01
+Address: 52 Birch Street, 85541 Lisbon, Portugal
+Email: leila.schneider90@mailhub.com
+Phone: +91-472-527-1590
+Target Role: Backend Developer
+
+Professional Summary:
+Backend Developer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Software Engineering — University of Bonn — 2015
+
+Experience:
+Backend Developer — Vector Tech — Lisbon, Portugal — 2017-08 to 2020-09
+
+* Reduced API response time by 22% through query and caching improvements.
+* Designed service integrations used across multiple product teams.
+* Expanded automated test coverage for payment and account workflows.
+* Improved reliability of core backend services handling business-critical traffic.
+
+Backend Engineer — Blue Solutions — Lisbon, Portugal — 2021-12 to 2023-12
+
+* Designed service integrations used across multiple product teams.
+* Improved reliability of core backend services handling business-critical traffic.
+
+Senior Backend Developer — Vector Tech — Lisbon, Portugal — 2024-10 to Present
+
+* Reduced API response time by 19% through query and caching improvements.
+* Expanded automated test coverage for payment and account workflows.
+* Improved reliability of core backend services handling business-critical traffic.
+
+Skills:
+Technical: Go, REST APIs, PostgreSQL
+Methods: Microservices, System design, Performance tuning, Root cause analysis, API design
+Management: Collaboration, Code review
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+AWS Certified Developer
+ITIL Foundation
+Professional Scrum Master I

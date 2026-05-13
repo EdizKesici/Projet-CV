@@ -1,0 +1,45 @@
+Name: Olivia Novak
+Gender: Female
+Date of Birth: 1992-05-08
+Address: 288 Hillview Street, 85208 Lagos, Nigeria
+Email: olivia.novak92@mailhub.com
+Phone: +33-419-896-3535
+Target Role: Data Scientist
+
+Professional Summary:
+Professional pursuing Data Scientist opportunities with exposure to production environments, team delivery, and measurable operational improvements. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning. Used to learning new tools quickly when projects require broader technical coverage.
+
+Education:
+Bachelor of Science — Data Science — University of Amsterdam — 2017
+
+Experience:
+Data Scientist — Vector Works — Lagos, Nigeria — 2018-07 to 2020-08
+
+* Translated ambiguous business questions into measurable ML experiments.
+* Delivered experimentation frameworks used to prioritize product changes.
+
+Junior Data Scientist — Data Solutions — Lagos, Nigeria — 2021-02 to 2023-05
+
+* Delivered experimentation frameworks used to prioritize product changes.
+* Improved model accuracy by 31% on a customer behavior prediction use case.
+
+Senior Data Scientist — Data Platform — Lagos, Nigeria — 2024-12 to Present
+
+* Built production-ready models with monitoring for drift and data quality.
+* Delivered experimentation frameworks used to prioritize product changes.
+* Translated ambiguous business questions into measurable ML experiments.
+
+Skills:
+Technical: Pandas, SQL, Spark, Python
+Methods: Forecasting, Feature engineering, Model validation, Experiment design, Statistical inference
+Management: Mentoring, Communication, Project planning, Stakeholder alignment, Cross-functional communication
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+TensorFlow Developer Certificate
+Google Professional Data Engineer
+Professional Scrum Master I
+Scrum Fundamentals Certified

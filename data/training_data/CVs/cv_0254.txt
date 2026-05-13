@@ -1,0 +1,32 @@
+Name: Victor Schneider
+Gender: Male
+Date of Birth: 1996-10-05
+Address: 824 Cedar Street, 29132 Amsterdam, Netherlands
+Email: victor.schneider96@inboxmail.net
+Phone: +31-544-406-9895
+Target Role: BI Developer
+
+Professional Summary:
+BI Developer with 3+ years of experience delivering reliable technical solutions and measurable business impact. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning. Comfortable contributing in environments with evolving priorities and shared ownership.
+
+Education:
+Bachelor of Science — Business Analytics — University of Bonn — 2021
+
+Experience:
+BI Developer — Blue Systems — Amsterdam, Netherlands — 2023-06 to Present
+
+* Translated stakeholder requests into reusable metrics and semantic layers.
+* Consolidated fragmented reporting into dashboards used by executives.
+
+Skills:
+Technical: SQL, Tableau, Python, DAX, Power BI, Excel
+Methods: Business analysis, KPI definition, Dashboard design, ETL workflows, Dimensional modeling
+Management: Stakeholder communication, Requirement gathering
+
+Languages:
+English — C2
+French — B2
+
+Certifications:
+Microsoft Power BI Data Analyst
+IBM Data Analyst Professional Certificate

@@ -1,0 +1,31 @@
+Name: Leo Costa
+Gender: Male
+Date of Birth: 1998-10-04
+Address: 700 Admiralty Avenue, Denver, CO 95122, USA
+Email: leo.costa98@mailhub.com
+Phone: +353-451-203-8911
+Target Role: Software Engineer
+
+Professional Summary:
+Software Engineer with 2+ years of experience delivering reliable technical solutions and measurable business impact. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Science — Software Engineering — University of Colorado Boulder — 2022
+
+Experience:
+Software Engineer — Signal Analytics — Denver, CO — 2024-02 to Present
+
+* Collaborated on architectural improvements for long-term scalability.
+* Contributed to CI/CD and release quality across multiple services.
+
+Skills:
+Technical: Agile tools, Python, Confluence, C#, SQL
+Methods: Agile delivery, Debugging, Object-oriented design, System integration
+Management: Mentoring, Planning
+
+Languages:
+English — C2
+German — B1
+
+Certifications:
+Azure Developer Associate

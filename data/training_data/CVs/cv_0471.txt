@@ -1,0 +1,37 @@
+Name: Hannah Aliyev
+Gender: Female
+Date of Birth: 1997-08-15
+Address: 716 Linden Street, 40872 Lagos, Nigeria
+Email: hannah.aliyev97@mailhub.com
+Phone: +39-409-779-8635
+Target Role: ML Engineer
+
+Professional Summary:
+ML Engineer with 4+ years of experience delivering reliable technical solutions and measurable business impact. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Science — Computer Science — University of Lisbon — 2021
+
+Experience:
+ML Engineer — Atlas Tech — Lagos, Nigeria — 2022-01 to 2024-11
+
+* Reduced model deployment time by 19% by standardizing CI/CD pipelines.
+* Partnered with data scientists to convert prototypes into resilient services.
+* Operationalized training and inference workflows for multiple production models.
+
+Machine Learning Engineer — Quantum Systems — Lagos, Nigeria — 2025-12 to Present
+
+* Operationalized training and inference workflows for multiple production models.
+* Partnered with data scientists to convert prototypes into resilient services.
+
+Skills:
+Technical: Docker, MLflow, AWS, PyTorch
+Methods: Model deployment, Documentation, Monitoring, Feature stores, CI/CD, MLOps
+Management: Technical mentoring, Collaboration, Sprint planning, Roadmap communication
+
+Languages:
+English — C2
+German — B1
+
+Certifications:
+None listed

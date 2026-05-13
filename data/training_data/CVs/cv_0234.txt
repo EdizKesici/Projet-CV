@@ -1,0 +1,46 @@
+Name: Isla Okafor
+Gender: Female
+Date of Birth: 1998-03-26
+Address: 417 Park Avenue, Seattle, WA 82590, USA
+Email: isla.okafor98@inboxmail.net
+Phone: +353-210-225-4664
+Target Role: QA Engineer
+
+Professional Summary:
+Analytical professional targeting QA Engineer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Comfortable contributing in environments with evolving priorities and shared ownership.
+
+Education:
+Bachelor of Arts — Information Technology — University of Colorado Boulder — 2021
+
+Experience:
+QA Engineer — Atlas Insight — Seattle, WA — 2022-07 to 2023-01
+
+* Improved release readiness through clearer test reporting.
+* Developed automation suites for critical API and UI flows.
+* Partnered with developers to reproduce and isolate production issues.
+
+Software QA Analyst — North Analytics — Seattle, WA — 2024-12 to 2025-08
+
+* Improved release readiness through clearer test reporting.
+* Partnered with developers to reproduce and isolate production issues.
+* Developed automation suites for critical API and UI flows.
+
+Test Engineer — Core Solutions — Seattle, WA — 2026-06 to Present
+
+* Developed automation suites for critical API and UI flows.
+* Reduced escaped defects by 12% by expanding regression coverage.
+* Partnered with developers to reproduce and isolate production issues.
+* Improved release readiness through clearer test reporting.
+
+Skills:
+Technical: API testing, Documentation, Agile tools, Postman, Cypress
+Methods: Test planning, Quality assurance, Test automation, Defect tracking, Regression testing
+Management: Documentation, Cross-team coordination
+
+Languages:
+English — C2
+French — B2
+
+Certifications:
+Professional Scrum Master I
+Certified Agile Tester

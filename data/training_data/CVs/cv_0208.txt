@@ -1,0 +1,31 @@
+Name: Adrian Silva
+Gender: Male
+Date of Birth: 1996-01-14
+Address: 238 Linden Avenue, Seattle, WA 87651, USA
+Email: adrian.silva96@email.com
+Phone: +39-733-963-7179
+Target Role: Backend Developer
+
+Professional Summary:
+Technology specialist with 5+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning. Interested in roles that combine execution, communication, and measurable business outcomes.
+
+Education:
+Bachelor of Science — Information Technology — University of Bonn — 2019
+
+Experience:
+Backend Engineer — Vector Analytics — Seattle, WA — 2021-03 to Present
+
+* Expanded automated test coverage for payment and account workflows.
+* Reduced API response time by 31% through query and caching improvements.
+
+Skills:
+Technical: Python, PostgreSQL, Docker, Java, Redis
+Methods: API design, Unit testing, Agile collaboration, Microservices, System design
+Management: Task estimation, Code review, Technical communication
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+None listed

@@ -1,0 +1,43 @@
+Name: Adrian Dubois
+Gender: Male
+Date of Birth: 1991-01-01
+Address: 514 Maple Street, 34462 Amsterdam, Netherlands
+Email: adrian.dubois91@mailhub.com
+Phone: +353-908-587-3074
+Target Role: QA Engineer
+
+Professional Summary:
+QA Engineer with 8+ years of experience delivering reliable technical solutions and measurable business impact. Known for clear communication, structured problem solving, and strong execution in fast-moving environments.
+
+Education:
+Bachelor of Science — Computer Science — Trinity College Dublin — 2016
+
+Experience:
+QA Engineer — Nova Systems — Amsterdam, Netherlands — 2018-11 to 2020-07
+
+* Reduced escaped defects by 19% by expanding regression coverage.
+* Partnered with developers to reproduce and isolate production issues.
+* Developed automation suites for critical API and UI flows.
+* Improved release readiness through clearer test reporting.
+
+Test Engineer — Vector Tech — Amsterdam, Netherlands — 2021-07 to 2023-07
+
+* Developed automation suites for critical API and UI flows.
+* Improved release readiness through clearer test reporting.
+
+Senior QA Engineer — Quantum Analytics — Amsterdam, Netherlands — 2024-06 to Present
+
+* Developed automation suites for critical API and UI flows.
+* Partnered with developers to reproduce and isolate production issues.
+
+Skills:
+Technical: Cypress, Jira, API testing
+Methods: Test automation, Test planning, Regression testing, Quality assurance, Defect tracking
+Management: Documentation, Risk communication, Prioritization, Cross-team coordination
+
+Languages:
+English — C2
+Spanish — B2
+
+Certifications:
+AWS Cloud Practitioner

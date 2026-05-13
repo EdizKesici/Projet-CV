@@ -1,0 +1,43 @@
+Name: Zoe Martinez
+Gender: Female
+Date of Birth: 1994-01-12
+Address: 623 Park Street, 88482 Milan, Italy
+Email: zoe.martinez94@mailhub.com
+Phone: +33-905-835-6697
+Target Role: DevOps Engineer
+
+Professional Summary:
+DevOps Engineer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Brings a practical approach to delivery, prioritization, and collaboration across teams.
+
+Education:
+Bachelor of Science — Software Engineering — University of Lisbon — 2018
+
+Experience:
+DevOps Engineer — Data Labs — Milan, Italy — 2018-07 to 2020-02
+
+* Improved platform reliability with stronger observability and runbooks.
+* Reduced release lead time by 34% through CI/CD automation.
+* Standardized infrastructure provisioning across environments.
+* Supported engineering teams during incidents and postmortem actions.
+
+Platform Engineer — Atlas Works — Milan, Italy — 2021-10 to 2023-07
+
+* Standardized infrastructure provisioning across environments.
+* Improved platform reliability with stronger observability and runbooks.
+
+Senior DevOps Engineer — Vector Works — Milan, Italy — 2024-07 to Present
+
+* Standardized infrastructure provisioning across environments.
+* Reduced release lead time by 34% through CI/CD automation.
+
+Skills:
+Technical: Linux, Docker, Terraform, Kubernetes
+Methods: Automation, Monitoring, CI/CD, Process improvement, Infrastructure as code, Incident response
+Management: Incident coordination, Stakeholder updates, Collaboration
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+CKA

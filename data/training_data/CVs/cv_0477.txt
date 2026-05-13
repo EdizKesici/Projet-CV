@@ -1,0 +1,32 @@
+Name: Victor Garcia
+Gender: Male
+Date of Birth: 2000-10-05
+Address: 368 Admiralty Street, 62368 Dublin, Ireland
+Email: victor.garcia00@mailhub.com
+Phone: +234-426-573-2950
+Target Role: Product Analyst
+
+Professional Summary:
+Product Analyst focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning. Interested in roles that combine execution, communication, and measurable business outcomes.
+
+Education:
+Bachelor of Arts — Statistics — University of Bonn — 2023
+
+Experience:
+Product Analyst — Nova Analytics — Dublin, Ireland — 2024-03 to Present
+
+* Identified product funnel bottlenecks and improved conversion by 20%.
+* Built experiment readouts used by product and design leadership.
+
+Skills:
+Technical: Tableau, Looker, Python, Mixpanel
+Methods: Product metrics, Cohort analysis, Problem solving, Experimentation, Funnel analysis, User behavior analysis
+Management: Stakeholder alignment, Planning
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+Google Data Analytics Certificate
+Professional Scrum Master I

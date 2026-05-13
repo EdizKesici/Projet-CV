@@ -1,0 +1,45 @@
+Name: Victor Popescu
+Gender: Male
+Date of Birth: 1997-10-10
+Address: 541 Linden Street, 99210 Bengaluru, India
+Email: victor.popescu97@inboxmail.net
+Phone: +48-839-186-2490
+Target Role: QA Engineer
+
+Professional Summary:
+Professional pursuing QA Engineer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Bachelor of Arts — Software Engineering — Indian Institute of Technology Delhi — 2018
+
+Experience:
+QA Engineer — Quantum Networks — Bengaluru, India — 2018-07 to 2020-02
+
+* Partnered with developers to reproduce and isolate production issues.
+* Developed automation suites for critical API and UI flows.
+
+Test Engineer — Core Tech — Bengaluru, India — 2021-11 to 2023-07
+
+* Improved release readiness through clearer test reporting while coordinating work across engineers and analysts.
+* Developed automation suites for critical API and UI flows.
+* Partnered with developers to reproduce and isolate production issues while coordinating work across engineers and analysts.
+* Reduced escaped defects by 12% by expanding regression coverage.
+
+Senior QA Engineer — Quantum Dynamics — Bengaluru, India — 2024-03 to Present
+
+* Reduced escaped defects by 27% by expanding regression coverage while coordinating work across engineers and analysts.
+* Improved release readiness through clearer test reporting while coordinating work across engineers and analysts.
+* Partnered with developers to reproduce and isolate production issues.
+
+Skills:
+Technical: SQL, Python, Selenium, Postman, Cypress
+Methods: Defect tracking, Regression testing, Test automation
+Management: Cross-team coordination, Documentation, Prioritization
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+ISTQB Foundation Level
+ITIL Foundation

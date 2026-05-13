@@ -1,0 +1,32 @@
+Name: Arjun Santos
+Gender: Male
+Date of Birth: 1998-01-06
+Address: 877 Park Street, 87123 Lisbon, Portugal
+Email: arjun.santos98@email.com
+Phone: +91-486-429-5119
+Target Role: DevOps Engineer
+
+Professional Summary:
+DevOps Engineer with 3+ years of experience delivering reliable technical solutions and measurable business impact. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Brings a practical approach to delivery, prioritization, and collaboration across teams.
+
+Education:
+Bachelor of Science — Network Engineering — University of Bonn — 2023
+
+Experience:
+DevOps Engineer — Blue Solutions — Lisbon, Portugal — 2023-11 to Present
+
+* Supported engineering teams during incidents and postmortem actions.
+* Reduced release lead time by 25% through CI/CD automation.
+
+Skills:
+Technical: Python, Linux, GitHub Actions, Kubernetes, Terraform, AWS
+Methods: Automation, Monitoring, CI/CD, Incident response, Infrastructure as code
+Management: Collaboration, Incident coordination
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+CKA
+AWS Certified SysOps Administrator

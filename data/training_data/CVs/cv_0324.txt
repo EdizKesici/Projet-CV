@@ -1,0 +1,47 @@
+Name: Nadia Okafor
+Gender: Female
+Date of Birth: 1990-06-01
+Address: 324 Hillview Avenue, Austin, TX 46772, USA
+Email: nadia.okafor90@inboxmail.net
+Phone: +31-268-498-7131
+Target Role: Data Engineer
+
+Professional Summary:
+Analytical professional targeting Data Engineer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Comfortable contributing in environments with evolving priorities and shared ownership.
+
+Education:
+Master of Science — Information Systems — University of Texas at Austin — 2014
+
+Experience:
+Data Engineer — Core Insight — Austin, TX — 2015-03 to 2018-02
+
+* Designed reliable ingestion jobs for operational and product datasets.
+* Supported analytics and ML teams with curated data models.
+* Cut pipeline runtime by 25% through incremental processing improvements.
+* Implemented data quality checks that reduced downstream incidents.
+
+Analytics Engineer — Blue Solutions — Austin, TX — 2019-11 to 2022-06
+
+* Cut pipeline runtime by 21% through incremental processing improvements.
+* Implemented data quality checks that reduced downstream incidents.
+* Supported analytics and ML teams with curated data models.
+* Designed reliable ingestion jobs for operational and product datasets.
+
+Senior Data Engineer — Core Works — Austin, TX — 2023-07 to Present
+
+* Designed reliable ingestion jobs for operational and product datasets.
+* Supported analytics and ML teams with curated data models.
+* Cut pipeline runtime by 22% through incremental processing improvements.
+* Implemented data quality checks that reduced downstream incidents.
+
+Skills:
+Technical: Airflow, dbt, Spark, SQL, AWS, API integration
+Methods: ETL design, Data modeling, Pipeline orchestration
+Management: Documentation, Planning, Cross-team coordination
+
+Languages:
+English — C2
+German — B1
+
+Certifications:
+Databricks Data Engineer Associate

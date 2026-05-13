@@ -1,0 +1,32 @@
+Name: Luca Liu
+Gender: Male
+Date of Birth: 1997-06-21
+Address: 880 Oakridge Street, 60856 Amsterdam, Netherlands
+Email: luca.liu97@mailhub.com
+Phone: +31-721-929-8562
+Target Role: QA Engineer
+
+Professional Summary:
+QA Engineer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Science — Computer Science — Indian Institute of Technology Delhi — 2022
+
+Experience:
+QA Engineer — Signal Insight — Amsterdam, Netherlands — 2023-05 to Present
+
+* Reduced escaped defects by 19% by expanding regression coverage.
+* Partnered with developers to reproduce and isolate production issues.
+* Improved release readiness through clearer test reporting.
+* Developed automation suites for critical API and UI flows.
+
+Skills:
+Technical: Selenium, Python, Jira, API testing
+Methods: Regression testing, Quality assurance, Defect tracking
+Management: Cross-team coordination, Prioritization, Documentation
+
+Languages:
+English — C2
+
+Certifications:
+Scrum Fundamentals Certified

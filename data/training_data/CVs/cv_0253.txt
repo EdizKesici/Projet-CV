@@ -1,0 +1,42 @@
+Name: Hannah Hassan
+Gender: Female
+Date of Birth: 1996-06-27
+Address: 406 Linden Street, 82101 Lisbon, Portugal
+Email: hannah.hassan96@email.com
+Phone: +1-981-738-4559
+Target Role: Data Engineer
+
+Professional Summary:
+Technology specialist with 7+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Known for clear communication, structured problem solving, and strong execution in fast-moving environments.
+
+Education:
+Bachelor of Science — Software Engineering — Politecnico di Milano — 2019
+
+Experience:
+Data Engineer — Core Systems — Lisbon, Portugal — 2019-02 to 2022-09
+
+* Designed reliable ingestion jobs for operational and product datasets.
+* Cut pipeline runtime by 20% through incremental processing improvements.
+* Supported analytics and ML teams with curated data models.
+
+Analytics Engineer — Core Systems — Lisbon, Portugal — 2023-12 to Present
+
+* Implemented data quality checks that reduced downstream incidents.
+* Supported analytics and ML teams with curated data models.
+* Designed reliable ingestion jobs for operational and product datasets.
+* Cut pipeline runtime by 34% through incremental processing improvements.
+
+Skills:
+Technical: Airflow, CI/CD, Spark, SQL, Python
+Methods: ETL design, Batch processing, Pipeline orchestration
+Management: Incident communication, Documentation, Planning, Cross-team coordination
+
+Languages:
+English — C2
+German — B1
+
+Certifications:
+Professional Scrum Master I
+AWS Certified Data Analytics
+Google Data Analytics Certificate
+Google Professional Data Engineer

@@ -1,0 +1,38 @@
+Name: Omar Martinez
+Gender: Male
+Date of Birth: 1995-01-28
+Address: 11 Hillview Street, 88641 Lagos, Nigeria
+Email: omar.martinez95@mailhub.com
+Phone: +353-296-733-2249
+Target Role: Data Engineer
+
+Professional Summary:
+Professional pursuing Data Engineer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Brings a practical approach to delivery, prioritization, and collaboration across teams.
+
+Education:
+Bachelor of Science — Software Engineering — Politecnico di Milano — 2019
+
+Experience:
+Data Engineer — Blue Networks — Lagos, Nigeria — 2021-04 to 2023-07
+
+* Cut pipeline runtime by 23% through incremental processing improvements.
+* Implemented data quality checks that reduced downstream incidents.
+
+Analytics Engineer — Cloud Platform — Lagos, Nigeria — 2024-12 to Present
+
+* Implemented data quality checks that reduced downstream incidents.
+* Supported analytics and ML teams with curated data models.
+* Designed reliable ingestion jobs for operational and product datasets.
+* Cut pipeline runtime by 21% through incremental processing improvements.
+
+Skills:
+Technical: dbt, Bash, Unit testing, Python, Kafka, AWS, Spark
+Methods: Data modeling, Batch processing, Data quality management
+Management: Documentation, Cross-team coordination, Stakeholder updates, Planning, Incident communication
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+ITIL Foundation

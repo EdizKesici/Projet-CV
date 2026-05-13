@@ -1,0 +1,42 @@
+Name: Camila Petrov
+Gender: Female
+Date of Birth: 1987-05-01
+Address: 736 Riverside Street, 22556 Warsaw, Poland
+Email: camila.petrov87@mailhub.com
+Phone: +33-723-997-8673
+Target Role: Backend Developer
+
+Professional Summary:
+Backend Developer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Software Engineering — Trinity College Dublin — 2015
+
+Experience:
+Backend Developer — North Insight — Warsaw, Poland — 2017-12 to 2020-08
+
+* Reduced API response time by 14% through query and caching improvements.
+* Designed service integrations used across multiple product teams.
+
+Backend Engineer — Core Solutions — Warsaw, Poland — 2021-02 to 2023-01
+
+* Expanded automated test coverage for payment and account workflows.
+* Designed service integrations used across multiple product teams.
+
+Senior Backend Developer — Core Solutions — Warsaw, Poland — 2024-01 to Present
+
+* Expanded automated test coverage for payment and account workflows.
+* Designed service integrations used across multiple product teams.
+* Reduced API response time by 13% through query and caching improvements.
+
+Skills:
+Technical: PostgreSQL, Go, Java, Redis, Docker
+Methods: Microservices, API design, System design, Unit testing, Performance tuning
+Management: Code review, Technical communication, Collaboration
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+Oracle Java Certification

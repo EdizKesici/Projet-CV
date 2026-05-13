@@ -1,0 +1,44 @@
+Name: Eva Hassan
+Gender: Female
+Date of Birth: 1996-02-24
+Address: 603 Riverside Street, 81835 Warsaw, Poland
+Email: eva.hassan96@mailhub.com
+Phone: +91-638-963-6720
+Target Role: DevOps Engineer
+
+Professional Summary:
+DevOps Engineer with 8+ years of experience delivering reliable technical solutions and measurable business impact. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Brings a practical approach to delivery, prioritization, and collaboration across teams.
+
+Education:
+Bachelor of Science — Computer Science — University of Lisbon — 2018
+
+Experience:
+DevOps Engineer — Nova Insight — Warsaw, Poland — 2018-08 to 2020-03
+
+* Standardized infrastructure provisioning across environments.
+* Improved platform reliability with stronger observability and runbooks.
+* Supported engineering teams during incidents and postmortem actions.
+
+Platform Engineer — Nova Solutions — Warsaw, Poland — 2021-08 to 2023-10
+
+* Reduced release lead time by 25% through CI/CD automation.
+* Supported engineering teams during incidents and postmortem actions.
+* Improved platform reliability with stronger observability and runbooks.
+
+Senior DevOps Engineer — Atlas Works — Warsaw, Poland — 2024-12 to Present
+
+* Improved platform reliability with stronger observability and runbooks.
+* Reduced release lead time by 15% through CI/CD automation.
+
+Skills:
+Technical: Terraform, Linux, Docker, Kubernetes, Python, Excel, AWS
+Methods: CI/CD, Monitoring, Incident response, Automation
+Management: Technical mentoring, Documentation, Collaboration
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+Scrum Fundamentals Certified
+HashiCorp Terraform Associate

@@ -1,0 +1,33 @@
+Name: Clara Petrov
+Gender: Female
+Date of Birth: 1990-08-19
+Address: 299 Hillview Street, 99593 Milan, Italy
+Email: clara.petrov90@inboxmail.net
+Phone: +353-581-426-3654
+Target Role: Backend Developer
+
+Professional Summary:
+Analytical professional targeting Backend Developer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Software Engineering — University of Colorado Boulder — 2013
+
+Experience:
+Senior Backend Developer — Core Tech — Milan, Italy — 2015-09 to Present
+
+* Designed service integrations used across multiple product teams.
+* Reduced API response time by 21% through query and caching improvements.
+* Improved reliability of core backend services handling business-critical traffic.
+* Expanded automated test coverage for payment and account workflows.
+
+Skills:
+Technical: Go, Java, Python
+Methods: System design, Microservices, Unit testing, Performance tuning
+Management: Technical communication, Task estimation
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+Azure Developer Associate

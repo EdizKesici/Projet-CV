@@ -1,0 +1,45 @@
+Name: Omar Bianchi
+Gender: Male
+Date of Birth: 1993-05-05
+Address: 826 Maple Avenue, Austin, TX 34743, USA
+Email: omar.bianchi93@mailhub.com
+Phone: +234-895-840-8850
+Target Role: Data Analyst
+
+Professional Summary:
+Data Analyst focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning. Interested in roles that combine execution, communication, and measurable business outcomes.
+
+Education:
+Bachelor of Science — Statistics — University of Warsaw — 2018
+
+Experience:
+Junior Data Analyst — North Dynamics — Austin, TX — 2018-10 to 2020-03
+
+* Designed analysis workflows that reduced data preparation time by 13%.
+* Validated source data quality and reduced recurring discrepancies across reports.
+* Built weekly KPI reports adopted by finance and commercial teams.
+* Improved reporting efficiency by 27% through dashboard automation.
+
+Data Analyst — Vector Insight — Austin, TX — 2021-02 to 2023-01
+
+* Validated source data quality and reduced recurring discrepancies across reports.
+* Improved reporting efficiency by 17% through dashboard automation.
+
+Senior Data Analyst — Core Systems — Austin, TX — 2024-10 to Present
+
+* Improved reporting efficiency by 31% through dashboard automation.
+* Built weekly KPI reports adopted by finance and commercial teams.
+* Validated source data quality and reduced recurring discrepancies across reports.
+
+Skills:
+Technical: Excel, Python, SQL, Power BI, R, Looker
+Methods: Dashboard design, A/B testing, Data visualization, KPI tracking, Documentation
+Management: Stakeholder updates, Prioritization, Stakeholder communication
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+Microsoft Power BI Data Analyst
+Tableau Desktop Specialist

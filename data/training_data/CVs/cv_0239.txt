@@ -1,0 +1,32 @@
+Name: Nadia Aliyev
+Gender: Female
+Date of Birth: 2000-07-21
+Address: 840 Park Avenue, Seattle, WA 74911, USA
+Email: nadia.aliyev00@inboxmail.net
+Phone: +351-954-705-6990
+Target Role: Data Analyst
+
+Professional Summary:
+Analytical professional targeting Data Analyst opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning. Brings a practical approach to delivery, prioritization, and collaboration across teams.
+
+Education:
+Master of Science — Economics — Indian Institute of Technology Delhi — 2021
+
+Experience:
+Junior Data Analyst — Data Analytics — Seattle, WA — 2023-11 to Present
+
+* Built weekly KPI reports adopted by finance and commercial teams.
+* Improved reporting efficiency by 20% through dashboard automation.
+* Designed analysis workflows that reduced data preparation time by 24%.
+
+Skills:
+Technical: SQL, Looker, Excel, R, Tableau
+Methods: Problem solving, Data visualization, Regression analysis, Dashboard design
+Management: Requirement gathering, Prioritization, Task coordination
+
+Languages:
+English — C2
+Spanish — B2
+
+Certifications:
+None listed

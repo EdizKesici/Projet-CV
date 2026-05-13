@@ -1,0 +1,46 @@
+Name: Hugo Santos
+Gender: Male
+Date of Birth: 1994-10-09
+Address: 324 Hillview Street, 27031 Bengaluru, India
+Email: hugo.santos94@email.com
+Phone: +33-332-781-8292
+Target Role: Software Engineer
+
+Professional Summary:
+Analytical professional targeting Software Engineer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Capable of supporting team goals and handling recurring technical responsibilities.
+
+Education:
+Bachelor of Science — Information Systems — University of Texas at Austin — 2016
+
+Experience:
+Software Engineer — Vector Insight — Bengaluru, India — 2017-05 to 2020-08
+
+* Delivered software features that improved internal process efficiency by 26%.
+* Collaborated on architectural improvements for long-term scalability.
+
+Software Developer — Nova Labs — Bengaluru, India — 2021-12 to 2023-08
+
+* Collaborated on architectural improvements for long-term scalability.
+* Maintained core application modules with strong uptime and defect control.
+* Delivered software features that improved internal process efficiency by 19%.
+* Contributed to CI/CD and release quality across multiple services.
+
+Senior Software Engineer — Vector Dynamics — Bengaluru, India — 2024-10 to Present
+
+* Delivered software features that improved internal process efficiency by 28%.
+* Contributed to CI/CD and release quality across multiple services.
+* Collaborated on architectural improvements for long-term scalability.
+
+Skills:
+Technical: C#, REST APIs, Git
+Methods: Agile delivery, Testing, Debugging
+Management: Communication, Planning, Mentoring
+
+Languages:
+English — C2
+German — B1
+
+Certifications:
+Azure Developer Associate
+Scrum Fundamentals Certified
+Professional Scrum Master I

@@ -1,0 +1,45 @@
+Name: Gabriel Petrov
+Gender: Male
+Date of Birth: 1990-04-15
+Address: 635 Riverside Avenue, Austin, TX 68971, USA
+Email: gabriel.petrov90@inboxmail.net
+Phone: +1-496-919-4672
+Target Role: Software Engineer
+
+Professional Summary:
+Analytical professional targeting Software Engineer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Science — Information Systems — University of Amsterdam — 2015
+
+Experience:
+Software Engineer — Vector Platform — Austin, TX — 2016-05 to 2019-03
+
+* Collaborated on architectural improvements for long-term scalability.
+* Maintained core application modules with strong uptime and defect control.
+* Contributed to CI/CD and release quality across multiple services.
+* Delivered software features that improved internal process efficiency by 13%.
+
+Software Developer — North Systems — Austin, TX — 2020-06 to 2023-02
+
+* Contributed to CI/CD and release quality across multiple services.
+* Maintained core application modules with strong uptime and defect control.
+
+Senior Software Engineer — Core Tech — Austin, TX — 2024-03 to Present
+
+* Delivered software features that improved internal process efficiency by 15%.
+* Maintained core application modules with strong uptime and defect control.
+* Contributed to CI/CD and release quality across multiple services.
+
+Skills:
+Technical: SQL, Python, Java, Git, Linux, REST APIs, Docker
+Methods: Agile delivery, Object-oriented design, Testing, Debugging, System integration
+Management: Communication, Planning, Collaboration, Mentoring
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+Professional Scrum Developer
+AWS Certified Developer

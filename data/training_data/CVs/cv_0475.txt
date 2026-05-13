@@ -1,0 +1,46 @@
+Name: Eva Dubois
+Gender: Female
+Date of Birth: 1989-09-13
+Address: 575 Hillview Street, 86792 Warsaw, Poland
+Email: eva.dubois89@email.com
+Phone: +48-488-189-2358
+Target Role: Data Scientist
+
+Professional Summary:
+Data Scientist focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Used to learning new tools quickly when projects require broader technical coverage.
+
+Education:
+Master of Science — Data Science — Trinity College Dublin — 2016
+
+Experience:
+Data Scientist — Quantum Insight — Warsaw, Poland — 2016-07 to 2019-02
+
+* Improved model accuracy by 23% on a customer behavior prediction use case.
+* Delivered experimentation frameworks used to prioritize product changes.
+* Built production-ready models with monitoring for drift and data quality.
+* Translated ambiguous business questions into measurable ML experiments.
+
+Junior Data Scientist — Quantum Labs — Warsaw, Poland — 2020-12 to 2023-02
+
+* Translated ambiguous business questions into measurable ML experiments.
+* Improved model accuracy by 18% on a customer behavior prediction use case.
+* Delivered experimentation frameworks used to prioritize product changes.
+
+Senior Data Scientist — Quantum Tech — Warsaw, Poland — 2024-03 to Present
+
+* Built production-ready models with monitoring for drift and data quality.
+* Improved model accuracy by 28% on a customer behavior prediction use case.
+* Delivered experimentation frameworks used to prioritize product changes.
+
+Skills:
+Technical: REST APIs, Pandas, Spark, PyTorch
+Methods: Forecasting, Experiment design, Statistical inference, Feature engineering, Root cause analysis, Model validation
+Management: Cross-functional communication, Stakeholder alignment, Mentoring
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+Google Professional Data Engineer
+TensorFlow Developer Certificate

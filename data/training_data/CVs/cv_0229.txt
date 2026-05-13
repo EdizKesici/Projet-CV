@@ -1,0 +1,43 @@
+Name: Kenji Liu
+Gender: Male
+Date of Birth: 1995-07-25
+Address: 573 Admiralty Avenue, Denver, CO 49295, USA
+Email: kenji.liu95@mailhub.com
+Phone: +91-911-490-4681
+Target Role: Data Analyst
+
+Professional Summary:
+Data Analyst focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Data Analytics — University of Colorado Boulder — 2016
+
+Experience:
+Junior Data Analyst — Vector Dynamics — Denver, CO — 2016-05 to 2019-10
+
+* Improved reporting efficiency by 18% through dashboard automation.
+* Validated source data quality and reduced recurring discrepancies across reports.
+* Built weekly KPI reports adopted by finance and commercial teams.
+
+Data Analyst — Core Insight — Denver, CO — 2020-09 to 2023-09
+
+* Improved reporting efficiency by 30% through dashboard automation.
+* Built weekly KPI reports adopted by finance and commercial teams.
+* Designed analysis workflows that reduced data preparation time by 20%.
+
+Senior Data Analyst — Core Networks — Denver, CO — 2024-10 to Present
+
+* Designed analysis workflows that reduced data preparation time by 16%.
+* Validated source data quality and reduced recurring discrepancies across reports.
+
+Skills:
+Technical: Python, R, Tableau
+Methods: Dashboard design, Agile collaboration, KPI tracking, Data visualization, A/B testing, Regression analysis
+Management: Stakeholder communication, Project coordination
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+Tableau Desktop Specialist

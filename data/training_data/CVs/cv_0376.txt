@@ -1,0 +1,45 @@
+Name: Mateo Garcia
+Gender: Male
+Date of Birth: 1988-06-28
+Address: 125 Hillview Street, 18558 Milan, Italy
+Email: mateo.garcia88@inboxmail.net
+Phone: +91-233-271-6265
+Target Role: Cybersecurity Analyst
+
+Professional Summary:
+Technology specialist with 12+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Information Security — University of Lagos — 2012
+
+Experience:
+Cybersecurity Analyst — Data Platform — Milan, Italy — 2014-01 to 2018-08
+
+* Reduced mean time to detect by 19% through stronger alert triage.
+* Hardened access controls and baseline monitoring practices.
+* Improved vulnerability remediation reporting across infrastructure teams.
+
+Security Analyst — Data Labs — Milan, Italy — 2019-12 to 2022-02
+
+* Reduced mean time to detect by 26% through stronger alert triage.
+* Hardened access controls and baseline monitoring practices.
+* Supported incident investigations with structured evidence collection.
+
+Senior Cybersecurity Analyst — North Labs — Milan, Italy — 2023-01 to Present
+
+* Reduced mean time to detect by 12% through stronger alert triage.
+* Supported incident investigations with structured evidence collection.
+* Improved vulnerability remediation reporting across infrastructure teams.
+
+Skills:
+Technical: Vulnerability scanning, Splunk, Python, Wireshark
+Methods: Problem solving, Log analysis, Threat analysis, Security monitoring, Risk assessment, Incident response
+Management: Cross-team coordination, Incident communication
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+Professional Scrum Master I
+ITIL Foundation

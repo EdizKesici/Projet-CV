@@ -1,0 +1,32 @@
+Name: Hugo Andersen
+Gender: Male
+Date of Birth: 1998-05-17
+Address: 629 Admiralty Street, 79713 Dublin, Ireland
+Email: hugo.andersen98@inboxmail.net
+Phone: +39-936-595-1429
+Target Role: Cybersecurity Analyst
+
+Professional Summary:
+Professional pursuing Cybersecurity Analyst opportunities with exposure to production environments, team delivery, and measurable operational improvements. Capable of supporting team goals and handling recurring technical responsibilities.
+
+Education:
+Bachelor of Science — Computer Science — University of Lisbon — 2023
+
+Experience:
+Cybersecurity Analyst — Vector Dynamics — Dublin, Ireland — 2024-01 to Present
+
+* Hardened access controls and baseline monitoring practices.
+* Improved vulnerability remediation reporting across infrastructure teams.
+* Supported incident investigations with structured evidence collection.
+
+Skills:
+Technical: Vulnerability scanning, REST APIs, Linux, IAM
+Methods: Security monitoring, Incident response, Risk assessment, Log analysis, Threat analysis, Documentation
+Management: Documentation, Cross-team coordination
+
+Languages:
+English — C2
+
+Certifications:
+Certified Ethical Hacker
+GIAC Security Essentials

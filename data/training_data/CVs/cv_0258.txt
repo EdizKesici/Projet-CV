@@ -1,0 +1,37 @@
+Name: Mateo Martinez
+Gender: Male
+Date of Birth: 1998-10-24
+Address: 497 Riverside Avenue, Austin, TX 87880, USA
+Email: mateo.martinez98@inboxmail.net
+Phone: +39-736-291-5658
+Target Role: Product Analyst
+
+Professional Summary:
+Professional pursuing Product Analyst opportunities with exposure to production environments, team delivery, and measurable operational improvements. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning. Brings a practical approach to delivery, prioritization, and collaboration across teams.
+
+Education:
+Master of Science — Business Analytics — University of Warsaw — 2020
+
+Experience:
+Product Analyst — Nova Analytics — Austin, TX — 2021-11 to 2023-09
+
+* Built experiment readouts used by product and design leadership.
+* Defined self-serve metrics for feature adoption and retention analysis.
+
+Growth Analyst — Core Analytics — Austin, TX — 2024-10 to Present
+
+* Identified product funnel bottlenecks and improved conversion by 31%.
+* Defined self-serve metrics for feature adoption and retention analysis.
+* Connected product analytics findings to roadmap prioritization decisions.
+
+Skills:
+Technical: Tableau, Looker, Excel
+Methods: Cohort analysis, Experimentation, User behavior analysis, Product metrics
+Management: Planning, Cross-functional collaboration
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+Certified Analytics Professional

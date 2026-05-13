@@ -1,0 +1,46 @@
+Name: Elena Hassan
+Gender: Female
+Date of Birth: 1989-05-03
+Address: 844 Riverside Street, 29342 Bengaluru, India
+Email: elena.hassan89@inboxmail.net
+Phone: +49-446-253-9664
+Target Role: Frontend Developer
+
+Professional Summary:
+Analytical professional targeting Frontend Developer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Software Engineering — Indian Institute of Technology Delhi — 2014
+
+Experience:
+Frontend Developer — North Tech — Bengaluru, India — 2015-01 to 2018-02
+
+* Improved page performance scores by 12% across key user journeys.
+* Reduced UI defects through stronger test automation and QA collaboration.
+* Partnered with designers to deliver accessible interfaces at scale.
+* Built reusable component libraries that accelerated feature delivery.
+
+Frontend Engineer — Quantum Insight — Bengaluru, India — 2019-09 to 2022-11
+
+* Reduced UI defects through stronger test automation and QA collaboration.
+* Partnered with designers to deliver accessible interfaces at scale.
+* Improved page performance scores by 12% across key user journeys.
+* Built reusable component libraries that accelerated feature delivery.
+
+Senior Frontend Developer — Vector Solutions — Bengaluru, India — 2023-07 to Present
+
+* Built reusable component libraries that accelerated feature delivery.
+* Partnered with designers to deliver accessible interfaces at scale.
+
+Skills:
+Technical: Testing Library, HTML, TypeScript, Next.js, JavaScript, CSS, Notion
+Methods: Accessibility, Performance optimization, Responsive design
+Management: Design collaboration, Requirement clarification, Sprint planning, Code review
+
+Languages:
+English — C2
+French — B2
+
+Certifications:
+Meta Front-End Developer
+Professional Scrum Master I

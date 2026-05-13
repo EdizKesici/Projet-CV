@@ -1,0 +1,44 @@
+Name: Iris Novak
+Gender: Female
+Date of Birth: 1986-08-12
+Address: 328 Linden Avenue, Denver, CO 92459, USA
+Email: iris.novak86@mailhub.com
+Phone: +49-310-715-8760
+Target Role: ML Engineer
+
+Professional Summary:
+Analytical professional targeting ML Engineer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Interested in roles that combine execution, communication, and measurable business outcomes.
+
+Education:
+Bachelor of Science — Machine Learning — University of Lisbon — 2015
+
+Experience:
+ML Engineer — Quantum Insight — Denver, CO — 2015-12 to 2018-04
+
+* Improved observability for inference latency and feature freshness.
+* Partnered with data scientists to convert prototypes into resilient services.
+* Reduced model deployment time by 12% by standardizing CI/CD pipelines.
+
+Machine Learning Engineer — Quantum Analytics — Denver, CO — 2019-07 to 2022-01
+
+* Reduced model deployment time by 22% by standardizing CI/CD pipelines.
+* Partnered with data scientists to convert prototypes into resilient services.
+
+Senior ML Engineer — North Analytics — Denver, CO — 2023-08 to Present
+
+* Operationalized training and inference workflows for multiple production models.
+* Reduced model deployment time by 31% by standardizing CI/CD pipelines.
+
+Skills:
+Technical: AWS, Docker, Python, PyTorch
+Methods: Root cause analysis, Model deployment, Feature stores, MLOps
+Management: Sprint planning, Collaboration
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+Scrum Fundamentals Certified
+CKA
+Professional Scrum Master I

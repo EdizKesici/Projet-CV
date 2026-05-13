@@ -1,0 +1,45 @@
+Name: Daniel Okafor
+Gender: Male
+Date of Birth: 1993-12-03
+Address: 832 Park Street, 81133 Amsterdam, Netherlands
+Email: daniel.okafor93@mailhub.com
+Phone: +234-855-815-6467
+Target Role: Software Engineer
+
+Professional Summary:
+Technology specialist with 11+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Has supported mentoring, planning, and coordination activities alongside individual technical work.
+
+Education:
+Master of Science — Computer Science — University of Colorado Boulder — 2015
+
+Experience:
+Software Engineer — Vector Labs — Amsterdam, Netherlands — 2015-12 to 2018-04
+
+* Contributed to CI/CD and release quality across multiple services.
+* Collaborated on architectural improvements for long-term scalability.
+* Delivered software features that improved internal process efficiency by 15%.
+* Maintained core application modules with strong uptime and defect control.
+
+Software Developer — Nova Insight — Amsterdam, Netherlands — 2019-12 to 2022-08
+
+* Contributed to CI/CD and release quality across multiple services.
+* Collaborated on architectural improvements for long-term scalability.
+* Delivered software features that improved internal process efficiency by 23%.
+* Maintained core application modules with strong uptime and defect control.
+
+Senior Software Engineer — Atlas Insight — Amsterdam, Netherlands — 2023-11 to Present
+
+* Collaborated on architectural improvements for long-term scalability.
+* Maintained core application modules with strong uptime and defect control.
+
+Skills:
+Technical: Python, Java, Docker
+Methods: Object-oriented design, Testing, Agile delivery
+Management: Collaboration, Mentoring, Communication
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+None listed

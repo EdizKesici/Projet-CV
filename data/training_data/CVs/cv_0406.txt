@@ -1,0 +1,45 @@
+Name: Hugo Okafor
+Gender: Male
+Date of Birth: 1993-01-10
+Address: 351 Oakridge Street, 43679 Lisbon, Portugal
+Email: hugo.okafor93@mailhub.com
+Phone: +1-789-689-7804
+Target Role: ML Engineer
+
+Professional Summary:
+ML Engineer with 9+ years of experience delivering reliable technical solutions and measurable business impact. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning. Interested in roles that combine execution, communication, and measurable business outcomes.
+
+Education:
+Master of Science — Software Engineering — Politecnico di Milano — 2015
+
+Experience:
+ML Engineer — North Networks — Lisbon, Portugal — 2017-06 to 2020-12
+
+* Partnered with data scientists to convert prototypes into resilient services.
+* Operationalized training and inference workflows for multiple production models.
+* Reduced model deployment time by 32% by standardizing CI/CD pipelines.
+* Improved observability for inference latency and feature freshness.
+
+Machine Learning Engineer — North Dynamics — Lisbon, Portugal — 2021-10 to 2023-09
+
+* Operationalized training and inference workflows for multiple production models.
+* Improved observability for inference latency and feature freshness.
+
+Senior ML Engineer — Signal Labs — Lisbon, Portugal — 2024-06 to Present
+
+* Reduced model deployment time by 21% by standardizing CI/CD pipelines.
+* Operationalized training and inference workflows for multiple production models.
+* Improved observability for inference latency and feature freshness.
+
+Skills:
+Technical: AWS, PyTorch, Notion, Docker
+Methods: CI/CD, Model deployment, Feature stores
+Management: Technical mentoring, Sprint planning
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+Google Professional Machine Learning Engineer
+Google Data Analytics Certificate

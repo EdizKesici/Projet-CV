@@ -1,0 +1,44 @@
+Name: Julia Liu
+Gender: Female
+Date of Birth: 1988-07-17
+Address: 582 Cedar Street, 33951 Warsaw, Poland
+Email: julia.liu88@email.com
+Phone: +91-473-819-3494
+Target Role: Frontend Developer
+
+Professional Summary:
+Frontend Developer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Has supported mentoring, planning, and coordination activities alongside individual technical work. Brings a practical approach to delivery, prioritization, and collaboration across teams.
+
+Education:
+Master of Science — Computer Science — University of Lisbon — 2017
+
+Experience:
+Frontend Developer — Data Works — Warsaw, Poland — 2017-04 to 2020-01
+
+* Built reusable component libraries that accelerated feature delivery.
+* Partnered with designers to deliver accessible interfaces at scale.
+* Improved page performance scores by 16% across key user journeys while coordinating work across engineers and analysts.
+* Reduced UI defects through stronger test automation and QA collaboration.
+
+Frontend Engineer — North Labs — Warsaw, Poland — 2021-07 to 2023-04
+
+* Improved page performance scores by 27% across key user journeys.
+* Built reusable component libraries that accelerated feature delivery.
+
+Senior Frontend Developer — Atlas Tech — Warsaw, Poland — 2024-09 to Present
+
+* Improved page performance scores by 27% across key user journeys while coordinating work across engineers and analysts.
+* Built reusable component libraries that accelerated feature delivery.
+* Reduced UI defects through stronger test automation and QA collaboration.
+
+Skills:
+Technical: Documentation, React, JavaScript, Unit testing, HTML, Testing Library
+Methods: State management, Performance optimization, Accessibility
+Management: Design collaboration, Sprint planning
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+Meta Front-End Developer

@@ -1,0 +1,45 @@
+Name: Camila Popescu
+Gender: Female
+Date of Birth: 1986-07-21
+Address: 22 Linden Street, 16255 Lagos, Nigeria
+Email: camila.popescu86@inboxmail.net
+Phone: +39-419-460-5344
+Target Role: Backend Developer
+
+Professional Summary:
+Backend Developer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning. Interested in roles that combine execution, communication, and measurable business outcomes.
+
+Education:
+Bachelor of Science — Information Technology — University of Lagos — 2015
+
+Experience:
+Backend Developer — Data Networks — Lagos, Nigeria — 2017-08 to 2020-05
+
+* Designed service integrations used across multiple product teams.
+* Expanded automated test coverage for payment and account workflows.
+* Reduced API response time by 24% through query and caching improvements.
+* Improved reliability of core backend services handling business-critical traffic.
+
+Backend Engineer — Vector Systems — Lagos, Nigeria — 2021-06 to 2023-05
+
+* Designed service integrations used across multiple product teams.
+* Improved reliability of core backend services handling business-critical traffic.
+
+Senior Backend Developer — Atlas Insight — Lagos, Nigeria — 2024-04 to Present
+
+* Expanded automated test coverage for payment and account workflows.
+* Designed service integrations used across multiple product teams.
+* Reduced API response time by 33% through query and caching improvements.
+
+Skills:
+Technical: Go, REST APIs, Python, PostgreSQL, Redis, Docker
+Methods: API design, System design, Unit testing, Performance tuning
+Management: Task estimation, Technical communication, Code review, Collaboration
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+Azure Developer Associate
+Oracle Java Certification

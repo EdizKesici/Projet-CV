@@ -1,0 +1,40 @@
+Name: Nadia Garcia
+Gender: Female
+Date of Birth: 1994-01-14
+Address: 728 Admiralty Street, 22961 Dublin, Ireland
+Email: nadia.garcia94@email.com
+Phone: +1-877-613-8609
+Target Role: QA Engineer
+
+Professional Summary:
+QA Engineer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Used to learning new tools quickly when projects require broader technical coverage.
+
+Education:
+Bachelor of Arts — Software Engineering — Indian Institute of Technology Delhi — 2019
+
+Experience:
+QA Engineer — Blue Platform — Dublin, Ireland — 2021-12 to 2023-12
+
+* Partnered with developers to reproduce and isolate production issues.
+* Developed automation suites for critical API and UI flows.
+* Improved release readiness through clearer test reporting.
+* Reduced escaped defects by 21% by expanding regression coverage.
+
+Test Engineer — Signal Platform — Dublin, Ireland — 2024-12 to Present
+
+* Reduced escaped defects by 22% by expanding regression coverage.
+* Developed automation suites for critical API and UI flows.
+
+Skills:
+Technical: API testing, Jira, Python
+Methods: Test automation, Quality assurance, Regression testing, Test planning
+Management: Risk communication, Prioritization, Documentation
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+Certified Agile Tester
+ITIL Foundation
+Postman API Fundamentals

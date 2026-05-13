@@ -1,0 +1,44 @@
+Name: Nathan Petrov
+Gender: Male
+Date of Birth: 1990-09-22
+Address: 87 Oakridge Street, 99295 Lyon, France
+Email: nathan.petrov90@email.com
+Phone: +1-866-807-7050
+Target Role: Frontend Developer
+
+Professional Summary:
+Technology specialist with 11+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Capable of supporting team goals and handling recurring technical responsibilities.
+
+Education:
+Master of Science — Information Technology — University of Lagos — 2014
+
+Experience:
+Frontend Developer — Atlas Works — Lyon, France — 2015-11 to 2018-07
+
+* Improved page performance scores by 19% across key user journeys.
+* Reduced UI defects through stronger test automation and QA collaboration.
+* Partnered with designers to deliver accessible interfaces at scale.
+* Built reusable component libraries that accelerated feature delivery.
+
+Frontend Engineer — Cloud Insight — Lyon, France — 2019-12 to 2022-07
+
+* Partnered with designers to deliver accessible interfaces at scale.
+* Improved page performance scores by 15% across key user journeys.
+
+Senior Frontend Developer — Nova Platform — Lyon, France — 2023-09 to Present
+
+* Built reusable component libraries that accelerated feature delivery.
+* Improved page performance scores by 33% across key user journeys.
+
+Skills:
+Technical: TypeScript, React, JavaScript, CSS
+Methods: Performance optimization, Responsive design, Accessibility, Component architecture, State management
+Management: Stakeholder updates, Code review, Sprint planning, Design collaboration
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+AWS Cloud Practitioner
+Meta Front-End Developer

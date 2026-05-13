@@ -1,0 +1,38 @@
+Name: Nora Silva
+Gender: Female
+Date of Birth: 1988-02-14
+Address: 200 Pinecrest Street, 31590 Bengaluru, India
+Email: nora.silva88@mailhub.com
+Phone: +48-502-393-4770
+Target Role: Data Analyst
+
+Professional Summary:
+Data Analyst with 7+ years of experience delivering reliable technical solutions and measurable business impact. Capable of supporting team goals and handling recurring technical responsibilities.
+
+Education:
+Bachelor of Science — Data Analytics — University of Lisbon — 2018
+
+Experience:
+Junior Data Analyst — North Works — Bengaluru, India — 2019-05 to 2022-07
+
+* Validated source data quality and reduced recurring discrepancies across reports.
+* Built weekly KPI reports adopted by finance and commercial teams.
+* Designed analysis workflows that reduced data preparation time by 20%.
+
+Data Analyst — Signal Systems — Bengaluru, India — 2023-12 to Present
+
+* Designed analysis workflows that reduced data preparation time by 30%.
+* Built weekly KPI reports adopted by finance and commercial teams.
+* Validated source data quality and reduced recurring discrepancies across reports.
+
+Skills:
+Technical: Power BI, Python, Documentation, SQL, Excel, Tableau
+Methods: Root cause analysis, KPI tracking, A/B testing, Data visualization, Dashboard design, Regression analysis
+Management: Prioritization, Requirement gathering, Project coordination, Stakeholder communication
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+None listed

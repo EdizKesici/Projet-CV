@@ -1,0 +1,32 @@
+Name: Marcus Andersen
+Gender: Male
+Date of Birth: 2003-08-11
+Address: 936 Park Avenue, Denver, CO 98803, USA
+Email: marcus.andersen03@inboxmail.net
+Phone: +91-468-422-5857
+Target Role: QA Engineer
+
+Professional Summary:
+Professional pursuing QA Engineer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning. Comfortable contributing in environments with evolving priorities and shared ownership.
+
+Education:
+Bachelor of Science — Computer Science — University of Amsterdam — 2025
+
+Experience:
+QA Engineer — North Analytics — Denver, CO — 2025-06 to Present
+
+* Reduced escaped defects by 12% by expanding regression coverage.
+* Partnered with developers to reproduce and isolate production issues.
+
+Skills:
+Technical: Cypress, API testing, Jira, Python
+Methods: Regression testing, Quality assurance, Test automation
+Management: Risk communication, Prioritization, Cross-team coordination
+
+Languages:
+English — C2
+French — B2
+
+Certifications:
+Certified Agile Tester
+ISTQB Foundation Level

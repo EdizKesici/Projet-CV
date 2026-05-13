@@ -1,0 +1,37 @@
+Name: Leo Liu
+Gender: Male
+Date of Birth: 1996-04-04
+Address: 175 Oakridge Street, 83090 Lagos, Nigeria
+Email: leo.liu96@email.com
+Phone: +234-598-593-4721
+Target Role: QA Engineer
+
+Professional Summary:
+Professional pursuing QA Engineer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Science — Software Engineering — University of Texas at Austin — 2018
+
+Experience:
+QA Engineer — Atlas Solutions — Lagos, Nigeria — 2019-05 to 2022-11
+
+* Partnered with developers to reproduce and isolate production issues.
+* Reduced escaped defects by 27% by expanding regression coverage.
+
+Test Engineer — Nova Platform — Lagos, Nigeria — 2023-10 to Present
+
+* Reduced escaped defects by 28% by expanding regression coverage.
+* Partnered with developers to reproduce and isolate production issues.
+* Improved release readiness through clearer test reporting.
+
+Skills:
+Technical: Cypress, SQL, Python, Postman, API testing
+Methods: Regression testing, Test planning, Defect tracking, Root cause analysis, Quality assurance, Test automation
+Management: Cross-team coordination, Prioritization, Risk communication
+
+Languages:
+English — C2
+German — B1
+
+Certifications:
+None listed

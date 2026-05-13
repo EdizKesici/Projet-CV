@@ -1,0 +1,46 @@
+Name: Leo Okafor
+Gender: Male
+Date of Birth: 1989-03-13
+Address: 310 Oakridge Street, 62006 Lisbon, Portugal
+Email: leo.okafor89@inboxmail.net
+Phone: +33-859-737-9813
+Target Role: QA Engineer
+
+Professional Summary:
+QA Engineer with 9+ years of experience delivering reliable technical solutions and measurable business impact. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Bachelor of Science — Software Engineering — Indian Institute of Technology Delhi — 2016
+
+Experience:
+QA Engineer — North Analytics — Lisbon, Portugal — 2017-09 to 2020-06
+
+* Developed automation suites for critical API and UI flows.
+* Improved release readiness through clearer test reporting.
+* Reduced escaped defects by 34% by expanding regression coverage.
+* Partnered with developers to reproduce and isolate production issues.
+
+Test Engineer — North Systems — Lisbon, Portugal — 2021-06 to 2023-10
+
+* Reduced escaped defects by 23% by expanding regression coverage.
+* Developed automation suites for critical API and UI flows.
+
+Senior QA Engineer — Quantum Solutions — Lisbon, Portugal — 2024-12 to Present
+
+* Reduced escaped defects by 17% by expanding regression coverage.
+* Developed automation suites for critical API and UI flows.
+* Partnered with developers to reproduce and isolate production issues.
+* Improved release readiness through clearer test reporting.
+
+Skills:
+Technical: API testing, Cypress, Python, Jira
+Methods: Regression testing, Test planning, Test automation
+Management: Cross-team coordination, Risk communication, Prioritization, Documentation
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+ISTQB Foundation Level
+Certified Agile Tester

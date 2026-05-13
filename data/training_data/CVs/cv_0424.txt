@@ -1,0 +1,46 @@
+Name: Julia Okafor
+Gender: Female
+Date of Birth: 1992-04-22
+Address: 163 Maple Street, 85644 Dublin, Ireland
+Email: julia.okafor92@inboxmail.net
+Phone: +33-807-131-3085
+Target Role: Product Analyst
+
+Professional Summary:
+Technology specialist with 7+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Business Analytics — Trinity College Dublin — 2018
+
+Experience:
+Product Analyst — Vector Platform — Dublin, Ireland — 2019-11 to 2021-12
+
+* Connected product analytics findings to roadmap prioritization decisions.
+* Defined self-serve metrics for feature adoption and retention analysis.
+* Identified product funnel bottlenecks and improved conversion by 22%.
+* Built experiment readouts used by product and design leadership.
+
+Product Data Analyst — Cloud Analytics — Dublin, Ireland — 2022-12 to 2024-01
+
+* Connected product analytics findings to roadmap prioritization decisions.
+* Identified product funnel bottlenecks and improved conversion by 23%.
+* Defined self-serve metrics for feature adoption and retention analysis.
+
+Growth Analyst — Nova Labs — Dublin, Ireland — 2025-12 to Present
+
+* Defined self-serve metrics for feature adoption and retention analysis.
+* Connected product analytics findings to roadmap prioritization decisions.
+* Identified product funnel bottlenecks and improved conversion by 21%.
+
+Skills:
+Technical: Tableau, SQL, Looker, Python
+Methods: Cohort analysis, Experimentation, User behavior analysis, Funnel analysis, Product metrics
+Management: Planning, Cross-functional collaboration, Stakeholder alignment, Communication
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+Amplitude Foundations
+Google Data Analytics Certificate

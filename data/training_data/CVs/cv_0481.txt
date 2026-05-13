@@ -1,0 +1,38 @@
+Name: Ethan Silva
+Gender: Male
+Date of Birth: 1990-06-11
+Address: 284 Park Avenue, Denver, CO 40572, USA
+Email: ethan.silva90@inboxmail.net
+Phone: +33-354-781-4258
+Target Role: BI Developer
+
+Professional Summary:
+Technology specialist with 7+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Science — Information Systems — Politecnico di Milano — 2019
+
+Experience:
+BI Developer — Nova Tech — Denver, CO — 2019-06 to 2022-11
+
+* Improved data refresh reliability and reduced manual reporting effort by 12%.
+* Consolidated fragmented reporting into dashboards used by executives.
+* Translated stakeholder requests into reusable metrics and semantic layers.
+* Partnered with analysts to validate business definitions across domains.
+
+Business Intelligence Developer — North Systems — Denver, CO — 2023-12 to Present
+
+* Partnered with analysts to validate business definitions across domains.
+* Translated stakeholder requests into reusable metrics and semantic layers.
+
+Skills:
+Technical: Power BI, DAX, Excel, CI/CD, SSIS
+Methods: Dashboard design, ETL workflows, Business analysis
+Management: Requirement gathering, Stakeholder communication, Documentation
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+None listed

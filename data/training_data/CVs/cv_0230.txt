@@ -1,0 +1,38 @@
+Name: Elena Santos
+Gender: Female
+Date of Birth: 1994-05-20
+Address: 117 Hillview Street, 12792 Dublin, Ireland
+Email: elena.santos94@inboxmail.net
+Phone: +1-307-444-7532
+Target Role: Data Scientist
+
+Professional Summary:
+Analytical professional targeting Data Scientist opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning. Used to learning new tools quickly when projects require broader technical coverage.
+
+Education:
+Bachelor of Science — Statistics — University of Amsterdam — 2019
+
+Experience:
+Data Scientist — Signal Systems — Dublin, Ireland — 2021-05 to 2023-05
+
+* Improved model accuracy by 16% on a customer behavior prediction use case.
+* Translated ambiguous business questions into measurable ML experiments.
+* Delivered experimentation frameworks used to prioritize product changes.
+
+Junior Data Scientist — Core Insight — Dublin, Ireland — 2024-12 to Present
+
+* Built production-ready models with monitoring for drift and data quality.
+* Improved model accuracy by 20% on a customer behavior prediction use case.
+* Translated ambiguous business questions into measurable ML experiments.
+
+Skills:
+Technical: SQL, Spark, TensorFlow
+Methods: Experiment design, Root cause analysis, Statistical inference, Model validation
+Management: Cross-functional communication, Stakeholder alignment, Planning
+
+Languages:
+English — C2
+Spanish — B2
+
+Certifications:
+Google Professional Data Engineer

@@ -1,0 +1,31 @@
+Name: Luca Aliyev
+Gender: Male
+Date of Birth: 2003-04-27
+Address: 811 Admiralty Avenue, Austin, TX 39295, USA
+Email: luca.aliyev03@inboxmail.net
+Phone: +48-555-296-9941
+Target Role: Backend Developer
+
+Professional Summary:
+Technology specialist with 2+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning. Brings a practical approach to delivery, prioritization, and collaboration across teams.
+
+Education:
+Master of Science — Information Technology — University of Amsterdam — 2024
+
+Experience:
+Backend Developer — Nova Solutions — Austin, TX — 2024-03 to Present
+
+* Improved reliability of core backend services handling business-critical traffic.
+* Designed service integrations used across multiple product teams.
+
+Skills:
+Technical: Go, REST APIs, Docker, ETL basics, Python, PostgreSQL
+Methods: Microservices, Performance tuning, Unit testing, API design, Process improvement
+Management: Code review, Teamwork, Technical communication
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+AWS Certified Developer

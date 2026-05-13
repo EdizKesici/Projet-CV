@@ -1,0 +1,45 @@
+Name: Arjun Santos
+Gender: Male
+Date of Birth: 1984-12-26
+Address: 133 Linden Street, 55513 Lyon, France
+Email: arjun.santos84@email.com
+Phone: +31-826-863-6977
+Target Role: DevOps Engineer
+
+Professional Summary:
+Analytical professional targeting DevOps Engineer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Capable of supporting team goals and handling recurring technical responsibilities.
+
+Education:
+Bachelor of Science — Information Systems — University of Amsterdam — 2013
+
+Experience:
+DevOps Engineer — Data Insight — Lyon, France — 2015-07 to 2018-11
+
+* Improved platform reliability with stronger observability and runbooks.
+* Standardized infrastructure provisioning across environments.
+* Supported engineering teams during incidents and postmortem actions.
+* Reduced release lead time by 19% through CI/CD automation.
+
+Platform Engineer — Quantum Solutions — Lyon, France — 2019-12 to 2022-09
+
+* Standardized infrastructure provisioning across environments.
+* Reduced release lead time by 13% through CI/CD automation.
+* Supported engineering teams during incidents and postmortem actions.
+
+Senior DevOps Engineer — Blue Works — Lyon, France — 2023-12 to Present
+
+* Supported engineering teams during incidents and postmortem actions.
+* Reduced release lead time by 13% through CI/CD automation.
+
+Skills:
+Technical: Python, AWS, GitHub Actions, Terraform
+Methods: Incident response, CI/CD, Automation, Monitoring, Infrastructure as code
+Management: Collaboration, Technical mentoring, Incident coordination
+
+Languages:
+English — C2
+French — B2
+
+Certifications:
+HashiCorp Terraform Associate
+CKA

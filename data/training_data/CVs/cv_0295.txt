@@ -1,0 +1,33 @@
+Name: Hugo Martinez
+Gender: Male
+Date of Birth: 1993-11-07
+Address: 113 Birch Street, 84587 Warsaw, Poland
+Email: hugo.martinez93@inboxmail.net
+Phone: +351-521-765-2811
+Target Role: Frontend Developer
+
+Professional Summary:
+Professional pursuing Frontend Developer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning. Brings a practical approach to delivery, prioritization, and collaboration across teams.
+
+Education:
+Master of Science — Human-Computer Interaction — University of Bonn — 2018
+
+Experience:
+Senior Frontend Developer — Atlas Dynamics — Warsaw, Poland — 2018-09 to Present
+
+* Improved page performance scores by 17% across key user journeys.
+* Reduced UI defects through stronger test automation and QA collaboration.
+* Built reusable component libraries that accelerated feature delivery.
+* Partnered with designers to deliver accessible interfaces at scale.
+
+Skills:
+Technical: Notion, React, HTML, Testing Library, Git, JavaScript
+Methods: State management, Problem solving, Accessibility, Performance optimization, Component architecture
+Management: Design collaboration, Sprint planning, Code review
+
+Languages:
+English — C2
+
+Certifications:
+Professional Scrum Master I
+AWS Cloud Practitioner

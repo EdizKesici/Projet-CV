@@ -1,0 +1,45 @@
+Name: Sara Aliyev
+Gender: Female
+Date of Birth: 1984-10-21
+Address: 48 Linden Avenue, Denver, CO 68668, USA
+Email: sara.aliyev84@mailhub.com
+Phone: +353-982-762-4447
+Target Role: BI Developer
+
+Professional Summary:
+Professional pursuing BI Developer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Known for clear communication, structured problem solving, and strong execution in fast-moving environments.
+
+Education:
+Bachelor of Science — Computer Science — Indian Institute of Technology Delhi — 2014
+
+Experience:
+BI Developer — Nova Insight — Denver, CO — 2015-08 to 2018-03
+
+* Partnered with analysts to validate business definitions across domains.
+* Improved data refresh reliability and reduced manual reporting effort by 14%.
+* Translated stakeholder requests into reusable metrics and semantic layers.
+* Consolidated fragmented reporting into dashboards used by executives.
+
+Business Intelligence Developer — Core Tech — Denver, CO — 2019-04 to 2022-07
+
+* Partnered with analysts to validate business definitions across domains.
+* Consolidated fragmented reporting into dashboards used by executives.
+* Translated stakeholder requests into reusable metrics and semantic layers.
+* Improved data refresh reliability and reduced manual reporting effort by 27%.
+
+Senior BI Developer — Data Platform — Denver, CO — 2023-08 to Present
+
+* Consolidated fragmented reporting into dashboards used by executives.
+* Translated stakeholder requests into reusable metrics and semantic layers.
+
+Skills:
+Technical: SQL, Tableau, Python, DAX, Excel
+Methods: Documentation, Dashboard design, ETL workflows, Dimensional modeling, Business analysis, KPI definition
+Management: Requirement gathering, Stakeholder communication
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+IBM Data Analyst Professional Certificate

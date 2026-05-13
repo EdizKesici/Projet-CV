@@ -1,0 +1,33 @@
+Name: Maya Schneider
+Gender: Female
+Date of Birth: 2002-06-20
+Address: 297 Admiralty Street, 44807 Amsterdam, Netherlands
+Email: maya.schneider02@inboxmail.net
+Phone: +351-953-502-7425
+Target Role: Frontend Developer
+
+Professional Summary:
+Technology specialist with 3+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning. Comfortable contributing in environments with evolving priorities and shared ownership.
+
+Education:
+Bachelor of Science — Software Engineering — University of Amsterdam — 2023
+
+Experience:
+Frontend Developer — Vector Platform — Amsterdam, Netherlands — 2023-07 to Present
+
+* Improved page performance scores by 31% across key user journeys.
+* Reduced UI defects through stronger test automation and QA collaboration.
+* Built reusable component libraries that accelerated feature delivery.
+* Partnered with designers to deliver accessible interfaces at scale.
+
+Skills:
+Technical: JavaScript, HTML, CSS, Next.js, React, Confluence
+Methods: Component architecture, Process improvement, Responsive design, State management
+Management: Design collaboration, Code review, Sprint planning, Requirement clarification
+
+Languages:
+English — C2
+Spanish — B2
+
+Certifications:
+Meta Front-End Developer

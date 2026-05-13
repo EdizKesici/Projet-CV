@@ -1,0 +1,35 @@
+Name: Anna Dubois
+Gender: Female
+Date of Birth: 1995-12-12
+Address: 962 Maple Street, 89210 Lyon, France
+Email: anna.dubois95@inboxmail.net
+Phone: +39-844-649-5816
+Target Role: Cybersecurity Analyst
+
+Professional Summary:
+Cybersecurity Analyst focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Capable of supporting team goals and handling recurring technical responsibilities.
+
+Education:
+Bachelor of Science — Information Security — University of Lisbon — 2019
+
+Experience:
+Security Analyst — Blue Networks — Lyon, France — 2019-08 to Present
+
+* Reduced mean time to detect by 30% through stronger alert triage.
+* Hardened access controls and baseline monitoring practices.
+* Improved vulnerability remediation reporting across infrastructure teams.
+
+Skills:
+Technical: Monitoring, Vulnerability scanning, Documentation, Wireshark, Splunk
+Methods: Security monitoring, Incident response, Risk assessment
+Management: Policy awareness, Documentation, Incident communication, Communication
+
+Languages:
+English — C2
+Spanish — B2
+
+Certifications:
+Certified Ethical Hacker
+Scrum Fundamentals Certified
+CompTIA Security+
+ITIL Foundation

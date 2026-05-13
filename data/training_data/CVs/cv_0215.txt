@@ -1,0 +1,43 @@
+Name: Ethan Garcia
+Gender: Male
+Date of Birth: 1987-04-16
+Address: 20 Admiralty Street, 40514 Bengaluru, India
+Email: ethan.garcia87@inboxmail.net
+Phone: +39-221-225-1117
+Target Role: Data Analyst
+
+Professional Summary:
+Analytical professional targeting Data Analyst opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Bachelor of Science — Statistics — Politecnico di Milano — 2017
+
+Experience:
+Junior Data Analyst — Signal Labs — Bengaluru, India — 2018-10 to 2020-08
+
+* Built weekly KPI reports adopted by finance and commercial teams.
+* Designed analysis workflows that reduced data preparation time by 25%.
+* Improved reporting efficiency by 29% through dashboard automation.
+* Validated source data quality and reduced recurring discrepancies across reports.
+
+Data Analyst — Core Networks — Bengaluru, India — 2021-07 to 2023-03
+
+* Improved reporting efficiency by 26% through dashboard automation.
+* Designed analysis workflows that reduced data preparation time by 34%.
+
+Senior Data Analyst — Core Dynamics — Bengaluru, India — 2024-06 to Present
+
+* Designed analysis workflows that reduced data preparation time by 25%.
+* Built weekly KPI reports adopted by finance and commercial teams.
+* Validated source data quality and reduced recurring discrepancies across reports.
+
+Skills:
+Technical: Python, Unit testing, R, Looker, REST APIs, Excel
+Methods: Dashboard design, Regression analysis, A/B testing
+Management: Prioritization, Requirement gathering, Project coordination
+
+Languages:
+English — C2
+
+Certifications:
+Certified Analytics Professional

@@ -1,0 +1,33 @@
+Name: David Liu
+Gender: Male
+Date of Birth: 1994-12-03
+Address: 507 Birch Avenue, Denver, CO 77311, USA
+Email: david.liu94@mailhub.com
+Phone: +39-656-237-2799
+Target Role: Software Engineer
+
+Professional Summary:
+Analytical professional targeting Software Engineer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Science — Information Systems — Indian Institute of Technology Delhi — 2019
+
+Experience:
+Software Developer — Data Insight — Denver, CO — 2021-08 to Present
+
+* Contributed to CI/CD and release quality across multiple services.
+* Delivered software features that improved internal process efficiency by 17%.
+
+Skills:
+Technical: REST APIs, Java, Docker, Git, Python
+Methods: Agile delivery, System integration, Debugging, Object-oriented design, Testing
+Management: Mentoring, Collaboration, Planning, Communication
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+ITIL Foundation
+Azure Developer Associate
+AWS Certified Developer

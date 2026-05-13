@@ -1,0 +1,32 @@
+Name: Maya Liu
+Gender: Female
+Date of Birth: 1991-07-05
+Address: 718 Pinecrest Street, 20654 Cologne, Germany
+Email: maya.liu91@inboxmail.net
+Phone: +39-763-224-9293
+Target Role: Data Analyst
+
+Professional Summary:
+Data Analyst focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Brings a practical approach to delivery, prioritization, and collaboration across teams.
+
+Education:
+Master of Science — Applied Mathematics — Indian Institute of Technology Delhi — 2017
+
+Experience:
+Senior Data Analyst — North Networks — Cologne, Germany — 2017-09 to Present
+
+* Validated source data quality and reduced recurring discrepancies across reports.
+* Improved reporting efficiency by 25% through dashboard automation.
+* Designed analysis workflows that reduced data preparation time by 26%.
+
+Skills:
+Technical: Looker, Excel, Tableau, Python, R, SQL
+Methods: A/B testing, Regression analysis, Dashboard design, KPI tracking, Data visualization
+Management: Communication, Requirement gathering, Prioritization, Project coordination, Stakeholder communication
+
+Languages:
+English — C2
+
+Certifications:
+Tableau Desktop Specialist
+Certified Analytics Professional

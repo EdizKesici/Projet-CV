@@ -1,0 +1,38 @@
+Name: Lucia Aliyev
+Gender: Female
+Date of Birth: 1992-11-14
+Address: 293 Pinecrest Street, 58045 Lagos, Nigeria
+Email: lucia.aliyev92@mailhub.com
+Phone: +353-918-568-7703
+Target Role: Data Analyst
+
+Professional Summary:
+Professional pursuing Data Analyst opportunities with exposure to production environments, team delivery, and measurable operational improvements. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Used to learning new tools quickly when projects require broader technical coverage.
+
+Education:
+Bachelor of Science — Applied Mathematics — University of Texas at Austin — 2020
+
+Experience:
+Junior Data Analyst — North Platform — Lagos, Nigeria — 2020-07 to 2023-05
+
+* Designed analysis workflows that reduced data preparation time by 31%.
+* Validated source data quality and reduced recurring discrepancies across reports.
+
+Data Analyst — Cloud Solutions — Lagos, Nigeria — 2024-12 to Present
+
+* Designed analysis workflows that reduced data preparation time by 27%.
+* Validated source data quality and reduced recurring discrepancies across reports.
+* Built weekly KPI reports adopted by finance and commercial teams.
+* Improved reporting efficiency by 27% through dashboard automation.
+
+Skills:
+Technical: Python, R, SQL, Tableau
+Methods: Regression analysis, Data visualization, A/B testing, KPI tracking, Documentation
+Management: Requirement gathering, Project coordination
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+Microsoft Power BI Data Analyst

@@ -1,0 +1,32 @@
+Name: Mina Martinez
+Gender: Female
+Date of Birth: 1999-06-07
+Address: 271 Hillview Street, 83095 Lagos, Nigeria
+Email: mina.martinez99@email.com
+Phone: +31-903-282-8689
+Target Role: BI Developer
+
+Professional Summary:
+Technology specialist with 1+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Master of Science — Statistics — University of Lisbon — 2023
+
+Experience:
+BI Developer — Nova Dynamics — Lagos, Nigeria — 2025-06 to Present
+
+* Consolidated fragmented reporting into dashboards used by executives.
+* Improved data refresh reliability and reduced manual reporting effort by 15%.
+* Partnered with analysts to validate business definitions across domains.
+
+Skills:
+Technical: Tableau, Python, Power BI, SSIS, DAX
+Methods: Dashboard design, Dimensional modeling, ETL workflows, Business analysis
+Management: Planning, Requirement gathering
+
+Languages:
+English — C2
+
+Certifications:
+IBM Data Analyst Professional Certificate
+Microsoft Power BI Data Analyst

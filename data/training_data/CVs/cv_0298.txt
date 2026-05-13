@@ -1,0 +1,33 @@
+Name: Mina Novak
+Gender: Female
+Date of Birth: 2000-02-06
+Address: 803 Hillview Street, 57769 Amsterdam, Netherlands
+Email: mina.novak00@email.com
+Phone: +234-778-582-8598
+Target Role: Frontend Developer
+
+Professional Summary:
+Frontend Developer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Capable of supporting team goals and handling recurring technical responsibilities.
+
+Education:
+Bachelor of Science — Computer Science — University of Warsaw — 2023
+
+Experience:
+Frontend Developer — Blue Systems — Amsterdam, Netherlands — 2023-02 to Present
+
+* Partnered with designers to deliver accessible interfaces at scale.
+* Built reusable component libraries that accelerated feature delivery.
+* Reduced UI defects through stronger test automation and QA collaboration.
+
+Skills:
+Technical: HTML, JavaScript, Next.js, CSS, TypeScript
+Methods: Accessibility, Responsive design, State management, Performance optimization, Component architecture
+Management: Design collaboration, Code review
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+Professional Scrum Master I
+AWS Cloud Practitioner

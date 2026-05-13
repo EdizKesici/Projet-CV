@@ -1,0 +1,40 @@
+Name: Thomas Schneider
+Gender: Male
+Date of Birth: 1991-01-21
+Address: 164 Birch Street, 52128 Amsterdam, Netherlands
+Email: thomas.schneider91@mailhub.com
+Phone: +31-889-614-8926
+Target Role: Backend Developer
+
+Professional Summary:
+Professional pursuing Backend Developer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning. Interested in roles that combine execution, communication, and measurable business outcomes.
+
+Education:
+Bachelor of Science — Information Technology — University of Lisbon — 2019
+
+Experience:
+Backend Developer — Vector Platform — Amsterdam, Netherlands — 2021-07 to 2023-03
+
+* Reduced API response time by 30% through query and caching improvements.
+* Improved reliability of core backend services handling business-critical traffic.
+* Designed service integrations used across multiple product teams.
+* Expanded automated test coverage for payment and account workflows.
+
+Backend Engineer — Nova Dynamics — Amsterdam, Netherlands — 2024-12 to Present
+
+* Reduced API response time by 22% through query and caching improvements.
+* Expanded automated test coverage for payment and account workflows.
+* Improved reliability of core backend services handling business-critical traffic.
+* Designed service integrations used across multiple product teams.
+
+Skills:
+Technical: PostgreSQL, REST APIs, Go, Python
+Methods: System design, API design, Microservices, Performance tuning, Unit testing
+Management: Collaboration, Task estimation, Technical communication, Code review, Planning
+
+Languages:
+English — C2
+
+Certifications:
+Google Data Analytics Certificate
+ITIL Foundation

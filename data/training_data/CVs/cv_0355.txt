@@ -1,0 +1,33 @@
+Name: Ethan Silva
+Gender: Male
+Date of Birth: 1997-01-28
+Address: 112 Park Street, 59665 Milan, Italy
+Email: ethan.silva97@mailhub.com
+Phone: +1-767-230-9161
+Target Role: Backend Developer
+
+Professional Summary:
+Backend Developer with 6+ years of experience delivering reliable technical solutions and measurable business impact. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Computer Science — University of Texas at Austin — 2020
+
+Experience:
+Backend Engineer — North Networks — Milan, Italy — 2020-02 to Present
+
+* Improved reliability of core backend services handling business-critical traffic.
+* Designed service integrations used across multiple product teams.
+* Expanded automated test coverage for payment and account workflows.
+
+Skills:
+Technical: Unit testing, Go, Java, Docker, PostgreSQL, REST APIs, Python
+Methods: Microservices, System design, API design
+Management: Collaboration, Technical communication
+
+Languages:
+English — C2
+French — B2
+
+Certifications:
+Scrum Fundamentals Certified
+Google Data Analytics Certificate

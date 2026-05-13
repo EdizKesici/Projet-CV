@@ -1,0 +1,31 @@
+Name: Sophie Bianchi
+Gender: Female
+Date of Birth: 2001-12-19
+Address: 158 Maple Street, 26404 Milan, Italy
+Email: sophie.bianchi01@mailhub.com
+Phone: +353-585-669-9914
+Target Role: QA Engineer
+
+Professional Summary:
+QA Engineer with 3+ years of experience delivering reliable technical solutions and measurable business impact. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Comfortable contributing in environments with evolving priorities and shared ownership.
+
+Education:
+Bachelor of Arts — Software Engineering — University of Colorado Boulder — 2023
+
+Experience:
+QA Engineer — Nova Dynamics — Milan, Italy — 2023-05 to Present
+
+* Developed automation suites for critical API and UI flows.
+* Reduced escaped defects by 14% by expanding regression coverage.
+
+Skills:
+Technical: Linux, Python, SQL, Cypress, Unit testing, Selenium
+Methods: Regression testing, Test planning, Quality assurance
+Management: Prioritization, Cross-team coordination, Documentation
+
+Languages:
+English — C2
+Spanish — B2
+
+Certifications:
+None listed

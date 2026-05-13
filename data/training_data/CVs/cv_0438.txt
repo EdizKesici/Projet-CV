@@ -1,0 +1,38 @@
+Name: Sara Liu
+Gender: Female
+Date of Birth: 1990-05-21
+Address: 127 Park Street, 71667 Amsterdam, Netherlands
+Email: sara.liu90@email.com
+Phone: +33-918-801-8018
+Target Role: Backend Developer
+
+Professional Summary:
+Professional pursuing Backend Developer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Capable of supporting team goals and handling recurring technical responsibilities.
+
+Education:
+Master of Science — Software Engineering — University of Lagos — 2018
+
+Experience:
+Backend Developer — Signal Solutions — Amsterdam, Netherlands — 2020-05 to 2023-08
+
+* Expanded automated test coverage for payment and account workflows.
+* Designed service integrations used across multiple product teams.
+* Reduced API response time by 24% through query and caching improvements.
+
+Backend Engineer — Data Analytics — Amsterdam, Netherlands — 2024-06 to Present
+
+* Expanded automated test coverage for payment and account workflows.
+* Designed service integrations used across multiple product teams.
+
+Skills:
+Technical: Java, Linux, Redis, PostgreSQL, Cloud fundamentals, Go
+Methods: Unit testing, Performance tuning, System design, API design, Microservices
+Management: Task estimation, Stakeholder updates, Code review
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+Azure Developer Associate
+Oracle Java Certification

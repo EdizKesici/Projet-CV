@@ -1,0 +1,43 @@
+Name: Maya Silva
+Gender: Female
+Date of Birth: 1989-09-23
+Address: 201 Hillview Street, 70507 Warsaw, Poland
+Email: maya.silva89@mailhub.com
+Phone: +234-753-517-4578
+Target Role: Software Engineer
+
+Professional Summary:
+Software Engineer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Information Systems — University of Lagos — 2016
+
+Experience:
+Software Engineer — Blue Labs — Warsaw, Poland — 2018-11 to 2020-05
+
+* Delivered software features that improved internal process efficiency by 29%.
+* Collaborated on architectural improvements for long-term scalability.
+* Maintained core application modules with strong uptime and defect control.
+
+Software Developer — Nova Platform — Warsaw, Poland — 2021-12 to 2023-04
+
+* Collaborated on architectural improvements for long-term scalability.
+* Delivered software features that improved internal process efficiency by 18%.
+
+Senior Software Engineer — Nova Analytics — Warsaw, Poland — 2024-12 to Present
+
+* Maintained core application modules with strong uptime and defect control.
+* Contributed to CI/CD and release quality across multiple services.
+* Collaborated on architectural improvements for long-term scalability.
+
+Skills:
+Technical: REST APIs, Java, SQL
+Methods: Testing, System integration, Object-oriented design, Agile delivery, Debugging
+Management: Mentoring, Communication, Planning
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+Azure Developer Associate

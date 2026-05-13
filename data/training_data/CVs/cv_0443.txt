@@ -1,0 +1,41 @@
+Name: Zoe Schneider
+Gender: Female
+Date of Birth: 1993-04-18
+Address: 849 Hillview Street, 73596 Cologne, Germany
+Email: zoe.schneider93@mailhub.com
+Phone: +49-502-980-9091
+Target Role: QA Engineer
+
+Professional Summary:
+QA Engineer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Arts — Information Technology — Indian Institute of Technology Delhi — 2019
+
+Experience:
+QA Engineer — Data Labs — Cologne, Germany — 2019-10 to 2022-12
+
+* Improved release readiness through clearer test reporting.
+* Developed automation suites for critical API and UI flows.
+* Partnered with developers to reproduce and isolate production issues.
+* Reduced escaped defects by 28% by expanding regression coverage.
+
+Test Engineer — Core Works — Cologne, Germany — 2023-05 to Present
+
+* Partnered with developers to reproduce and isolate production issues.
+* Reduced escaped defects by 26% by expanding regression coverage.
+* Improved release readiness through clearer test reporting.
+* Developed automation suites for critical API and UI flows.
+
+Skills:
+Technical: Python, API testing, Cypress, Postman, SQL, Jira
+Methods: Test planning, Quality assurance, Test automation, Defect tracking, Regression testing
+Management: Prioritization, Cross-team coordination, Documentation, Task coordination, Risk communication
+
+Languages:
+English — C2
+German — B1
+
+Certifications:
+ITIL Foundation
+Google Data Analytics Certificate

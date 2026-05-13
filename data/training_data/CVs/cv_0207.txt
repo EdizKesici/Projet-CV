@@ -1,0 +1,46 @@
+Name: Jonas Liu
+Gender: Male
+Date of Birth: 1987-10-26
+Address: 325 Admiralty Avenue, Seattle, WA 92298, USA
+Email: jonas.liu87@inboxmail.net
+Phone: +234-705-929-6758
+Target Role: ML Engineer
+
+Professional Summary:
+Analytical professional targeting ML Engineer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Science — Artificial Intelligence — Indian Institute of Technology Delhi — 2014
+
+Experience:
+ML Engineer — Cloud Tech — Seattle, WA — 2015-04 to 2018-09
+
+* Partnered with data scientists to convert prototypes into resilient services.
+* Reduced model deployment time by 16% by standardizing CI/CD pipelines.
+
+Machine Learning Engineer — Data Works — Seattle, WA — 2019-06 to 2022-12
+
+* Partnered with data scientists to convert prototypes into resilient services.
+* Reduced model deployment time by 33% by standardizing CI/CD pipelines.
+* Improved observability for inference latency and feature freshness.
+
+Senior ML Engineer — Cloud Tech — Seattle, WA — 2023-10 to Present
+
+* Operationalized training and inference workflows for multiple production models.
+* Reduced model deployment time by 25% by standardizing CI/CD pipelines.
+* Partnered with data scientists to convert prototypes into resilient services.
+* Improved observability for inference latency and feature freshness.
+
+Skills:
+Technical: Documentation, Kubernetes, Docker, AWS, PyTorch, TensorFlow, Python
+Methods: CI/CD, Documentation, Feature stores, Model deployment
+Management: Sprint planning, Technical mentoring, Collaboration, Roadmap communication
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+CKA
+Professional Scrum Master I
+ITIL Foundation

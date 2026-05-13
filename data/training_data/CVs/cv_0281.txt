@@ -1,0 +1,45 @@
+Name: Isla Garcia
+Gender: Female
+Date of Birth: 1985-01-09
+Address: 832 Birch Street, 14976 Cologne, Germany
+Email: isla.garcia85@inboxmail.net
+Phone: +31-441-826-2377
+Target Role: DevOps Engineer
+
+Professional Summary:
+DevOps Engineer with 10+ years of experience delivering reliable technical solutions and measurable business impact. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Bachelor of Science — Software Engineering — University of Lisbon — 2014
+
+Experience:
+DevOps Engineer — Blue Systems — Cologne, Germany — 2016-05 to 2019-02
+
+* Improved platform reliability with stronger observability and runbooks.
+* Standardized infrastructure provisioning across environments.
+
+Platform Engineer — North Analytics — Cologne, Germany — 2020-04 to 2023-08
+
+* Reduced release lead time by 23% through CI/CD automation.
+* Supported engineering teams during incidents and postmortem actions.
+* Standardized infrastructure provisioning across environments.
+* Improved platform reliability with stronger observability and runbooks.
+
+Senior DevOps Engineer — Core Networks — Cologne, Germany — 2024-03 to Present
+
+* Supported engineering teams during incidents and postmortem actions.
+* Improved platform reliability with stronger observability and runbooks.
+* Reduced release lead time by 13% through CI/CD automation.
+* Standardized infrastructure provisioning across environments.
+
+Skills:
+Technical: Excel, Linux, Notion, Docker, AWS
+Methods: Monitoring, CI/CD, Automation
+Management: Teamwork, Documentation, Incident coordination, Technical mentoring
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+None listed

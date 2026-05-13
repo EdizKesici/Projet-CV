@@ -1,0 +1,41 @@
+Name: Eva Martinez
+Gender: Female
+Date of Birth: 1999-07-05
+Address: 606 Linden Street, 57062 Lisbon, Portugal
+Email: eva.martinez99@mailhub.com
+Phone: +49-860-493-9986
+Target Role: Backend Developer
+
+Professional Summary:
+Analytical professional targeting Backend Developer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Computer Science — University of Colorado Boulder — 2020
+
+Experience:
+Backend Developer — Cloud Works — Lisbon, Portugal — 2021-05 to 2023-06
+
+* Designed service integrations used across multiple product teams.
+* Expanded automated test coverage for payment and account workflows.
+* Reduced API response time by 14% through query and caching improvements.
+* Improved reliability of core backend services handling business-critical traffic.
+
+Backend Engineer — North Platform — Lisbon, Portugal — 2024-12 to Present
+
+* Expanded automated test coverage for payment and account workflows.
+* Improved reliability of core backend services handling business-critical traffic.
+* Designed service integrations used across multiple product teams.
+* Reduced API response time by 33% through query and caching improvements.
+
+Skills:
+Technical: Go, Java, REST APIs
+Methods: API design, Unit testing, Microservices
+Management: Code review, Collaboration
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+AWS Cloud Practitioner
+Oracle Java Certification

@@ -1,0 +1,35 @@
+Name: Luca Kim
+Gender: Male
+Date of Birth: 1990-07-26
+Address: 825 Riverside Street, 96389 Amsterdam, Netherlands
+Email: luca.kim90@email.com
+Phone: +49-954-156-1398
+Target Role: DevOps Engineer
+
+Professional Summary:
+Professional pursuing DevOps Engineer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Master of Science — Computer Science — University of Lagos — 2015
+
+Experience:
+Senior DevOps Engineer — Cloud Dynamics — Amsterdam, Netherlands — 2017-11 to Present
+
+* Standardized infrastructure provisioning across environments while coordinating work across engineers and analysts.
+* Improved platform reliability with stronger observability and runbooks while coordinating work across engineers and analysts.
+* Supported engineering teams during incidents and postmortem actions while coordinating work across engineers and analysts.
+
+Skills:
+Technical: GitHub Actions, Python, AWS, Kubernetes, Linux, Terraform
+Methods: Infrastructure as code, Automation, Incident response
+Management: Technical mentoring, Collaboration, Incident coordination
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+AWS Certified SysOps Administrator
+Scrum Fundamentals Certified
+CKA
+Professional Scrum Master I

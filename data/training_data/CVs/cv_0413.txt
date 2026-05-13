@@ -1,0 +1,39 @@
+Name: Gabriel Patel
+Gender: Male
+Date of Birth: 1989-09-09
+Address: 400 Cedar Street, 82376 Bengaluru, India
+Email: gabriel.patel89@email.com
+Phone: +39-692-504-7499
+Target Role: Software Engineer
+
+Professional Summary:
+Professional pursuing Software Engineer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Capable of supporting team goals and handling recurring technical responsibilities.
+
+Education:
+Bachelor of Science — Information Systems — University of Lisbon — 2019
+
+Experience:
+Software Engineer — Data Platform — Bengaluru, India — 2019-04 to 2022-05
+
+* Delivered software features that improved internal process efficiency by 31%.
+* Maintained core application modules with strong uptime and defect control.
+* Collaborated on architectural improvements for long-term scalability.
+
+Software Developer — North Solutions — Bengaluru, India — 2023-07 to Present
+
+* Maintained core application modules with strong uptime and defect control.
+* Contributed to CI/CD and release quality across multiple services.
+
+Skills:
+Technical: REST APIs, Docker, C#, Linux, Java, Python
+Methods: Object-oriented design, System integration, Agile delivery, Testing, Debugging
+Management: Mentoring, Collaboration, Planning, Communication
+
+Languages:
+English — C2
+French — B2
+
+Certifications:
+Professional Scrum Master I
+Professional Scrum Developer
+AWS Cloud Practitioner

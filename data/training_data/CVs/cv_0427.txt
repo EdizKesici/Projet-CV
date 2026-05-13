@@ -1,0 +1,47 @@
+Name: Leila Garcia
+Gender: Female
+Date of Birth: 1989-07-01
+Address: 206 Cedar Street, 74429 Warsaw, Poland
+Email: leila.garcia89@email.com
+Phone: +49-312-227-1386
+Target Role: ML Engineer
+
+Professional Summary:
+ML Engineer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Science — Computer Science — Indian Institute of Technology Delhi — 2012
+
+Experience:
+ML Engineer — Blue Solutions — Warsaw, Poland — 2013-03 to 2017-08
+
+* Reduced model deployment time by 26% by standardizing CI/CD pipelines.
+* Operationalized training and inference workflows for multiple production models.
+* Improved observability for inference latency and feature freshness.
+* Partnered with data scientists to convert prototypes into resilient services.
+
+Machine Learning Engineer — Core Solutions — Warsaw, Poland — 2018-12 to 2022-03
+
+* Operationalized training and inference workflows for multiple production models.
+* Reduced model deployment time by 17% by standardizing CI/CD pipelines.
+* Improved observability for inference latency and feature freshness.
+* Partnered with data scientists to convert prototypes into resilient services.
+
+Senior ML Engineer — Nova Systems — Warsaw, Poland — 2023-10 to Present
+
+* Partnered with data scientists to convert prototypes into resilient services.
+* Reduced model deployment time by 27% by standardizing CI/CD pipelines.
+* Improved observability for inference latency and feature freshness.
+* Operationalized training and inference workflows for multiple production models.
+
+Skills:
+Technical: TensorFlow, PyTorch, Docker, Kubernetes
+Methods: CI/CD, Feature stores, Model deployment, MLOps, Monitoring
+Management: Collaboration, Roadmap communication, Technical mentoring, Sprint planning
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+None listed

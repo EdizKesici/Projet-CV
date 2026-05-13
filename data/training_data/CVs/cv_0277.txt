@@ -1,0 +1,44 @@
+Name: Isla Popescu
+Gender: Female
+Date of Birth: 1989-11-26
+Address: 574 Maple Street, 75627 Warsaw, Poland
+Email: isla.popescu89@mailhub.com
+Phone: +353-746-935-1559
+Target Role: Data Scientist
+
+Professional Summary:
+Technology specialist with 9+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Capable of supporting team goals and handling recurring technical responsibilities.
+
+Education:
+Bachelor of Science — Data Science — University of Warsaw — 2016
+
+Experience:
+Data Scientist — Core Networks — Warsaw, Poland — 2017-10 to 2020-07
+
+* Built production-ready models with monitoring for drift and data quality.
+* Improved model accuracy by 21% on a customer behavior prediction use case.
+* Translated ambiguous business questions into measurable ML experiments.
+
+Junior Data Scientist — Nova Insight — Warsaw, Poland — 2021-06 to 2023-03
+
+* Built production-ready models with monitoring for drift and data quality.
+* Translated ambiguous business questions into measurable ML experiments.
+
+Senior Data Scientist — Nova Analytics — Warsaw, Poland — 2024-12 to Present
+
+* Improved model accuracy by 16% on a customer behavior prediction use case.
+* Delivered experimentation frameworks used to prioritize product changes.
+* Built production-ready models with monitoring for drift and data quality.
+
+Skills:
+Technical: Spark, TensorFlow, Python, PyTorch, scikit-learn
+Methods: Experiment design, Feature engineering, Agile collaboration, Forecasting, Model validation
+Management: Stakeholder updates, Cross-functional communication, Stakeholder alignment, Mentoring, Project planning
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+Google Professional Data Engineer
+AWS Certified Machine Learning

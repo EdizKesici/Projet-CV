@@ -1,0 +1,38 @@
+Name: Samuel Garcia
+Gender: Male
+Date of Birth: 1993-04-21
+Address: 65 Maple Avenue, Seattle, WA 15682, USA
+Email: samuel.garcia93@email.com
+Phone: +351-258-134-5254
+Target Role: Software Engineer
+
+Professional Summary:
+Professional pursuing Software Engineer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning. Used to learning new tools quickly when projects require broader technical coverage.
+
+Education:
+Bachelor of Science — Software Engineering — Trinity College Dublin — 2019
+
+Experience:
+Software Engineer — Core Systems — Seattle, WA — 2021-10 to 2023-03
+
+* Maintained core application modules with strong uptime and defect control.
+* Collaborated on architectural improvements for long-term scalability.
+* Contributed to CI/CD and release quality across multiple services.
+
+Software Developer — Quantum Networks — Seattle, WA — 2024-12 to Present
+
+* Collaborated on architectural improvements for long-term scalability.
+* Maintained core application modules with strong uptime and defect control.
+
+Skills:
+Technical: Docker, Cloud fundamentals, C#, Python, Git, SQL, REST APIs, Excel
+Methods: Object-oriented design, System integration, Root cause analysis, Agile delivery
+Management: Collaboration, Mentoring, Task coordination
+
+Languages:
+English — C2
+Spanish — B2
+
+Certifications:
+Scrum Fundamentals Certified
+ITIL Foundation

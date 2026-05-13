@@ -1,0 +1,45 @@
+Name: Hugo Schneider
+Gender: Male
+Date of Birth: 1989-08-28
+Address: 282 Admiralty Street, 24856 Lyon, France
+Email: hugo.schneider89@inboxmail.net
+Phone: +48-524-399-8424
+Target Role: Software Engineer
+
+Professional Summary:
+Analytical professional targeting Software Engineer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Capable of supporting team goals and handling recurring technical responsibilities.
+
+Education:
+Master of Science — Computer Science — Politecnico di Milano — 2018
+
+Experience:
+Software Engineer — North Platform — Lyon, France — 2018-10 to 2020-08
+
+* Delivered software features that improved internal process efficiency by 28%.
+* Collaborated on architectural improvements for long-term scalability.
+* Contributed to CI/CD and release quality across multiple services.
+
+Software Developer — Blue Tech — Lyon, France — 2021-10 to 2023-06
+
+* Delivered software features that improved internal process efficiency by 28%.
+* Contributed to CI/CD and release quality across multiple services.
+* Maintained core application modules with strong uptime and defect control.
+
+Senior Software Engineer — Signal Analytics — Lyon, France — 2024-03 to Present
+
+* Maintained core application modules with strong uptime and defect control.
+* Collaborated on architectural improvements for long-term scalability.
+* Delivered software features that improved internal process efficiency by 23%.
+* Contributed to CI/CD and release quality across multiple services.
+
+Skills:
+Technical: SQL, REST APIs, Git, Docker, Python, C#
+Methods: Testing, System integration, Object-oriented design, Agile collaboration
+Management: Collaboration, Communication, Mentoring, Planning
+
+Languages:
+English — C2
+German — B1
+
+Certifications:
+Professional Scrum Developer

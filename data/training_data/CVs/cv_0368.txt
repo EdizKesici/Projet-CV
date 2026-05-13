@@ -1,0 +1,39 @@
+Name: Maya Aliyev
+Gender: Female
+Date of Birth: 1992-11-26
+Address: 816 Park Street, 27978 Milan, Italy
+Email: maya.aliyev92@mailhub.com
+Phone: +91-589-573-6305
+Target Role: Data Engineer
+
+Professional Summary:
+Data Engineer with 5+ years of experience delivering reliable technical solutions and measurable business impact. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Brings a practical approach to delivery, prioritization, and collaboration across teams.
+
+Education:
+Master of Science — Computer Science — University of Texas at Austin — 2020
+
+Experience:
+Data Engineer — Quantum Works — Milan, Italy — 2021-05 to 2023-02
+
+* Designed reliable ingestion jobs for operational and product datasets.
+* Supported analytics and ML teams with curated data models.
+* Implemented data quality checks that reduced downstream incidents.
+
+Analytics Engineer — Atlas Solutions — Milan, Italy — 2024-12 to Present
+
+* Designed reliable ingestion jobs for operational and product datasets.
+* Cut pipeline runtime by 31% through incremental processing improvements.
+* Supported analytics and ML teams with curated data models.
+
+Skills:
+Technical: Spark, dbt, Documentation, Kafka, Airflow, SQL, Python
+Methods: ETL design, Data modeling, Process improvement, Pipeline orchestration, Data quality management
+Management: Incident communication, Planning, Cross-team coordination
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+Google Professional Data Engineer
+AWS Certified Data Analytics

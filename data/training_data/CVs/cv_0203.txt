@@ -1,0 +1,31 @@
+Name: Gabriel Kim
+Gender: Male
+Date of Birth: 1991-09-27
+Address: 375 Cedar Street, 92950 Lyon, France
+Email: gabriel.kim91@inboxmail.net
+Phone: +353-816-415-4868
+Target Role: Data Analyst
+
+Professional Summary:
+Data Analyst with 12+ years of experience delivering reliable technical solutions and measurable business impact. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Has supported mentoring, planning, and coordination activities alongside individual technical work. Comfortable contributing in environments with evolving priorities and shared ownership.
+
+Education:
+Bachelor of Science — Applied Mathematics — University of Texas at Austin — 2012
+
+Experience:
+Senior Data Analyst — Cloud Analytics — Lyon, France — 2014-07 to Present
+
+* Improved reporting efficiency by 34% through dashboard automation.
+* Validated source data quality and reduced recurring discrepancies across reports.
+
+Skills:
+Technical: Python, R, Power BI
+Methods: Dashboard design, Regression analysis, KPI tracking, Data visualization
+Management: Prioritization, Stakeholder communication, Requirement gathering, Communication, Project coordination
+
+Languages:
+English — C2
+Spanish — B2
+
+Certifications:
+Microsoft Power BI Data Analyst

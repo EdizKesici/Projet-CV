@@ -1,0 +1,38 @@
+Name: Adrian Patel
+Gender: Male
+Date of Birth: 1993-07-07
+Address: 707 Maple Street, 35786 Bengaluru, India
+Email: adrian.patel93@email.com
+Phone: +91-395-688-9148
+Target Role: Data Scientist
+
+Professional Summary:
+Technology specialist with 4+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Bachelor of Science — Statistics — University of Bonn — 2020
+
+Experience:
+Data Scientist — Signal Analytics — Bengaluru, India — 2022-06 to 2024-11
+
+* Translated ambiguous business questions into measurable ML experiments.
+* Improved model accuracy by 22% on a customer behavior prediction use case.
+
+Junior Data Scientist — Cloud Insight — Bengaluru, India — 2025-10 to Present
+
+* Delivered experimentation frameworks used to prioritize product changes.
+* Built production-ready models with monitoring for drift and data quality.
+* Improved model accuracy by 18% on a customer behavior prediction use case.
+* Translated ambiguous business questions into measurable ML experiments.
+
+Skills:
+Technical: PyTorch, Spark, scikit-learn, SQL, Pandas
+Methods: Model validation, Statistical inference, Feature engineering, Forecasting, Experiment design, Process improvement
+Management: Project planning, Mentoring
+
+Languages:
+English — C2
+German — B1
+
+Certifications:
+TensorFlow Developer Certificate

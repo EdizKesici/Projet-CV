@@ -1,0 +1,33 @@
+Name: Victor Rossi
+Gender: Male
+Date of Birth: 2001-06-11
+Address: 211 Hillview Street, 34436 Lyon, France
+Email: victor.rossi01@email.com
+Phone: +91-974-864-1225
+Target Role: Frontend Developer
+
+Professional Summary:
+Frontend Developer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Brings a practical approach to delivery, prioritization, and collaboration across teams.
+
+Education:
+Master of Science — Software Engineering — University of Lagos — 2025
+
+Experience:
+Frontend Developer — Core Platform — Lyon, France — 2025-05 to Present
+
+* Reduced UI defects through stronger test automation and QA collaboration.
+* Partnered with designers to deliver accessible interfaces at scale.
+* Improved page performance scores by 23% across key user journeys.
+* Built reusable component libraries that accelerated feature delivery.
+
+Skills:
+Technical: React, Bash, Next.js, Linux, JavaScript
+Methods: Component architecture, State management, Process improvement, Responsive design, Accessibility, Performance optimization
+Management: Requirement clarification, Sprint planning
+
+Languages:
+English — C2
+German — B1
+
+Certifications:
+Meta Front-End Developer

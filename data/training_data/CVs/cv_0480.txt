@@ -1,0 +1,46 @@
+Name: Camila Rossi
+Gender: Female
+Date of Birth: 1986-07-07
+Address: 586 Riverside Avenue, Austin, TX 75529, USA
+Email: camila.rossi86@inboxmail.net
+Phone: +31-854-167-3803
+Target Role: Software Engineer
+
+Professional Summary:
+Software Engineer with 11+ years of experience delivering reliable technical solutions and measurable business impact. Known for clear communication, structured problem solving, and strong execution in fast-moving environments.
+
+Education:
+Bachelor of Science — Information Systems — University of Warsaw — 2013
+
+Experience:
+Software Engineer — Vector Networks — Austin, TX — 2015-01 to 2018-10
+
+* Delivered software features that improved internal process efficiency by 13%.
+* Contributed to CI/CD and release quality across multiple services.
+* Maintained core application modules with strong uptime and defect control.
+* Collaborated on architectural improvements for long-term scalability.
+
+Software Developer — Core Labs — Austin, TX — 2019-05 to 2022-02
+
+* Maintained core application modules with strong uptime and defect control.
+* Collaborated on architectural improvements for long-term scalability.
+* Contributed to CI/CD and release quality across multiple services.
+
+Senior Software Engineer — Blue Labs — Austin, TX — 2023-03 to Present
+
+* Delivered software features that improved internal process efficiency by 18%.
+* Contributed to CI/CD and release quality across multiple services.
+* Collaborated on architectural improvements for long-term scalability.
+* Maintained core application modules with strong uptime and defect control.
+
+Skills:
+Technical: Docker, Bash, REST APIs, Excel, Python, Java
+Methods: Debugging, Object-oriented design, Process improvement, Testing, System integration
+Management: Mentoring, Communication, Collaboration, Planning
+
+Languages:
+English — C2
+Spanish — B2
+
+Certifications:
+Professional Scrum Developer

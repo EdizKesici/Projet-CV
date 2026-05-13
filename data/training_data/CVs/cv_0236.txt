@@ -1,0 +1,32 @@
+Name: Arjun Santos
+Gender: Male
+Date of Birth: 1992-03-28
+Address: 361 Cedar Avenue, Austin, TX 99692, USA
+Email: arjun.santos92@mailhub.com
+Phone: +48-263-167-9605
+Target Role: QA Engineer
+
+Professional Summary:
+Analytical professional targeting QA Engineer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Science — Information Technology — University of Lagos — 2018
+
+Experience:
+Test Engineer — Vector Labs — Austin, TX — 2019-01 to Present
+
+* Reduced escaped defects by 22% by expanding regression coverage.
+* Developed automation suites for critical API and UI flows.
+* Partnered with developers to reproduce and isolate production issues.
+
+Skills:
+Technical: Jira, Python, REST APIs, Postman, Linux
+Methods: Quality assurance, Defect tracking, Regression testing, Root cause analysis, Test automation, Test planning
+Management: Prioritization, Stakeholder updates, Cross-team coordination, Documentation
+
+Languages:
+English — C2
+German — B1
+
+Certifications:
+ISTQB Foundation Level

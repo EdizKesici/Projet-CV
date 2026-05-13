@@ -1,0 +1,46 @@
+Name: Luca Patel
+Gender: Male
+Date of Birth: 1988-05-03
+Address: 171 Riverside Avenue, Austin, TX 22044, USA
+Email: luca.patel88@inboxmail.net
+Phone: +49-238-133-5272
+Target Role: Product Analyst
+
+Professional Summary:
+Technology specialist with 9+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Computer Science — University of Lisbon — 2015
+
+Experience:
+Product Analyst — Vector Networks — Austin, TX — 2017-12 to 2020-02
+
+* Built experiment readouts used by product and design leadership.
+* Connected product analytics findings to roadmap prioritization decisions.
+* Defined self-serve metrics for feature adoption and retention analysis.
+* Identified product funnel bottlenecks and improved conversion by 18%.
+
+Growth Analyst — Data Insight — Austin, TX — 2021-04 to 2023-04
+
+* Defined self-serve metrics for feature adoption and retention analysis.
+* Identified product funnel bottlenecks and improved conversion by 19%.
+* Built experiment readouts used by product and design leadership.
+
+Senior Product Analyst — Vector Platform — Austin, TX — 2024-01 to Present
+
+* Connected product analytics findings to roadmap prioritization decisions.
+* Defined self-serve metrics for feature adoption and retention analysis.
+* Built experiment readouts used by product and design leadership.
+* Identified product funnel bottlenecks and improved conversion by 15%.
+
+Skills:
+Technical: Excel, Looker, Mixpanel, Tableau
+Methods: Experimentation, Product metrics, User behavior analysis, Funnel analysis, Cohort analysis
+Management: Stakeholder alignment, Communication, Planning, Cross-functional collaboration
+
+Languages:
+English — C2
+Spanish — B2
+
+Certifications:
+Google Data Analytics Certificate

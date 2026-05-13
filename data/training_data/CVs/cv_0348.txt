@@ -1,0 +1,47 @@
+Name: Omar Bianchi
+Gender: Male
+Date of Birth: 1994-02-24
+Address: 752 Park Avenue, Austin, TX 27648, USA
+Email: omar.bianchi94@mailhub.com
+Phone: +91-348-516-5586
+Target Role: Data Engineer
+
+Professional Summary:
+Data Engineer with 9+ years of experience delivering reliable technical solutions and measurable business impact. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning. Comfortable contributing in environments with evolving priorities and shared ownership.
+
+Education:
+Master of Science — Computer Science — Politecnico di Milano — 2016
+
+Experience:
+Data Engineer — Data Systems — Austin, TX — 2017-02 to 2020-02
+
+* Designed reliable ingestion jobs for operational and product datasets.
+* Implemented data quality checks that reduced downstream incidents.
+* Supported analytics and ML teams with curated data models.
+* Cut pipeline runtime by 14% through incremental processing improvements.
+
+Analytics Engineer — Quantum Networks — Austin, TX — 2021-07 to 2023-09
+
+* Supported analytics and ML teams with curated data models.
+* Designed reliable ingestion jobs for operational and product datasets.
+* Cut pipeline runtime by 15% through incremental processing improvements.
+
+Senior Data Engineer — Core Dynamics — Austin, TX — 2024-08 to Present
+
+* Supported analytics and ML teams with curated data models.
+* Designed reliable ingestion jobs for operational and product datasets.
+* Implemented data quality checks that reduced downstream incidents.
+* Cut pipeline runtime by 32% through incremental processing improvements.
+
+Skills:
+Technical: Kafka, AWS, dbt, SQL, ETL basics, Confluence, Python, Spark
+Methods: Data quality management, Data modeling, Pipeline orchestration, Batch processing
+Management: Cross-team coordination, Incident communication
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+Databricks Data Engineer Associate
+Google Professional Data Engineer

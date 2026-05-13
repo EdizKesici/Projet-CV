@@ -1,0 +1,31 @@
+Name: Kenji Silva
+Gender: Male
+Date of Birth: 2002-05-07
+Address: 939 Admiralty Street, 60639 Cologne, Germany
+Email: kenji.silva02@inboxmail.net
+Phone: +91-946-358-7395
+Target Role: Data Engineer
+
+Professional Summary:
+Analytical professional targeting Data Engineer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning. Brings a practical approach to delivery, prioritization, and collaboration across teams.
+
+Education:
+Master of Science — Information Systems — University of Amsterdam — 2023
+
+Experience:
+Data Engineer — Nova Solutions — Cologne, Germany — 2025-12 to Present
+
+* Implemented data quality checks that reduced downstream incidents.
+* Cut pipeline runtime by 29% through incremental processing improvements.
+
+Skills:
+Technical: SQL, dbt, Documentation, Spark, Python, ETL basics
+Methods: ETL design, Data quality management, Data modeling, Pipeline orchestration, Batch processing
+Management: Documentation, Stakeholder updates, Planning, Incident communication
+
+Languages:
+English — C2
+Spanish — B2
+
+Certifications:
+None listed

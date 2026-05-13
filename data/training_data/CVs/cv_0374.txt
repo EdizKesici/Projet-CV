@@ -1,0 +1,47 @@
+Name: Iris Dubois
+Gender: Female
+Date of Birth: 1997-12-22
+Address: 28 Maple Street, 82943 Lisbon, Portugal
+Email: iris.dubois97@mailhub.com
+Phone: +39-772-781-5591
+Target Role: Backend Developer
+
+Professional Summary:
+Professional pursuing Backend Developer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Bachelor of Science — Software Engineering — University of Lagos — 2021
+
+Experience:
+Backend Developer — Quantum Tech — Lisbon, Portugal — 2021-03 to 2022-09
+
+* Designed service integrations used across multiple product teams.
+* Improved reliability of core backend services handling business-critical traffic.
+* Expanded automated test coverage for payment and account workflows.
+
+Software Developer — Data Solutions — Lisbon, Portugal — 2023-12 to 2024-03
+
+* Improved reliability of core backend services handling business-critical traffic.
+* Reduced API response time by 26% through query and caching improvements.
+* Designed service integrations used across multiple product teams.
+* Expanded automated test coverage for payment and account workflows.
+
+Backend Engineer — Data Insight — Lisbon, Portugal — 2025-04 to Present
+
+* Expanded automated test coverage for payment and account workflows.
+* Improved reliability of core backend services handling business-critical traffic.
+* Designed service integrations used across multiple product teams.
+* Reduced API response time by 20% through query and caching improvements.
+
+Skills:
+Technical: Docker, Java, PostgreSQL
+Methods: API design, Unit testing, Performance tuning, Microservices
+Management: Technical communication, Code review, Collaboration
+
+Languages:
+English — C2
+German — B1
+
+Certifications:
+Azure Developer Associate
+Google Data Analytics Certificate

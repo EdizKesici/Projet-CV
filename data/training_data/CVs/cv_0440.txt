@@ -1,0 +1,32 @@
+Name: David Martinez
+Gender: Male
+Date of Birth: 1997-11-08
+Address: 962 Linden Street, 58224 Milan, Italy
+Email: david.martinez97@inboxmail.net
+Phone: +351-910-688-9236
+Target Role: Data Scientist
+
+Professional Summary:
+Technology specialist with 7+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Master of Science — Computer Science — Politecnico di Milano — 2018
+
+Experience:
+Junior Data Scientist — Blue Networks — Milan, Italy — 2019-01 to Present
+
+* Translated ambiguous business questions into measurable ML experiments.
+* Built production-ready models with monitoring for drift and data quality.
+
+Skills:
+Technical: Python, PyTorch, TensorFlow
+Methods: Statistical inference, Experiment design, Forecasting
+Management: Cross-functional communication, Project planning, Mentoring
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+AWS Certified Machine Learning
+Scrum Fundamentals Certified

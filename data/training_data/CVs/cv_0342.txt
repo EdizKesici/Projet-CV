@@ -1,0 +1,33 @@
+Name: Hugo Patel
+Gender: Male
+Date of Birth: 1997-05-21
+Address: 577 Hillview Avenue, Denver, CO 14838, USA
+Email: hugo.patel97@email.com
+Phone: +91-748-892-2289
+Target Role: DevOps Engineer
+
+Professional Summary:
+Analytical professional targeting DevOps Engineer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning. Interested in roles that combine execution, communication, and measurable business outcomes.
+
+Education:
+Bachelor of Science — Information Systems — Politecnico di Milano — 2022
+
+Experience:
+DevOps Engineer — Core Analytics — Denver, CO — 2024-11 to Present
+
+* Supported engineering teams during incidents and postmortem actions.
+* Standardized infrastructure provisioning across environments.
+
+Skills:
+Technical: Python, Linux, Kubernetes, AWS, Terraform
+Methods: CI/CD, Monitoring, Infrastructure as code, Incident response, Automation
+Management: Collaboration, Incident coordination, Technical mentoring, Documentation
+
+Languages:
+English — C2
+German — B1
+
+Certifications:
+HashiCorp Terraform Associate
+ITIL Foundation
+Google Data Analytics Certificate

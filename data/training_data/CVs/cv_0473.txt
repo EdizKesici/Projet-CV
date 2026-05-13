@@ -1,0 +1,38 @@
+Name: Jonas Petrov
+Gender: Male
+Date of Birth: 1994-01-19
+Address: 951 Hillview Street, 49941 Lyon, France
+Email: jonas.petrov94@mailhub.com
+Phone: +33-823-637-9077
+Target Role: Backend Developer
+
+Professional Summary:
+Analytical professional targeting Backend Developer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Master of Science — Software Engineering — University of Colorado Boulder — 2020
+
+Experience:
+Backend Developer — Quantum Analytics — Lyon, France — 2021-06 to 2023-07
+
+* Expanded automated test coverage for payment and account workflows.
+* Designed service integrations used across multiple product teams.
+* Reduced API response time by 32% through query and caching improvements.
+
+Backend Engineer — Vector Systems — Lyon, France — 2024-06 to Present
+
+* Reduced API response time by 21% through query and caching improvements.
+* Expanded automated test coverage for payment and account workflows.
+* Designed service integrations used across multiple product teams.
+
+Skills:
+Technical: Python, Docker, Go, Java
+Methods: System design, Performance tuning, Unit testing
+Management: Technical communication, Code review, Collaboration, Task estimation
+
+Languages:
+English — C2
+French — B2
+
+Certifications:
+AWS Certified Developer

@@ -1,0 +1,45 @@
+Name: Eva Petrov
+Gender: Female
+Date of Birth: 1992-12-08
+Address: 272 Pinecrest Avenue, Seattle, WA 79522, USA
+Email: eva.petrov92@email.com
+Phone: +234-403-996-6567
+Target Role: Data Analyst
+
+Professional Summary:
+Data Analyst focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning. Comfortable contributing in environments with evolving priorities and shared ownership.
+
+Education:
+Master of Science — Applied Mathematics — University of Amsterdam — 2014
+
+Experience:
+Junior Data Analyst — Nova Networks — Seattle, WA — 2014-10 to 2018-01
+
+* Built weekly KPI reports adopted by finance and commercial teams.
+* Validated source data quality and reduced recurring discrepancies across reports.
+* Designed analysis workflows that reduced data preparation time by 13%.
+* Improved reporting efficiency by 33% through dashboard automation.
+
+Data Analyst — Vector Networks — Seattle, WA — 2019-11 to 2022-12
+
+* Improved reporting efficiency by 17% through dashboard automation.
+* Validated source data quality and reduced recurring discrepancies across reports.
+* Designed analysis workflows that reduced data preparation time by 27%.
+* Built weekly KPI reports adopted by finance and commercial teams.
+
+Senior Data Analyst — Vector Solutions — Seattle, WA — 2023-04 to Present
+
+* Built weekly KPI reports adopted by finance and commercial teams.
+* Improved reporting efficiency by 12% through dashboard automation.
+
+Skills:
+Technical: SQL, Python, Tableau, R, Power BI
+Methods: Regression analysis, Data visualization, A/B testing
+Management: Requirement gathering, Stakeholder communication, Prioritization, Project coordination
+
+Languages:
+English — C2
+French — B2
+
+Certifications:
+Microsoft Power BI Data Analyst

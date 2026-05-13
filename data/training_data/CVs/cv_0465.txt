@@ -1,0 +1,35 @@
+Name: Nora Fischer
+Gender: Female
+Date of Birth: 1998-09-15
+Address: 717 Park Street, 38025 Warsaw, Poland
+Email: nora.fischer98@mailhub.com
+Phone: +49-666-878-4780
+Target Role: BI Developer
+
+Professional Summary:
+BI Developer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Business Analytics — Politecnico di Milano — 2023
+
+Experience:
+BI Developer — Quantum Works — Warsaw, Poland — 2024-12 to Present
+
+* Partnered with analysts to validate business definitions across domains.
+* Translated stakeholder requests into reusable metrics and semantic layers.
+* Consolidated fragmented reporting into dashboards used by executives.
+* Improved data refresh reliability and reduced manual reporting effort by 15%.
+
+Skills:
+Technical: SSIS, Tableau, Excel, Python
+Methods: Dimensional modeling, KPI definition, Dashboard design, ETL workflows
+Management: Stakeholder communication, Documentation, Planning
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+Microsoft Power BI Data Analyst
+Scrum Fundamentals Certified
+IBM Data Analyst Professional Certificate

@@ -1,0 +1,42 @@
+Name: Gabriel Dubois
+Gender: Male
+Date of Birth: 1983-11-23
+Address: 325 Birch Avenue, Denver, CO 16911, USA
+Email: gabriel.dubois83@email.com
+Phone: +39-729-922-9937
+Target Role: Data Analyst
+
+Professional Summary:
+Analytical professional targeting Data Analyst opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Science — Data Analytics — University of Lagos — 2013
+
+Experience:
+Junior Data Analyst — Quantum Dynamics — Denver, CO — 2015-01 to 2018-04
+
+* Designed analysis workflows that reduced data preparation time by 17%.
+* Built weekly KPI reports adopted by finance and commercial teams.
+* Validated source data quality and reduced recurring discrepancies across reports.
+
+Data Analyst — Atlas Tech — Denver, CO — 2019-12 to 2022-08
+
+* Designed analysis workflows that reduced data preparation time by 34%.
+* Improved reporting efficiency by 14% through dashboard automation.
+
+Senior Data Analyst — Nova Labs — Denver, CO — 2023-05 to Present
+
+* Designed analysis workflows that reduced data preparation time by 33%.
+* Built weekly KPI reports adopted by finance and commercial teams.
+
+Skills:
+Technical: Looker, Excel, R
+Methods: KPI tracking, A/B testing, Problem solving, Data visualization
+Management: Requirement gathering, Stakeholder communication, Prioritization, Project coordination
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+None listed

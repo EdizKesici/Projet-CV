@@ -1,0 +1,30 @@
+Name: Mina Hassan
+Gender: Female
+Date of Birth: 1993-12-14
+Address: 431 Birch Avenue, Austin, TX 83266, USA
+Email: mina.hassan93@mailhub.com
+Phone: +33-546-435-2066
+Target Role: Data Analyst
+
+Professional Summary:
+Professional pursuing Data Analyst opportunities with exposure to production environments, team delivery, and measurable operational improvements. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Data Analytics — University of Colorado Boulder — 2014
+
+Experience:
+Senior Data Analyst — Nova Labs — Austin, TX — 2014-05 to Present
+
+* Validated source data quality and reduced recurring discrepancies across reports.
+* Designed analysis workflows that reduced data preparation time by 25%.
+
+Skills:
+Technical: Looker, R, Agile tools, Power BI
+Methods: Data visualization, KPI tracking, Dashboard design
+Management: Stakeholder communication, Project coordination, Requirement gathering, Planning, Prioritization
+
+Languages:
+English — C2
+
+Certifications:
+Tableau Desktop Specialist

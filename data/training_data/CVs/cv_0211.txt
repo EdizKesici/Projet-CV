@@ -1,0 +1,46 @@
+Name: Nora Fischer
+Gender: Female
+Date of Birth: 1989-02-14
+Address: 984 Linden Street, 46990 Cologne, Germany
+Email: nora.fischer89@mailhub.com
+Phone: +48-827-173-1548
+Target Role: QA Engineer
+
+Professional Summary:
+QA Engineer with 9+ years of experience delivering reliable technical solutions and measurable business impact. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Bachelor of Arts — Software Engineering — University of Texas at Austin — 2015
+
+Experience:
+QA Engineer — Nova Labs — Cologne, Germany — 2017-02 to 2020-10
+
+* Reduced escaped defects by 29% by expanding regression coverage.
+* Improved release readiness through clearer test reporting.
+* Developed automation suites for critical API and UI flows.
+* Partnered with developers to reproduce and isolate production issues.
+
+Test Engineer — Cloud Solutions — Cologne, Germany — 2021-04 to 2023-04
+
+* Reduced escaped defects by 18% by expanding regression coverage.
+* Partnered with developers to reproduce and isolate production issues.
+* Improved release readiness through clearer test reporting.
+* Developed automation suites for critical API and UI flows.
+
+Senior QA Engineer — Atlas Analytics — Cologne, Germany — 2024-12 to Present
+
+* Improved release readiness through clearer test reporting.
+* Reduced escaped defects by 31% by expanding regression coverage.
+* Developed automation suites for critical API and UI flows.
+
+Skills:
+Technical: Cypress, SQL, API testing
+Methods: Test planning, Test automation, Defect tracking, Quality assurance, Problem solving
+Management: Risk communication, Cross-team coordination, Prioritization, Task coordination
+
+Languages:
+English — C2
+German — B1
+
+Certifications:
+ISTQB Foundation Level

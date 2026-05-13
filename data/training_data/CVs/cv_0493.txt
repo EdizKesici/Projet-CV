@@ -1,0 +1,44 @@
+Name: Mina Schneider
+Gender: Female
+Date of Birth: 1993-03-12
+Address: 82 Linden Avenue, Seattle, WA 72668, USA
+Email: mina.schneider93@inboxmail.net
+Phone: +351-552-867-8603
+Target Role: Backend Developer
+
+Professional Summary:
+Professional pursuing Backend Developer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Software Engineering — University of Amsterdam — 2015
+
+Experience:
+Backend Developer — Vector Platform — Seattle, WA — 2016-09 to 2019-05
+
+* Designed service integrations used across multiple product teams.
+* Reduced API response time by 20% through query and caching improvements.
+* Expanded automated test coverage for payment and account workflows.
+* Improved reliability of core backend services handling business-critical traffic.
+
+Backend Engineer — Blue Solutions — Seattle, WA — 2020-09 to 2023-02
+
+* Expanded automated test coverage for payment and account workflows.
+* Reduced API response time by 21% through query and caching improvements.
+
+Senior Backend Developer — Quantum Platform — Seattle, WA — 2024-04 to Present
+
+* Expanded automated test coverage for payment and account workflows.
+* Reduced API response time by 14% through query and caching improvements.
+* Designed service integrations used across multiple product teams.
+
+Skills:
+Technical: Python, Redis, Agile tools, REST APIs
+Methods: Microservices, Unit testing, API design, Performance tuning
+Management: Task estimation, Code review, Collaboration
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+Oracle Java Certification

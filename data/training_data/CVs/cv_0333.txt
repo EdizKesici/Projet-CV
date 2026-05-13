@@ -1,0 +1,33 @@
+Name: Adrian Silva
+Gender: Male
+Date of Birth: 1997-07-14
+Address: 866 Park Street, 30799 Dublin, Ireland
+Email: adrian.silva97@email.com
+Phone: +91-358-496-9640
+Target Role: Data Scientist
+
+Professional Summary:
+Data Scientist with 6+ years of experience delivering reliable technical solutions and measurable business impact. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning. Brings a practical approach to delivery, prioritization, and collaboration across teams.
+
+Education:
+Bachelor of Science — Computer Science — Indian Institute of Technology Delhi — 2020
+
+Experience:
+Junior Data Scientist — Data Systems — Dublin, Ireland — 2020-02 to Present
+
+* Delivered experimentation frameworks used to prioritize product changes.
+* Improved model accuracy by 21% on a customer behavior prediction use case.
+* Built production-ready models with monitoring for drift and data quality.
+* Translated ambiguous business questions into measurable ML experiments.
+
+Skills:
+Technical: Python, PyTorch, SQL, TensorFlow, Pandas, scikit-learn
+Methods: Model validation, Forecasting, Feature engineering, Statistical inference, Problem solving
+Management: Stakeholder alignment, Mentoring
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+Professional Scrum Master I

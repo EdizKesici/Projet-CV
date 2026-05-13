@@ -1,0 +1,39 @@
+Name: Omar Kim
+Gender: Male
+Date of Birth: 1997-03-27
+Address: 876 Park Street, 82279 Lisbon, Portugal
+Email: omar.kim97@mailhub.com
+Phone: +353-258-595-9723
+Target Role: DevOps Engineer
+
+Professional Summary:
+DevOps Engineer with 4+ years of experience delivering reliable technical solutions and measurable business impact. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Science — Computer Science — University of Bonn — 2021
+
+Experience:
+DevOps Engineer — Vector Solutions — Lisbon, Portugal — 2022-03 to 2024-09
+
+* Supported engineering teams during incidents and postmortem actions.
+* Reduced release lead time by 29% through CI/CD automation.
+* Standardized infrastructure provisioning across environments.
+* Improved platform reliability with stronger observability and runbooks.
+
+Platform Engineer — Atlas Networks — Lisbon, Portugal — 2025-05 to Present
+
+* Supported engineering teams during incidents and postmortem actions.
+* Standardized infrastructure provisioning across environments.
+
+Skills:
+Technical: Python, Notion, Kubernetes, AWS, Docker, Jira
+Methods: Infrastructure as code, Monitoring, Automation, Incident response, Problem solving
+Management: Incident coordination, Task coordination, Collaboration, Documentation
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+ITIL Foundation
+Google Data Analytics Certificate

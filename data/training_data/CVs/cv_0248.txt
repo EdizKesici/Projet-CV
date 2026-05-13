@@ -1,0 +1,40 @@
+Name: Clara Rossi
+Gender: Female
+Date of Birth: 1986-04-08
+Address: 467 Birch Avenue, Austin, TX 33140, USA
+Email: clara.rossi86@inboxmail.net
+Phone: +48-520-456-4521
+Target Role: Cybersecurity Analyst
+
+Professional Summary:
+Professional pursuing Cybersecurity Analyst opportunities with exposure to production environments, team delivery, and measurable operational improvements. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Has supported mentoring, planning, and coordination activities alongside individual technical work.
+
+Education:
+Bachelor of Science — Network Engineering — University of Lagos — 2013
+
+Experience:
+Cybersecurity Analyst — Signal Analytics — Austin, TX — 2015-08 to 2018-09
+
+* Supported incident investigations with structured evidence collection.
+* Improved vulnerability remediation reporting across infrastructure teams while coordinating work across engineers and analysts.
+
+Security Analyst — Quantum Dynamics — Austin, TX — 2019-11 to 2022-05
+
+* Supported incident investigations with structured evidence collection while coordinating work across engineers and analysts.
+* Hardened access controls and baseline monitoring practices.
+
+Senior Cybersecurity Analyst — Vector Labs — Austin, TX — 2023-09 to Present
+
+* Supported incident investigations with structured evidence collection while coordinating work across engineers and analysts.
+* Hardened access controls and baseline monitoring practices while coordinating work across engineers and analysts.
+
+Skills:
+Technical: Wireshark, Vulnerability scanning, Python, Splunk, Linux, IAM
+Methods: Log analysis, Security monitoring, Incident response, Risk assessment
+Management: Documentation, Cross-team coordination
+
+Languages:
+English — C2
+
+Certifications:
+CompTIA Security+

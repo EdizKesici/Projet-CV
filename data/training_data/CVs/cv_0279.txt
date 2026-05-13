@@ -1,0 +1,45 @@
+Name: Thomas Silva
+Gender: Male
+Date of Birth: 1989-08-07
+Address: 949 Admiralty Avenue, Austin, TX 23690, USA
+Email: thomas.silva89@inboxmail.net
+Phone: +353-360-472-1019
+Target Role: ML Engineer
+
+Professional Summary:
+Analytical professional targeting ML Engineer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Master of Science — Software Engineering — University of Texas at Austin — 2012
+
+Experience:
+ML Engineer — North Tech — Austin, TX — 2014-10 to 2018-05
+
+* Partnered with data scientists to convert prototypes into resilient services.
+* Operationalized training and inference workflows for multiple production models.
+* Reduced model deployment time by 17% by standardizing CI/CD pipelines.
+* Improved observability for inference latency and feature freshness.
+
+Machine Learning Engineer — Cloud Networks — Austin, TX — 2019-10 to 2022-04
+
+* Operationalized training and inference workflows for multiple production models.
+* Reduced model deployment time by 34% by standardizing CI/CD pipelines.
+* Improved observability for inference latency and feature freshness.
+
+Senior ML Engineer — Core Networks — Austin, TX — 2023-07 to Present
+
+* Reduced model deployment time by 13% by standardizing CI/CD pipelines.
+* Improved observability for inference latency and feature freshness.
+* Partnered with data scientists to convert prototypes into resilient services.
+
+Skills:
+Technical: Python, TensorFlow, Kubernetes
+Methods: Monitoring, Process improvement, MLOps, Feature stores, Model deployment
+Management: Sprint planning, Technical mentoring, Teamwork, Collaboration, Roadmap communication
+
+Languages:
+English — C2
+Spanish — B2
+
+Certifications:
+CKA

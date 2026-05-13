@@ -1,0 +1,43 @@
+Name: David Popescu
+Gender: Male
+Date of Birth: 1991-02-19
+Address: 630 Linden Avenue, Austin, TX 79815, USA
+Email: david.popescu91@mailhub.com
+Phone: +49-434-914-1547
+Target Role: ML Engineer
+
+Professional Summary:
+ML Engineer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Has supported mentoring, planning, and coordination activities alongside individual technical work.
+
+Education:
+Master of Science — Machine Learning — University of Colorado Boulder — 2013
+
+Experience:
+ML Engineer — Vector Analytics — Austin, TX — 2013-07 to 2017-11
+
+* Reduced model deployment time by 24% by standardizing CI/CD pipelines.
+* Operationalized training and inference workflows for multiple production models.
+
+Machine Learning Engineer — North Dynamics — Austin, TX — 2018-01 to 2022-11
+
+* Partnered with data scientists to convert prototypes into resilient services.
+* Reduced model deployment time by 31% by standardizing CI/CD pipelines.
+* Improved observability for inference latency and feature freshness while coordinating work across engineers and analysts.
+* Operationalized training and inference workflows for multiple production models.
+
+Senior ML Engineer — Blue Analytics — Austin, TX — 2023-04 to Present
+
+* Reduced model deployment time by 32% by standardizing CI/CD pipelines.
+* Operationalized training and inference workflows for multiple production models while coordinating work across engineers and analysts.
+
+Skills:
+Technical: Kubernetes, AWS, MLflow, TensorFlow, Docker
+Methods: CI/CD, Model deployment, MLOps
+Management: Roadmap communication, Sprint planning, Collaboration, Technical mentoring, Teamwork
+
+Languages:
+English — C2
+German — B1
+
+Certifications:
+Google Data Analytics Certificate

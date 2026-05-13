@@ -1,0 +1,37 @@
+Name: Aisha Dubois
+Gender: Female
+Date of Birth: 1995-11-03
+Address: 102 Pinecrest Avenue, Austin, TX 83119, USA
+Email: aisha.dubois95@email.com
+Phone: +48-668-964-1676
+Target Role: BI Developer
+
+Professional Summary:
+Technology specialist with 6+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Master of Science — Information Systems — University of Warsaw — 2019
+
+Experience:
+BI Developer — Quantum Networks — Austin, TX — 2020-01 to 2023-10
+
+* Translated stakeholder requests into reusable metrics and semantic layers.
+* Consolidated fragmented reporting into dashboards used by executives.
+* Improved data refresh reliability and reduced manual reporting effort by 20%.
+
+Business Intelligence Developer — Data Systems — Austin, TX — 2024-07 to Present
+
+* Improved data refresh reliability and reduced manual reporting effort by 12%.
+* Partnered with analysts to validate business definitions across domains.
+
+Skills:
+Technical: Tableau, Power BI, SQL, SSIS, Python
+Methods: Dashboard design, Business analysis, ETL workflows, KPI definition
+Management: Requirement gathering, Stakeholder communication, Planning, Documentation
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+IBM Data Analyst Professional Certificate

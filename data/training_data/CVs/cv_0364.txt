@@ -1,0 +1,46 @@
+Name: Omar Bianchi
+Gender: Male
+Date of Birth: 1990-05-10
+Address: 591 Park Avenue, Austin, TX 62754, USA
+Email: omar.bianchi90@email.com
+Phone: +33-596-755-4527
+Target Role: Data Engineer
+
+Professional Summary:
+Professional pursuing Data Engineer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning. Comfortable contributing in environments with evolving priorities and shared ownership.
+
+Education:
+Master of Science — Information Systems — University of Lisbon — 2013
+
+Experience:
+Data Engineer — Blue Works — Austin, TX — 2014-11 to 2018-04
+
+* Supported analytics and ML teams with curated data models.
+* Implemented data quality checks that reduced downstream incidents.
+* Cut pipeline runtime by 18% through incremental processing improvements.
+* Designed reliable ingestion jobs for operational and product datasets.
+
+Analytics Engineer — Atlas Insight — Austin, TX — 2019-12 to 2022-12
+
+* Cut pipeline runtime by 30% through incremental processing improvements.
+* Implemented data quality checks that reduced downstream incidents.
+* Designed reliable ingestion jobs for operational and product datasets.
+* Supported analytics and ML teams with curated data models.
+
+Senior Data Engineer — Data Tech — Austin, TX — 2023-10 to Present
+
+* Designed reliable ingestion jobs for operational and product datasets.
+* Cut pipeline runtime by 31% through incremental processing improvements.
+* Supported analytics and ML teams with curated data models.
+
+Skills:
+Technical: SQL, Airflow, AWS
+Methods: Data modeling, Batch processing, Data quality management, Pipeline orchestration, ETL design
+Management: Cross-team coordination, Documentation, Stakeholder updates, Incident communication, Planning
+
+Languages:
+English — C2
+German — B1
+
+Certifications:
+None listed

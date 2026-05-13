@@ -1,0 +1,44 @@
+Name: Daniel Okafor
+Gender: Male
+Date of Birth: 1989-09-23
+Address: 277 Oakridge Street, 18624 Lagos, Nigeria
+Email: daniel.okafor89@email.com
+Phone: +91-667-738-8223
+Target Role: DevOps Engineer
+
+Professional Summary:
+DevOps Engineer with 10+ years of experience delivering reliable technical solutions and measurable business impact. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Bachelor of Science — Information Systems — University of Texas at Austin — 2014
+
+Experience:
+DevOps Engineer — North Insight — Lagos, Nigeria — 2016-02 to 2019-10
+
+* Standardized infrastructure provisioning across environments.
+* Improved platform reliability with stronger observability and runbooks.
+
+Platform Engineer — Quantum Dynamics — Lagos, Nigeria — 2020-09 to 2023-03
+
+* Standardized infrastructure provisioning across environments.
+* Reduced release lead time by 15% through CI/CD automation.
+* Supported engineering teams during incidents and postmortem actions.
+* Improved platform reliability with stronger observability and runbooks.
+
+Senior DevOps Engineer — Nova Platform — Lagos, Nigeria — 2024-11 to Present
+
+* Standardized infrastructure provisioning across environments.
+* Reduced release lead time by 27% through CI/CD automation.
+* Improved platform reliability with stronger observability and runbooks.
+
+Skills:
+Technical: Python, Docker, Terraform
+Methods: CI/CD, Monitoring, Automation, Infrastructure as code, Incident response
+Management: Collaboration, Technical mentoring, Incident coordination
+
+Languages:
+English — C2
+Spanish — B2
+
+Certifications:
+HashiCorp Terraform Associate

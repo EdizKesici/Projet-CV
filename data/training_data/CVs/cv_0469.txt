@@ -1,0 +1,31 @@
+Name: Omar Kim
+Gender: Male
+Date of Birth: 1998-01-27
+Address: 152 Hillview Avenue, Denver, CO 52968, USA
+Email: omar.kim98@inboxmail.net
+Phone: +351-936-151-3351
+Target Role: Product Analyst
+
+Professional Summary:
+Technology specialist with 3+ years of experience building practical solutions, improving processes, and supporting cross-functional teams. Capable of supporting team goals and handling recurring technical responsibilities.
+
+Education:
+Bachelor of Science — Economics — University of Texas at Austin — 2023
+
+Experience:
+Product Analyst — Data Labs — Denver, CO — 2023-02 to Present
+
+* Defined self-serve metrics for feature adoption and retention analysis.
+* Identified product funnel bottlenecks and improved conversion by 26%.
+
+Skills:
+Technical: Excel, Looker, SQL, REST APIs
+Methods: User behavior analysis, Funnel analysis, Cohort analysis
+Management: Stakeholder alignment, Cross-functional collaboration, Communication
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+Google Data Analytics Certificate

@@ -1,0 +1,32 @@
+Name: Elena Garcia
+Gender: Female
+Date of Birth: 1997-08-24
+Address: 247 Riverside Street, 86096 Lagos, Nigeria
+Email: elena.garcia97@inboxmail.net
+Phone: +351-262-304-6050
+Target Role: ML Engineer
+
+Professional Summary:
+Professional pursuing ML Engineer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Computer Science — University of Warsaw — 2022
+
+Experience:
+ML Engineer — Atlas Networks — Lagos, Nigeria — 2024-10 to Present
+
+* Improved observability for inference latency and feature freshness.
+* Operationalized training and inference workflows for multiple production models.
+* Reduced model deployment time by 30% by standardizing CI/CD pipelines.
+
+Skills:
+Technical: MLflow, TensorFlow, Agile tools, Docker
+Methods: MLOps, Feature stores, Monitoring
+Management: Sprint planning, Roadmap communication, Teamwork, Technical mentoring, Collaboration
+
+Languages:
+English — C1
+Portuguese — C1
+
+Certifications:
+AWS Certified Machine Learning

@@ -1,0 +1,33 @@
+Name: Leo Dubois
+Gender: Male
+Date of Birth: 1995-11-28
+Address: 585 Oakridge Street, 75800 Milan, Italy
+Email: leo.dubois95@mailhub.com
+Phone: +48-883-119-9440
+Target Role: Software Engineer
+
+Professional Summary:
+Analytical professional targeting Software Engineer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Known for clear communication, structured problem solving, and strong execution in fast-moving environments.
+
+Education:
+Master of Science — Computer Science — University of Lisbon — 2017
+
+Experience:
+Software Developer — Cloud Solutions — Milan, Italy — 2019-07 to Present
+
+* Delivered software features that improved internal process efficiency by 12% while coordinating work across engineers and analysts.
+* Collaborated on architectural improvements for long-term scalability.
+* Maintained core application modules with strong uptime and defect control.
+* Contributed to CI/CD and release quality across multiple services.
+
+Skills:
+Technical: Monitoring, Java, Git, Python, Cloud fundamentals, REST APIs, Docker
+Methods: Agile delivery, Debugging, Testing, System integration, Object-oriented design, Documentation
+Management: Planning, Mentoring, Collaboration
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+Professional Scrum Developer

@@ -1,0 +1,37 @@
+Name: Lucia Okafor
+Gender: Female
+Date of Birth: 1993-08-27
+Address: 202 Pinecrest Street, 24984 Lisbon, Portugal
+Email: lucia.okafor93@email.com
+Phone: +91-972-127-2322
+Target Role: BI Developer
+
+Professional Summary:
+BI Developer with 7+ years of experience delivering reliable technical solutions and measurable business impact. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Has supported mentoring, planning, and coordination activities alongside individual technical work.
+
+Education:
+Master of Science — Statistics — University of Colorado Boulder — 2018
+
+Experience:
+BI Developer — Nova Analytics — Lisbon, Portugal — 2019-05 to 2022-08
+
+* Partnered with analysts to validate business definitions across domains.
+* Improved data refresh reliability and reduced manual reporting effort by 16% while coordinating work across engineers and analysts.
+
+Business Intelligence Developer — Cloud Tech — Lisbon, Portugal — 2023-07 to Present
+
+* Translated stakeholder requests into reusable metrics and semantic layers.
+* Improved data refresh reliability and reduced manual reporting effort by 14%.
+
+Skills:
+Technical: DAX, Excel, SQL, Tableau, Power BI, Python
+Methods: Business analysis, ETL workflows, KPI definition
+Management: Requirement gathering, Planning
+
+Languages:
+English — C1
+German — C2
+
+Certifications:
+Tableau Desktop Specialist
+IBM Data Analyst Professional Certificate

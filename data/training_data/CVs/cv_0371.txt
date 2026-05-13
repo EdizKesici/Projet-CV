@@ -1,0 +1,33 @@
+Name: Olivia Popescu
+Gender: Female
+Date of Birth: 1999-09-11
+Address: 450 Park Street, 47544 Milan, Italy
+Email: olivia.popescu99@mailhub.com
+Phone: +234-832-279-2684
+Target Role: Backend Developer
+
+Professional Summary:
+Backend Developer focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Comfortable contributing in environments with evolving priorities and shared ownership.
+
+Education:
+Bachelor of Science — Information Technology — Indian Institute of Technology Delhi — 2022
+
+Experience:
+Backend Developer — Quantum Networks — Milan, Italy — 2023-08 to Present
+
+* Designed service integrations used across multiple product teams.
+* Expanded automated test coverage for payment and account workflows.
+* Improved reliability of core backend services handling business-critical traffic.
+* Reduced API response time by 30% through query and caching improvements.
+
+Skills:
+Technical: Go, REST APIs, Docker, Monitoring, Python
+Methods: System design, Unit testing, Microservices
+Management: Code review, Task estimation, Collaboration
+
+Languages:
+English — C2
+Spanish — B2
+
+Certifications:
+None listed

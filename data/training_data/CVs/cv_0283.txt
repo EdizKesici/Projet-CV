@@ -1,0 +1,33 @@
+Name: Sara Fischer
+Gender: Female
+Date of Birth: 1999-09-06
+Address: 372 Linden Street, 83603 Bengaluru, India
+Email: sara.fischer99@inboxmail.net
+Phone: +1-710-829-7459
+Target Role: Data Scientist
+
+Professional Summary:
+Professional pursuing Data Scientist opportunities with exposure to production environments, team delivery, and measurable operational improvements. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Master of Science — Data Science — University of Warsaw — 2022
+
+Experience:
+Data Scientist — Core Labs — Bengaluru, India — 2023-01 to Present
+
+* Translated ambiguous business questions into measurable ML experiments.
+* Built production-ready models with monitoring for drift and data quality.
+* Improved model accuracy by 17% on a customer behavior prediction use case.
+
+Skills:
+Technical: scikit-learn, Pandas, TensorFlow
+Methods: Forecasting, Statistical inference, Model validation, Experiment design
+Management: Mentoring, Cross-functional communication, Project planning
+
+Languages:
+English — C2
+Spanish — B2
+
+Certifications:
+TensorFlow Developer Certificate
+AWS Certified Machine Learning

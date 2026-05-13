@@ -1,0 +1,48 @@
+Name: Leila Novak
+Gender: Female
+Date of Birth: 1993-05-14
+Address: 834 Cedar Street, 57885 Lagos, Nigeria
+Email: leila.novak93@inboxmail.net
+Phone: +91-896-240-2890
+Target Role: Software Engineer
+
+Professional Summary:
+Professional pursuing Software Engineer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning. Used to learning new tools quickly when projects require broader technical coverage.
+
+Education:
+Bachelor of Science — Computer Science — University of Lisbon — 2017
+
+Experience:
+Software Engineer — Quantum Networks — Lagos, Nigeria — 2018-03 to 2020-03
+
+* Contributed to CI/CD and release quality across multiple services.
+* Collaborated on architectural improvements for long-term scalability.
+* Maintained core application modules with strong uptime and defect control.
+
+Software Developer — Cloud Insight — Lagos, Nigeria — 2021-12 to 2023-08
+
+* Contributed to CI/CD and release quality across multiple services.
+* Collaborated on architectural improvements for long-term scalability.
+* Delivered software features that improved internal process efficiency by 14%.
+* Maintained core application modules with strong uptime and defect control.
+
+Senior Software Engineer — Blue Works — Lagos, Nigeria — 2024-02 to Present
+
+* Maintained core application modules with strong uptime and defect control.
+* Contributed to CI/CD and release quality across multiple services.
+* Collaborated on architectural improvements for long-term scalability.
+* Delivered software features that improved internal process efficiency by 23%.
+
+Skills:
+Technical: REST APIs, Docker, Git, Java, Confluence, Python, Cloud fundamentals
+Methods: Object-oriented design, Debugging, Agile delivery, System integration, Testing
+Management: Planning, Communication, Mentoring, Stakeholder updates, Collaboration
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+AWS Certified Developer
+AWS Cloud Practitioner
+Scrum Fundamentals Certified

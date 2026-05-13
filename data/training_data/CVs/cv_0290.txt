@@ -1,0 +1,42 @@
+Name: Clara Aliyev
+Gender: Female
+Date of Birth: 1992-05-19
+Address: 53 Park Street, 43080 Amsterdam, Netherlands
+Email: clara.aliyev92@email.com
+Phone: +1-768-569-6531
+Target Role: ML Engineer
+
+Professional Summary:
+Analytical professional targeting ML Engineer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Known for clear communication, structured problem solving, and strong execution in fast-moving environments. Focused on individual contribution with growing exposure to collaborative planning. Used to learning new tools quickly when projects require broader technical coverage.
+
+Education:
+Master of Science — Software Engineering — University of Bonn — 2015
+
+Experience:
+ML Engineer — Atlas Networks — Amsterdam, Netherlands — 2015-02 to 2018-01
+
+* Operationalized training and inference workflows for multiple production models.
+* Improved observability for inference latency and feature freshness.
+
+Machine Learning Engineer — Cloud Systems — Amsterdam, Netherlands — 2019-12 to 2022-04
+
+* Improved observability for inference latency and feature freshness.
+* Operationalized training and inference workflows for multiple production models.
+* Partnered with data scientists to convert prototypes into resilient services.
+
+Senior ML Engineer — Quantum Tech — Amsterdam, Netherlands — 2023-02 to Present
+
+* Partnered with data scientists to convert prototypes into resilient services.
+* Reduced model deployment time by 21% by standardizing CI/CD pipelines.
+
+Skills:
+Technical: Docker, AWS, PyTorch, TensorFlow
+Methods: Monitoring, Feature stores, CI/CD, MLOps
+Management: Sprint planning, Collaboration, Roadmap communication, Technical mentoring
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+None listed

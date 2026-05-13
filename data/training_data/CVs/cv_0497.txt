@@ -1,0 +1,43 @@
+Name: Hannah Santos
+Gender: Female
+Date of Birth: 1985-10-02
+Address: 841 Hillview Avenue, Austin, TX 50179, USA
+Email: hannah.santos85@mailhub.com
+Phone: +351-422-146-9156
+Target Role: Frontend Developer
+
+Professional Summary:
+Professional pursuing Frontend Developer opportunities with exposure to production environments, team delivery, and measurable operational improvements. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Bachelor of Arts — Computer Science — University of Texas at Austin — 2015
+
+Experience:
+Frontend Developer — Nova Networks — Austin, TX — 2016-04 to 2019-05
+
+* Reduced UI defects through stronger test automation and QA collaboration.
+* Built reusable component libraries that accelerated feature delivery.
+* Improved page performance scores by 12% across key user journeys.
+* Partnered with designers to deliver accessible interfaces at scale.
+
+Frontend Engineer — Atlas Insight — Austin, TX — 2020-12 to 2023-07
+
+* Built reusable component libraries that accelerated feature delivery.
+* Partnered with designers to deliver accessible interfaces at scale.
+
+Senior Frontend Developer — Cloud Solutions — Austin, TX — 2024-10 to Present
+
+* Improved page performance scores by 26% across key user journeys.
+* Reduced UI defects through stronger test automation and QA collaboration.
+
+Skills:
+Technical: React, Next.js, Testing Library, TypeScript, JavaScript
+Methods: Performance optimization, Accessibility, Problem solving, Responsive design
+Management: Design collaboration, Sprint planning, Requirement clarification, Code review
+
+Languages:
+English — C1
+Italian — B2
+
+Certifications:
+None listed

@@ -1,0 +1,45 @@
+Name: Sophie Popescu
+Gender: Female
+Date of Birth: 1992-05-08
+Address: 714 Pinecrest Street, 54255 Bengaluru, India
+Email: sophie.popescu92@email.com
+Phone: +234-711-293-3680
+Target Role: Cybersecurity Analyst
+
+Professional Summary:
+Cybersecurity Analyst focused on pragmatic execution, dependable delivery, and collaboration across technical and business stakeholders. Comfortable working with stakeholders, documenting decisions, and contributing to delivery milestones.
+
+Education:
+Bachelor of Science — Computer Science — University of Colorado Boulder — 2020
+
+Experience:
+Cybersecurity Analyst — Quantum Labs — Bengaluru, India — 2021-06 to 2022-09
+
+* Reduced mean time to detect by 32% through stronger alert triage.
+* Hardened access controls and baseline monitoring practices.
+* Supported incident investigations with structured evidence collection.
+
+SOC Analyst — Quantum Networks — Bengaluru, India — 2023-08 to 2024-10
+
+* Reduced mean time to detect by 27% through stronger alert triage.
+* Supported incident investigations with structured evidence collection.
+* Hardened access controls and baseline monitoring practices.
+
+Security Analyst — North Systems — Bengaluru, India — 2025-01 to Present
+
+* Supported incident investigations with structured evidence collection.
+* Improved vulnerability remediation reporting across infrastructure teams.
+* Reduced mean time to detect by 26% through stronger alert triage.
+
+Skills:
+Technical: ETL basics, Wireshark, Vulnerability scanning, Splunk, REST APIs, Linux, Python
+Methods: Risk assessment, Incident response, Threat analysis, Log analysis, Security monitoring
+Management: Cross-team coordination, Policy awareness, Incident communication, Documentation
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+GIAC Security Essentials
+CompTIA Security+

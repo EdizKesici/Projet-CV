@@ -1,0 +1,38 @@
+Name: Lucia Silva
+Gender: Female
+Date of Birth: 1995-07-23
+Address: 69 Cedar Street, 71590 Lyon, France
+Email: lucia.silva95@mailhub.com
+Phone: +91-238-661-7866
+Target Role: ML Engineer
+
+Professional Summary:
+ML Engineer with 4+ years of experience delivering reliable technical solutions and measurable business impact. Capable of supporting team goals and handling recurring technical responsibilities. Focused on individual contribution with growing exposure to collaborative planning.
+
+Education:
+Master of Science — Software Engineering — University of Lagos — 2020
+
+Experience:
+ML Engineer — Vector Dynamics — Lyon, France — 2022-10 to 2024-08
+
+* Improved observability for inference latency and feature freshness.
+* Partnered with data scientists to convert prototypes into resilient services.
+* Reduced model deployment time by 26% by standardizing CI/CD pipelines.
+
+Machine Learning Engineer — Cloud Labs — Lyon, France — 2025-12 to Present
+
+* Reduced model deployment time by 22% by standardizing CI/CD pipelines.
+* Operationalized training and inference workflows for multiple production models.
+
+Skills:
+Technical: PyTorch, TensorFlow, MLflow, Python
+Methods: MLOps, Monitoring, Model deployment, Feature stores
+Management: Collaboration, Technical mentoring, Roadmap communication
+
+Languages:
+English — C2
+
+Certifications:
+AWS Cloud Practitioner
+ITIL Foundation
+AWS Certified Machine Learning

@@ -1,0 +1,41 @@
+Name: Yusuf Bianchi
+Gender: Male
+Date of Birth: 1993-05-04
+Address: 928 Maple Street, 15525 Milan, Italy
+Email: yusuf.bianchi93@inboxmail.net
+Phone: +48-951-180-2945
+Target Role: Data Engineer
+
+Professional Summary:
+Analytical professional targeting Data Engineer opportunities, with hands-on experience across delivery, collaboration, and continuous improvement. Known for clear communication, structured problem solving, and strong execution in fast-moving environments.
+
+Education:
+Bachelor of Science — Software Engineering — University of Amsterdam — 2019
+
+Experience:
+Data Engineer — Blue Dynamics — Milan, Italy — 2020-09 to 2023-01
+
+* Designed reliable ingestion jobs for operational and product datasets.
+* Implemented data quality checks that reduced downstream incidents.
+* Supported analytics and ML teams with curated data models.
+* Cut pipeline runtime by 32% through incremental processing improvements.
+
+Analytics Engineer — Blue Dynamics — Milan, Italy — 2024-07 to Present
+
+* Supported analytics and ML teams with curated data models.
+* Cut pipeline runtime by 24% through incremental processing improvements.
+* Designed reliable ingestion jobs for operational and product datasets.
+
+Skills:
+Technical: Spark, dbt, AWS, Python, Airflow, Kafka, API integration, Agile tools
+Methods: Batch processing, Data modeling, Pipeline orchestration
+Management: Documentation, Incident communication, Planning
+
+Languages:
+English — C1
+French — C2
+
+Certifications:
+Google Data Analytics Certificate
+AWS Cloud Practitioner
+Databricks Data Engineer Associate

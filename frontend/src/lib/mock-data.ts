@@ -1,0 +1,350 @@
+// LuxTalent V2 CV Pre-Screening System - Mock Data
+
+import type {
+  HealthResponse,
+  PredictionResponse,
+  FairnessMetricsResponse,
+  ProcessedFilesResponse,
+  ScreeningLogEntry,
+  ProcessInboxResponse,
+  ParseResponse,
+  ExplainResponse,
+} from './types';
+
+export const MOCK_HEALTH: HealthResponse = {
+  status: 'ok',
+  model_ready: true,
+  model_name: 'Logistic Regression (C=0.5, l2)',
+  fairness_enabled: true,
+  version: 'V2',
+};
+
+export const SAMPLE_CV_TEXT = `Name: Marie Dupont
+Gender: Female
+Date of Birth: 1990-03-15
+Target Role: Senior Data Analyst
+
+Education:
+Master in Data Science, Université de Liège, 2014
+Licence in Mathematics, ULB, 2012
+
+Work Experience:
+2018-2024: Lead Data Analyst, BNP Paribas, Brussels
+  - Managed team of 4 analysts
+  - Implemented ML pipelines
+
+2014-2018: Data Analyst, McKinsey, Paris
+  - International projects in London and New York
+
+Languages: French (native), English (C2), German (B2)
+Skills: Python, R, SQL, Machine Learning, Tableau, Power BI
+Certifications: Google Data Analytics, AWS Cloud Practitioner`;
+
+export const MOCK_PREDICTION: PredictionResponse = {
+  name: 'Marie Dupont',
+  target_role: 'Senior Data Analyst',
+  stage: 'ml_model',
+  passed: true,
+  label: 'Invite',
+  confidence: 78.5,
+  probabilities: { Invite: 78.5, Reject: 21.5 },
+  model_name: 'Logistic Regression (C=0.5, l2)',
+  fairness_adjusted: true,
+  version: 'V2',
+  features: {
+    age: 36,
+    years_experience: 12.0,
+    education_level: 4,
+    nb_certifications: 2,
+    nb_extra_languages: 2,
+    nb_extra_skills: 6,
+    has_management_experience: 1,
+    has_international_experience: 1,
+    gender: 0,
+  },
+  explanation: {
+    base_value: -0.8234,
+    shap_values: {
+      Age: 0.0521,
+      'Years of Experience': 0.4512,
+      'Education Level': 0.2301,
+      Certifications: 0.1023,
+      'Extra Languages': 0.0834,
+      'Extra Skills': 0.0612,
+      'Management Experience': 0.1923,
+      'International Experience': 0.1432,
+    },
+    top_features: [
+      ['Years of Experience', 0.4512],
+      ['Education Level', 0.2301],
+      ['Management Experience', 0.1923],
+    ],
+    decision_drivers:
+      "The main factors for this decision are: Years of Experience (+0.45, strongly favoring Invite), Education Level (+0.23, moderately favoring Invite), and Management Experience (+0.19, moderately favoring Invite).",
+  },
+};
+
+export const MOCK_REJECT_PREDICTION: PredictionResponse = {
+  name: 'Thomas Bernard',
+  target_role: 'Senior Data Analyst',
+  stage: 'ml_model',
+  passed: false,
+  label: 'Reject',
+  confidence: 68.3,
+  probabilities: { Invite: 31.7, Reject: 68.3 },
+  model_name: 'Logistic Regression (C=0.5, l2)',
+  fairness_adjusted: true,
+  version: 'V2',
+  features: {
+    age: 24,
+    years_experience: 2.0,
+    education_level: 3,
+    nb_certifications: 0,
+    nb_extra_languages: 1,
+    nb_extra_skills: 3,
+    has_management_experience: 0,
+    has_international_experience: 0,
+    gender: 1,
+  },
+  explanation: {
+    base_value: -0.8234,
+    shap_values: {
+      Age: -0.1203,
+      'Years of Experience': -0.3845,
+      'Education Level': 0.0512,
+      Certifications: -0.0891,
+      'Extra Languages': 0.0234,
+      'Extra Skills': -0.0145,
+      'Management Experience': -0.1523,
+      'International Experience': -0.1102,
+    },
+    top_features: [
+      ['Years of Experience', -0.3845],
+      ['Management Experience', -0.1523],
+      ['International Experience', -0.1102],
+    ],
+    decision_drivers:
+      "The main factors for this decision are: Years of Experience (-0.38, strongly favoring Reject), Management Experience (-0.15, moderately favoring Reject), and International Experience (-0.11, moderately favoring Reject).",
+  },
+};
+
+export const MOCK_EXPLAIN: ExplainResponse = {
+  name: 'Marie Dupont',
+  target_role: 'Senior Data Analyst',
+  explanation: MOCK_PREDICTION.explanation,
+};
+
+export const MOCK_PARSE: ParseResponse = {
+  name: 'Marie Dupont',
+  target_role: 'Senior Data Analyst',
+  features: MOCK_PREDICTION.features,
+};
+
+export const MOCK_FAIRNESS_METRICS: FairnessMetricsResponse = {
+  version: 'V2',
+  fairness_constraint: 'equalized_odds',
+  base_model: {
+    epd: 8.3,
+    epd_alert: true,
+    rid: 0.789,
+    rid_alert: true,
+    delta_tpr: 4.2,
+    delta_tpr_alert: false,
+    group_stats: {
+      Male: { n: 45, invite_rate: 42.2, tpr: 60.0, fpr: 25.0 },
+      Female: { n: 35, invite_rate: 33.9, tpr: 55.0, fpr: 20.0 },
+    },
+  },
+  fair_model: {
+    epd: 2.1,
+    epd_alert: false,
+    rid: 0.956,
+    rid_alert: false,
+    delta_tpr: 1.3,
+    delta_tpr_alert: false,
+    group_stats: {
+      Male: { n: 45, invite_rate: 37.8, tpr: 58.0, fpr: 22.0 },
+      Female: { n: 35, invite_rate: 35.7, tpr: 57.0, fpr: 21.0 },
+    },
+  },
+  performance_comparison: {
+    base: { accuracy: 0.66, f1_invite: 0.46, f1_reject: 0.76, auc: 0.72 },
+    fair: { accuracy: 0.64, f1_invite: 0.43, f1_reject: 0.74 },
+  },
+  proxy_analysis: [
+    { feature: 'age', pearson_r: 0.1245, pearson_pval: 0.234, mutual_info: 0.0234, is_proxy: false },
+    { feature: 'years_experience', pearson_r: 0.0832, pearson_pval: 0.412, mutual_info: 0.0156, is_proxy: false },
+    { feature: 'education_level', pearson_r: -0.0523, pearson_pval: 0.621, mutual_info: 0.0089, is_proxy: false },
+    { feature: 'nb_certifications', pearson_r: 0.2103, pearson_pval: 0.089, mutual_info: 0.0312, is_proxy: false },
+    { feature: 'nb_extra_languages', pearson_r: -0.1456, pearson_pval: 0.178, mutual_info: 0.0198, is_proxy: false },
+    { feature: 'nb_extra_skills', pearson_r: 0.3521, pearson_pval: 0.012, mutual_info: 0.0467, is_proxy: true },
+    { feature: 'has_management_experience', pearson_r: 0.2678, pearson_pval: 0.045, mutual_info: 0.0345, is_proxy: false },
+    { feature: 'has_international_experience', pearson_r: 0.0891, pearson_pval: 0.398, mutual_info: 0.0123, is_proxy: false },
+  ],
+};
+
+export const MOCK_PROCESSED_FILES: ProcessedFilesResponse = {
+  count: 5,
+  files: ['cv1.txt', 'cv2.txt', 'cv3.txt', 'cv4.txt', 'cv5.txt'],
+};
+
+export const MOCK_SCREENING_LOG: ScreeningLogEntry[] = [
+  {
+    timestamp: '2026-05-14T13:55:19',
+    filename: 'cv1.txt',
+    name: 'Olivia Martinez',
+    target_role: 'Senior Data Analyst',
+    stage: 'ml_model',
+    label: 'Invite',
+    confidence: 90.6,
+    model_name: 'Logistic Regression (C=1.0, l1)',
+    fairness_adjusted: true,
+    top_driver: 'Years of Experience (+0.45)',
+    reasons: '',
+  },
+  {
+    timestamp: '2026-05-14T13:55:19',
+    filename: 'cv2.txt',
+    name: 'Marcus Liu',
+    target_role: 'Operations Manager',
+    stage: 'ml_model',
+    label: 'Invite',
+    confidence: 95.1,
+    model_name: 'Logistic Regression (C=1.0, l1)',
+    fairness_adjusted: false,
+    top_driver: 'Management Experience (+0.38)',
+    reasons: '',
+  },
+  {
+    timestamp: '2026-05-14T13:55:19',
+    filename: 'cv3.txt',
+    name: 'Hannah Schneider',
+    target_role: 'Software Engineering Lead',
+    stage: 'ml_model',
+    label: 'Invite',
+    confidence: 80.3,
+    model_name: 'Logistic Regression (C=1.0, l1)',
+    fairness_adjusted: true,
+    top_driver: 'Education Level (+0.31)',
+    reasons: '',
+  },
+  {
+    timestamp: '2026-05-14T13:55:19',
+    filename: 'cv4.txt',
+    name: 'Daniel Okafor',
+    target_role: 'Financial Controller',
+    stage: 'ml_model',
+    label: 'Invite',
+    confidence: 98.1,
+    model_name: 'Logistic Regression (C=1.0, l1)',
+    fairness_adjusted: false,
+    top_driver: 'Years of Experience (+0.52)',
+    reasons: '',
+  },
+  {
+    timestamp: '2026-05-14T13:55:24',
+    filename: 'cv5.txt',
+    name: 'Sophie Dubois',
+    target_role: 'Marketing Manager',
+    stage: 'ml_model',
+    label: 'Invite',
+    confidence: 64.8,
+    model_name: 'Logistic Regression (C=1.0, l1)',
+    fairness_adjusted: true,
+    top_driver: 'International Experience (+0.21)',
+    reasons: '',
+  },
+  {
+    timestamp: '2026-05-14T12:30:10',
+    filename: 'cv6.txt',
+    name: 'Pierre Leclerc',
+    target_role: 'Junior Analyst',
+    stage: 'ml_model',
+    label: 'Reject',
+    confidence: 72.4,
+    model_name: 'Logistic Regression (C=0.5, l2)',
+    fairness_adjusted: true,
+    top_driver: 'Years of Experience (-0.29)',
+    reasons: 'Insufficient experience',
+  },
+  {
+    timestamp: '2026-05-14T12:30:10',
+    filename: 'cv7.txt',
+    name: 'Anna Kowalski',
+    target_role: 'Senior Data Analyst',
+    stage: 'ml_model',
+    label: 'Reject',
+    confidence: 58.9,
+    model_name: 'Logistic Regression (C=0.5, l2)',
+    fairness_adjusted: true,
+    top_driver: 'Education Level (-0.18)',
+    reasons: '',
+  },
+  {
+    timestamp: '2026-05-14T11:15:33',
+    filename: 'cv8.txt',
+    name: 'James Müller',
+    target_role: 'Operations Manager',
+    stage: 'hard_filter',
+    label: 'Reject',
+    confidence: 0,
+    model_name: 'N/A',
+    fairness_adjusted: false,
+    top_driver: 'N/A',
+    reasons: 'Missing required language: French; Insufficient experience',
+  },
+];
+
+export const MOCK_BATCH_RESULT: ProcessInboxResponse = {
+  total: 5,
+  invited: 3,
+  rejected: 2,
+  errors: 0,
+  results: [
+    { filename: 'cv1.txt', name: 'Olivia Martinez', target_role: 'Senior Data Analyst', label: 'Invite', confidence: 90.6 },
+    { filename: 'cv2.txt', name: 'Marcus Liu', target_role: 'Operations Manager', label: 'Invite', confidence: 95.1 },
+    { filename: 'cv3.txt', name: 'Hannah Schneider', target_role: 'Software Engineering Lead', label: 'Invite', confidence: 80.3 },
+    { filename: 'cv4.txt', name: 'Pierre Leclerc', target_role: 'Junior Analyst', label: 'Reject', confidence: 72.4 },
+    { filename: 'cv5.txt', name: 'Anna Kowalski', target_role: 'Senior Data Analyst', label: 'Reject', confidence: 58.9 },
+  ],
+};
+
+// French labels for features
+export const FEATURE_LABELS: Record<string, string> = {
+  age: 'Âge',
+  years_experience: "Années d'expérience",
+  education_level: "Niveau d'éducation",
+  nb_certifications: 'Certifications',
+  nb_extra_languages: 'Langues supplémentaires',
+  nb_extra_skills: 'Compétences supplémentaires',
+  has_management_experience: 'Exp. management',
+  has_international_experience: 'Exp. internationale',
+  gender: 'Genre',
+};
+
+export const EDUCATION_LEVELS: Record<number, string> = {
+  1: 'Bac',
+  2: 'Bac+2/3',
+  3: 'Licence',
+  4: 'Master',
+  5: 'Doctorat',
+};
+
+export const SHAP_FEATURE_LABELS: Record<string, string> = {
+  Age: 'Âge',
+  'Years of Experience': "Années d'expérience",
+  'Education Level': "Niveau d'éducation",
+  Certifications: 'Certifications',
+  'Extra Languages': 'Langues supplémentaires',
+  'Extra Skills': 'Compétences supplémentaires',
+  'Management Experience': 'Exp. management',
+  'International Experience': 'Exp. internationale',
+};
+
+export const DEFAULT_HARD_FILTER_CONFIG = {
+  required_languages: ['Français', 'Anglais'],
+  required_skills: ['Python', 'SQL'],
+  min_education_level: 3,
+  min_years_experience: 3,
+  min_positions: 1,
+};

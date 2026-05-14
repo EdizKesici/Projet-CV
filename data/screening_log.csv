@@ -1,0 +1,6 @@
+timestamp,filename,name,target_role,stage,label,confidence,model_name,fairness_adjusted,top_driver,reasons
+2026-05-14T13:55:19.150030,cv3.txt,Hannah Schneider,Software Engineering Lead,ml_model,Invite,80.3,"Logistic Regression (C=1.0, l1)",False,,
+2026-05-14T13:55:19.154593,cv2.txt,Marcus Liu,Operations Manager,ml_model,Invite,95.1,"Logistic Regression (C=1.0, l1)",False,,
+2026-05-14T13:55:19.158315,cv4.txt,Daniel Okafor,Financial Controller,ml_model,Invite,98.1,"Logistic Regression (C=1.0, l1)",False,,
+2026-05-14T13:55:19.163219,cv1.txt,Olivia Martinez,Senior Data Analyst,ml_model,Invite,90.6,"Logistic Regression (C=1.0, l1)",False,,
+2026-05-14T13:55:24.172855,cv5.txt,Sophie Dubois,Marketing Manager,ml_model,Invite,64.8,"Logistic Regression (C=1.0, l1)",False,,

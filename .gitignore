@@ -1,0 +1,27 @@
+cat > .gitignore << 'EOF'
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+*.egg-info/
+
+# Node.js / Next.js
+node_modules/
+.next/
+out/
+
+# Environnement
+.env*
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Modèles binaires (optionnel, décommente si tu ne veux pas les tracker)
+# *.pkl
+EOF

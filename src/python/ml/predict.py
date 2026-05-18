@@ -1,32 +1,43 @@
 """
-ML Prediction Module — CV Pre-Screening V2 (Fairness-Aware)
-============================================================
+ML Prediction Module — CV Pre-Screening V2.2 (Fairness-Aware)
+=============================================================
 Loads the trained Logistic Regression model, scaler, ThresholdOptimizer,
 and SHAP explainer from disk, then returns a prediction for a single candidate.
+
+V2.2 Changes from V2.1
+-----------------------
+1. ThresholdOptimizer uses gender ONLY (2 stable groups). Age_group is no
+   longer passed to the TO — intersectional subgroups had too few samples
+   for reliable threshold estimation. Age fairness is still audited.
+2. fairness_note updated to reflect that gender is the only attribute
+   corrected by the TO, while age_group is monitored for audit only.
+
+V2.1 Changes from V2
+---------------------
+1. age EXCLUDED from FEATURE_COLUMNS (age is now a protected attribute).
+2. Safety margin is explicitly asymmetric (see SAFETY_MARGIN_INVITE_TO_REJECT).
+3. When the ThresholdOptimizer changes the final decision, a fairness_note is
+   added to the SHAP explanation (AI Act art. 13).
 
 V2 Changes from V1
 -------------------
 1. gender EXCLUDED from FEATURE_COLUMNS (removed from model input)
-2. ThresholdOptimizer applies group-specific thresholds using gender
-   as a sensitive feature (post-processing fairness constraint).
-   A hybrid approach is used: the ThresholdOptimizer can only override
-   the base model when the candidate's probability is close to the
-   decision threshold (margin < 10%). This prevents the ThresholdOptimizer
-   from being overly aggressive on imbalanced datasets.
+2. ThresholdOptimizer applies group-specific thresholds (post-processing fairness)
 3. SHAP explanation available for each prediction
 4. Fairness-aware prediction flow:
-   a) Extract features (without gender for model)
+   a) Extract features (without gender or age for model)
    b) Scale features
    c) Model produces probability
    d) Apply base threshold (0.45) to get base prediction
-   e) ThresholdOptimizer adjusts decision per gender group (with safety check)
+   e) ThresholdOptimizer adjusts decision per group (gender only)
    f) SHAP computes feature contributions
 
 Expected input
 --------------
 A feature dict produced by ``feature_extractor.extract_features()``.
-Only the keys listed in FEATURE_COLUMNS are used; gender is used
-separately by the ThresholdOptimizer.
+Only the keys listed in FEATURE_COLUMNS are used for the ML model.
+'gender' is used separately by the ThresholdOptimizer.
+'age' is used for audit logging only (not by the ThresholdOptimizer).
 
 Return value
 ------------
@@ -44,6 +55,7 @@ Return value
             "shap_values"   : dict,
             "top_features"  : list,
             "decision_drivers": str,
+            "fairness_note" : str | None, # V2.1: set when decision was adjusted
         } | None
     }
 """
@@ -54,13 +66,16 @@ import pickle
 import numpy as np
 import pandas as pd
 
+from ml.audit import get_age_group
+
 # ---------------------------------------------------------------------------
 # Configuration — must stay in sync with train.py and feature_extractor
 # ---------------------------------------------------------------------------
 
-# V2: gender is EXCLUDED from model features
+# V2.2: both gender AND age are excluded from ML features.
+# Gender is used by the ThresholdOptimizer and audit.
+# Age is used for audit only (not by the ThresholdOptimizer).
 FEATURE_COLUMNS = [
-    "age",
     "years_experience",
     "education_level",
     "nb_certifications",
@@ -69,6 +84,17 @@ FEATURE_COLUMNS = [
     "has_management_experience",
     "has_international_experience",
 ]
+
+# Asymmetric safety margin for the ThresholdOptimizer (Invite -> Reject direction only).
+# When the ThresholdOptimizer wants to demote a candidate (Invite -> Reject),
+# this margin prevents overriding a confident base-model prediction.
+# Rationale: on imbalanced data (~80% Reject), the ThresholdOptimizer may produce
+# unstable group thresholds; a downward correction on a confident Invite prediction
+# is more likely to be a false override than a genuine fairness correction.
+# For upward corrections (Reject -> Invite), NO margin is applied: promoting an
+# unjustly penalised candidate is preferred (ethically and legally).
+# To change this trade-off, update this value and document it in the WP2 report.
+SAFETY_MARGIN_INVITE_TO_REJECT = 0.10
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
 MODEL_PATH = os.path.join(_HERE, "model", "model.pkl")
@@ -219,55 +245,57 @@ def predict(features: dict, explain: bool = True) -> dict:
     # Get model probabilities (base model, without ThresholdOptimizer)
     probas = _model.predict_proba(X_scaled)[0]
 
-    # V2: Apply ThresholdOptimizer if available
-    fairness_adjusted = False
-    gender = features.get("gender", -1)
+    # V2.2: Apply ThresholdOptimizer if available.
+    # Gender ONLY is used as sensitive feature (not gender+age_group).
+    fairness_adjusted        = False
+    fairness_changed_decision = False
+    base_label               = 1 if probas[1] >= _threshold else 0
+
+    gender    = features.get("gender", -1)
+    age_raw   = features.get("age", -1)
+    age_group = get_age_group(age_raw)
 
     if _threshold_optimizer is not None and gender in (0, 1):
         try:
-            # ThresholdOptimizer expects a DataFrame with features + sensitive_features separately
-            gender_array = np.array([gender])
-            to_label = int(_threshold_optimizer.predict(X_scaled, sensitive_features=gender_array)[0])
-
-            # Safety check: if the ThresholdOptimizer predicts Reject but the base model
-            # is confident enough (probability significantly above threshold), trust the
-            # base model instead.  This prevents the ThresholdOptimizer from being
-            # overly aggressive on imbalanced datasets.
-            base_label = 1 if probas[1] >= _threshold else 0
+            # V2.2: sensitive_features uses gender ONLY (1D array).
+            # Age_group is not passed to the ThresholdOptimizer.
+            to_label = int(_threshold_optimizer.predict(X_scaled, sensitive_features=np.array([gender]))[0])
 
             if to_label == base_label:
-                # Both agree — use the shared prediction
-                label_int = base_label
+                # Both agree — use the shared prediction.
+                label_int         = base_label
                 fairness_adjusted = True
+
             elif to_label == 1 and base_label == 0:
-                # ThresholdOptimizer wants to Invite but base model says Reject —
-                # the fairness adjustment is promoting the candidate; allow it.
-                label_int = 1
-                fairness_adjusted = True
+                # ThresholdOptimizer promotes the candidate (Reject -> Invite).
+                # No safety margin: promoting an unjustly penalised candidate is
+                # always preferred. Allow the correction unconditionally.
+                label_int                  = 1
+                fairness_adjusted          = True
+                fairness_changed_decision  = True
+
             else:
-                # ThresholdOptimizer says Reject, base model says Invite.
-                # Only override if the base model's confidence is marginal
-                # (probability close to threshold). If the base model is
-                # confident, the ThresholdOptimizer is likely being too
-                # aggressive, so we trust the base model.
+                # ThresholdOptimizer demotes the candidate (Invite -> Reject).
+                # Asymmetric safety margin: only apply if the base model is not
+                # confidently above the threshold.  If the margin is large, the
+                # base model is likely correct and the ThresholdOptimizer may be
+                # reacting to an imbalanced group — trust the base model instead.
                 margin = probas[1] - _threshold
-                if margin < 0.10:
-                    # Base model is only marginally above threshold —
-                    # let the fairness adjustment push to Reject
-                    label_int = 0
-                    fairness_adjusted = True
+                if margin < SAFETY_MARGIN_INVITE_TO_REJECT:
+                    label_int                  = 0
+                    fairness_adjusted          = True
+                    fairness_changed_decision  = True
                 else:
-                    # Base model is confident — keep the Invite
-                    label_int = 1
+                    # Base model is confident — keep the Invite decision.
+                    label_int         = 1
                     fairness_adjusted = False
 
         except Exception as exc:
-            # Fallback to base model if ThresholdOptimizer fails
             print(f"[WARN] ThresholdOptimizer failed: {exc}. Falling back to base model.")
-            label_int = 1 if probas[1] >= _threshold else 0
+            label_int = base_label
     else:
-        # No ThresholdOptimizer: use base model with custom threshold
-        label_int = 1 if probas[1] >= _threshold else 0
+        # ThresholdOptimizer unavailable or gender unknown — use base model.
+        label_int = base_label
 
     label = "Invite" if label_int == 1 else "Reject"
     confidence = round(float(max(probas)) * 100, 1)
@@ -332,7 +360,26 @@ def predict(features: dict, explain: bool = True) -> dict:
                 "shap_values": shap_dict,
                 "top_features": [(f, round(v, 4)) for f, v in top_features],
                 "decision_drivers": f"The main factors for this decision are: {drivers_text}.",
+                "fairness_note": None,
             }
+
+            # V2.1 — AI Act art. 13: when the ThresholdOptimizer changed the final
+            # decision, the SHAP explanation reflects the base model only.
+            # Add an explicit note so HR consultants are not misled.
+            if fairness_adjusted and fairness_changed_decision:
+                base_label_str  = "Invite" if base_label == 1 else "Reject"
+                final_label_str = "Invite" if label_int  == 1 else "Reject"
+                explanation["fairness_note"] = (
+                    f"This decision was adjusted by the ThresholdOptimizer to satisfy "
+                    f"the fairness constraint (Demographic Parity / Equalized Odds). "
+                    f"The base model predicted '{base_label_str}' "
+                    f"(score: {probas[1]:.1%}); the final decision is '{final_label_str}'. "
+                    f"The SHAP explanation above reflects the base model's scoring, "
+                    f"not the final adjusted outcome. "
+                    f"Protected attribute applied by ThresholdOptimizer: gender={gender}. "
+                    f"Age group ({age_group}) is monitored for audit purposes but does "
+                    f"not influence the fairness adjustment."
+                )
 
         except Exception as exc:
             print(f"[WARN] SHAP explanation failed: {exc}")

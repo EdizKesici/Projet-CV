@@ -1,15 +1,35 @@
 """
-ML Training Script — CV Pre-Screening V2 (Fairness-Aware)
-==========================================================
+ML Training Script — CV Pre-Screening V2.2 (Fairness-Aware)
+============================================================
 Trains a Logistic Regression classifier on labeled CV feature data,
 with fairness-aware modifications:
+
+V2.2 Changes from V2.1
+-----------------------
+1. ThresholdOptimizer applied on gender ONLY (2 stable groups),
+   not on gender+age_group. Age is still audited but not corrected
+   by the ThresholdOptimizer — insufficient data per intersectional
+   subgroup for reliable threshold estimation.
+2. FAIRNESS_CONSTRAINTS = ["demographic_parity", "equalized_odds"]
+   — demographic_parity first (less restrictive on imbalanced data).
+3. INVITE_RATE_FLOOR raised from 5% to 15% — if the ThresholdOptimizer
+   drops the invite rate below 15%, the system falls back to the base
+   model with a clear warning.
+4. Model metadata now distinguishes protected_attributes_audit
+   (attributes monitored in the audit) from protected_attributes_to
+   (attributes corrected by the ThresholdOptimizer).
+
+V2.1 Changes from V2
+---------------------
+1. age REMOVED from FEATURE_COLUMNS (protected attribute).
+2. Label quality audit added before training.
+3. Two-level RID thresholds (WARN 0.95 / ALERT 0.80).
+4. Intersectional limitation documented.
 
 V2 Changes from V1
 -------------------
 1. gender REMOVED from FEATURE_COLUMNS (eliminates direct discrimination)
 2. Fairlearn ThresholdOptimizer applied as post-processing
-   (tries demographic_parity first, then equalized_odds; falls back
-   to base model if both produce Invite rates below 5%)
 3. SHAP explainability integrated (explainer saved for inference)
 4. Fairness audit computed on test set (EPD, RID, Delta-TPR)
 5. Proxy analysis between gender and remaining features
@@ -70,15 +90,18 @@ from fairlearn.postprocessing import ThresholdOptimizer
 import shap
 
 # V2: Audit module
-from ml.audit import run_audit
+from ml.audit import run_audit, get_age_group, AGE_GROUP_LABELS
 
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
 
-# V2: gender is EXCLUDED from ML features (kept as metadata for audit only)
+# V2.2: both gender AND age are excluded from ML features.
+# Age is a protected attribute under Loi 10/05/2007 and Directive 2000/78/CE;
+# its negative coefficient (-0.3541 in V1) constituted direct discrimination.
+# Gender is retained as metadata for the ThresholdOptimizer and audit.
+# Age is retained as metadata for the audit ONLY (not corrected by TO).
 FEATURE_COLUMNS = [
-    "age",
     "years_experience",
     "education_level",
     "nb_certifications",
@@ -89,7 +112,6 @@ FEATURE_COLUMNS = [
 ]
 
 FEATURE_LABELS = {
-    "age": "Age",
     "years_experience": "Years of Experience",
     "education_level": "Education Level",
     "nb_certifications": "Certifications",
@@ -373,16 +395,81 @@ def train(data_path: str, plots_dir: str) -> None:
 
     X = df[FEATURE_COLUMNS].fillna(0).values
     y = df["label"].astype(int).values
-    gender = df["gender"].values  # Kept for audit and ThresholdOptimizer
+    gender    = df["gender"].values         # Metadata: sensitive feature for audit + ThresholdOptimizer
+    age_raw   = df["age"].fillna(-1).values # Metadata: protected attribute (Loi 10/05/2007)
+    age_group = np.array([get_age_group(a) for a in age_raw])
 
     print(f"\n[INFO] Class distribution (full dataset):")
     print(f"         Reject (0) : {(y == 0).sum()}")
     print(f"         Invite (1) : {(y == 1).sum()}")
     print(f"         Gender distribution: Male={int((gender == 1).sum())}, Female={int((gender == 0).sum())}")
+    print(f"         Age group distribution: "
+          f"Under30={int((age_group == 0).sum())}, "
+          f"30-45={int((age_group == 1).sum())}, "
+          f"Over45={int((age_group == 2).sum())}, "
+          f"Unknown={int((age_group == -1).sum())}")
+
+    # --- Label quality audit (Point 11) ---
+    # Checks whether the training labels themselves encode historical human bias.
+    # If the invite rate differs significantly between groups in the raw labels,
+    # the model will learn those biased patterns even without the protected feature.
+    # Reference: "label bias" — AI Act art. 10 (data governance).
+    print("\n" + "=" * 60)
+    print("LABEL QUALITY AUDIT — Distribution check before training")
+    print("=" * 60)
+
+    label_issues = []
+
+    # By gender
+    male_mask   = gender == 1
+    female_mask = gender == 0
+    if male_mask.sum() > 0 and female_mask.sum() > 0:
+        male_invite_rate   = y[male_mask].mean() * 100
+        female_invite_rate = y[female_mask].mean() * 100
+        gender_label_gap   = abs(male_invite_rate - female_invite_rate)
+        status = "[WARN — potential label bias]" if gender_label_gap > 5 else "[OK]"
+        print(f"  Gender label distribution:")
+        print(f"    Male   invite rate : {male_invite_rate:.1f}%  (n={male_mask.sum()})")
+        print(f"    Female invite rate : {female_invite_rate:.1f}%  (n={female_mask.sum()})")
+        print(f"    Gap    : {gender_label_gap:.1f} pts  {status}")
+        if gender_label_gap > 5:
+            label_issues.append(
+                f"Gender label gap = {gender_label_gap:.1f} pts > 5 pts threshold. "
+                "Labels may encode historical hiring bias."
+            )
+
+    # By age group
+    print(f"  Age group label distribution:")
+    age_invite_rates = {}
+    for group_idx, group_name in AGE_GROUP_LABELS.items():
+        mask = age_group == group_idx
+        if mask.sum() > 0:
+            rate = y[mask].mean() * 100
+            age_invite_rates[group_name] = rate
+            print(f"    {group_name:12s} invite rate : {rate:.1f}%  (n={mask.sum()})")
+
+    if len(age_invite_rates) >= 2:
+        age_gap = max(age_invite_rates.values()) - min(age_invite_rates.values())
+        status = "[WARN — potential label bias]" if age_gap > 5 else "[OK]"
+        print(f"    Max age group gap  : {age_gap:.1f} pts  {status}")
+        if age_gap > 5:
+            label_issues.append(
+                f"Age group label gap = {age_gap:.1f} pts > 5 pts threshold. "
+                "Labels may encode historical hiring bias by age."
+            )
+
+    if label_issues:
+        print("\n  [WARN] Label bias detected. The following issues should be documented")
+        print("         in the WP2 audit report and may require label re-weighting:")
+        for issue in label_issues:
+            print(f"    - {issue}")
+    else:
+        print("\n  Label distribution looks balanced — no significant label bias detected.")
+    print("=" * 60)
 
     # --- Step 1: Train/test split (BEFORE any scaling) ---
-    X_train, X_test, y_train, y_test, gender_train, gender_test = train_test_split(
-        X, y, gender, test_size=0.2, random_state=42, stratify=y
+    X_train, X_test, y_train, y_test, gender_train, gender_test, age_group_train, age_group_test = (
+        train_test_split(X, y, gender, age_group, test_size=0.2, random_state=42, stratify=y)
     )
     print(f"\n[INFO] Training set : {len(X_train)} samples")
     print(f"[INFO] Test set     : {len(X_test)} samples  (held out, never touched during training)")
@@ -444,12 +531,23 @@ def train(data_path: str, plots_dir: str) -> None:
     print(f"  F1 Invite : {f1i_base:.3f}")
     print(f"  F1 Reject : {f1r_base:.3f}")
 
-    # --- Step 5: Fairlearn ThresholdOptimizer (V2) ---
-    # Try demographic_parity first (less aggressive than equalized_odds on
-    # imbalanced data). If the resulting Invite rate drops below a sensible
-    # floor, fall back to equalized_odds, and ultimately to the base model.
+    # --- Step 5: Fairlearn ThresholdOptimizer (V2.2) ---
+    # Constraint priority: demographic_parity first, then equalized_odds.
+    #
+    # V2.2 rationale: on imbalanced data (~80% Reject / ~20% Invite),
+    # equalized_odds is too strict as the first constraint — it forces
+    # equal TPR AND FPR across groups, which often collapses the invite
+    # rate to near-zero on small datasets. demographic_parity is less
+    # restrictive (only requires equal invite rates across groups) and
+    # is a better first choice for a hiring system with imbalanced labels.
+    # equalized_odds is kept as a fallback if DP somehow fails.
+    #
+    # V2.2: ThresholdOptimizer uses gender ONLY (2 stable groups ~230+ samples each).
+    # Age_group is NOT used because intersectional subgroups (gender × age_group)
+    # have too few samples (~15-35 each) for reliable threshold estimation.
+    # Age is still audited separately (see audit.py).
     FAIRNESS_CONSTRAINTS = ["demographic_parity", "equalized_odds"]
-    INVITE_RATE_FLOOR = 0.05  # minimum acceptable Invite rate (5%)
+    INVITE_RATE_FLOOR = 0.15  # minimum acceptable Invite rate (15%)
 
     best_to = None
     best_constraint = None
@@ -470,11 +568,11 @@ def train(data_path: str, plots_dir: str) -> None:
                 prefit=True,
                 predict_method="predict_proba",
             )
-            to.fit(
-                X_train_scaled, y_train,
-                sensitive_features=gender_train,
-            )
-
+            # V2.2: sensitive_features uses gender ONLY (not gender+age_group).
+            # Passing gender as a 1D array creates 2 groups with sufficient
+            # samples (~230+ each) for reliable threshold estimation.
+            # Age_group is excluded from the TO — see rationale above.
+            to.fit(X_train_scaled, y_train, sensitive_features=gender_train)
             y_pred_to = to.predict(X_test_scaled, sensitive_features=gender_test)
             invite_rate = y_pred_to.mean()
             acc_to = (y_pred_to == y_test).mean()
@@ -504,8 +602,13 @@ def train(data_path: str, plots_dir: str) -> None:
 
     # If no ThresholdOptimizer produced acceptable results, fall back to base
     if best_to is None:
-        print("\n[WARN] No ThresholdOptimizer constraint produced acceptable results.")
-        print("       Falling back to base model (no fairness post-processing).")
+        print("\n" + "!" * 70)
+        print("[CRITICAL WARNING] No fairness constraint produced acceptable results")
+        print("(all invite rates below 15% floor). The system will fall back to the")
+        print("base model WITHOUT fairness post-processing. This means that fairness")
+        print("corrections are NOT being applied to predictions.")
+        print("This should be investigated and documented in the WP2 audit report.")
+        print("!" * 70)
         threshold_optimizer = None
         y_pred_fair = y_pred_base
         acc_fair = acc_base
@@ -545,14 +648,21 @@ def train(data_path: str, plots_dir: str) -> None:
         y_true=y_test,
         y_pred=y_pred_base,
         sensitive_features=gender_test,
+        age_features=age_group_test,
         X_df=pd.DataFrame(X_test, columns=FEATURE_COLUMNS),
         plots_dir=None,
-        version_label="V2 Base (no ThresholdOptimizer)",
+        version_label="V2.2 Base (no ThresholdOptimizer)",
     )
-    print("\n  Base Model Fairness Metrics:")
+    print("\n  Base Model Gender Fairness Metrics:")
     print(f"    EPD        : {audit_base['metrics']['epd']:.1f} pts {'[ALERT]' if audit_base['metrics']['epd_alert'] else '[OK]'}")
-    print(f"    RID        : {audit_base['metrics']['rid']:.3f} {'[ALERT]' if audit_base['metrics']['rid_alert'] else '[OK]'}")
+    print(f"    RID        : {audit_base['metrics']['rid']:.3f} {'[ALERT]' if audit_base['metrics']['rid_alert'] else '[WARN]' if audit_base['metrics']['rid_warn'] else '[OK]'}")
     print(f"    Delta TPR  : {audit_base['metrics']['delta_tpr']:.1f} pts {'[ALERT]' if audit_base['metrics']['delta_tpr_alert'] else '[OK]'}")
+    if audit_base.get("age_metrics"):
+        am = audit_base["age_metrics"]
+        print(f"\n  Base Model Age Fairness Metrics:")
+        print(f"    Max EPD (age)       : {am['max_epd']:.1f} pts {'[ALERT]' if am['max_epd'] > 5 else '[OK]'}")
+        print(f"    Min RID (age)       : {am['min_rid']:.3f} {'[ALERT]' if am['min_rid'] < 0.8 else '[WARN]' if am['min_rid'] < 0.95 else '[OK]'}")
+        print(f"    Max Delta TPR (age) : {am['max_delta_tpr']:.1f} pts {'[ALERT]' if am['max_delta_tpr'] > 5 else '[OK]'}")
     if audit_base["proxies"] is not None:
         print(f"\n  Proxy Analysis:")
         for _, row in audit_base["proxies"].iterrows():
@@ -564,14 +674,21 @@ def train(data_path: str, plots_dir: str) -> None:
         y_true=y_test,
         y_pred=y_pred_fair,
         sensitive_features=gender_test,
+        age_features=age_group_test,
         X_df=pd.DataFrame(X_test, columns=FEATURE_COLUMNS),
         plots_dir=None,
-        version_label="V2 (with ThresholdOptimizer)",
+        version_label="V2.2 (with ThresholdOptimizer)",
     )
-    print("\n  Fair Model Fairness Metrics (with ThresholdOptimizer):")
+    print("\n  Fair Model Gender Fairness Metrics (with ThresholdOptimizer):")
     print(f"    EPD        : {audit_fair['metrics']['epd']:.1f} pts {'[ALERT]' if audit_fair['metrics']['epd_alert'] else '[OK]'}")
-    print(f"    RID        : {audit_fair['metrics']['rid']:.3f} {'[ALERT]' if audit_fair['metrics']['rid_alert'] else '[OK]'}")
+    print(f"    RID        : {audit_fair['metrics']['rid']:.3f} {'[ALERT]' if audit_fair['metrics']['rid_alert'] else '[WARN]' if audit_fair['metrics']['rid_warn'] else '[OK]'}")
     print(f"    Delta TPR  : {audit_fair['metrics']['delta_tpr']:.1f} pts {'[ALERT]' if audit_fair['metrics']['delta_tpr_alert'] else '[OK]'}")
+    if audit_fair.get("age_metrics"):
+        am = audit_fair["age_metrics"]
+        print(f"\n  Fair Model Age Fairness Metrics (with ThresholdOptimizer):")
+        print(f"    Max EPD (age)       : {am['max_epd']:.1f} pts {'[ALERT]' if am['max_epd'] > 5 else '[OK]'}")
+        print(f"    Min RID (age)       : {am['min_rid']:.3f} {'[ALERT]' if am['min_rid'] < 0.8 else '[WARN]' if am['min_rid'] < 0.95 else '[OK]'}")
+        print(f"    Max Delta TPR (age) : {am['max_delta_tpr']:.1f} pts {'[ALERT]' if am['max_delta_tpr'] > 5 else '[OK]'}")
 
     # --- Step 8: Create SHAP Explainer (V2) ---
     print("\n" + "=" * 60)
@@ -595,8 +712,10 @@ def train(data_path: str, plots_dir: str) -> None:
         pickle.dump({
             "model_name": model_name,
             "threshold": THRESHOLD,
-            "version": "V2",
+            "version": "V2.2",
             "feature_columns": FEATURE_COLUMNS,
+            "protected_attributes_audit": ["gender", "age_group"],
+            "protected_attributes_to": ["gender"],
             "fairness_constraint": best_constraint,
             "threshold_optimizer_available": threshold_optimizer is not None,
         }, f)
@@ -620,6 +739,8 @@ def train(data_path: str, plots_dir: str) -> None:
     fairness_data = {
         "base_model": audit_base["metrics"],
         "fair_model": audit_fair["metrics"],
+        "age_base_model": audit_base.get("age_metrics"),
+        "age_fair_model": audit_fair.get("age_metrics"),
         "performance_comparison": {
             "base": {"accuracy": acc_base, "f1_invite": f1i_base, "f1_reject": f1r_base, "auc": auc_base},
             "fair": {"accuracy": acc_fair, "f1_invite": f1i_fair, "f1_reject": f1r_fair},
@@ -650,9 +771,10 @@ def train(data_path: str, plots_dir: str) -> None:
         y_true=y_test,
         y_pred=y_pred_fair,
         sensitive_features=gender_test,
+        age_features=age_group_test,
         X_df=pd.DataFrame(X_test, columns=FEATURE_COLUMNS),
         plots_dir=plots_dir,
-        version_label="V2 (with ThresholdOptimizer)",
+        version_label="V2.2 (with ThresholdOptimizer)",
     )
 
     # V2: SHAP summary plot

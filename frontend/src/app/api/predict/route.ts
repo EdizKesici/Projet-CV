@@ -1,17 +1,20 @@
 import { NextResponse } from 'next/server';
-import { MOCK_PREDICTION } from '@/lib/mock-data';
+import { MOCK_PREDICTION, MOCK_REJECT_PREDICTION } from '@/lib/mock-data';
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const cvText = body.cv_text || '';
+    const cvText = body.text || body.cv_text || '';
 
     if (!cvText.trim()) {
-      return NextResponse.json({ error: 'cv_text is required' }, { status: 400 });
+      return NextResponse.json({ error: 'Le texte du CV est requis' }, { status: 400 });
     }
 
-    // Return mock prediction with slight variation based on input
-    const prediction = { ...MOCK_PREDICTION };
+    // Simple mock logic: if text contains "reject" or "junior", return reject
+    const lowerText = cvText.toLowerCase();
+    const isReject = lowerText.includes('reject') || lowerText.includes('junior') || lowerText.includes('stage');
+
+    const prediction = { ...(isReject ? MOCK_REJECT_PREDICTION : MOCK_PREDICTION) };
 
     // Try to extract name from text
     const nameMatch = cvText.match(/Name:\s*(.+)/i);
@@ -26,6 +29,6 @@ export async function POST(request: Request) {
 
     return NextResponse.json(prediction);
   } catch {
-    return NextResponse.json({ error: 'Invalid request' }, { status: 400 });
+    return NextResponse.json({ error: 'Requête invalide' }, { status: 400 });
   }
 }

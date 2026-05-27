@@ -14,12 +14,15 @@ V2 Modified Endpoints
 - POST /predict           : Now includes SHAP explanation and fairness_adjusted flag
 """
 
+import csv
 import glob
+import json
 import os
 import shutil
 import sys
 import traceback
 
+import numpy as np
 from flask import Flask, jsonify, request
 
 # ---------------------------------------------------------------------------
@@ -38,6 +41,7 @@ from predict import (
     predict,
     is_fairness_enabled,
     get_fairness_metrics,
+    get_fairness_constraint,
 )
 from logger import log_result
 from registry import (
@@ -230,19 +234,39 @@ def fairness_metrics():
             "version": "V2",
         }), 404
 
-    # Convert any non-serializable types
+    # Convert numpy types to native Python for JSON serialization
+    def _convert(obj):
+        """Recursively convert numpy types to native Python types."""
+        if isinstance(obj, dict):
+            return {k: _convert(v) for k, v in obj.items()}
+        if isinstance(obj, (list, tuple)):
+            return [_convert(v) for v in obj]
+        if isinstance(obj, (np.bool_,)):
+            return bool(obj)
+        if isinstance(obj, (np.integer,)):
+            return int(obj)
+        if isinstance(obj, (np.floating,)):
+            return float(obj)
+        if isinstance(obj, np.ndarray):
+            return _convert(obj.tolist())
+        return obj
+
     result = {
         "version": "V2",
-        "fairness_constraint": "equalized_odds",
-        "base_model": metrics.get("base_model"),
-        "fair_model": metrics.get("fair_model"),
-        "performance_comparison": metrics.get("performance_comparison"),
+        # Read the constraint actually applied during training from model_meta.pkl.
+        # A hardcoded string would become incorrect whenever the training fallback
+        # selects a different constraint — this ensures accurate traceability
+        # as required by AI Act art. 12.
+        "fairness_constraint": get_fairness_constraint(),
+        "base_model": _convert(metrics.get("base_model")),
+        "fair_model": _convert(metrics.get("fair_model")),
+        "performance_comparison": _convert(metrics.get("performance_comparison")),
     }
 
     # Include proxy analysis if available
     proxies = metrics.get("proxies")
     if proxies is not None:
-        result["proxy_analysis"] = proxies
+        result["proxy_analysis"] = _convert(proxies)
 
     return jsonify(result)
 
@@ -335,6 +359,40 @@ def process_inbox():
         "results": results,
         "version": "V2",
     })
+
+
+@app.route("/screening-log", methods=["GET"])
+def screening_log():
+    """
+    V2 endpoint: Return the screening log as JSON.
+    Reads the CSV log file and returns each row as a dict.
+    """
+    if not os.path.exists(LOG_PATH):
+        return jsonify([])
+
+    try:
+        entries = []
+        with open(LOG_PATH, "r", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                # Convert numeric strings to numbers where applicable
+                entry = {}
+                for key, value in row.items():
+                    if value == "" or value is None:
+                        entry[key] = None
+                    elif key == "confidence":
+                        try:
+                            entry[key] = float(value)
+                        except ValueError:
+                            entry[key] = value
+                    elif key == "fairness_adjusted":
+                        entry[key] = value.lower() == "true" if isinstance(value, str) else bool(value)
+                    else:
+                        entry[key] = value
+                entries.append(entry)
+        return jsonify(entries)
+    except Exception as exc:
+        return jsonify({"error": str(exc)}), 500
 
 
 @app.route("/processed-files", methods=["GET"])

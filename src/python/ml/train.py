@@ -568,12 +568,28 @@ def train(data_path: str, plots_dir: str) -> None:
                 prefit=True,
                 predict_method="predict_proba",
             )
-            # V2.2: sensitive_features uses gender ONLY (not gender+age_group).
-            # Passing gender as a 1D array creates 2 groups with sufficient
-            # samples (~230+ each) for reliable threshold estimation.
-            # Age_group is excluded from the TO — see rationale above.
-            to.fit(X_train_scaled, y_train, sensitive_features=gender_train)
-            y_pred_to = to.predict(X_test_scaled, sensitive_features=gender_test)
+            # Bug fix: exclude candidates with unknown gender (=-1) from fitting.
+            # Including -1 creates a 3rd group whose threshold is learned but
+            # never used at inference (predict.py requires gender in (0, 1)).
+            # That phantom group distorts the calibration of the real groups.
+            valid_train_mask = gender_train >= 0
+            to.fit(
+                X_train_scaled[valid_train_mask],
+                y_train[valid_train_mask],
+                sensitive_features=gender_train[valid_train_mask],
+            )
+
+            # Hybrid prediction on the test set: mirror predict.py's behaviour.
+            # - Known gender (0/1) → ThresholdOptimizer decides.
+            # - Unknown gender (-1)  → base model decides (no fairness adjustment).
+            # This ensures evaluation metrics reflect production behaviour exactly.
+            y_pred_to = y_pred_base.copy()
+            known_test_mask = gender_test >= 0
+            if known_test_mask.sum() > 0:
+                y_pred_to[known_test_mask] = to.predict(
+                    X_test_scaled[known_test_mask],
+                    sensitive_features=gender_test[known_test_mask],
+                )
             invite_rate = y_pred_to.mean()
             acc_to = (y_pred_to == y_test).mean()
             f1i_to = f1_score(y_test, y_pred_to, pos_label=1, zero_division=0)

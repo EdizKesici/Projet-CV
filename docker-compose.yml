@@ -43,3 +43,21 @@ services:
     depends_on:
       api:
         condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: luxtalent-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: "file:./db/custom.db"
+      NEXT_PUBLIC_USE_MOCK: "false"
+      NODE_ENV: production
+    volumes:
+      - ./frontend/db:/app/db
+    restart: unless-stopped
+    depends_on:
+      api:
+        condition: service_healthy

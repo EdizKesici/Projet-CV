@@ -43,28 +43,6 @@ export interface ParseResponse {
   features: Record<string, number>;
 }
 
-export interface BatchResult {
-  filename: string;
-  name: string;
-  target_role: string;
-  label: 'Invite' | 'Reject';
-  confidence: number;
-  error?: string;
-}
-
-export interface ProcessInboxResponse {
-  total: number;
-  invited: number;
-  rejected: number;
-  errors: number;
-  results: BatchResult[];
-}
-
-export interface ProcessedFilesResponse {
-  count: number;
-  files: string[];
-}
-
 export interface GroupStats {
   n: number;
   invite_rate: number;
@@ -109,6 +87,8 @@ export interface FairnessMetricsResponse {
   proxy_analysis: ProxyAnalysisItem[];
 }
 
+export type CandidateStatus = 'En attente' | 'Entretien planifié' | 'Refusé' | 'Embauché';
+
 export interface ScreeningLogEntry {
   timestamp: string;
   filename: string;
@@ -121,24 +101,49 @@ export interface ScreeningLogEntry {
   fairness_adjusted: boolean;
   top_driver: string;
   reasons: string;
+  status?: CandidateStatus;
 }
 
-export interface HardFilterConfig {
-  required_languages: string[];
-  required_skills: string[];
-  min_education_level: number;
-  min_years_experience: number;
-  min_positions: number;
+export interface FairnessTrendPoint {
+  date: string;
+  epd: number;
+  rid: number;
+  delta_tpr: number;
+  composite_score: number;
 }
 
-export type SectionGroup = 'rh' | 'tech';
+export type ExportFormat = 'txt' | 'csv' | 'json' | 'pdf';
 
-export type SectionId =
-  | 'rh-dashboard'
-  | 'batch-processor'
-  | 'screening-log'
-  | 'tech-dashboard'
-  | 'fairness-audit'
-  | 'advanced-logs'
-  | 'processed-files'
-  | 'configuration';
+export type TabId = 'cv-drop' | 'fairness';
+
+// French labels for features
+export const FEATURE_LABELS: Record<string, string> = {
+  age: 'Âge',
+  years_experience: "Années d'expérience",
+  education_level: "Niveau d'éducation",
+  nb_certifications: 'Certifications',
+  nb_extra_languages: 'Langues suppl.',
+  nb_extra_skills: 'Compétences suppl.',
+  has_management_experience: 'Exp. management',
+  has_international_experience: 'Exp. internationale',
+  gender: 'Genre',
+};
+
+export const EDUCATION_LEVELS: Record<number, string> = {
+  1: 'Bac',
+  2: 'Bac+2/3',
+  3: 'Licence',
+  4: 'Master',
+  5: 'Doctorat',
+};
+
+export const SHAP_FEATURE_LABELS: Record<string, string> = {
+  Age: 'Âge',
+  'Years of Experience': "Années d'expérience",
+  'Education Level': "Niveau d'éducation",
+  Certifications: 'Certifications',
+  'Extra Languages': 'Langues suppl.',
+  'Extra Skills': 'Compétences suppl.',
+  'Management Experience': 'Exp. management',
+  'International Experience': 'Exp. internationale',
+};

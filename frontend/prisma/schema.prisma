@@ -1,0 +1,31 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model CvAnalysis {
+  id                 String   @id @default(cuid())
+  candidateName      String
+  targetRole         String
+  filename           String
+  stage              String
+  label              String
+  confidence         Float
+  modelName          String
+  fairnessAdjusted   Boolean  @default(false)
+  topDriver          String   @default("")
+  reasons            String   @default("")
+  probabilitiesInvite Float   @default(0)
+  probabilitiesReject Float   @default(0)
+  shapValues         String   @default("{}")
+  features           String   @default("{}")
+  hardFilterReasons  String   @default("[]")
+  decisionDrivers    String   @default("")
+  version            String   @default("V2")
+  createdAt          DateTime @default(now())
+}

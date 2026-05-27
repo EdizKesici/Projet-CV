@@ -209,6 +209,27 @@ def get_fairness_metrics() -> dict | None:
         return None
 
 
+def get_fairness_constraint() -> str | None:
+    """
+    Return the fairness constraint actually applied by the ThresholdOptimizer
+    during training, as stored in model_meta.pkl.
+
+    Reading from the persisted artifact guarantees the returned value matches
+    what the trained model uses — unlike a hardcoded string which becomes stale
+    whenever the training fallback selects a different constraint.
+
+    Returns None if no model has been trained yet.
+    """
+    if not os.path.exists(META_PATH):
+        return None
+    try:
+        with open(META_PATH, "rb") as f:
+            meta = pickle.load(f)
+        return meta.get("fairness_constraint")
+    except Exception:
+        return None
+
+
 def predict(features: dict, explain: bool = True) -> dict:
     """
     Predict the screening outcome for a single candidate.

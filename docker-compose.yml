@@ -30,7 +30,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      DATABASE_URL: "postgresql://postgres:UgeLCXxfhi0gbdLG@aws-0-eu-west-1.pooler.supabase.com:6543/postgres"
+      DATABASE_URL: "postgresql://postgres.bipntqlieakiyocaycuo:UgeLCXxfhi0gbdLG@aws-0-eu-west-3.pooler.supabase.com:6543/postgres?sslmode=require&pgbouncer=true"
       FLASK_API_URL: "http://api:8000"
       NEXT_PUBLIC_USE_MOCK: "false"
       NODE_ENV: production

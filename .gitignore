@@ -22,6 +22,6 @@ out/
 .DS_Store
 Thumbs.db
 
-# Modèles binaires (optionnel, décommente si tu ne veux pas les tracker)
-# *.pkl
+# Modèles binaires
+*.pkl
 EOF

@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
     root: path.resolve("."),
   },
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false,
   },
   reactStrictMode: false,
   // Proxy /flask-api/* to the Flask API container

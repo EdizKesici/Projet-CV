@@ -10,12 +10,8 @@ export const authOptions: NextAuthOptions = {
       },
       async authorize(credentials) {
         const validPassword = process.env.AUTH_PASSWORD || "luxtalent";
-
         if (credentials?.password === validPassword) {
-          return {
-            id: "1",
-            name: "Recruteur",
-          };
+          return { id: "1", name: "Recruteur" };
         }
         return null;
       },

@@ -27,7 +27,7 @@ RUN npx prisma generate
 # Client-side: use /flask-api prefix (proxied by Next.js rewrites)
 ENV NEXT_PUBLIC_FLASK_API_URL=/flask-api
 # Server-side: Next.js rewrites will proxy /flask-api/* to this URL
-ENV FLASK_API_URL=http://api:8000
+ENV FLASK_API_URL=http://projet-cv.railway.internal:8000
 ENV NEXT_PUBLIC_USE_MOCK=false
 
 RUN npm run build

@@ -22,28 +22,6 @@ services:
       retries: 3
       start_period: 10s
 
-  watcher:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: luxtalent-watcher
-    volumes:
-      - ./data:/app/data
-      - ./src/python/ml/model:/app/src/python/ml/model
-    environment:
-      INBOX_DIR: /app/data/input_CVs
-      PROCESSED_DIR: /app/data/processed_CVs
-      REGISTRY_PATH: /app/data/processed_registry.json
-      LOG_PATH: /app/data/screening_log.csv
-      POLL_INTERVAL: "5"  # Check every 5 seconds
-      PYTHONUNBUFFERED: "1"
-    # Override the default Gunicorn CMD to run the watcher script instead
-    command: ["python", "src/python/watcher.py"]
-    restart: unless-stopped
-    depends_on:
-      api:
-        condition: service_healthy
-
   frontend:
     build:
       context: ./frontend
@@ -52,11 +30,13 @@ services:
     ports:
       - "3000:3000"
     environment:
-      DATABASE_URL: "file:./db/custom.db"
+      DATABASE_URL: "postgresql://postgres:UgeLCXxfhi0gbdLG@aws-0-eu-west-1.pooler.supabase.com:6543/postgres"
+      FLASK_API_URL: "http://api:8000"
       NEXT_PUBLIC_USE_MOCK: "false"
       NODE_ENV: production
-    volumes:
-      - ./frontend/db:/app/db
+      NEXTAUTH_SECRET: "a7f3b9c2e1d4f6a8b0c3e5d7f9a1b3c5"
+      NEXTAUTH_URL: "http://localhost:3000"
+      AUTH_PASSWORD: "luxtalent"
     restart: unless-stopped
     depends_on:
       api:

@@ -13,3 +13,7 @@ timestamp,filename,name,target_role,stage,label,confidence,model_name,fairness_a
 2026-05-25T13:15:11.112468,cv_0007.txt,Maya Andersen,Product Analyst,ml_model,Invite,57.3,"Logistic Regression (C=1.0, l1)",False,Years of Experience (+1.16),
 2026-05-25T13:15:58.041022,cv_0007.txt,Maya Andersen,Product Analyst,ml_model,Invite,57.3,"Logistic Regression (C=1.0, l1)",False,Years of Experience (+1.16),
 2026-05-25T13:16:08.989370,cv_0041.txt,Gabriel Novak,Backend Developer,ml_model,Invite,70.2,"Logistic Regression (C=1.0, l1)",False,Years of Experience (+1.08),
+2026-05-31T10:50:31.483386,cv_0005.txt,Leo Kim,Software Engineer,ml_model,Reject,57.6,"Logistic Regression (C=1.0, l1)",False,Years of Experience (+1.43),
+2026-05-31T10:50:39.420635,cv_0004.txt,Ethan Garcia,Software Engineer,ml_model,Reject,59.3,"Logistic Regression (C=1.0, l1)",False,Years of Experience (+0.73),
+2026-05-31T16:01:45.237141,cv_0007.txt,Maya Andersen,Product Analyst,ml_model,Invite,57.3,"Logistic Regression (C=1.0, l1)",False,Years of Experience (+1.16),
+2026-05-31T16:01:52.449315,cv_0054.txt,Clara Rossi,ML Engineer,ml_model,Invite,50.7,"Logistic Regression (C=1.0, l1)",False,Years of Experience (+1.08),

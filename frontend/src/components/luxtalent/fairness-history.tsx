@@ -86,6 +86,12 @@ export function FairnessHistory() {
   const [statusFilter, setStatusFilter] = useState<CandidateStatus | 'all'>('all');
   const exportDropdownRef = useRef<HTMLDivElement>(null);
 
+  // Analytics dashboard toggle
+  const [showAnalytics, setShowAnalytics] = useState(true);
+
+  // Last updated timestamp
+  const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
+
   // Click outside handler for dropdowns
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -156,6 +162,7 @@ export function FairnessHistory() {
     try {
       const data = await fetchFairnessMetrics();
       setMetrics(data);
+      setLastUpdated(new Date());
     } catch (err) {
       setMetricsError(err instanceof Error ? err.message : 'Erreur lors du chargement des métriques.');
       toast.error('Erreur', { description: 'Impossible de charger les métriques de fairness.' });
@@ -583,703 +590,17 @@ export function FairnessHistory() {
 
   return (
     <div className="space-y-8">
-      {/* ====== FAIRNESS SECTION ====== */}
-      <section>
-        <div className="fairness-mesh-bg rounded-2xl p-5 mb-5">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <div>
-              <h2 className="text-xl font-bold text-slate-800 flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-100 to-emerald-200 flex items-center justify-center shadow-sm">
-                  <Scale className="w-4 h-4 text-emerald-600" />
-                </div>
-                Audit d&apos;équité
-                <span className="inline-flex items-center gap-1.5 ml-2 px-2 py-0.5 rounded-full bg-emerald-100/80 border border-emerald-200">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 live-dot" />
-                  <span className="text-[10px] font-semibold text-emerald-700 uppercase tracking-wider">Live</span>
-                </span>
-              </h2>
-              <p className="text-sm text-slate-500 mt-1 ml-[42px]">
-                Comparaison des métriques entre le modèle de base et le modèle corrigé
-              </p>
-            </div>
-            <Button
-              onClick={loadMetrics}
-              disabled={metricsLoading}
-              variant="outline"
-              className="border-emerald-200 text-emerald-600 hover:bg-emerald-50 gap-2"
-            >
-              {metricsLoading ? (
-                <>
-                  <Loader2 className="w-4 h-4 animate-spin" />
-                  Chargement...
-                </>
-              ) : (
-                <>
-                  <RefreshCw className="w-4 h-4" />
-                  Actualiser
-                </>
-              )}
-            </Button>
-          </div>
-        </div>
-
-        {/* Metrics loading skeleton */}
-        {metricsLoading && !metrics && (
-          <Card className="shadow-sm">
-            <CardContent className="p-8 flex flex-col items-center justify-center gap-3">
-              <Loader2 className="w-8 h-8 text-emerald-500 animate-spin" />
-              <p className="text-sm text-slate-500">Chargement des métriques de fairness...</p>
-            </CardContent>
-          </Card>
-        )}
-
-        {metricsError && (
-          <Card className="border-red-200 bg-red-50/80 mb-4 shadow-sm">
-            <CardContent className="p-5 flex items-start gap-3">
-              <div className="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center flex-shrink-0">
-                <AlertTriangle className="w-5 h-5 text-red-500" />
-              </div>
-              <div className="flex-1">
-                <p className="text-sm font-semibold text-red-700">Impossible de charger les métriques</p>
-                <p className="text-sm text-red-600/80 mt-0.5">{metricsError}</p>
-              </div>
-              <Button variant="outline" size="sm" onClick={loadMetrics} className="border-red-200 text-red-600 hover:bg-red-50">
-                <RefreshCw className="w-3.5 h-3.5 mr-1.5" />
-                Réessayer
-              </Button>
-            </CardContent>
-          </Card>
-        )}
-
-        {metrics && (
-          <div className="space-y-4 animate-card-enter">
-            {/* Fairness Composite Score + Trend Sparkline */}
-            <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4">
-              {/* Composite Score */}
-              <Card className="shadow-sm border-emerald-100 overflow-hidden">
-                <CardContent className="p-5 flex flex-col items-center">
-                  <div className="flex items-center gap-1.5 mb-3">
-                    <Target className="w-4 h-4 text-emerald-500" />
-                    <span className="text-xs font-semibold text-slate-600 uppercase tracking-wider">Score d&apos;équité</span>
-                  </div>
-                  <div className="relative w-28 h-28">
-                    <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
-                      <circle cx="50" cy="50" r="45" fill="none" stroke="#e2e8f0" strokeWidth="6" />
-                      <circle
-                        cx="50" cy="50" r="45"
-                        fill="none"
-                        stroke="url(#scoreGradient)"
-                        strokeWidth="6"
-                        strokeLinecap="round"
-                        strokeDasharray={283}
-                        strokeDashoffset={283 - (283 * fairnessScore) / 100}
-                        className="animate-score-circle"
-                        style={{ transition: 'stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1)' }}
-                      />
-                      <defs>
-                        <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                          <stop offset="0%" stopColor="#6ee7b7" />
-                          <stop offset="50%" stopColor="#34d399" />
-                          <stop offset="100%" stopColor="#10b981" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
-                    <div className="absolute inset-0 flex flex-col items-center justify-center">
-                      <span className="text-2xl font-bold text-emerald-600">{fairnessScore}</span>
-                      <span className="text-[9px] text-slate-400 uppercase tracking-wider">/ 100</span>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-1 mt-2">
-                    <TrendingUp className="w-3 h-3 text-emerald-500" />
-                    <span className="text-[10px] text-emerald-600 font-medium">+{trendData.length >= 2 ? (trendData[trendData.length - 1].composite_score - trendData[trendData.length - 2].composite_score) : 0} pts</span>
-                  </div>
-                  <p className="text-[9px] text-slate-400 mt-1 text-center">EPD 35% · RID 40% · ΔTPR 25%</p>
-                </CardContent>
-              </Card>
-
-              {/* Summary Cards with enhancements */}
-              <div className="grid grid-cols-3 gap-3">
-                {/* EPD Card */}
-                <div className="summary-card-glow rounded-xl border p-4 shadow-sm text-center relative bg-gradient-to-br from-emerald-50/30 to-white border-slate-200/80">
-                  <div className="flex items-center justify-center gap-1 mb-2 cursor-help" onClick={() => setShowMetricInfo(showMetricInfo === 'epd' ? null : 'epd')}>
-                    <Info className="w-3.5 h-3.5 text-slate-400 hover:text-emerald-500 transition-colors" />
-                    <span className="text-[10px] text-slate-400 uppercase font-semibold tracking-wider">EPD</span>
-                  </div>
-                  {showMetricInfo === 'epd' && (
-                    <div className="absolute top-full mt-1 left-1/2 -translate-x-1/2 z-30 bg-slate-800 text-white text-[10px] rounded-lg px-3 py-2 shadow-xl max-w-[200px]">
-                      Écart de Parité Démographique — Mesure la différence de taux d&apos;invitation entre groupes. Plus c&apos;est bas, mieux c&apos;est.
-                    </div>
-                  )}
-                  <div className="flex items-center justify-center gap-3">
-                    <div className="text-center">
-                      <p className="text-xs text-slate-400">Base</p>
-                      <p className={`text-lg font-bold ${metrics.base_model.epd_alert ? 'text-red-500' : 'text-amber-500'}`}>
-                        {metrics.base_model.epd.toFixed(1)}
-                      </p>
-                    </div>
-                    <ArrowRight className="w-4 h-4 text-emerald-400" />
-                    <div className="text-center">
-                      <p className="text-xs text-slate-400">Corrigé</p>
-                      <p className={`text-lg font-bold ${metrics.fair_model.epd_alert ? 'text-red-500' : 'text-emerald-500'}`}>
-                        {metrics.fair_model.epd.toFixed(1)}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-center gap-1.5 mt-1.5">
-                    <TrendingDown className="w-3 h-3 text-emerald-500" />
-                    <span className="text-[10px] text-emerald-600 font-medium">−{(metrics.base_model.epd - metrics.fair_model.epd).toFixed(1)} pts</span>
-                  </div>
-                  {/* Mini progress ring for Corrigé */}
-                  <div className="flex justify-center mt-2">
-                    <svg viewBox="0 0 36 36" className="w-8 h-8 -rotate-90">
-                      <circle cx="18" cy="18" r="14" fill="none" stroke="#e2e8f0" strokeWidth="3" />
-                      <circle
-                        cx="18" cy="18" r="14" fill="none"
-                        stroke={metrics.fair_model.epd_alert ? '#ef4444' : '#10b981'}
-                        strokeWidth="3" strokeLinecap="round"
-                        strokeDasharray={88}
-                        strokeDashoffset={88 - (88 * Math.max(0, 100 - metrics.fair_model.epd * 5)) / 100}
-                        className="animate-ring-fill"
-                      />
-                    </svg>
-                  </div>
-                </div>
-
-                {/* RID Card */}
-                <div className="summary-card-glow rounded-xl border p-4 shadow-sm text-center relative bg-gradient-to-br from-emerald-50/30 to-white border-slate-200/80">
-                  <div className="flex items-center justify-center gap-1 mb-2 cursor-help" onClick={() => setShowMetricInfo(showMetricInfo === 'rid' ? null : 'rid')}>
-                    <Info className="w-3.5 h-3.5 text-slate-400 hover:text-emerald-500 transition-colors" />
-                    <span className="text-[10px] text-slate-400 uppercase font-semibold tracking-wider">RID</span>
-                  </div>
-                  {showMetricInfo === 'rid' && (
-                    <div className="absolute top-full mt-1 left-1/2 -translate-x-1/2 z-30 bg-slate-800 text-white text-[10px] rounded-lg px-3 py-2 shadow-xl max-w-[200px]">
-                      Ratio d&apos;Impact Disparate — Ratio du taux d&apos;invitation entre groupes. Plus c&apos;est proche de 1.0, mieux c&apos;est.
-                    </div>
-                  )}
-                  <div className="flex items-center justify-center gap-3">
-                    <div className="text-center">
-                      <p className="text-xs text-slate-400">Base</p>
-                      <p className={`text-lg font-bold ${metrics.base_model.rid_alert ? 'text-red-500' : 'text-amber-500'}`}>
-                        {metrics.base_model.rid.toFixed(3)}
-                      </p>
-                    </div>
-                    <ArrowRight className="w-4 h-4 text-emerald-400" />
-                    <div className="text-center">
-                      <p className="text-xs text-slate-400">Corrigé</p>
-                      <p className={`text-lg font-bold ${metrics.fair_model.rid_alert ? 'text-red-500' : 'text-emerald-500'}`}>
-                        {metrics.fair_model.rid.toFixed(3)}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-center gap-1.5 mt-1.5">
-                    <TrendingUp className="w-3 h-3 text-emerald-500" />
-                    <span className="text-[10px] text-emerald-600 font-medium">+{(metrics.fair_model.rid - metrics.base_model.rid).toFixed(3)}</span>
-                  </div>
-                  {/* Mini progress ring for Corrigé */}
-                  <div className="flex justify-center mt-2">
-                    <svg viewBox="0 0 36 36" className="w-8 h-8 -rotate-90">
-                      <circle cx="18" cy="18" r="14" fill="none" stroke="#e2e8f0" strokeWidth="3" />
-                      <circle
-                        cx="18" cy="18" r="14" fill="none"
-                        stroke={metrics.fair_model.rid_alert ? '#ef4444' : '#10b981'}
-                        strokeWidth="3" strokeLinecap="round"
-                        strokeDasharray={88}
-                        strokeDashoffset={88 - (88 * Math.min(metrics.fair_model.rid, 1)) / 1}
-                        className="animate-ring-fill"
-                      />
-                    </svg>
-                  </div>
-                </div>
-
-                {/* Delta TPR Card */}
-                <div className="summary-card-glow rounded-xl border p-4 shadow-sm text-center relative bg-gradient-to-br from-emerald-50/30 to-white border-slate-200/80">
-                  <div className="flex items-center justify-center gap-1 mb-2 cursor-help" onClick={() => setShowMetricInfo(showMetricInfo === 'delta_tpr' ? null : 'delta_tpr')}>
-                    <Info className="w-3.5 h-3.5 text-slate-400 hover:text-emerald-500 transition-colors" />
-                    <span className="text-[10px] text-slate-400 uppercase font-semibold tracking-wider">Delta TPR</span>
-                  </div>
-                  {showMetricInfo === 'delta_tpr' && (
-                    <div className="absolute top-full mt-1 left-1/2 -translate-x-1/2 z-30 bg-slate-800 text-white text-[10px] rounded-lg px-3 py-2 shadow-xl max-w-[200px]">
-                      Différence de Taux de Vrais Positifs — Écart de détection des candidats qualifiés entre groupes. Plus c&apos;est bas, mieux c&apos;est.
-                    </div>
-                  )}
-                  <div className="flex items-center justify-center gap-3">
-                    <div className="text-center">
-                      <p className="text-xs text-slate-400">Base</p>
-                      <p className={`text-lg font-bold ${metrics.base_model.delta_tpr_alert ? 'text-red-500' : 'text-amber-500'}`}>
-                        {metrics.base_model.delta_tpr.toFixed(1)}
-                      </p>
-                    </div>
-                    <ArrowRight className="w-4 h-4 text-emerald-400" />
-                    <div className="text-center">
-                      <p className="text-xs text-slate-400">Corrigé</p>
-                      <p className={`text-lg font-bold ${metrics.fair_model.delta_tpr_alert ? 'text-red-500' : 'text-emerald-500'}`}>
-                        {metrics.fair_model.delta_tpr.toFixed(1)}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-center gap-1.5 mt-1.5">
-                    <TrendingDown className="w-3 h-3 text-emerald-500" />
-                    <span className="text-[10px] text-emerald-600 font-medium">−{(metrics.base_model.delta_tpr - metrics.fair_model.delta_tpr).toFixed(1)} pts</span>
-                  </div>
-                  {/* Mini progress ring for Corrigé */}
-                  <div className="flex justify-center mt-2">
-                    <svg viewBox="0 0 36 36" className="w-8 h-8 -rotate-90">
-                      <circle cx="18" cy="18" r="14" fill="none" stroke="#e2e8f0" strokeWidth="3" />
-                      <circle
-                        cx="18" cy="18" r="14" fill="none"
-                        stroke={metrics.fair_model.delta_tpr_alert ? '#ef4444' : '#10b981'}
-                        strokeWidth="3" strokeLinecap="round"
-                        strokeDasharray={88}
-                        strokeDashoffset={88 - (88 * Math.max(0, 100 - metrics.fair_model.delta_tpr * 5)) / 100}
-                        className="animate-ring-fill"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Fairness Trend Mini-Chart (Sparkline) */}
-            <Card className="shadow-sm">
-              <CardContent className="p-4">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center gap-2">
-                    <Activity className="w-4 h-4 text-emerald-500" />
-                    <span className="text-xs font-semibold text-slate-700 uppercase tracking-wider">Tendance d&apos;équité</span>
-                  </div>
-                  <span className="text-[10px] text-slate-400">5 dernières sessions</span>
-                </div>
-                <div className="flex items-end gap-1 h-16">
-                  <svg viewBox="0 0 200 60" className="w-full h-full">
-                    {/* Grid lines */}
-                    <line x1="0" y1="15" x2="200" y2="15" stroke="#e2e8f0" strokeWidth="0.5" strokeDasharray="4" />
-                    <line x1="0" y1="30" x2="200" y2="30" stroke="#e2e8f0" strokeWidth="0.5" strokeDasharray="4" />
-                    <line x1="0" y1="45" x2="200" y2="45" stroke="#e2e8f0" strokeWidth="0.5" strokeDasharray="4" />
-
-                    {/* Area fill */}
-                    <path
-                      d={`M 0 ${60 - (trendData[0]?.composite_score || 0) * 0.55} ${trendData.map((p, i) => `L ${i * 50} ${60 - p.composite_score * 0.55}`).join(' ')} L ${(trendData.length - 1) * 50} 60 L 0 60 Z`}
-                      fill="url(#sparklineGradient)"
-                      opacity="0.3"
-                    />
-
-                    {/* Line */}
-                    <path
-                      d={trendData.map((p, i) => `${i === 0 ? 'M' : 'L'} ${i * 50} ${60 - p.composite_score * 0.55}`).join(' ')}
-                      fill="none"
-                      stroke="#10b981"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="animate-sparkline"
-                    />
-
-                    {/* Dots */}
-                    {trendData.map((p, i) => (
-                      <g key={i}>
-                        <circle cx={i * 50} cy={60 - p.composite_score * 0.55} r="4" fill="white" stroke="#10b981" strokeWidth="2" />
-                        <text x={i * 50} y={60 - p.composite_score * 0.55 - 10} textAnchor="middle" className="text-[8px]" fill="#64748b">{p.composite_score}</text>
-                      </g>
-                    ))}
-
-                    <defs>
-                      <linearGradient id="sparklineGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stopColor="#10b981" stopOpacity="0.3" />
-                        <stop offset="100%" stopColor="#10b981" stopOpacity="0" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                </div>
-                <div className="flex justify-between mt-1">
-                  {trendData.map((p, i) => (
-                    <span key={i} className="text-[8px] text-slate-400">{new Date(p.date).toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit' })}</span>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Version info bar */}
-            <div className="flex items-center gap-3 px-4 py-3 bg-white rounded-xl border border-slate-200 shadow-sm">
-              <Badge className="bg-emerald-50 text-emerald-700 border border-emerald-100 hover:bg-emerald-50">{metrics.version}</Badge>
-              <div className="h-4 w-px bg-slate-200" />
-              <span className="text-sm text-slate-600">Contrainte : <strong className="text-slate-800">{metrics.fairness_constraint === 'equalized_odds' ? 'Égalité des chances' : metrics.fairness_constraint}</strong></span>
-              <div className="ml-auto flex items-center gap-2 text-xs text-slate-400">
-                <BarChart3 className="w-3.5 h-3.5" />
-                <span>Dernier entraînement</span>
-              </div>
-            </div>
-
-            {/* Comparison Panels */}
-            <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
-              {/* Base model */}
-              <Card className="border-amber-200 shadow-sm">
-                <CardHeader className="pb-3">
-                  <div className="flex items-center justify-between">
-                    <CardTitle className="text-sm font-semibold text-slate-700">Modèle de base</CardTitle>
-                    <Badge className="bg-amber-50 text-amber-700 border border-amber-100 hover:bg-amber-50 gap-1">
-                      <AlertTriangle className="w-3 h-3" />
-                      Sans correction
-                    </Badge>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="grid grid-cols-3 gap-2">
-                    <FairnessGauge label="EPD" value={metrics.base_model.epd} alert={metrics.base_model.epd_alert} description="Écart Parité Démogr." type="epd" />
-                    <FairnessGauge label="RID" value={metrics.base_model.rid} alert={metrics.base_model.rid_alert} description="Ratio Impact Diff." type="rid" />
-                    <FairnessGauge label="Delta TPR" value={metrics.base_model.delta_tpr} alert={metrics.base_model.delta_tpr_alert} description="Égalité des Chances" type="delta_tpr" />
-                  </div>
-                  <GroupStatsTable groupStats={metrics.base_model.group_stats} />
-                </CardContent>
-              </Card>
-
-              {/* Fair model */}
-              <Card className="border-emerald-200 shadow-sm">
-                <CardHeader className="pb-3">
-                  <div className="flex items-center justify-between">
-                    <CardTitle className="text-sm font-semibold text-slate-700">Modèle V2 (corrigé)</CardTitle>
-                    <Badge className="bg-emerald-50 text-emerald-700 border border-emerald-100 hover:bg-emerald-50 gap-1">
-                      <Award className="w-3 h-3" />
-                      ThresholdOptimizer
-                    </Badge>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="grid grid-cols-3 gap-2">
-                    <FairnessGauge label="EPD" value={metrics.fair_model.epd} alert={metrics.fair_model.epd_alert} description="Écart Parité Démogr." type="epd" />
-                    <FairnessGauge label="RID" value={metrics.fair_model.rid} alert={metrics.fair_model.rid_alert} description="Ratio Impact Diff." type="rid" />
-                    <FairnessGauge label="Delta TPR" value={metrics.fair_model.delta_tpr} alert={metrics.fair_model.delta_tpr_alert} description="Égalité des Chances" type="delta_tpr" />
-                  </div>
-                  <GroupStatsTable groupStats={metrics.fair_model.group_stats} />
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Improvement indicators */}
-            <Card className="shadow-sm">
-              <CardHeader className="pb-3">
-                <CardTitle className="text-sm font-semibold text-slate-700 flex items-center gap-2">
-                  <TrendingDown className="w-4 h-4 text-emerald-500" />
-                  Améliorations apportées par la correction
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  <ImprovementCard
-                    icon={<TrendingDown className="w-4 h-4 text-emerald-500" />}
-                    label="EPD"
-                    before={`${metrics.base_model.epd.toFixed(1)} pts`}
-                    after={`${metrics.fair_model.epd.toFixed(1)} pts`}
-                    beforeAlert={metrics.base_model.epd_alert}
-                    diff={`−${(metrics.base_model.epd - metrics.fair_model.epd).toFixed(1)} pts d'écart réduit`}
-                  />
-                  <ImprovementCard
-                    icon={<TrendingUp className="w-4 h-4 text-emerald-500" />}
-                    label="RID"
-                    before={metrics.base_model.rid.toFixed(3)}
-                    after={metrics.fair_model.rid.toFixed(3)}
-                    beforeAlert={metrics.base_model.rid_alert}
-                    diff={`+${(metrics.fair_model.rid - metrics.base_model.rid).toFixed(3)} plus proche de 1.0`}
-                  />
-                  <ImprovementCard
-                    icon={<TrendingDown className="w-4 h-4 text-emerald-500" />}
-                    label="Delta TPR"
-                    before={`${metrics.base_model.delta_tpr.toFixed(1)} pts`}
-                    after={`${metrics.fair_model.delta_tpr.toFixed(1)} pts`}
-                    beforeAlert={metrics.base_model.delta_tpr_alert}
-                    diff={`−${(metrics.base_model.delta_tpr - metrics.fair_model.delta_tpr).toFixed(1)} pts d'écart réduit`}
-                  />
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Performance + Proxy side by side on large screens */}
-            <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
-              {/* Performance Comparison */}
-              <Card className="shadow-sm">
-                <CardHeader className="pb-3">
-                  <CardTitle className="text-sm font-semibold text-slate-700">Comparaison des performances</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3">
-                    {[
-                      { label: 'Accuracy', base: metrics.performance_comparison.base.accuracy, fair: metrics.performance_comparison.fair.accuracy },
-                      { label: 'F1 Invite', base: metrics.performance_comparison.base.f1_invite, fair: metrics.performance_comparison.fair.f1_invite },
-                      { label: 'F1 Reject', base: metrics.performance_comparison.base.f1_reject, fair: metrics.performance_comparison.fair.f1_reject },
-                    ].map((item) => {
-                      const diff = item.fair - item.base;
-                      const isNeg = diff < 0;
-                      return (
-                        <div key={item.label} className="flex items-center gap-3">
-                          <span className="text-xs font-medium text-slate-500 w-20">{item.label}</span>
-                          <div className="flex-1 flex items-center gap-2">
-                            <span className="text-sm font-mono text-slate-500 w-12 text-right">{(item.base * 100).toFixed(0)}%</span>
-                            <div className="flex-1 h-2.5 bg-slate-100 rounded-full overflow-hidden relative shadow-inner">
-                              <div className="absolute inset-y-0 left-0 bg-slate-300 rounded-full" style={{ width: `${item.base * 100}%` }} />
-                              <div className={`absolute inset-y-0 left-0 rounded-full transition-all duration-700 animate-progress ${isNeg ? 'bg-gradient-to-r from-red-400 to-red-300' : 'bg-gradient-to-r from-emerald-400 to-emerald-300'}`} style={{ width: `${item.fair * 100}%` }} />
-                            </div>
-                            <span className="text-sm font-mono font-semibold text-slate-700 w-12">{(item.fair * 100).toFixed(0)}%</span>
-                          </div>
-                          <span className={`text-xs font-semibold w-12 text-right ${isNeg ? 'text-red-500' : 'text-emerald-500'}`}>
-                            {isNeg ? '' : '+'}{(diff * 100).toFixed(1)}%
-                          </span>
-                        </div>
-                      );
-                    })}
-                    {metrics.performance_comparison.base.auc && (
-                      <div className="flex items-center gap-3 pt-2 border-t border-slate-100">
-                        <span className="text-xs font-medium text-slate-500 w-20">AUC</span>
-                        <div className="flex-1 flex items-center gap-2">
-                          <span className="text-sm font-mono text-slate-500">{(metrics.performance_comparison.base.auc * 100).toFixed(0)}%</span>
-                          <span className="text-xs text-slate-400">(modèle de base)</span>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Proxy Analysis */}
-              <Card className="shadow-sm">
-                <CardHeader className="pb-3">
-                  <CardTitle className="text-sm font-semibold text-slate-700 flex items-center gap-2">
-                    Analyse des variables proxy
-                    {metrics.proxy_analysis.some((p) => p.is_proxy) && (
-                      <Badge className="bg-amber-50 text-amber-600 border border-amber-100 text-[10px] hover:bg-amber-50">
-                        {metrics.proxy_analysis.filter((p) => p.is_proxy).length} proxy détecté
-                      </Badge>
-                    )}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="overflow-x-auto">
-                    <table className="w-full text-sm">
-                      <thead>
-                        <tr className="border-b border-slate-200">
-                          <th className="text-left py-2 px-2 text-xs font-semibold text-slate-500 uppercase">Variable</th>
-                          <th className="text-center py-2 px-2 text-xs font-semibold text-slate-500 uppercase">r</th>
-                          <th className="text-center py-2 px-2 text-xs font-semibold text-slate-500 uppercase">p</th>
-                          <th className="text-center py-2 px-2 text-xs font-semibold text-slate-500 uppercase">MI</th>
-                          <th className="text-center py-2 px-1 text-xs font-semibold text-slate-500 uppercase">Statut</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {metrics.proxy_analysis.map((item) => {
-                          const label = FEATURE_LABELS[item.feature] || item.feature;
-                          return (
-                            <tr key={item.feature} className={`border-b border-slate-50 transition-colors ${item.is_proxy ? 'bg-amber-50/50' : 'hover:bg-slate-50'}`}>
-                              <td className="py-2 px-2 font-medium text-slate-700 text-xs">{label}</td>
-                              <td className="py-2 px-2 text-center font-mono text-slate-600 text-xs">{item.pearson_r.toFixed(3)}</td>
-                              <td className="py-2 px-2 text-center font-mono text-slate-600 text-xs">{item.pearson_pval.toFixed(2)}</td>
-                              <td className="py-2 px-2 text-center font-mono text-slate-600 text-xs">{item.mutual_info.toFixed(3)}</td>
-                              <td className="py-2 px-1 text-center">
-                                {item.is_proxy ? (
-                                  <Badge className="bg-amber-100 text-amber-700 border-0 hover:bg-amber-100 text-[10px] px-1.5">
-                                    <AlertTriangle className="w-2.5 h-2.5 mr-0.5" />
-                                    Proxy
-                                  </Badge>
-                                ) : (
-                                  <Badge className="bg-emerald-50 text-emerald-600 border-0 hover:bg-emerald-50 text-[10px] px-1.5">
-                                    <Shield className="w-2.5 h-2.5 mr-0.5" />
-                                    OK
-                                  </Badge>
-                                )}
-                              </td>
-                            </tr>
-                          );
-                        })}
-                      </tbody>
-                    </table>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        )}
-      </section>
-
-      {/* ====== DECORATIVE DIVIDER 1 ====== */}
-      <div className="relative flex items-center justify-center py-3">
-        <div className="w-full h-px bg-gradient-to-r from-transparent via-emerald-300 to-transparent" />
-        <div className="absolute flex items-center gap-3">
-          <div className="w-2 h-2 bg-emerald-400 rotate-45 animate-diamond shadow-sm shadow-emerald-200" />
-          <div className="w-3 h-3 bg-emerald-500 rotate-45 animate-diamond shadow-sm shadow-emerald-300" style={{ animationDelay: '0.5s' }} />
-          <div className="w-2 h-2 bg-emerald-400 rotate-45 animate-diamond shadow-sm shadow-emerald-200" style={{ animationDelay: '1s' }} />
-        </div>
-      </div>
-
-      {/* ====== ANALYTICS INSIGHTS SECTION ====== */}
-      {logEntries.length > 0 && (
-        <section className="animate-card-enter">
-          <div className="mb-5">
-            <h2 className="text-xl font-bold text-slate-800 flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-50 to-emerald-100 flex items-center justify-center">
-                <TrendingUp className="w-4 h-4 text-emerald-600" />
-              </div>
-              Analyse des tendances
-            </h2>
-            <p className="text-sm text-slate-500 mt-1 ml-[42px]">
-              Répartition et distribution des décisions par poste et confiance
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
-            {/* Role Breakdown with mini donut charts */}
-            <Card className="shadow-sm">
-              <CardHeader className="pb-3">
-                <CardTitle className="text-sm font-semibold text-slate-700 flex items-center gap-2">
-                  <Users className="w-4 h-4 text-slate-400" />
-                  Répartition par poste
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  {Object.entries(roleBreakdown).map(([role, counts]) => {
-                    const total = counts.invite + counts.reject;
-                    const invitePct = total > 0 ? (counts.invite / total) * 100 : 0;
-                    const rejectPct = total > 0 ? (counts.reject / total) * 100 : 0;
-                    // CSS donut: invite angle
-                    const inviteDeg = (counts.invite / total) * 360;
-                    return (
-                      <div key={role} className="p-3 bg-gradient-to-br from-slate-50/80 to-white rounded-xl border border-slate-100 flex items-center gap-3">
-                        {/* Mini CSS donut */}
-                        <div className="w-8 h-8 rounded-full flex-shrink-0 relative" style={{
-                          background: counts.invite > 0 && counts.reject > 0
-                            ? `conic-gradient(#10b981 0deg ${inviteDeg}deg, #ef4444 ${inviteDeg}deg 360deg)`
-                            : counts.invite > 0 ? '#10b981' : '#ef4444'
-                        }}>
-                          <div className="absolute inset-1.5 rounded-full bg-white" />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center justify-between mb-2">
-                            <span className="text-xs font-semibold text-slate-700 truncate">{role}</span>
-                            <div className="flex items-center gap-2 text-[10px]">
-                              <span className="flex items-center gap-1 text-emerald-600">
-                                <CheckCircle2 className="w-3 h-3" />
-                                {counts.invite}
-                              </span>
-                              <span className="flex items-center gap-1 text-red-600">
-                                <XCircle className="w-3 h-3" />
-                                {counts.reject}
-                              </span>
-                            </div>
-                          </div>
-                          <div className="flex h-2.5 rounded-full overflow-hidden bg-slate-100 shadow-inner">
-                            {counts.invite > 0 && (
-                              <div
-                                className="bg-gradient-to-r from-emerald-400 to-emerald-500 transition-all duration-500"
-                                style={{ width: `${invitePct}%` }}
-                              />
-                            )}
-                            {counts.reject > 0 && (
-                              <div
-                                className="bg-gradient-to-r from-red-400 to-red-500 transition-all duration-500"
-                                style={{ width: `${rejectPct}%` }}
-                              />
-                            )}
-                          </div>
-                          <div className="flex justify-between mt-1.5 text-[10px] text-slate-400">
-                            <span>{invitePct.toFixed(0)}% Invités</span>
-                            <span>{rejectPct.toFixed(0)}% Rejetés</span>
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-                {/* Insight badge */}
-                <div className="mt-3 pt-3 border-t border-slate-100 flex flex-wrap gap-2">
-                  <Badge className="bg-emerald-50 text-emerald-700 border border-emerald-100 hover:bg-emerald-50 gap-1 text-[10px]">
-                    <Sparkles className="w-3 h-3" />
-                    Top poste : {Object.entries(roleBreakdown).sort((a, b) => (b[1].invite + b[1].reject) - (a[1].invite + a[1].reject))[0]?.[0] || '—'}
-                  </Badge>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Confidence Distribution */}
-            <Card className="shadow-sm">
-              <CardHeader className="pb-3">
-                <CardTitle className="text-sm font-semibold text-slate-700 flex items-center gap-2">
-                  <BarChart3 className="w-4 h-4 text-slate-400" />
-                  Distribution de confiance
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="h-48 px-2 pt-2 pb-2">
-                  <div className="flex items-end justify-between gap-3 h-full">
-                    {confidenceBins.map((count, i) => {
-                      const binLabel = `${i * 20}–${(i + 1) * 20}%`;
-                      const heightPct = maxBinCount > 0 ? (count / maxBinCount) * 100 : 0;
-                      const isMax = count === maxBinCount && count > 0;
-                      return (
-                        <div key={i} className="flex-1 flex flex-col items-center gap-1">
-                          <span className="text-[10px] font-bold text-slate-600">{count}</span>
-                          <div className="w-full flex flex-col justify-end flex-1">
-                            <div
-                              className={`w-full rounded-t-md transition-all duration-500 ${
-                                isMax
-                                  ? 'bg-gradient-to-t from-emerald-500 to-emerald-400 shadow-sm shadow-emerald-200'
-                                  : count > 0
-                                    ? 'bg-gradient-to-t from-emerald-300 to-emerald-200'
-                                    : 'bg-slate-100'
-                              }`}
-                              style={{ height: `${heightPct}%`, minHeight: count > 0 ? '4px' : '2px' }}
-                            />
-                          </div>
-                          <span className="text-[9px] text-slate-400 text-center leading-tight whitespace-nowrap">{binLabel}</span>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-                <div className="flex items-center justify-center gap-4 mt-3 pt-3 border-t border-slate-100">
-                  <span className="flex items-center gap-1.5 text-[10px] text-slate-500">
-                    <span className="w-3 h-2 rounded-sm bg-gradient-to-r from-emerald-400 to-emerald-500 inline-block" />
-                    Plus fréquent
-                  </span>
-                  <span className="flex items-center gap-1.5 text-[10px] text-slate-500">
-                    <span className="w-3 h-2 rounded-sm bg-emerald-200 inline-block" />
-                    Moins fréquent
-                  </span>
-                </div>
-                {/* Insight badges */}
-                <div className="mt-3 flex flex-wrap gap-2">
-                  <Badge className="bg-emerald-50 text-emerald-700 border border-emerald-100 hover:bg-emerald-50 gap-1 text-[10px]">
-                    <Activity className="w-3 h-3" />
-                    Confiance médiane : {confidenceMedian.toFixed(0)}%
-                  </Badge>
-                  <Badge className="bg-slate-50 text-slate-600 border border-slate-100 hover:bg-slate-50 gap-1 text-[10px]">
-                    <Zap className="w-3 h-3" />
-                    Moyenne : {avgConfidence.toFixed(0)}%
-                  </Badge>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-      )}
-
-      {/* ====== DECORATIVE DIVIDER 2 ====== */}
-      <div className="relative flex items-center justify-center py-3">
-        <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent" />
-        <div className="absolute flex items-center gap-4">
-          <div className="w-1.5 h-1.5 bg-emerald-300 rotate-45 animate-diamond" style={{ animationDelay: '0.3s' }} />
-          <div className="w-2 h-2 bg-emerald-400 rotate-45 animate-diamond shadow-sm shadow-emerald-200" />
-          <div className="w-1.5 h-1.5 bg-emerald-300 rotate-45 animate-diamond" style={{ animationDelay: '0.7s' }} />
-        </div>
-      </div>
-
       {/* ====== HISTORY SECTION ====== */}
       <section>
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-5">
           <div>
-            <h2 className="text-xl font-bold text-slate-800 flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-50 to-emerald-100 flex items-center justify-center">
-                <Clock className="w-4 h-4 text-emerald-600" />
+            <h2 className="text-xl font-bold text-slate-800 dark:text-slate-100 flex items-center gap-2.5">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-50 to-emerald-100 dark:from-emerald-900/30 dark:to-emerald-800/20 flex items-center justify-center">
+                <Clock className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
               </div>
               Historique des analyses
             </h2>
-            <p className="text-sm text-slate-500 mt-1 ml-[42px]">
+            <p className="text-sm text-slate-500 dark:text-slate-400 mt-1 ml-[42px]">
               {comparisonMode
                 ? 'Sélectionnez 2 candidats pour les comparer'
                 : 'Cliquez sur une entrée pour voir le détail complet'
@@ -1294,7 +615,8 @@ export function FairnessHistory() {
                   variant="outline"
                   size="sm"
                   onClick={exportHistory}
-                  className="border-slate-200 text-slate-600 hover:bg-slate-50 gap-1.5 rounded-r-none border-r-0"
+                  className="border-slate-200 text-slate-600 hover:bg-slate-50 gap-1.5 rounded-r-none border-r-0 min-h-[44px]"
+                  aria-label="Exporter l'historique"
                 >
                   <Download className="w-3.5 h-3.5" />
                   <span className="hidden sm:inline">Exporter</span>
@@ -1302,13 +624,16 @@ export function FairnessHistory() {
                 </Button>
                 <button
                   onClick={() => setShowExportDropdown(!showExportDropdown)}
-                  className="px-2 border border-slate-200 rounded-r-md text-slate-400 hover:bg-slate-50 hover:text-slate-600 transition-colors"
+                  className="px-2 min-w-[44px] min-h-[44px] border border-slate-200 rounded-r-md text-slate-400 hover:bg-slate-50 hover:text-slate-600 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500/40 active:scale-95"
+                  aria-expanded={showExportDropdown}
+                  aria-haspopup="true"
+                  aria-label="Choisir le format d'export"
                 >
                   <ChevronDown className="w-3 h-3" />
                 </button>
               </div>
               {showExportDropdown && (
-                <div className="absolute right-0 top-full mt-1 bg-white border border-slate-200 rounded-lg shadow-lg z-20 py-1 min-w-[130px] export-dropdown">
+                <div className="absolute left-0 sm:left-auto right-0 sm:right-0 top-full mt-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-lg z-20 py-1 min-w-[130px] export-dropdown" role="menu" aria-label="Formats d'export">
                   {([
                     { key: 'txt' as const, label: 'Texte (.txt)', icon: <File className="w-3 h-3" /> },
                     { key: 'csv' as const, label: 'CSV (.csv)', icon: <FileSpreadsheet className="w-3 h-3" /> },
@@ -1318,8 +643,8 @@ export function FairnessHistory() {
                     <button
                       key={fmt.key}
                       onClick={() => { setExportFormat(fmt.key); setShowExportDropdown(false); }}
-                      className={`w-full text-left px-3 py-1.5 text-xs flex items-center gap-2 transition-colors ${
-                        exportFormat === fmt.key ? 'bg-emerald-50 text-emerald-700 font-medium' : 'text-slate-600 hover:bg-slate-50'
+                      className={`w-full text-left px-3 py-1.5 min-h-[44px] text-xs flex items-center gap-2 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500/40 ${
+                        exportFormat === fmt.key ? 'bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-400 font-medium' : 'text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700'
                       }`}
                     >
                       {fmt.icon}
@@ -1335,11 +660,12 @@ export function FairnessHistory() {
               variant={comparisonMode ? 'default' : 'outline'}
               size="sm"
               onClick={toggleComparisonMode}
-              className={`gap-1.5 ${
+              className={`gap-1.5 min-h-[44px] ${
                 comparisonMode
                   ? 'bg-emerald-600 hover:bg-emerald-700 text-white'
                   : 'border-slate-200 text-slate-600 hover:bg-slate-50'
               }`}
+              aria-label={comparisonMode ? 'Annuler la comparaison' : 'Comparer des candidats'}
             >
               <GitCompareArrows className="w-3.5 h-3.5" />
               <span className="hidden sm:inline">{comparisonMode ? 'Annuler' : 'Comparer'}</span>
@@ -1347,20 +673,22 @@ export function FairnessHistory() {
 
             {/* Search input */}
             <div className="relative">
-              <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-400" />
+              <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-400 dark:text-slate-500" />
               <input
                 type="text"
                 placeholder="Rechercher..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="h-8 w-40 pl-8 pr-7 text-xs bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-300 transition-all placeholder:text-slate-400"
+                aria-label="Rechercher dans l'historique"
+                className="h-8 min-h-[44px] w-40 pl-8 pr-7 text-xs bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-300 dark:focus:border-emerald-600 transition-all placeholder:text-slate-400 dark:placeholder:text-slate-500 text-slate-700 dark:text-slate-200"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery('')}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 w-4 h-4 flex items-center justify-center rounded-full bg-slate-200 hover:bg-slate-300 transition-colors"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 w-4 h-4 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-600 hover:bg-slate-300 dark:hover:bg-slate-500 transition-colors"
+                  aria-label="Effacer la recherche"
                 >
-                  <X className="w-2.5 h-2.5 text-slate-500" />
+                  <X className="w-2.5 h-2.5 text-slate-500 dark:text-slate-300" />
                 </button>
               )}
             </div>
@@ -1369,20 +697,23 @@ export function FairnessHistory() {
             <div className="relative" ref={dateDropdownRef}>
               <button
                 onClick={() => setShowDateDropdown(!showDateDropdown)}
-                className="flex items-center gap-1.5 h-8 px-3 text-xs bg-white border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors text-slate-600"
+                className="flex items-center gap-1.5 min-h-[44px] px-3 text-xs bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-600 dark:text-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500/40 active:scale-95"
+                aria-expanded={showDateDropdown}
+                aria-haspopup="true"
+                aria-label="Filtrer par date"
               >
-                <Calendar className="w-3.5 h-3.5 text-slate-400" />
+                <Calendar className="w-3.5 h-3.5 text-slate-400 dark:text-slate-500" />
                 <span className="hidden sm:inline">{dateFilterLabels[dateFilter]}</span>
-                <ChevronDown className="w-3 h-3 text-slate-400" />
+                <ChevronDown className="w-3 h-3 text-slate-400 dark:text-slate-500" />
               </button>
               {showDateDropdown && (
-                <div className="absolute right-0 top-full mt-1 bg-white border border-slate-200 rounded-lg shadow-lg z-20 py-1 min-w-[160px]">
+                <div className="absolute left-0 sm:left-auto right-0 sm:right-0 top-full mt-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-lg z-20 py-1 min-w-[160px]" role="menu" aria-label="Filtres de date">
                   {Object.entries(dateFilterLabels).map(([key, label]) => (
                     <button
                       key={key}
                       onClick={() => { setDateFilter(key as typeof dateFilter); setShowDateDropdown(false); }}
-                      className={`w-full text-left px-3 py-1.5 text-xs transition-colors ${
-                        dateFilter === key ? 'bg-emerald-50 text-emerald-700 font-medium' : 'text-slate-600 hover:bg-slate-50'
+                      className={`w-full text-left px-3 py-1.5 min-h-[44px] text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500/40 ${
+                        dateFilter === key ? 'bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-400 font-medium' : 'text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700'
                       }`}
                     >
                       {label}
@@ -1392,37 +723,53 @@ export function FairnessHistory() {
               )}
             </div>
 
-            {/* Filter buttons */}
-            <div className="flex bg-slate-100 rounded-lg p-0.5">
-              {(['all', 'Invite', 'Reject'] as const).map((f) => (
-                <button
-                  key={f}
-                  onClick={() => setFilterLabel(f)}
-                  className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all ${
-                    filterLabel === f
-                      ? f === 'Invite'
-                        ? 'bg-emerald-100 text-emerald-700 shadow-sm'
-                        : f === 'Reject'
-                          ? 'bg-red-100 text-red-700 shadow-sm'
-                          : 'bg-white text-slate-700 shadow-sm'
-                      : 'text-slate-500 hover:text-slate-700'
-                  }`}
-                >
-                  {f === 'all' ? 'Tous' : f}
-                </button>
-              ))}
+            {/* Filter buttons with count badges */}
+            <div className="flex flex-wrap bg-slate-100 dark:bg-slate-700/50 rounded-lg p-0.5">
+              {(['all', 'Invite', 'Reject'] as const).map((f) => {
+                const countForFilter = f === 'all'
+                  ? logEntries.length
+                  : logEntries.filter((e) => e.label === f).length;
+                return (
+                  <button
+                    key={f}
+                    onClick={() => setFilterLabel(f)}
+                    className={`px-3 py-1.5 min-h-[44px] text-xs font-medium rounded-md transition-all flex items-center gap-1.5 active:scale-95 ${
+                      filterLabel === f
+                        ? f === 'Invite'
+                          ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 shadow-sm'
+                          : f === 'Reject'
+                            ? 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 shadow-sm'
+                            : 'bg-white dark:bg-slate-600 text-slate-700 dark:text-slate-200 shadow-sm'
+                        : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
+                    }`}
+                  >
+                    {f === 'all' ? 'Tous' : f}
+                    <span className={`filter-count-badge ${
+                      filterLabel === f
+                        ? f === 'Invite'
+                          ? 'bg-emerald-200/60 dark:bg-emerald-800/40 text-emerald-800 dark:text-emerald-300'
+                          : f === 'Reject'
+                            ? 'bg-red-200/60 dark:bg-red-800/40 text-red-800 dark:text-red-300'
+                            : 'bg-slate-200/60 dark:bg-slate-500/40 text-slate-700 dark:text-slate-300'
+                        : 'bg-slate-200/60 dark:bg-slate-600/40 text-slate-500 dark:text-slate-400'
+                    }`}>
+                      {countForFilter}
+                    </span>
+                  </button>
+                );
+              })}
             </div>
 
             {/* Status filter */}
-            <div className="flex bg-slate-100 rounded-lg p-0.5">
+            <div className="flex flex-wrap bg-slate-100 dark:bg-slate-700/50 rounded-lg p-0.5">
               {(['all', 'En attente', 'Entretien planifié', 'Refusé', 'Embauché'] as const).map((s) => (
                 <button
                   key={s}
                   onClick={() => setStatusFilter(s)}
-                  className={`px-2 py-1.5 text-[10px] font-medium rounded-md transition-all ${
+                  className={`px-2 py-1.5 min-h-[44px] text-[10px] font-medium rounded-md transition-all active:scale-95 ${
                     statusFilter === s
-                      ? 'bg-white text-slate-700 shadow-sm'
-                      : 'text-slate-400 hover:text-slate-600'
+                      ? 'bg-white dark:bg-slate-600 text-slate-700 dark:text-slate-200 shadow-sm'
+                      : 'text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300'
                   }`}
                 >
                   {s === 'all' ? 'Statut' : STATUS_CONFIG[s]?.label || s}
@@ -1434,16 +781,14 @@ export function FairnessHistory() {
 
         {/* Batch Statistics Summary */}
         {totalEntries > 0 && (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2 mb-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4">
             {[
               { label: 'Total analyses', value: totalEntries, icon: <BarChart3 className="w-3.5 h-3.5 text-slate-400" /> },
               { label: 'Taux d\'invitation', value: `${totalEntries > 0 ? ((inviteCount / totalEntries) * 100).toFixed(0) : 0}%`, icon: <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" /> },
               { label: 'Confiance moyenne', value: `${avgConfidence.toFixed(0)}%`, icon: <Activity className="w-3.5 h-3.5 text-amber-400" /> },
-              { label: 'Taux d\'ajustement', value: `${totalEntries > 0 ? ((fairnessAdjustedCount / totalEntries) * 100).toFixed(0) : 0}%`, icon: <Shield className="w-3.5 h-3.5 text-emerald-400" /> },
               { label: 'Poste le + analysé', value: mostAnalyzedRole, icon: <Users className="w-3.5 h-3.5 text-slate-400" /> },
-              { label: 'Équité ajustée', value: `${fairnessAdjustedCount}/${totalEntries}`, icon: <Award className="w-3.5 h-3.5 text-emerald-400" /> },
             ].map((stat, i) => (
-              <div key={i} className="batch-stat-card p-3 bg-white rounded-xl border border-slate-200/80 shadow-sm">
+              <div key={i} className="batch-stat-card p-3 bg-white dark:bg-slate-800/50 rounded-xl border border-slate-200/80 dark:border-slate-700/50 shadow-sm">
                 <div className="flex items-center gap-1.5 mb-1">
                   {stat.icon}
                   <span className="text-[9px] text-slate-400 uppercase font-semibold tracking-wider leading-tight">{stat.label}</span>
@@ -1456,7 +801,7 @@ export function FairnessHistory() {
 
         {/* Average confidence bar */}
         {totalEntries > 0 && (
-          <div className="flex items-center gap-3 px-4 py-3 bg-white rounded-xl border border-slate-200/80 shadow-sm mb-4">
+          <div className="flex items-center gap-3 px-4 py-3 bg-white dark:bg-slate-800/50 rounded-xl border border-slate-200/80 dark:border-slate-700/50 shadow-sm mb-4">
             <BarChart3 className="w-4 h-4 text-slate-400" />
             <span className="text-xs text-slate-500">Confiance moyenne :</span>
             <div className="flex-1 h-5 bg-slate-100 rounded-full overflow-hidden shadow-inner max-w-xs relative">
@@ -1472,9 +817,6 @@ export function FairnessHistory() {
             {avgConfidence <= 15 && (
               <span className="text-sm font-bold text-slate-700">{avgConfidence.toFixed(1)}%</span>
             )}
-            <div className="w-px h-4 bg-slate-200" />
-            <span className="text-xs text-slate-500">Équité ajustée :</span>
-            <span className="text-sm font-bold text-emerald-600">{fairnessAdjustedCount}/{totalEntries}</span>
           </div>
         )}
 
@@ -1542,21 +884,20 @@ export function FairnessHistory() {
         {!logLoading && filteredEntries.length > 0 && (
           <Card className="shadow-sm overflow-hidden">
             <CardContent className="p-0">
-              <div className="max-h-[500px] overflow-y-auto custom-scrollbar animate-page-slide" key={currentPage}>
+              <div className="max-h-[500px] overflow-y-auto overflow-x-auto custom-scrollbar animate-page-slide" key={currentPage}>
                 <table className="w-full text-sm">
-                  <thead className="sticky top-0 bg-white/95 backdrop-blur-sm z-10 border-b border-slate-200">
+                  <thead className="sticky top-0 table-header-frosted z-10 border-b border-slate-200 dark:border-slate-700">
                     <tr>
                       {comparisonMode && (
                         <th className="w-8 py-3 px-2 text-xs font-semibold text-slate-500 uppercase"></th>
                       )}
-                      <th className="text-left py-3 px-4 text-xs font-semibold text-slate-500 uppercase">Date</th>
-                      <th className="text-left py-3 px-4 text-xs font-semibold text-slate-500 uppercase">Candidat</th>
-                      <th className="text-left py-3 px-4 text-xs font-semibold text-slate-500 uppercase hidden sm:table-cell">Poste</th>
-                      <th className="text-center py-3 px-4 text-xs font-semibold text-slate-500 uppercase">Décision</th>
-                      <th className="text-right py-3 px-4 text-xs font-semibold text-slate-500 uppercase">Confiance</th>
-                      <th className="text-center py-3 px-4 text-xs font-semibold text-slate-500 uppercase hidden md:table-cell">Équité</th>
-                      <th className="text-center py-3 px-4 text-xs font-semibold text-slate-500 uppercase hidden lg:table-cell">Statut</th>
-                      <th className="text-left py-3 px-4 text-xs font-semibold text-slate-500 uppercase hidden lg:table-cell">Facteur principal</th>
+                      <th className="text-left py-3 px-4 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase">Date</th>
+                      <th className="text-left py-3 px-4 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase">Candidat</th>
+                      <th className="text-left py-3 px-4 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase hidden sm:table-cell">Poste</th>
+                      <th className="text-center py-3 px-4 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase">Décision</th>
+                      <th className="text-right py-3 px-4 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase">Confiance</th>
+                      <th className="text-center py-3 px-4 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase hidden lg:table-cell">Statut</th>
+                      <th className="text-left py-3 px-4 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase hidden lg:table-cell">Facteur principal</th>
                       <th className="w-8 py-3 px-2"></th>
                     </tr>
                   </thead>
@@ -1567,11 +908,11 @@ export function FairnessHistory() {
                       return (
                         <tr
                           key={`${entry.timestamp}-${entry.name}-${i}`}
-                          className={`border-b border-slate-50 hover:bg-emerald-50/30 cursor-pointer transition-all group border-l-4 history-row-enter ${
+                          className={`border-b border-slate-100 dark:border-slate-800 cursor-pointer transition-all group border-l-4 history-row-highlight ${
                             entry.label === 'Invite'
-                              ? 'border-l-emerald-400'
-                              : 'border-l-red-400'
-                          } ${isCompSelected ? 'bg-emerald-50/60 comparison-selected' : ''} ${i % 2 === 1 ? 'bg-slate-50/30' : ''}`}
+                              ? 'border-l-emerald-400 dark:border-l-emerald-500'
+                              : 'border-l-red-400 dark:border-l-red-500'
+                          } ${isCompSelected ? 'bg-emerald-50/60 dark:bg-emerald-900/20 comparison-selected' : ''} ${i % 2 === 1 ? 'bg-slate-50/50 dark:bg-slate-800/30' : 'bg-white dark:bg-slate-900/20'}`}
                           onClick={() => {
                             if (comparisonMode) {
                               toggleComparisonSelection(entry);
@@ -1590,7 +931,7 @@ export function FairnessHistory() {
                               />
                             </td>
                           )}
-                          <td className="py-3 px-4 text-slate-500 whitespace-nowrap text-xs">
+                          <td className="py-3 px-4 text-slate-500 dark:text-slate-400 whitespace-nowrap text-xs">
                             {new Date(entry.timestamp).toLocaleString('fr-FR', {
                               day: '2-digit',
                               month: '2-digit',
@@ -1601,55 +942,45 @@ export function FairnessHistory() {
                           <td className="py-3 px-4">
                             <div className="flex items-center gap-2">
                               <span className={`w-2 h-2 rounded-full flex-shrink-0 ${entry.label === 'Invite' ? 'bg-emerald-400' : 'bg-red-400'}`} />
-                              <span className="font-medium text-slate-700">{entry.name}</span>
+                              <span className="font-medium text-slate-700 dark:text-slate-200">{entry.name}</span>
                             </div>
                           </td>
-                          <td className="py-3 px-4 text-slate-500 text-xs hidden sm:table-cell">{entry.target_role}</td>
+                          <td className="py-3 px-4 text-slate-500 dark:text-slate-400 text-xs hidden sm:table-cell">{entry.target_role}</td>
                           <td className="py-3 px-4 text-center">
-                            <Badge className={`text-xs border-0 shadow-sm ${
+                            <span className={`status-pill ${
                               entry.label === 'Invite'
-                                ? 'bg-gradient-to-r from-emerald-50 to-emerald-100 text-emerald-700'
-                                : 'bg-gradient-to-r from-red-50 to-red-100 text-red-700'
+                                ? 'bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-400 border-emerald-100 dark:border-emerald-800/30'
+                                : 'bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 border-red-100 dark:border-red-800/30'
                             }`}>
                               {entry.label}
-                            </Badge>
+                            </span>
                           </td>
                           <td className="py-3 px-4 text-right">
                             <div className="flex items-center justify-end gap-2">
                               {entry.confidence > 0 && (
-                                <div className="w-12 h-1.5 bg-slate-100 rounded-full overflow-hidden hidden sm:block">
+                                <div className="w-12 h-1.5 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden hidden sm:block">
                                   <div
-                                    className={`h-full rounded-full ${entry.label === 'Invite' ? 'bg-emerald-400' : 'bg-red-400'}`}
+                                    className={`h-full rounded-full ${entry.label === 'Invite' ? 'bg-emerald-400 dark:bg-emerald-500' : 'bg-red-400 dark:bg-red-500'}`}
                                     style={{ width: `${Math.min(entry.confidence, 100)}%` }}
                                   />
                                 </div>
                               )}
-                              <span className="font-mono text-slate-600 text-xs">
+                              <span className="font-mono text-slate-600 dark:text-slate-300 text-xs">
                               {entry.confidence > 0 ? `${entry.confidence.toFixed(1)}%` : '—'}
                               </span>
                             </div>
                           </td>
-                          <td className="py-3 px-4 text-center hidden md:table-cell">
-                            {entry.fairness_adjusted ? (
-                              <div className="inline-flex items-center gap-1 px-2 py-0.5 bg-emerald-50 rounded-md">
-                                <Shield className="w-3 h-3 text-emerald-500" />
-                                <span className="text-[10px] text-emerald-600 font-medium">Oui</span>
-                              </div>
-                            ) : (
-                              <span className="text-slate-300">—</span>
-                            )}
-                          </td>
                           <td className="py-3 px-4 text-center hidden lg:table-cell">
                             {statusCfg ? (
-                              <Badge className={`text-[10px] border px-1.5 py-0 ${statusCfg.cssClass}`}>
-                                <span className={`w-1.5 h-1.5 rounded-full ${statusCfg.dotColor} mr-1`} />
+                              <span className={`status-pill ${statusCfg.cssClass}`}>
+                                <span className={`w-1.5 h-1.5 rounded-full ${statusCfg.dotColor}`} />
                                 {statusCfg.label}
-                              </Badge>
+                              </span>
                             ) : (
-                              <span className="text-slate-300 text-xs">—</span>
+                              <span className="text-slate-300 dark:text-slate-600 text-xs">—</span>
                             )}
                           </td>
-                          <td className="py-3 px-4 text-xs text-slate-500 hidden lg:table-cell truncate max-w-[180px]">
+                          <td className="py-3 px-4 text-xs text-slate-500 dark:text-slate-400 hidden lg:table-cell truncate max-w-[180px]">
                             {entry.top_driver !== 'N/A' ? entry.top_driver : '—'}
                           </td>
                           <td className="py-3 px-2">
@@ -1657,8 +988,9 @@ export function FairnessHistory() {
                               {!comparisonMode && (
                                 <button
                                   onClick={(e) => handleDeleteEntry(e, entry)}
-                                  className="w-6 h-6 flex items-center justify-center rounded-md text-slate-300 hover:text-red-500 hover:bg-red-50 transition-all opacity-0 group-hover:opacity-100"
+                                  className="w-6 h-6 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-md text-slate-300 hover:text-red-500 hover:bg-red-50 transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 focus:outline-none focus:ring-2 focus:ring-red-500/40"
                                   title="Supprimer"
+                                  aria-label={`Supprimer l'entrée de ${entry.name}`}
                                 >
                                   <Trash2 className="w-3.5 h-3.5" />
                                 </button>
@@ -1677,8 +1009,8 @@ export function FairnessHistory() {
 
               {/* Pagination */}
               {filteredEntries.length > ITEMS_PER_PAGE && (
-                <div className="flex items-center justify-between px-4 py-3 border-t border-slate-100 bg-white">
-                  <span className="text-xs text-slate-500">
+                <div className="flex items-center justify-between px-4 py-3 border-t border-slate-100 dark:border-slate-700 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm">
+                  <span className="text-xs text-slate-500 dark:text-slate-400">
                     {entryRangeStart}–{entryRangeEnd} sur {filteredEntries.length}
                   </span>
                   <div className="flex items-center gap-2">
@@ -1692,7 +1024,7 @@ export function FairnessHistory() {
                       <ChevronLeft className="w-3 h-3" />
                       Précédent
                     </Button>
-                    <span className="text-xs text-slate-600 font-medium">
+                    <span className="text-xs text-slate-600 dark:text-slate-300 font-medium">
                       Page {currentPage} sur {totalPages}
                     </span>
                     <Button
@@ -1710,6 +1042,466 @@ export function FairnessHistory() {
               )}
             </CardContent>
           </Card>
+        )}
+      </section>
+
+      {/* ====== DECORATIVE DIVIDER 1 ====== */}
+      <div className="relative flex items-center justify-center py-3">
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-emerald-300 to-transparent" />
+        <div className="absolute flex items-center gap-3">
+          <div className="w-2 h-2 bg-emerald-400 rotate-45 animate-diamond shadow-sm shadow-emerald-200" />
+          <div className="w-3 h-3 bg-emerald-500 rotate-45 animate-diamond shadow-sm shadow-emerald-300" style={{ animationDelay: '0.5s' }} />
+          <div className="w-2 h-2 bg-emerald-400 rotate-45 animate-diamond shadow-sm shadow-emerald-200" style={{ animationDelay: '1s' }} />
+        </div>
+      </div>
+
+      {/* ====== ANALYTICS DASHBOARD SECTION ====== */}
+      {logEntries.length > 0 && (
+        <section className="animate-card-enter">
+          <div className="flex items-center justify-between mb-5">
+            <div>
+              <h2 className="text-xl font-bold text-slate-800 dark:text-slate-100 flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-50 to-emerald-100 dark:from-emerald-900/30 dark:to-emerald-800/20 flex items-center justify-center">
+                  <BarChart3 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                </div>
+                Tableau de bord analytique
+              </h2>
+              <p className="text-sm text-slate-500 dark:text-slate-400 mt-1 ml-[42px]">
+                Répartition et distribution des décisions par poste et confiance
+              </p>
+            </div>
+            <button
+              onClick={() => setShowAnalytics(!showAnalytics)}
+              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all"
+            >
+              {showAnalytics ? (
+                <>
+                  <ChevronDown className="w-3.5 h-3.5 rotate-180 transition-transform" />
+                  Masquer
+                </>
+              ) : (
+                <>
+                  <ChevronDown className="w-3.5 h-3.5 transition-transform" />
+                  Afficher
+                </>
+              )}
+            </button>
+          </div>
+
+          {showAnalytics && (
+            <div className="collapse-expand-enter space-y-4">
+              {/* Summary Insight Cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                {/* Taux d'invitation */}
+                <div className="analytics-insight-card p-4 rounded-xl border bg-gradient-to-br from-emerald-50/40 to-white dark:from-emerald-900/10 dark:to-slate-800/50 border-slate-200/80 dark:border-slate-700/50">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-7 h-7 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+                    </div>
+                    <span className="text-[10px] text-slate-400 dark:text-slate-500 uppercase font-semibold tracking-wider">Taux d&apos;invitation</span>
+                  </div>
+                  <p className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">
+                    {totalEntries > 0 ? ((inviteCount / totalEntries) * 100).toFixed(0) : 0}%
+                  </p>
+                  <p className="text-[10px] text-slate-400 dark:text-slate-500 mt-0.5">{inviteCount} invités sur {totalEntries}</p>
+                </div>
+
+                {/* Confiance médiane */}
+                <div className="analytics-insight-card p-4 rounded-xl border bg-gradient-to-br from-amber-50/40 to-white dark:from-amber-900/10 dark:to-slate-800/50 border-slate-200/80 dark:border-slate-700/50">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-7 h-7 rounded-lg bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center">
+                      <Activity className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
+                    </div>
+                    <span className="text-[10px] text-slate-400 dark:text-slate-500 uppercase font-semibold tracking-wider">Confiance médiane</span>
+                  </div>
+                  <p className="text-2xl font-bold text-amber-600 dark:text-amber-400">
+                    {confidenceMedian.toFixed(0)}%
+                  </p>
+                  <p className="text-[10px] text-slate-400 dark:text-slate-500 mt-0.5">Moyenne : {avgConfidence.toFixed(1)}%</p>
+                </div>
+
+                {/* Poste principal */}
+                <div className="analytics-insight-card p-4 rounded-xl border bg-gradient-to-br from-slate-50/40 to-white dark:from-slate-700/10 dark:to-slate-800/50 border-slate-200/80 dark:border-slate-700/50">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-7 h-7 rounded-lg bg-slate-100 dark:bg-slate-700/50 flex items-center justify-center">
+                      <Users className="w-3.5 h-3.5 text-slate-600 dark:text-slate-400" />
+                    </div>
+                    <span className="text-[10px] text-slate-400 dark:text-slate-500 uppercase font-semibold tracking-wider">Poste principal</span>
+                  </div>
+                  <p className="text-lg font-bold text-slate-700 dark:text-slate-200 truncate">
+                    {mostAnalyzedRole}
+                  </p>
+                  <p className="text-[10px] text-slate-400 dark:text-slate-500 mt-0.5">{roleCounts[mostAnalyzedRole] || 0} analyses</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
+                {/* Role Distribution Chart — Horizontal Bar Chart (inline SVG) */}
+                <Card className="shadow-sm dark:bg-slate-800/50 dark:border-slate-700/50">
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-sm font-semibold text-slate-700 dark:text-slate-200 flex items-center gap-2">
+                      <Users className="w-4 h-4 text-slate-400 dark:text-slate-500" />
+                      Répartition par poste
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-3">
+                      {Object.entries(roleBreakdown).map(([role, counts]) => {
+                        const total = counts.invite + counts.reject;
+                        const invitePct = total > 0 ? (counts.invite / total) * 100 : 0;
+                        const rejectPct = total > 0 ? (counts.reject / total) * 100 : 0;
+                        const maxTotal = Math.max(...Object.values(roleBreakdown).map((c) => c.invite + c.reject), 1);
+                        const barScale = total / maxTotal;
+                        return (
+                          <div key={role} className="group">
+                            <div className="flex items-center justify-between mb-1.5">
+                              <span className="text-xs font-semibold text-slate-700 dark:text-slate-200 truncate max-w-[60%]">{role}</span>
+                              <div className="flex items-center gap-2 text-[10px]">
+                                <span className="flex items-center gap-1 text-emerald-600 dark:text-emerald-400">
+                                  <CheckCircle2 className="w-3 h-3" />
+                                  {counts.invite}
+                                </span>
+                                <span className="flex items-center gap-1 text-red-600 dark:text-red-400">
+                                  <XCircle className="w-3 h-3" />
+                                  {counts.reject}
+                                </span>
+                              </div>
+                            </div>
+                            {/* Horizontal stacked bar */}
+                            <div className="flex h-5 rounded-full overflow-hidden bg-slate-100 dark:bg-slate-700/50 shadow-inner" style={{ width: `${Math.max(barScale * 100, 20)}%` }}>
+                              {counts.invite > 0 && (
+                                <div
+                                  className="bg-gradient-to-r from-emerald-400 to-emerald-500 dark:from-emerald-500 dark:to-emerald-600 animate-bar-grow-h flex items-center justify-center"
+                                  style={{ width: `${invitePct}%` }}
+                                >
+                                  {invitePct > 15 && <span className="text-[8px] font-bold text-white">{invitePct.toFixed(0)}%</span>}
+                                </div>
+                              )}
+                              {counts.reject > 0 && (
+                                <div
+                                  className="bg-gradient-to-r from-red-400 to-red-500 dark:from-red-500 dark:to-red-600 animate-bar-grow-h flex items-center justify-center"
+                                  style={{ width: `${rejectPct}%` }}
+                                >
+                                  {rejectPct > 15 && <span className="text-[8px] font-bold text-white">{rejectPct.toFixed(0)}%</span>}
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    {/* Insight badge */}
+                    <div className="mt-3 pt-3 border-t border-slate-100 dark:border-slate-700/50 flex flex-wrap gap-2">
+                      <Badge className="bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 border border-emerald-100 dark:border-emerald-800/30 hover:bg-emerald-50 gap-1 text-[10px]">
+                        <Sparkles className="w-3 h-3" />
+                        Top poste : {Object.entries(roleBreakdown).sort((a, b) => (b[1].invite + b[1].reject) - (a[1].invite + a[1].reject))[0]?.[0] || '—'}
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+
+
+              </div>
+            </div>
+          )}
+        </section>
+      )}
+
+      {/* ====== DECORATIVE DIVIDER 2 ====== */}
+      <div className="relative flex items-center justify-center py-3">
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent" />
+        <div className="absolute flex items-center gap-4">
+          <div className="w-1.5 h-1.5 bg-emerald-300 rotate-45 animate-diamond" style={{ animationDelay: '0.3s' }} />
+          <div className="w-2 h-2 bg-emerald-400 rotate-45 animate-diamond shadow-sm shadow-emerald-200" />
+          <div className="w-1.5 h-1.5 bg-emerald-300 rotate-45 animate-diamond" style={{ animationDelay: '0.7s' }} />
+        </div>
+      </div>
+
+      {/* ====== FAIRNESS SECTION ====== */}
+      <section>
+        <div className="relative fairness-mesh-bg fairness-pattern-bg rounded-2xl p-6 mb-6 overflow-hidden">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 relative z-10">
+            <div>
+              <h2 className="text-xl font-bold text-slate-800 dark:text-slate-100 flex items-center gap-3">
+                <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-100 to-emerald-200 dark:from-emerald-900/40 dark:to-emerald-800/30 flex items-center justify-center shadow-sm ring-1 ring-emerald-200/50 dark:ring-emerald-700/30">
+                  <Scale className="w-4.5 h-4.5 text-emerald-600 dark:text-emerald-400" />
+                </div>
+                Audit d&apos;équité
+                <span className="live-badge-modern">
+                  <span className="live-dot-modern" />
+                  Live
+                </span>
+              </h2>
+              <p className="text-sm text-slate-500 dark:text-slate-400 mt-1.5 ml-12">
+                Métriques d&apos;équité du modèle corrigé
+              </p>
+            </div>
+            <div className="flex flex-col items-end gap-1.5">
+              <Button
+                onClick={loadMetrics}
+                disabled={metricsLoading}
+                variant="outline"
+                className="border-emerald-200 dark:border-emerald-800/40 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 gap-2"
+              >
+                {metricsLoading ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                    Chargement...
+                  </>
+                ) : (
+                  <>
+                    <RefreshCw className="w-4 h-4" />
+                    Actualiser
+                  </>
+                )}
+              </Button>
+              {lastUpdated && (
+                <span className="text-[10px] text-slate-400 dark:text-slate-500 timestamp-text">
+                  Dernière màj : {lastUpdated.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit', second: '2-digit' })}
+                </span>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* Metrics loading skeleton */}
+        {metricsLoading && !metrics && (
+          <Card className="shadow-sm">
+            <CardContent className="p-8 flex flex-col items-center justify-center gap-3">
+              <Loader2 className="w-8 h-8 text-emerald-500 animate-spin" />
+              <p className="text-sm text-slate-500">Chargement des métriques de fairness...</p>
+            </CardContent>
+          </Card>
+        )}
+
+        {metricsError && (
+          <Card className="border-red-200 bg-red-50/80 mb-4 shadow-sm">
+            <CardContent className="p-5 flex items-start gap-3">
+              <div className="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center flex-shrink-0">
+                <AlertTriangle className="w-5 h-5 text-red-500" />
+              </div>
+              <div className="flex-1">
+                <p className="text-sm font-semibold text-red-700">Impossible de charger les métriques</p>
+                <p className="text-sm text-red-600/80 mt-0.5">{metricsError}</p>
+              </div>
+              <Button variant="outline" size="sm" onClick={loadMetrics} className="border-red-200 text-red-600 hover:bg-red-50">
+                <RefreshCw className="w-3.5 h-3.5 mr-1.5" />
+                Réessayer
+              </Button>
+            </CardContent>
+          </Card>
+        )}
+
+        {metrics && (
+          <div className="space-y-4 animate-card-enter">
+            {/* Fairness Composite Score + Metric Cards — Equal Height Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {/* Composite Score */}
+              <Card className="shadow-sm border-emerald-100 dark:border-emerald-800/30 overflow-hidden flex flex-col">
+                <CardContent className="p-5 flex flex-col items-center flex-1">
+                  <div className="flex items-center gap-1.5 mb-3">
+                    <Target className="w-4 h-4 text-emerald-500 dark:text-emerald-400" />
+                    <span className="text-xs font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider">Score d&apos;équité</span>
+                  </div>
+                  <div className="relative w-28 h-28 equity-ring-glow">
+                    <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
+                      <circle cx="50" cy="50" r="45" fill="none" stroke="#e2e8f0" className="dark:stroke-slate-700" strokeWidth="6" />
+                      <circle
+                        cx="50" cy="50" r="45"
+                        fill="none"
+                        stroke="url(#scoreGradient)"
+                        strokeWidth="6"
+                        strokeLinecap="round"
+                        strokeDasharray={283}
+                        strokeDashoffset={283 - (283 * fairnessScore) / 100}
+                        className="animate-score-circle"
+                        style={{ transition: 'stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1)' }}
+                      />
+                      <defs>
+                        <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                          <stop offset="0%" stopColor="#6ee7b7" />
+                          <stop offset="50%" stopColor="#34d399" />
+                          <stop offset="100%" stopColor="#10b981" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                    <div className="absolute inset-0 flex flex-col items-center justify-center">
+                      <span className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">{fairnessScore}</span>
+                      <span className="text-[9px] text-slate-400 dark:text-slate-500 uppercase tracking-wider">/ 100</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-1 mt-2">
+                    <TrendingUp className="w-3 h-3 text-emerald-500" />
+                    <span className="text-[10px] text-emerald-600 font-medium">+{trendData.length >= 2 ? (trendData[trendData.length - 1].composite_score - trendData[trendData.length - 2].composite_score) : 0} pts</span>
+                  </div>
+                  <p className="text-[9px] text-slate-400 mt-1 text-center">EPD 35% · RID 40% · ΔTPR 25%</p>
+                </CardContent>
+              </Card>
+
+              {/* Summary Cards with enhancements */}
+              {/* EPD Card */}
+              <div className="summary-card-glow fairness-metric-card rounded-xl border p-4 shadow-sm text-center relative bg-gradient-to-br from-emerald-50/30 to-white dark:from-emerald-900/10 dark:to-slate-800/50 border-slate-200/80 dark:border-slate-700/50 flex flex-col">
+                <div className="flex items-center justify-center gap-1 mb-2 cursor-help" onClick={() => setShowMetricInfo(showMetricInfo === 'epd' ? null : 'epd')}>
+                  <Info className="w-3.5 h-3.5 text-slate-400 hover:text-emerald-500 transition-colors" />
+                  <span className="text-[10px] text-slate-400 uppercase font-semibold tracking-wider">EPD</span>
+                </div>
+                {showMetricInfo === 'epd' && (
+                  <div className="absolute top-full mt-1 left-1/2 -translate-x-1/2 z-30 bg-slate-800 text-white text-[10px] rounded-lg px-3 py-2 shadow-xl max-w-[200px]">
+                    Écart de Parité Démographique — Mesure la différence de taux d&apos;invitation entre groupes. Plus c&apos;est bas, mieux c&apos;est.
+                  </div>
+                )}
+                <div className="flex items-center justify-center gap-2 flex-1">
+                  <p className={`text-2xl font-bold ${metrics.fair_model.epd_alert ? 'text-red-500' : 'text-emerald-500'}`}>
+                    {metrics.fair_model.epd.toFixed(1)}
+                  </p>
+                  {metrics.fair_model.epd_alert ? (
+                    <Badge className="bg-red-50 text-red-600 border border-red-100 hover:bg-red-50 text-[9px] px-1.5 gap-0.5">
+                      <AlertTriangle className="w-2.5 h-2.5" />
+                      Alerte
+                    </Badge>
+                  ) : (
+                    <Badge className="bg-emerald-50 text-emerald-600 border border-emerald-100 hover:bg-emerald-50 text-[9px] px-1.5 gap-0.5">
+                      <CheckCircle2 className="w-2.5 h-2.5" />
+                      OK
+                    </Badge>
+                  )}
+                </div>
+                {/* Mini progress ring */}
+                <div className="flex justify-center mt-2">
+                  <svg viewBox="0 0 36 36" className="w-8 h-8 -rotate-90">
+                    <circle cx="18" cy="18" r="14" fill="none" stroke="#e2e8f0" strokeWidth="3" />
+                    <circle
+                      cx="18" cy="18" r="14" fill="none"
+                      stroke={metrics.fair_model.epd_alert ? '#ef4444' : '#10b981'}
+                      strokeWidth="3" strokeLinecap="round"
+                      strokeDasharray={88}
+                      strokeDashoffset={88 - (88 * Math.max(0, 100 - metrics.fair_model.epd * 5)) / 100}
+                      className="animate-ring-fill"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              {/* RID Card */}
+              <div className="summary-card-glow fairness-metric-card rounded-xl border p-4 shadow-sm text-center relative bg-gradient-to-br from-emerald-50/30 to-white dark:from-emerald-900/10 dark:to-slate-800/50 border-slate-200/80 dark:border-slate-700/50 flex flex-col">
+                <div className="flex items-center justify-center gap-1 mb-2 cursor-help" onClick={() => setShowMetricInfo(showMetricInfo === 'rid' ? null : 'rid')}>
+                  <Info className="w-3.5 h-3.5 text-slate-400 hover:text-emerald-500 transition-colors" />
+                  <span className="text-[10px] text-slate-400 uppercase font-semibold tracking-wider">RID</span>
+                </div>
+                {showMetricInfo === 'rid' && (
+                  <div className="absolute top-full mt-1 left-1/2 -translate-x-1/2 z-30 bg-slate-800 text-white text-[10px] rounded-lg px-3 py-2 shadow-xl max-w-[200px]">
+                    Ratio d&apos;Impact Disparate — Ratio du taux d&apos;invitation entre groupes. Plus c&apos;est proche de 1.0, mieux c&apos;est.
+                  </div>
+                )}
+                <div className="flex items-center justify-center gap-2 flex-1">
+                  <p className={`text-2xl font-bold ${metrics.fair_model.rid_alert ? 'text-red-500' : 'text-emerald-500'}`}>
+                    {metrics.fair_model.rid.toFixed(3)}
+                  </p>
+                  {metrics.fair_model.rid_alert ? (
+                    <Badge className="bg-red-50 text-red-600 border border-red-100 hover:bg-red-50 text-[9px] px-1.5 gap-0.5">
+                      <AlertTriangle className="w-2.5 h-2.5" />
+                      Alerte
+                    </Badge>
+                  ) : (
+                    <Badge className="bg-emerald-50 text-emerald-600 border border-emerald-100 hover:bg-emerald-50 text-[9px] px-1.5 gap-0.5">
+                      <CheckCircle2 className="w-2.5 h-2.5" />
+                      OK
+                    </Badge>
+                  )}
+                </div>
+                {/* Mini progress ring */}
+                <div className="flex justify-center mt-2">
+                  <svg viewBox="0 0 36 36" className="w-8 h-8 -rotate-90">
+                    <circle cx="18" cy="18" r="14" fill="none" stroke="#e2e8f0" strokeWidth="3" />
+                    <circle
+                      cx="18" cy="18" r="14" fill="none"
+                      stroke={metrics.fair_model.rid_alert ? '#ef4444' : '#10b981'}
+                      strokeWidth="3" strokeLinecap="round"
+                      strokeDasharray={88}
+                      strokeDashoffset={88 - (88 * Math.min(metrics.fair_model.rid, 1)) / 1}
+                      className="animate-ring-fill"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Delta TPR Card */}
+              <div className="summary-card-glow fairness-metric-card rounded-xl border p-4 shadow-sm text-center relative bg-gradient-to-br from-emerald-50/30 to-white dark:from-emerald-900/10 dark:to-slate-800/50 border-slate-200/80 dark:border-slate-700/50 flex flex-col">
+                <div className="flex items-center justify-center gap-1 mb-2 cursor-help" onClick={() => setShowMetricInfo(showMetricInfo === 'delta_tpr' ? null : 'delta_tpr')}>
+                  <Info className="w-3.5 h-3.5 text-slate-400 hover:text-emerald-500 transition-colors" />
+                  <span className="text-[10px] text-slate-400 uppercase font-semibold tracking-wider">Delta TPR</span>
+                </div>
+                {showMetricInfo === 'delta_tpr' && (
+                  <div className="absolute top-full mt-1 left-1/2 -translate-x-1/2 z-30 bg-slate-800 text-white text-[10px] rounded-lg px-3 py-2 shadow-xl max-w-[200px]">
+                    Différence de Taux de Vrais Positifs — Écart de détection des candidats qualifiés entre groupes. Plus c&apos;est bas, mieux c&apos;est.
+                  </div>
+                )}
+                <div className="flex items-center justify-center gap-2 flex-1">
+                  <p className={`text-2xl font-bold ${metrics.fair_model.delta_tpr_alert ? 'text-red-500' : 'text-emerald-500'}`}>
+                    {metrics.fair_model.delta_tpr.toFixed(1)}
+                  </p>
+                  {metrics.fair_model.delta_tpr_alert ? (
+                    <Badge className="bg-red-50 text-red-600 border border-red-100 hover:bg-red-50 text-[9px] px-1.5 gap-0.5">
+                      <AlertTriangle className="w-2.5 h-2.5" />
+                      Alerte
+                    </Badge>
+                  ) : (
+                    <Badge className="bg-emerald-50 text-emerald-600 border border-emerald-100 hover:bg-emerald-50 text-[9px] px-1.5 gap-0.5">
+                      <CheckCircle2 className="w-2.5 h-2.5" />
+                      OK
+                    </Badge>
+                  )}
+                </div>
+                {/* Mini progress ring */}
+                <div className="flex justify-center mt-2">
+                  <svg viewBox="0 0 36 36" className="w-8 h-8 -rotate-90">
+                    <circle cx="18" cy="18" r="14" fill="none" stroke="#e2e8f0" strokeWidth="3" />
+                    <circle
+                      cx="18" cy="18" r="14" fill="none"
+                      stroke={metrics.fair_model.delta_tpr_alert ? '#ef4444' : '#10b981'}
+                      strokeWidth="3" strokeLinecap="round"
+                      strokeDasharray={88}
+                      strokeDashoffset={88 - (88 * Math.max(0, 100 - metrics.fair_model.delta_tpr * 5)) / 100}
+                      className="animate-ring-fill"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            {/* Version info bar */}
+            <div className="flex items-center gap-3 px-4 py-3 bg-white dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700/50 shadow-sm">
+              <Badge className="bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 border border-emerald-100 dark:border-emerald-800/30 hover:bg-emerald-50">{metrics.version}</Badge>
+              <div className="h-4 w-px bg-slate-200 dark:bg-slate-700" />
+              <span className="text-sm text-slate-600 dark:text-slate-300">Contrainte : <strong className="text-slate-800 dark:text-slate-100">{metrics.fairness_constraint === 'equalized_odds' ? 'Égalité des chances' : metrics.fairness_constraint}</strong></span>
+              <div className="ml-auto flex items-center gap-2 text-xs text-slate-400 dark:text-slate-500">
+                <BarChart3 className="w-3.5 h-3.5" />
+                <span>Dernier entraînement</span>
+              </div>
+            </div>
+
+            {/* Fair model metrics */}
+            <Card className="border-emerald-200 dark:border-emerald-800/30 shadow-sm">
+              <CardHeader className="pb-3">
+                <div className="flex items-center justify-between">
+                  <CardTitle className="text-sm font-semibold text-slate-700 dark:text-slate-200">Métriques d&apos;équité</CardTitle>
+                  <Badge className="bg-emerald-50 text-emerald-700 border border-emerald-100 hover:bg-emerald-50 gap-1">
+                    <Award className="w-3 h-3" />
+                    ThresholdOptimizer
+                  </Badge>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="grid grid-cols-3 gap-2">
+                  <FairnessGauge label="EPD" value={metrics.fair_model.epd} alert={metrics.fair_model.epd_alert} description="Écart Parité Démogr." type="epd" />
+                  <FairnessGauge label="RID" value={metrics.fair_model.rid} alert={metrics.fair_model.rid_alert} description="Ratio Impact Diff." type="rid" />
+                  <FairnessGauge label="Delta TPR" value={metrics.fair_model.delta_tpr} alert={metrics.fair_model.delta_tpr_alert} description="Égalité des Chances" type="delta_tpr" />
+                </div>
+                <GroupStatsTable groupStats={metrics.fair_model.group_stats} />
+              </CardContent>
+            </Card>
+
+          </div>
         )}
       </section>
 
@@ -1887,18 +1679,18 @@ function EntryDetailModal({ entry, onClose, onUpdateStatus }: { entry: Screening
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-overlay" onClick={onClose}>
-      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" />
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 animate-overlay-enhanced" onClick={onClose} role="dialog" aria-modal="true" aria-label={`Détail de l'analyse — ${entry.name}`}>
+      <div className="fixed inset-0 bg-black/40 backdrop-blur-md" />
       <div
-        className="relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto custom-scrollbar animate-modal-enter"
+        className="relative bg-white dark:bg-slate-800 rounded-2xl shadow-2xl max-w-2xl w-full max-h-[95vh] sm:max-h-[90vh] overflow-y-auto custom-scrollbar animate-modal-slide-in"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header with colored top bar and frosted glass */}
         <div className={`h-2 rounded-t-2xl ${isInvite ? 'bg-gradient-to-r from-emerald-400 via-emerald-500 to-teal-400' : 'bg-gradient-to-r from-red-400 via-red-500 to-rose-400'}`} />
-        <div className="sticky top-0 frosted-glass border-b border-slate-100 px-6 py-4 flex items-center justify-between z-10">
+        <div className="sticky top-0 modal-frosted-header border-b border-slate-100 dark:border-slate-700/50 px-6 py-4 flex items-center justify-between z-10">
           <div className="flex items-center gap-3">
             <div className={`w-11 h-11 rounded-xl flex items-center justify-center shadow-sm ${
-              isInvite ? 'bg-gradient-to-br from-emerald-50 to-emerald-100 ring-1 ring-emerald-200/50' : 'bg-gradient-to-br from-red-50 to-red-100 ring-1 ring-red-200/50'
+              isInvite ? 'bg-gradient-to-br from-emerald-50 to-emerald-100 dark:from-emerald-900/30 dark:to-emerald-800/20 ring-1 ring-emerald-200/50 dark:ring-emerald-700/30' : 'bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900/30 dark:to-red-800/20 ring-1 ring-red-200/50 dark:ring-red-700/30'
             }`}>
               {isInvite ? (
                 <CheckCircle2 className="w-5 h-5 text-emerald-500" />
@@ -1907,25 +1699,20 @@ function EntryDetailModal({ entry, onClose, onUpdateStatus }: { entry: Screening
               )}
             </div>
             <div>
-              <h3 className="text-lg font-bold text-slate-800">{entry.name}</h3>
-              <p className="text-sm text-slate-500">{entry.target_role}</p>
+              <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100">{entry.name}</h3>
+              <p className="text-sm text-slate-500 dark:text-slate-400">{entry.target_role}</p>
             </div>
           </div>
           <div className="flex items-center gap-2">
-            {entry.fairness_adjusted && (
-              <Badge className="bg-emerald-50 text-emerald-700 border border-emerald-100 gap-1 hover:bg-emerald-50">
-                <Shield className="w-3 h-3" />
-                Équité
-              </Badge>
-            )}
             <Badge className={`font-bold border-0 shadow-sm ${
-              isInvite ? 'bg-gradient-to-r from-emerald-100 to-emerald-50 text-emerald-700' : 'bg-gradient-to-r from-red-100 to-red-50 text-red-700'
+              isInvite ? 'bg-gradient-to-r from-emerald-100 to-emerald-50 dark:from-emerald-900/30 dark:to-emerald-800/20 text-emerald-700 dark:text-emerald-400' : 'bg-gradient-to-r from-red-100 to-red-50 dark:from-red-900/30 dark:to-red-800/20 text-red-700 dark:text-red-400'
             }`}>
               {entry.label}
             </Badge>
             <button
               onClick={onClose}
-              className="ml-1 w-8 h-8 flex items-center justify-center rounded-lg text-slate-400 hover:text-slate-600 close-btn-hover"
+              className="ml-1 w-8 h-8 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 close-btn-hover focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+              aria-label="Fermer le détail"
             >
               ✕
             </button>
@@ -1936,21 +1723,21 @@ function EntryDetailModal({ entry, onClose, onUpdateStatus }: { entry: Screening
         <div className="px-6 py-5 space-y-5">
           {/* Metadata grid */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            <div className="p-3 bg-gradient-to-br from-slate-50 to-white rounded-xl border border-slate-100">
-              <p className="text-[10px] text-slate-400 uppercase font-semibold mb-1">Confiance</p>
-              <p className="text-xl font-bold text-slate-800">{entry.confidence > 0 ? `${entry.confidence.toFixed(1)}%` : '—'}</p>
+            <div className="p-3 bg-gradient-to-br from-slate-50 to-white dark:from-slate-700/20 dark:to-slate-800/50 rounded-xl border border-slate-100 dark:border-slate-600/50">
+              <p className="text-[10px] text-slate-400 dark:text-slate-500 uppercase font-semibold mb-1">Confiance</p>
+              <p className="text-xl font-bold text-slate-800 dark:text-slate-100">{entry.confidence > 0 ? `${entry.confidence.toFixed(1)}%` : '—'}</p>
             </div>
-            <div className="p-3 bg-gradient-to-br from-slate-50 to-white rounded-xl border border-slate-100">
-              <p className="text-[10px] text-slate-400 uppercase font-semibold mb-1">Étape</p>
-              <p className="text-sm font-semibold text-slate-800">{entry.stage === 'hard_filter' ? 'Filtre élimin.' : 'Modèle ML'}</p>
+            <div className="p-3 bg-gradient-to-br from-slate-50 to-white dark:from-slate-700/20 dark:to-slate-800/50 rounded-xl border border-slate-100 dark:border-slate-600/50">
+              <p className="text-[10px] text-slate-400 dark:text-slate-500 uppercase font-semibold mb-1">Étape</p>
+              <p className="text-sm font-semibold text-slate-800 dark:text-slate-100">{entry.stage === 'hard_filter' ? 'Filtre élimin.' : 'Modèle ML'}</p>
             </div>
-            <div className="p-3 bg-gradient-to-br from-slate-50 to-white rounded-xl border border-slate-100">
-              <p className="text-[10px] text-slate-400 uppercase font-semibold mb-1">Modèle</p>
-              <p className="text-xs font-semibold text-slate-800 leading-tight">{entry.model_name}</p>
+            <div className="p-3 bg-gradient-to-br from-slate-50 to-white dark:from-slate-700/20 dark:to-slate-800/50 rounded-xl border border-slate-100 dark:border-slate-600/50">
+              <p className="text-[10px] text-slate-400 dark:text-slate-500 uppercase font-semibold mb-1">Modèle</p>
+              <p className="text-xs font-semibold text-slate-800 dark:text-slate-100 leading-tight">{entry.model_name}</p>
             </div>
-            <div className="p-3 bg-gradient-to-br from-slate-50 to-white rounded-xl border border-slate-100">
-              <p className="text-[10px] text-slate-400 uppercase font-semibold mb-1">Date</p>
-              <p className="text-sm font-semibold text-slate-800">
+            <div className="p-3 bg-gradient-to-br from-slate-50 to-white dark:from-slate-700/20 dark:to-slate-800/50 rounded-xl border border-slate-100 dark:border-slate-600/50">
+              <p className="text-[10px] text-slate-400 dark:text-slate-500 uppercase font-semibold mb-1">Date</p>
+              <p className="text-sm font-semibold text-slate-800 dark:text-slate-100">
                 {new Date(entry.timestamp).toLocaleString('fr-FR', {
                   day: '2-digit', month: '2-digit', year: 'numeric',
                   hour: '2-digit', minute: '2-digit',
@@ -1960,13 +1747,13 @@ function EntryDetailModal({ entry, onClose, onUpdateStatus }: { entry: Screening
           </div>
 
           {/* Status update */}
-          <div className="p-4 bg-white border border-slate-200 rounded-xl shadow-sm">
+          <div className="p-4 bg-white dark:bg-slate-700/30 border border-slate-200 dark:border-slate-600/50 rounded-xl shadow-sm">
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-2">
-                <Tag className="w-4 h-4 text-emerald-500" />
-                <h4 className="text-sm font-semibold text-slate-700">Statut du candidat</h4>
+                <Tag className="w-4 h-4 text-emerald-500 dark:text-emerald-400" />
+                <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-200">Statut du candidat</h4>
               </div>
-              <Badge className={`text-[10px] border ${entry.status ? STATUS_CONFIG[entry.status]?.cssClass : 'bg-slate-50 text-slate-500 border-slate-100'}`}>
+              <Badge className={`text-[10px] border ${entry.status ? STATUS_CONFIG[entry.status]?.cssClass : 'bg-slate-50 dark:bg-slate-700 text-slate-500 dark:text-slate-400 border-slate-100 dark:border-slate-600'}`}>
                 {entry.status ? STATUS_CONFIG[entry.status]?.label : 'Non défini'}
               </Badge>
             </div>
@@ -1980,7 +1767,7 @@ function EntryDetailModal({ entry, onClose, onUpdateStatus }: { entry: Screening
                     className={`px-3 py-1.5 text-xs rounded-lg border transition-all ${
                       entry.status === s
                         ? `${cfg.cssClass} border-current font-semibold`
-                        : 'bg-white text-slate-500 border-slate-200 hover:border-emerald-300 hover:text-emerald-600'
+                        : 'bg-white dark:bg-slate-700 text-slate-500 dark:text-slate-400 border-slate-200 dark:border-slate-600 hover:border-emerald-300 dark:hover:border-emerald-600 hover:text-emerald-600 dark:hover:text-emerald-400'
                     }`}
                   >
                     <span className={`w-1.5 h-1.5 rounded-full ${cfg.dotColor} inline-block mr-1.5`} />
@@ -2006,9 +1793,9 @@ function EntryDetailModal({ entry, onClose, onUpdateStatus }: { entry: Screening
 
           {/* Top driver */}
           {entry.top_driver && entry.top_driver !== 'N/A' && (
-            <div className="p-4 bg-slate-50/80 border border-slate-100 rounded-xl">
-              <p className="text-[10px] text-slate-400 uppercase font-semibold mb-1">Facteur principal</p>
-              <p className="text-sm font-semibold text-slate-700">{entry.top_driver}</p>
+            <div className="p-4 bg-slate-50/80 dark:bg-slate-700/30 border border-slate-100 dark:border-slate-600/50 rounded-xl">
+              <p className="text-[10px] text-slate-400 dark:text-slate-500 uppercase font-semibold mb-1">Facteur principal</p>
+              <p className="text-sm font-semibold text-slate-700 dark:text-slate-200">{entry.top_driver}</p>
             </div>
           )}
 
@@ -2016,7 +1803,7 @@ function EntryDetailModal({ entry, onClose, onUpdateStatus }: { entry: Screening
           {entry.stage === 'ml_model' && (
             <>
               {/* Sidebar navigation within modal */}
-              <div className="flex bg-slate-100 rounded-lg p-1 gap-1">
+              <div className="tab-nav-enhanced flex bg-slate-100 dark:bg-slate-700/50 rounded-lg p-1 gap-1">
                 {([
                   { key: 'shap' as const, label: 'SHAP', icon: <Eye className="w-3.5 h-3.5" /> },
                   { key: 'features' as const, label: 'Features', icon: <BarChart3 className="w-3.5 h-3.5" /> },
@@ -2025,10 +1812,10 @@ function EntryDetailModal({ entry, onClose, onUpdateStatus }: { entry: Screening
                   <button
                     key={tab.key}
                     onClick={() => setActiveTab(tab.key)}
-                    className={`flex-1 flex items-center justify-center gap-1.5 px-3 py-2 text-xs font-medium rounded-md transition-all ${
+                    className={`flex-1 flex items-center justify-center gap-1.5 px-3 py-2.5 text-xs font-medium rounded-md transition-all ${
                       activeTab === tab.key
-                        ? 'bg-white text-slate-700 shadow-sm'
-                        : 'text-slate-500 hover:text-slate-700'
+                        ? 'bg-white dark:bg-slate-600 text-slate-700 dark:text-slate-200 shadow-sm'
+                        : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-white/50 dark:hover:bg-slate-600/50'
                     }`}
                   >
                     {tab.icon}
@@ -2039,13 +1826,13 @@ function EntryDetailModal({ entry, onClose, onUpdateStatus }: { entry: Screening
 
               {/* Tab content */}
               {activeTab === 'shap' && (
-                <div className="p-4 bg-white border border-slate-200 rounded-xl shadow-sm animate-card-enter">
+                <div className="p-4 bg-white dark:bg-slate-700/30 border border-slate-200 dark:border-slate-600/50 rounded-xl shadow-sm animate-card-enter">
                   <div className="flex items-center gap-2 mb-4">
-                    <div className="w-6 h-6 rounded-lg bg-emerald-50 flex items-center justify-center">
-                      <Eye className="w-3.5 h-3.5 text-emerald-500" />
+                    <div className="w-6 h-6 rounded-lg bg-emerald-50 dark:bg-emerald-900/30 flex items-center justify-center">
+                      <Eye className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400" />
                     </div>
-                    <h4 className="text-sm font-semibold text-slate-700">Analyse SHAP complète</h4>
-                    <Badge variant="outline" className="text-[10px] px-1.5 py-0 text-slate-400 border-slate-200 ml-auto">Simulé</Badge>
+                    <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-200">Analyse SHAP complète</h4>
+                    <Badge variant="outline" className="text-[10px] px-1.5 py-0 text-slate-400 dark:text-slate-500 border-slate-200 dark:border-slate-600 ml-auto">Simulé</Badge>
                   </div>
                   <ShapWaterfall
                     shapValues={simulatedPrediction.explanation.shap_values}
@@ -2056,39 +1843,39 @@ function EntryDetailModal({ entry, onClose, onUpdateStatus }: { entry: Screening
               )}
 
               {activeTab === 'features' && (
-                <div className="p-4 bg-white border border-slate-200 rounded-xl shadow-sm animate-card-enter">
+                <div className="p-4 bg-white dark:bg-slate-700/30 border border-slate-200 dark:border-slate-600/50 rounded-xl shadow-sm animate-card-enter">
                   <div className="flex items-center gap-2 mb-4">
-                    <div className="w-6 h-6 rounded-lg bg-emerald-50 flex items-center justify-center">
-                      <BarChart3 className="w-3.5 h-3.5 text-emerald-500" />
+                    <div className="w-6 h-6 rounded-lg bg-emerald-50 dark:bg-emerald-900/30 flex items-center justify-center">
+                      <BarChart3 className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400" />
                     </div>
-                    <h4 className="text-sm font-semibold text-slate-700">Features extraites</h4>
-                    <Badge variant="outline" className="text-[10px] px-1.5 py-0 text-slate-400 border-slate-200 ml-auto">Simulé</Badge>
+                    <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-200">Features extraites</h4>
+                    <Badge variant="outline" className="text-[10px] px-1.5 py-0 text-slate-400 dark:text-slate-500 border-slate-200 dark:border-slate-600 ml-auto">Simulé</Badge>
                   </div>
                   <FeatureTable features={simulatedPrediction.features} />
                 </div>
               )}
 
               {activeTab === 'resume' && (
-                <div className="p-4 bg-white border border-slate-200 rounded-xl shadow-sm animate-card-enter space-y-3">
+                <div className="p-4 bg-white dark:bg-slate-700/30 border border-slate-200 dark:border-slate-600/50 rounded-xl shadow-sm animate-card-enter space-y-3">
                   <div className="flex items-center gap-2 mb-2">
-                    <div className="w-6 h-6 rounded-lg bg-emerald-50 flex items-center justify-center">
-                      <FileText className="w-3.5 h-3.5 text-emerald-500" />
+                    <div className="w-6 h-6 rounded-lg bg-emerald-50 dark:bg-emerald-900/30 flex items-center justify-center">
+                      <FileText className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400" />
                     </div>
-                    <h4 className="text-sm font-semibold text-slate-700">Résumé de la décision</h4>
+                    <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-200">Résumé de la décision</h4>
                   </div>
-                  <div className="p-3 bg-gradient-to-br from-emerald-50/50 to-emerald-50/20 border border-emerald-100 rounded-xl">
-                    <p className="text-sm text-slate-700 leading-relaxed">
+                  <div className="p-3 bg-gradient-to-br from-emerald-50/50 to-emerald-50/20 dark:from-emerald-900/20 dark:to-emerald-800/10 border border-emerald-100 dark:border-emerald-800/30 rounded-xl">
+                    <p className="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
                       {simulatedPrediction.explanation.decision_drivers}
                     </p>
                   </div>
                   <div className="grid grid-cols-2 gap-3">
-                    <div className="p-3 bg-slate-50 rounded-xl border border-slate-100">
-                      <p className="text-[10px] text-slate-400 uppercase font-semibold mb-1">Probabilité Invite</p>
-                      <p className="text-lg font-bold text-emerald-600">{simulatedPrediction.probabilities.Invite.toFixed(1)}%</p>
+                    <div className="p-3 bg-slate-50 dark:bg-slate-700/30 rounded-xl border border-slate-100 dark:border-slate-600/50">
+                      <p className="text-[10px] text-slate-400 dark:text-slate-500 uppercase font-semibold mb-1">Probabilité Invite</p>
+                      <p className="text-lg font-bold text-emerald-600 dark:text-emerald-400">{simulatedPrediction.probabilities.Invite.toFixed(1)}%</p>
                     </div>
-                    <div className="p-3 bg-slate-50 rounded-xl border border-slate-100">
-                      <p className="text-[10px] text-slate-400 uppercase font-semibold mb-1">Probabilité Reject</p>
-                      <p className="text-lg font-bold text-red-600">{simulatedPrediction.probabilities.Reject.toFixed(1)}%</p>
+                    <div className="p-3 bg-slate-50 dark:bg-slate-700/30 rounded-xl border border-slate-100 dark:border-slate-600/50">
+                      <p className="text-[10px] text-slate-400 dark:text-slate-500 uppercase font-semibold mb-1">Probabilité Reject</p>
+                      <p className="text-lg font-bold text-red-600 dark:text-red-400">{simulatedPrediction.probabilities.Reject.toFixed(1)}%</p>
                     </div>
                   </div>
                 </div>
@@ -2098,9 +1885,9 @@ function EntryDetailModal({ entry, onClose, onUpdateStatus }: { entry: Screening
 
           {/* Decision drivers text (shown when not ml_model or as fallback) */}
           {entry.stage === 'ml_model' && activeTab !== 'resume' && simulatedPrediction.explanation && (
-            <div className="p-4 bg-gradient-to-br from-emerald-50/50 to-emerald-50/20 border border-emerald-100 rounded-xl">
-              <p className="text-xs text-slate-500 uppercase font-semibold mb-2">Explication de la décision</p>
-              <p className="text-sm text-slate-700 leading-relaxed">
+            <div className="p-4 bg-gradient-to-br from-emerald-50/50 to-emerald-50/20 dark:from-emerald-900/20 dark:to-emerald-800/10 border border-emerald-100 dark:border-emerald-800/30 rounded-xl">
+              <p className="text-xs text-slate-500 dark:text-slate-400 uppercase font-semibold mb-2">Explication de la décision</p>
+              <p className="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
                 {simulatedPrediction.explanation.decision_drivers}
               </p>
             </div>
@@ -2108,7 +1895,7 @@ function EntryDetailModal({ entry, onClose, onUpdateStatus }: { entry: Screening
         </div>
 
         {/* Modal footer */}
-        <div className="sticky bottom-0 bg-white/95 backdrop-blur-sm border-t border-slate-100 px-6 py-3 flex items-center justify-between">
+        <div className="sticky bottom-0 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm border-t border-slate-100 dark:border-slate-700/50 px-6 py-3 flex items-center justify-between">
           <div className="flex items-center gap-2 text-xs text-slate-400">
             <FileText className="w-3.5 h-3.5" />
             <span>{entry.filename}</span>
@@ -2152,27 +1939,28 @@ function ComparisonModal({ entryA, entryB, onClose }: { entryA: ScreeningLogEntr
   const verdict = aWins > bWins ? entryA.name : bWins > aWins ? entryB.name : 'Égalité';
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-overlay" onClick={onClose}>
-      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" />
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 animate-overlay-enhanced" onClick={onClose} role="dialog" aria-modal="true" aria-label="Comparaison des candidats">
+      <div className="fixed inset-0 bg-black/40 backdrop-blur-md" />
       <div
-        className="relative bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto custom-scrollbar animate-modal-enter"
+        className="relative bg-white dark:bg-slate-800 rounded-2xl shadow-2xl max-w-4xl w-full max-h-[95vh] sm:max-h-[90vh] overflow-y-auto custom-scrollbar animate-modal-slide-in"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
         <div className="h-2 rounded-t-2xl bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-400" />
-        <div className="sticky top-0 frosted-glass border-b border-slate-100 px-6 py-4 flex items-center justify-between z-10">
+        <div className="sticky top-0 modal-frosted-header border-b border-slate-100 dark:border-slate-700/50 px-6 py-4 flex items-center justify-between z-10">
           <div className="flex items-center gap-3">
-            <div className="w-11 h-11 rounded-xl flex items-center justify-center shadow-sm bg-gradient-to-br from-emerald-50 to-emerald-100 ring-1 ring-emerald-200/50">
-              <GitCompareArrows className="w-5 h-5 text-emerald-500" />
+            <div className="w-11 h-11 rounded-xl flex items-center justify-center shadow-sm bg-gradient-to-br from-emerald-50 to-emerald-100 dark:from-emerald-900/30 dark:to-emerald-800/20 ring-1 ring-emerald-200/50 dark:ring-emerald-700/30">
+              <GitCompareArrows className="w-5 h-5 text-emerald-500 dark:text-emerald-400" />
             </div>
             <div>
-              <h3 className="text-lg font-bold text-slate-800">Comparaison des candidats</h3>
-              <p className="text-sm text-slate-500">Analyse comparative des profils</p>
+              <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100">Comparaison des candidats</h3>
+              <p className="text-sm text-slate-500 dark:text-slate-400">Analyse comparative des profils</p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="w-8 h-8 flex items-center justify-center rounded-lg text-slate-400 hover:text-slate-600 close-btn-hover"
+            className="w-8 h-8 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 close-btn-hover focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+            aria-label="Fermer la comparaison"
           >
             ✕
           </button>
@@ -2181,47 +1969,47 @@ function ComparisonModal({ entryA, entryB, onClose }: { entryA: ScreeningLogEntr
         {/* Body - side by side */}
         <div className="px-6 py-5">
           {/* Names and decisions side by side with VS badge */}
-          <div className="grid grid-cols-[1fr_auto_1fr] gap-3 mb-5 items-center">
+          <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] gap-3 sm:gap-3 mb-5 items-center">
             {/* Candidate A */}
-            <div className={`p-4 rounded-xl border-2 ${entryA.label === 'Invite' ? 'border-emerald-200 bg-emerald-50/30' : 'border-red-200 bg-red-50/30'}`}>
+            <div className={`p-4 rounded-xl border-2 ${entryA.label === 'Invite' ? 'border-emerald-200 dark:border-emerald-800/40 bg-emerald-50/30 dark:bg-emerald-900/10' : 'border-red-200 dark:border-red-800/40 bg-red-50/30 dark:bg-red-900/10'}`}>
               <div className="flex items-center gap-3 mb-3">
                 <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
-                  entryA.label === 'Invite' ? 'bg-emerald-100' : 'bg-red-100'
+                  entryA.label === 'Invite' ? 'bg-emerald-100 dark:bg-emerald-900/30' : 'bg-red-100 dark:bg-red-900/30'
                 }`}>
                   {entryA.label === 'Invite' ? (
-                    <CheckCircle2 className="w-5 h-5 text-emerald-600" />
+                    <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
                   ) : (
-                    <XCircle className="w-5 h-5 text-red-600" />
+                    <XCircle className="w-5 h-5 text-red-600 dark:text-red-400" />
                   )}
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-800">{entryA.name}</h4>
-                  <p className="text-xs text-slate-500">{entryA.target_role}</p>
+                  <h4 className="font-bold text-slate-800 dark:text-slate-100">{entryA.name}</h4>
+                  <p className="text-xs text-slate-500 dark:text-slate-400">{entryA.target_role}</p>
                 </div>
                 <Badge className={`ml-auto text-xs border-0 ${
                   entryA.label === 'Invite'
-                    ? 'bg-emerald-100 text-emerald-700'
-                    : 'bg-red-100 text-red-700'
+                    ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400'
+                    : 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400'
                 }`}>
                   {entryA.label}
                 </Badge>
               </div>
               <div className="grid grid-cols-2 gap-2 text-xs">
-                <div className="p-2 bg-white/60 rounded-lg">
-                  <span className="text-slate-400">Confiance</span>
-                  <p className="font-bold text-slate-700">{entryA.confidence > 0 ? `${entryA.confidence.toFixed(1)}%` : '—'}</p>
+                <div className="p-2 bg-white/60 dark:bg-slate-700/30 rounded-lg">
+                  <span className="text-slate-400 dark:text-slate-500">Confiance</span>
+                  <p className="font-bold text-slate-700 dark:text-slate-200">{entryA.confidence > 0 ? `${entryA.confidence.toFixed(1)}%` : '—'}</p>
                 </div>
-                <div className="p-2 bg-white/60 rounded-lg">
-                  <span className="text-slate-400">Étape</span>
-                  <p className="font-bold text-slate-700">{entryA.stage === 'hard_filter' ? 'Filtre élimin.' : 'Modèle ML'}</p>
+                <div className="p-2 bg-white/60 dark:bg-slate-700/30 rounded-lg">
+                  <span className="text-slate-400 dark:text-slate-500">Étape</span>
+                  <p className="font-bold text-slate-700 dark:text-slate-200">{entryA.stage === 'hard_filter' ? 'Filtre élimin.' : 'Modèle ML'}</p>
                 </div>
-                <div className="p-2 bg-white/60 rounded-lg">
-                  <span className="text-slate-400">Équité</span>
-                  <p className="font-bold text-slate-700">{entryA.fairness_adjusted ? 'Oui' : 'Non'}</p>
+                <div className="p-2 bg-white/60 dark:bg-slate-700/30 rounded-lg">
+                  <span className="text-slate-400 dark:text-slate-500">Équité</span>
+                  <p className="font-bold text-slate-700 dark:text-slate-200">{entryA.fairness_adjusted ? 'Oui' : 'Non'}</p>
                 </div>
-                <div className="p-2 bg-white/60 rounded-lg">
-                  <span className="text-slate-400">Facteur</span>
-                  <p className="font-bold text-slate-700 truncate">{entryA.top_driver !== 'N/A' ? entryA.top_driver : '—'}</p>
+                <div className="p-2 bg-white/60 dark:bg-slate-700/30 rounded-lg">
+                  <span className="text-slate-400 dark:text-slate-500">Facteur</span>
+                  <p className="font-bold text-slate-700 dark:text-slate-200 truncate">{entryA.top_driver !== 'N/A' ? entryA.top_driver : '—'}</p>
                 </div>
               </div>
             </div>
@@ -2234,54 +2022,54 @@ function ComparisonModal({ entryA, entryB, onClose }: { entryA: ScreeningLogEntr
             </div>
 
             {/* Candidate B */}
-            <div className={`p-4 rounded-xl border-2 ${entryB.label === 'Invite' ? 'border-emerald-200 bg-emerald-50/30' : 'border-red-200 bg-red-50/30'}`}>
+            <div className={`p-4 rounded-xl border-2 ${entryB.label === 'Invite' ? 'border-emerald-200 dark:border-emerald-800/40 bg-emerald-50/30 dark:bg-emerald-900/10' : 'border-red-200 dark:border-red-800/40 bg-red-50/30 dark:bg-red-900/10'}`}>
               <div className="flex items-center gap-3 mb-3">
                 <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
-                  entryB.label === 'Invite' ? 'bg-emerald-100' : 'bg-red-100'
+                  entryB.label === 'Invite' ? 'bg-emerald-100 dark:bg-emerald-900/30' : 'bg-red-100 dark:bg-red-900/30'
                 }`}>
                   {entryB.label === 'Invite' ? (
-                    <CheckCircle2 className="w-5 h-5 text-emerald-600" />
+                    <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
                   ) : (
-                    <XCircle className="w-5 h-5 text-red-600" />
+                    <XCircle className="w-5 h-5 text-red-600 dark:text-red-400" />
                   )}
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-800">{entryB.name}</h4>
-                  <p className="text-xs text-slate-500">{entryB.target_role}</p>
+                  <h4 className="font-bold text-slate-800 dark:text-slate-100">{entryB.name}</h4>
+                  <p className="text-xs text-slate-500 dark:text-slate-400">{entryB.target_role}</p>
                 </div>
                 <Badge className={`ml-auto text-xs border-0 ${
                   entryB.label === 'Invite'
-                    ? 'bg-emerald-100 text-emerald-700'
-                    : 'bg-red-100 text-red-700'
+                    ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400'
+                    : 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400'
                 }`}>
                   {entryB.label}
                 </Badge>
               </div>
               <div className="grid grid-cols-2 gap-2 text-xs">
-                <div className="p-2 bg-white/60 rounded-lg">
-                  <span className="text-slate-400">Confiance</span>
-                  <p className="font-bold text-slate-700">{entryB.confidence > 0 ? `${entryB.confidence.toFixed(1)}%` : '—'}</p>
+                <div className="p-2 bg-white/60 dark:bg-slate-700/30 rounded-lg">
+                  <span className="text-slate-400 dark:text-slate-500">Confiance</span>
+                  <p className="font-bold text-slate-700 dark:text-slate-200">{entryB.confidence > 0 ? `${entryB.confidence.toFixed(1)}%` : '—'}</p>
                 </div>
-                <div className="p-2 bg-white/60 rounded-lg">
-                  <span className="text-slate-400">Étape</span>
-                  <p className="font-bold text-slate-700">{entryB.stage === 'hard_filter' ? 'Filtre élimin.' : 'Modèle ML'}</p>
+                <div className="p-2 bg-white/60 dark:bg-slate-700/30 rounded-lg">
+                  <span className="text-slate-400 dark:text-slate-500">Étape</span>
+                  <p className="font-bold text-slate-700 dark:text-slate-200">{entryB.stage === 'hard_filter' ? 'Filtre élimin.' : 'Modèle ML'}</p>
                 </div>
-                <div className="p-2 bg-white/60 rounded-lg">
-                  <span className="text-slate-400">Équité</span>
-                  <p className="font-bold text-slate-700">{entryB.fairness_adjusted ? 'Oui' : 'Non'}</p>
+                <div className="p-2 bg-white/60 dark:bg-slate-700/30 rounded-lg">
+                  <span className="text-slate-400 dark:text-slate-500">Équité</span>
+                  <p className="font-bold text-slate-700 dark:text-slate-200">{entryB.fairness_adjusted ? 'Oui' : 'Non'}</p>
                 </div>
-                <div className="p-2 bg-white/60 rounded-lg">
-                  <span className="text-slate-400">Facteur</span>
-                  <p className="font-bold text-slate-700 truncate">{entryB.top_driver !== 'N/A' ? entryB.top_driver : '—'}</p>
+                <div className="p-2 bg-white/60 dark:bg-slate-700/30 rounded-lg">
+                  <span className="text-slate-400 dark:text-slate-500">Facteur</span>
+                  <p className="font-bold text-slate-700 dark:text-slate-200 truncate">{entryB.top_driver !== 'N/A' ? entryB.top_driver : '—'}</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Metric comparison with colored highlights */}
-          <div className="p-4 bg-white border border-slate-200 rounded-xl shadow-sm mb-4">
-            <h4 className="text-sm font-semibold text-slate-700 mb-3 flex items-center gap-2">
-              <Target className="w-4 h-4 text-emerald-500" />
+          <div className="p-4 bg-white dark:bg-slate-700/30 border border-slate-200 dark:border-slate-600/50 rounded-xl shadow-sm mb-4">
+            <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3 flex items-center gap-2">
+              <Target className="w-4 h-4 text-emerald-500 dark:text-emerald-400" />
               Comparaison des métriques
             </h4>
             <div className="space-y-2">
@@ -2289,15 +2077,15 @@ function ComparisonModal({ entryA, entryB, onClose }: { entryA: ScreeningLogEntr
                 const aBetter = comp.higher ? comp.a > comp.b : comp.a < comp.b;
                 const bBetter = comp.higher ? comp.b > comp.a : comp.b < comp.a;
                 return (
-                  <div key={comp.label} className="grid grid-cols-[1fr_auto_1fr] gap-2 items-center">
-                    <div className={`p-2 rounded-lg text-xs text-right transition-colors ${aBetter ? 'bg-emerald-50 ring-1 ring-emerald-200' : 'bg-slate-50'}`}>
-                      <span className={aBetter ? 'font-bold text-emerald-700' : 'text-slate-600'}>
+                  <div key={comp.label} className="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] gap-2 items-center">
+                    <div className={`p-2 rounded-lg text-xs text-right transition-colors ${aBetter ? 'bg-emerald-50 dark:bg-emerald-900/20 ring-1 ring-emerald-200 dark:ring-emerald-700/50' : 'bg-slate-50 dark:bg-slate-700/20'}`}>
+                      <span className={aBetter ? 'font-bold text-emerald-700 dark:text-emerald-400' : 'text-slate-600 dark:text-slate-300'}>
                         {comp.binary ? (comp.a ? '✓ Oui' : '✗ Non') : `${comp.a.toFixed(1)}${comp.unit}`}
                       </span>
                     </div>
-                    <span className="text-[10px] text-slate-400 font-medium w-24 text-center">{comp.label}</span>
-                    <div className={`p-2 rounded-lg text-xs text-left transition-colors ${bBetter ? 'bg-emerald-50 ring-1 ring-emerald-200' : 'bg-slate-50'}`}>
-                      <span className={bBetter ? 'font-bold text-emerald-700' : 'text-slate-600'}>
+                    <span className="text-[10px] text-slate-400 dark:text-slate-500 font-medium w-24 text-center">{comp.label}</span>
+                    <div className={`p-2 rounded-lg text-xs text-left transition-colors ${bBetter ? 'bg-emerald-50 dark:bg-emerald-900/20 ring-1 ring-emerald-200 dark:ring-emerald-700/50' : 'bg-slate-50 dark:bg-slate-700/20'}`}>
+                      <span className={bBetter ? 'font-bold text-emerald-700 dark:text-emerald-400' : 'text-slate-600 dark:text-slate-300'}>
                         {comp.binary ? (comp.b ? '✓ Oui' : '✗ Non') : `${comp.b.toFixed(1)}${comp.unit}`}
                       </span>
                     </div>
@@ -2308,12 +2096,12 @@ function ComparisonModal({ entryA, entryB, onClose }: { entryA: ScreeningLogEntr
           </div>
 
           {/* Summary verdict */}
-          <div className="p-4 bg-gradient-to-r from-emerald-50/80 to-emerald-50/40 border border-emerald-100 rounded-xl">
+          <div className="p-4 bg-gradient-to-r from-emerald-50/80 to-emerald-50/40 dark:from-emerald-900/20 dark:to-emerald-800/10 border border-emerald-100 dark:border-emerald-800/30 rounded-xl">
             <div className="flex items-center gap-2 mb-1">
-              <Award className="w-4 h-4 text-emerald-600" />
-              <span className="text-sm font-semibold text-emerald-700">Verdict</span>
+              <Award className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <span className="text-sm font-semibold text-emerald-700 dark:text-emerald-400">Verdict</span>
             </div>
-            <p className="text-sm text-emerald-700">
+            <p className="text-sm text-emerald-700 dark:text-emerald-300">
               {verdict === 'Égalité'
                 ? 'Les deux candidats présentent des profils équivalents selon les métriques comparées.'
                 : `${verdict} présente un profil légèrement avantageux selon les métriques comparées.`
@@ -2323,12 +2111,12 @@ function ComparisonModal({ entryA, entryB, onClose }: { entryA: ScreeningLogEntr
 
           {/* SHAP Comparison side by side */}
           {entryA.stage === 'ml_model' && entryB.stage === 'ml_model' && (
-            <div className="grid grid-cols-2 gap-4 mt-4">
-              <div className="p-4 bg-white border border-slate-200 rounded-xl shadow-sm">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+              <div className="p-4 bg-white dark:bg-slate-700/30 border border-slate-200 dark:border-slate-600/50 rounded-xl shadow-sm">
                 <div className="flex items-center gap-2 mb-3">
-                  <Eye className="w-3.5 h-3.5 text-emerald-500" />
-                  <h4 className="text-sm font-semibold text-slate-700">SHAP — {entryA.name}</h4>
-                  <Badge variant="outline" className="text-[10px] px-1.5 py-0 text-slate-400 border-slate-200 ml-auto">Simulé</Badge>
+                  <Eye className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400" />
+                  <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-200">SHAP — {entryA.name}</h4>
+                  <Badge variant="outline" className="text-[10px] px-1.5 py-0 text-slate-400 dark:text-slate-500 border-slate-200 dark:border-slate-600 ml-auto">Simulé</Badge>
                 </div>
                 <ShapWaterfall
                   shapValues={predA.explanation.shap_values}
@@ -2336,11 +2124,11 @@ function ComparisonModal({ entryA, entryB, onClose }: { entryA: ScreeningLogEntr
                   label={entryA.label}
                 />
               </div>
-              <div className="p-4 bg-white border border-slate-200 rounded-xl shadow-sm">
+              <div className="p-4 bg-white dark:bg-slate-700/30 border border-slate-200 dark:border-slate-600/50 rounded-xl shadow-sm">
                 <div className="flex items-center gap-2 mb-3">
-                  <Eye className="w-3.5 h-3.5 text-emerald-500" />
-                  <h4 className="text-sm font-semibold text-slate-700">SHAP — {entryB.name}</h4>
-                  <Badge variant="outline" className="text-[10px] px-1.5 py-0 text-slate-400 border-slate-200 ml-auto">Simulé</Badge>
+                  <Eye className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400" />
+                  <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-200">SHAP — {entryB.name}</h4>
+                  <Badge variant="outline" className="text-[10px] px-1.5 py-0 text-slate-400 dark:text-slate-500 border-slate-200 dark:border-slate-600 ml-auto">Simulé</Badge>
                 </div>
                 <ShapWaterfall
                   shapValues={predB.explanation.shap_values}
@@ -2353,20 +2141,20 @@ function ComparisonModal({ entryA, entryB, onClose }: { entryA: ScreeningLogEntr
 
           {/* Features comparison side by side */}
           {entryA.stage === 'ml_model' && entryB.stage === 'ml_model' && (
-            <div className="grid grid-cols-2 gap-4 mt-4">
-              <div className="p-4 bg-white border border-slate-200 rounded-xl shadow-sm">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+              <div className="p-4 bg-white dark:bg-slate-700/30 border border-slate-200 dark:border-slate-600/50 rounded-xl shadow-sm">
                 <div className="flex items-center gap-2 mb-3">
-                  <BarChart3 className="w-3.5 h-3.5 text-emerald-500" />
-                  <h4 className="text-sm font-semibold text-slate-700">Features — {entryA.name}</h4>
-                  <Badge variant="outline" className="text-[10px] px-1.5 py-0 text-slate-400 border-slate-200 ml-auto">Simulé</Badge>
+                  <BarChart3 className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400" />
+                  <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-200">Features — {entryA.name}</h4>
+                  <Badge variant="outline" className="text-[10px] px-1.5 py-0 text-slate-400 dark:text-slate-500 border-slate-200 dark:border-slate-600 ml-auto">Simulé</Badge>
                 </div>
                 <FeatureTable features={predA.features} />
               </div>
-              <div className="p-4 bg-white border border-slate-200 rounded-xl shadow-sm">
+              <div className="p-4 bg-white dark:bg-slate-700/30 border border-slate-200 dark:border-slate-600/50 rounded-xl shadow-sm">
                 <div className="flex items-center gap-2 mb-3">
-                  <BarChart3 className="w-3.5 h-3.5 text-emerald-500" />
-                  <h4 className="text-sm font-semibold text-slate-700">Features — {entryB.name}</h4>
-                  <Badge variant="outline" className="text-[10px] px-1.5 py-0 text-slate-400 border-slate-200 ml-auto">Simulé</Badge>
+                  <BarChart3 className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400" />
+                  <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-200">Features — {entryB.name}</h4>
+                  <Badge variant="outline" className="text-[10px] px-1.5 py-0 text-slate-400 dark:text-slate-500 border-slate-200 dark:border-slate-600 ml-auto">Simulé</Badge>
                 </div>
                 <FeatureTable features={predB.features} />
               </div>
@@ -2375,7 +2163,7 @@ function ComparisonModal({ entryA, entryB, onClose }: { entryA: ScreeningLogEntr
         </div>
 
         {/* Footer */}
-        <div className="sticky bottom-0 bg-white/95 backdrop-blur-sm border-t border-slate-100 px-6 py-3 flex items-center justify-end gap-2">
+        <div className="sticky bottom-0 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm border-t border-slate-100 dark:border-slate-700/50 px-6 py-3 flex items-center justify-end gap-2">
           <Button variant="outline" size="sm" onClick={onClose} className="text-slate-600">
             Fermer
           </Button>

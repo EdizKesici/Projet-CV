@@ -22,11 +22,11 @@ export function FairnessGauge({ label, value, alert, description, type }: Fairne
   }
 
   const getColor = () => {
-    if (alert) return 'text-red-500';
+    if (alert) return 'text-red-500 dark:text-red-400';
     if (type === 'rid') {
-      return value >= 0.8 ? 'text-emerald-500' : value >= 0.6 ? 'text-amber-500' : 'text-red-500';
+      return value >= 0.8 ? 'text-emerald-500 dark:text-emerald-400' : value >= 0.6 ? 'text-amber-500 dark:text-amber-400' : 'text-red-500 dark:text-red-400';
     }
-    return value <= 5 ? 'text-emerald-500' : value <= 10 ? 'text-amber-500' : 'text-red-500';
+    return value <= 5 ? 'text-emerald-500 dark:text-emerald-400' : value <= 10 ? 'text-amber-500 dark:text-amber-400' : 'text-red-500 dark:text-red-400';
   };
 
   const getArcGradientId = () => {
@@ -72,12 +72,12 @@ export function FairnessGauge({ label, value, alert, description, type }: Fairne
   }
 
   return (
-    <div className={`flex flex-col items-center p-3 rounded-xl border transition-all duration-200 ${
+    <div className={`fairness-metric-card flex flex-col items-center p-4 rounded-xl border transition-all duration-200 ${
       alert
-        ? 'bg-red-50/30 border-red-100'
-        : 'bg-white border-slate-100 hover:shadow-sm'
+        ? 'bg-red-50/30 dark:bg-red-900/10 border-red-100 dark:border-red-800/30'
+        : 'bg-white dark:bg-slate-800/50 border-slate-100 dark:border-slate-700/50 hover:shadow-sm'
     }`}>
-      <div className="relative w-24 h-14 mb-1">
+      <div className="relative w-28 h-16 mb-1">
         <svg viewBox="0 0 100 55" className="w-full h-full">
           <defs>
             <linearGradient id="gauge-gradient-emerald" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -112,6 +112,7 @@ export function FairnessGauge({ label, value, alert, description, type }: Fairne
               cy={tick.cy}
               r={tick.isMajor ? 1.2 : 0.7}
               fill={tick.isMajor ? '#94a3b8' : '#cbd5e1'}
+              className="dark:fill-slate-500"
             />
           ))}
 
@@ -120,6 +121,7 @@ export function FairnessGauge({ label, value, alert, description, type }: Fairne
             d="M 10 50 A 40 40 0 0 1 90 50"
             fill="none"
             stroke="#e2e8f0"
+            className="dark:stroke-slate-600"
             strokeWidth="8"
             strokeLinecap="round"
           />
@@ -140,16 +142,16 @@ export function FairnessGauge({ label, value, alert, description, type }: Fairne
           <span className={`text-lg font-bold ${getColor()}`}>{formatValue()}</span>
         </div>
       </div>
-      <h4 className="text-xs font-semibold text-slate-700 text-center">{label}</h4>
-      <p className="text-[10px] text-slate-500 text-center mt-0.5">{description}</p>
+      <h4 className="text-xs font-semibold text-slate-700 dark:text-slate-200 text-center">{label}</h4>
+      <p className="text-[10px] text-slate-500 dark:text-slate-400 text-center mt-0.5">{description}</p>
       {alert && (
-        <div className="mt-1.5 px-2 py-0.5 bg-red-50 border border-red-200 rounded-full">
-          <span className="text-[10px] font-semibold text-red-600">⚠ Alerte</span>
+        <div className="mt-1.5 px-2 py-0.5 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800/30 rounded-full">
+          <span className="text-[10px] font-semibold text-red-600 dark:text-red-400">⚠ Alerte</span>
         </div>
       )}
       {!alert && (
-        <div className="mt-1.5 px-2 py-0.5 bg-emerald-50/50 border border-emerald-100 rounded-full">
-          <span className="text-[10px] font-semibold text-emerald-600">✓ OK</span>
+        <div className="mt-1.5 px-2 py-0.5 bg-emerald-50/50 dark:bg-emerald-900/20 border border-emerald-100 dark:border-emerald-800/30 rounded-full">
+          <span className="text-[10px] font-semibold text-emerald-600 dark:text-emerald-400">✓ OK</span>
         </div>
       )}
     </div>

@@ -39,6 +39,9 @@ import {
   GitCompare,
   X,
   Timer,
+  ArrowRight,
+  TrendingUp,
+  TrendingDown,
 } from 'lucide-react';
 
 interface AnalysisRecord {
@@ -53,35 +56,51 @@ interface AnalysisRecord {
 
 const PIPELINE_STEPS = ['Extraction', 'Prédiction', 'Équité', 'SHAP'];
 
-// Sparkline SVG component for stat cards
+// Sparkline SVG component for stat cards — enhanced with gradient fill
 function MiniSparkline({ data, color }: { data: number[]; color: string }) {
   if (data.length < 2) return null;
   const max = Math.max(...data);
   const min = Math.min(...data);
   const range = max - min || 1;
-  const w = 48;
-  const h = 20;
+  const w = 56;
+  const h = 24;
   const points = data.map((v, i) => {
     const x = (i / (data.length - 1)) * w;
-    const y = h - ((v - min) / range) * (h - 4) - 2;
+    const y = h - ((v - min) / range) * (h - 6) - 3;
     return `${x},${y}`;
   }).join(' ');
 
+  // Area fill points (closed path)
+  const areaPoints = points + ` ${w},${h} 0,${h}`;
+
   return (
-    <svg width={w} height={h} className="opacity-60">
+    <svg width={w} height={h} className="sparkline-enhanced">
+      <defs>
+        <linearGradient id={`spark-grad-${color.replace(/[^a-z0-9]/gi, '')}`} x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor={color} stopOpacity="0.25" />
+          <stop offset="100%" stopColor={color} stopOpacity="0" />
+        </linearGradient>
+      </defs>
+      <polygon
+        points={areaPoints}
+        fill={`url(#spark-grad-${color.replace(/[^a-z0-9]/gi, '')})`}
+        className="sparkline-area-fill"
+      />
       <polyline
         points={points}
         fill="none"
         stroke={color}
-        strokeWidth="1.5"
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <circle
         cx={(data.length - 1) / (data.length - 1) * w}
-        cy={h - ((data[data.length - 1] - min) / range) * (h - 4) - 2}
-        r="2.5"
+        cy={h - ((data[data.length - 1] - min) / range) * (h - 6) - 3}
+        r="3"
         fill={color}
+        stroke="white"
+        strokeWidth="1.5"
       />
     </svg>
   );
@@ -96,7 +115,7 @@ function ScoreRing({ value, isInvite }: { value: number; isInvite: boolean }) {
   const bgColor = isInvite ? 'oklch(0.92 0.05 160)' : 'oklch(0.92 0.05 25)';
 
   return (
-    <svg width="80" height="80" className="flex-shrink-0">
+    <svg width="80" height="80" className="flex-shrink-0 score-ring-glow">
       <circle
         cx="40"
         cy="40"
@@ -601,82 +620,99 @@ export function CvDrop() {
 
   return (
     <div className="space-y-6">
-      {/* Animated Welcome Banner */}
-      <div className="animate-banner-shimmer rounded-2xl px-5 py-4 flex items-center gap-3 relative overflow-hidden">
-        <div className="absolute inset-0 bg-white/40 pointer-events-none" />
+      {/* Animated Welcome Banner — Enhanced with gradient mesh */}
+      <div className="animate-banner-mount welcome-banner-mesh noise-texture rounded-2xl px-5 py-4 flex items-center gap-3 relative overflow-hidden">
+        {/* Decorative floating shapes */}
+        <div className="absolute right-8 top-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-emerald-400/10 dark:bg-emerald-500/5 animate-float-shape pointer-events-none" />
+        <div className="absolute right-24 top-1/3 w-8 h-8 rounded-full bg-emerald-300/10 dark:bg-emerald-400/5 animate-float-shape pointer-events-none" style={{ animationDelay: '2s' }} />
+        <div className="absolute left-4 bottom-1 w-6 h-6 rounded-full bg-emerald-300/8 dark:bg-emerald-400/5 animate-float-shape pointer-events-none" style={{ animationDelay: '4s' }} />
         <div className="relative flex items-center gap-3 w-full">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center shadow-md flex-shrink-0">
+          <div className="w-10 h-10 min-w-[44px] min-h-[44px] rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center shadow-md flex-shrink-0 ring-2 ring-emerald-400/20" aria-hidden="true">
             <Sparkles className="w-5 h-5 text-white" />
           </div>
           <div className="flex-1 min-w-0">
-            <h2 className="text-base font-bold text-emerald-800">Bienvenue sur l&apos;analyse CV</h2>
-            <p className="text-xs text-emerald-700/70 mt-0.5">Déposez un CV et laissez l&apos;IA vous guider dans la pré-sélection</p>
+            <h2 className="text-sm sm:text-base font-bold text-emerald-800 dark:text-emerald-200">Bienvenue sur l&apos;analyse CV</h2>
+            <p className="text-[10px] sm:text-xs text-emerald-700/70 dark:text-emerald-400/60 mt-0.5">Déposez un CV et laissez l&apos;IA vous guider dans la pré-sélection</p>
           </div>
-          <div className="hidden sm:flex items-center gap-2 text-xs text-emerald-700/60 flex-shrink-0">
-            <Timer className="w-3.5 h-3.5" />
-            <span>Session : {formatSessionTime(sessionSeconds)}</span>
+          <div className="hidden sm:flex items-center gap-2 flex-shrink-0">
+            <div className="session-timer-pill flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium text-emerald-700/80 dark:text-emerald-300/80" aria-label={`Session en cours depuis ${formatSessionTime(sessionSeconds)}`}>
+              <Timer className="w-3.5 h-3.5" aria-hidden="true" />
+              <span>Session : {formatSessionTime(sessionSeconds)}</span>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Quick Stats Cards with Sparklines */}
+      {/* Quick Stats Cards — Enhanced with gradients, trends, sparklines */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-        <div className="stat-card-enhanced bg-white rounded-xl border border-slate-200/80 p-4 shadow-sm border-l-4 border-l-emerald-400 relative overflow-hidden">
+        <div className="stat-card-enhanced-v2 stat-card-gradient-analyses rounded-xl border border-slate-200/80 dark:border-slate-700/50 p-4 shadow-sm border-l-4 border-l-emerald-400 relative overflow-hidden noise-texture">
           <div className="flex items-center gap-2 mb-2">
-            <div className="w-7 h-7 rounded-lg bg-emerald-50 flex items-center justify-center">
-              <Zap className="w-3.5 h-3.5 text-emerald-500" />
+            <div className="w-7 h-7 rounded-lg bg-emerald-50 dark:bg-emerald-900/30 flex items-center justify-center">
+              <Zap className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400" />
             </div>
-            <span className="text-xs text-slate-500 font-medium">Analyses</span>
+            <span className="text-xs text-slate-500 dark:text-slate-400 font-medium">Analyses</span>
           </div>
           <div className="flex items-end justify-between">
             <div>
-              <p className="text-2xl font-bold text-slate-800">{analysisHistory.length}</p>
-              <p className="text-[10px] text-slate-400 mt-0.5">analyses</p>
+              <div className="flex items-center gap-1.5">
+                <p className="text-2xl font-bold text-slate-800 dark:text-slate-100">{analysisHistory.length}</p>
+                {analysisHistory.length > 0 && <TrendingUp className="w-3.5 h-3.5 trend-arrow-up" />}
+              </div>
+              <p className="text-[10px] text-slate-400 dark:text-slate-500 mt-0.5">analyses</p>
             </div>
             <MiniSparkline data={inviteSparkData} color="oklch(0.65 0.18 160)" />
           </div>
         </div>
-        <div className="stat-card-enhanced bg-white rounded-xl border border-slate-200/80 p-4 shadow-sm border-l-4 border-l-emerald-400 relative overflow-hidden">
+        <div className="stat-card-enhanced-v2 stat-card-gradient-invites rounded-xl border border-slate-200/80 dark:border-slate-700/50 p-4 shadow-sm border-l-4 border-l-emerald-400 relative overflow-hidden noise-texture">
           <div className="flex items-center gap-2 mb-2">
-            <div className="w-7 h-7 rounded-lg bg-emerald-50 flex items-center justify-center">
-              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+            <div className="w-7 h-7 rounded-lg bg-emerald-50 dark:bg-emerald-900/30 flex items-center justify-center">
+              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400" />
             </div>
-            <span className="text-xs text-slate-500 font-medium">Invités</span>
+            <span className="text-xs text-slate-500 dark:text-slate-400 font-medium">Invités</span>
           </div>
           <div className="flex items-end justify-between">
             <div>
-              <p className="text-2xl font-bold text-emerald-600">{analysisHistory.filter((a) => a.result.label === 'Invite').length}</p>
-              <p className="text-[10px] text-slate-400 mt-0.5">candidats</p>
+              <div className="flex items-center gap-1.5">
+                <p className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">{analysisHistory.filter((a) => a.result.label === 'Invite').length}</p>
+                {analysisHistory.filter((a) => a.result.label === 'Invite').length > 0 && <TrendingUp className="w-3.5 h-3.5 trend-arrow-up" />}
+              </div>
+              <p className="text-[10px] text-slate-400 dark:text-slate-500 mt-0.5">candidats</p>
             </div>
             <MiniSparkline data={rejectSparkData} color="oklch(0.65 0.18 160)" />
           </div>
         </div>
-        <div className="stat-card-enhanced bg-white rounded-xl border border-slate-200/80 p-4 shadow-sm border-l-4 border-l-red-400 relative overflow-hidden">
+        <div className="stat-card-enhanced-v2 stat-card-gradient-rejects rounded-xl border border-slate-200/80 dark:border-slate-700/50 p-4 shadow-sm border-l-4 border-l-red-400 relative overflow-hidden noise-texture">
           <div className="flex items-center gap-2 mb-2">
-            <div className="w-7 h-7 rounded-lg bg-red-50 flex items-center justify-center">
-              <XCircle className="w-3.5 h-3.5 text-red-400" />
+            <div className="w-7 h-7 rounded-lg bg-red-50 dark:bg-red-900/30 flex items-center justify-center">
+              <XCircle className="w-3.5 h-3.5 text-red-400 dark:text-red-400" />
             </div>
-            <span className="text-xs text-slate-500 font-medium">Rejetés</span>
+            <span className="text-xs text-slate-500 dark:text-slate-400 font-medium">Rejetés</span>
           </div>
           <div className="flex items-end justify-between">
             <div>
-              <p className="text-2xl font-bold text-red-500">{analysisHistory.filter((a) => a.result.label === 'Reject').length}</p>
-              <p className="text-[10px] text-slate-400 mt-0.5">candidats</p>
+              <div className="flex items-center gap-1.5">
+                <p className="text-2xl font-bold text-red-500 dark:text-red-400">{analysisHistory.filter((a) => a.result.label === 'Reject').length}</p>
+                {analysisHistory.filter((a) => a.result.label === 'Reject').length > 0 && <TrendingDown className="w-3.5 h-3.5 trend-arrow-down" />}
+              </div>
+              <p className="text-[10px] text-slate-400 dark:text-slate-500 mt-0.5">candidats</p>
             </div>
             <MiniSparkline data={confSparkData} color="oklch(0.6 0.15 25)" />
           </div>
         </div>
-        <div className="stat-card-enhanced bg-white rounded-xl border border-slate-200/80 p-4 shadow-sm border-l-4 border-l-emerald-300 relative overflow-hidden">
+        <div className="stat-card-enhanced-v2 stat-card-gradient-equity rounded-xl border border-slate-200/80 dark:border-slate-700/50 p-4 shadow-sm border-l-4 border-l-emerald-300 relative overflow-hidden noise-texture">
           <div className="flex items-center gap-2 mb-2">
-            <div className="w-7 h-7 rounded-lg bg-emerald-50 flex items-center justify-center">
-              <Shield className="w-3.5 h-3.5 text-emerald-500" />
+            <div className="w-7 h-7 rounded-lg bg-emerald-50 dark:bg-emerald-900/30 flex items-center justify-center">
+              <Shield className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400" />
             </div>
-            <span className="text-xs text-slate-500 font-medium">Équité</span>
+            <span className="text-xs text-slate-500 dark:text-slate-400 font-medium">Équité</span>
           </div>
           <div className="flex items-end justify-between">
             <div>
-              <p className="text-2xl font-bold text-slate-800">{analysisHistory.length > 0 ? Math.round((analysisHistory.filter((a) => a.result.fairness_adjusted).length / analysisHistory.length) * 100) : 0}%</p>
-              <p className="text-[10px] text-slate-400 mt-0.5">ajustés</p>
+              <div className="flex items-center gap-1.5">
+                <p className="text-2xl font-bold text-slate-800 dark:text-slate-100">{analysisHistory.length > 0 ? Math.round((analysisHistory.filter((a) => a.result.fairness_adjusted).length / analysisHistory.length) * 100) : 0}%</p>
+                {analysisHistory.filter((a) => a.result.fairness_adjusted).length > 0 && <TrendingUp className="w-3.5 h-3.5 trend-arrow-up" />}
+              </div>
+              <p className="text-[10px] text-slate-400 dark:text-slate-500 mt-0.5">ajustés</p>
             </div>
             <MiniSparkline data={fairnessSparkData} color="oklch(0.55 0.12 160)" />
           </div>
@@ -709,11 +745,11 @@ export function CvDrop() {
                 <span className="text-xs text-slate-500 font-medium">{fileName}</span>
               </div>
             )}
-            {/* Animated pipeline steps */}
-            <div className="flex items-center gap-1 mt-1">
+            {/* Animated pipeline steps — wrap on mobile */}
+            <div className="flex flex-wrap items-center justify-center gap-1 mt-1" role="status" aria-label="Progression de l&#39;analyse">
               {PIPELINE_STEPS.map((step, i) => (
                 <div key={step} className="flex items-center gap-1">
-                  <div className={`px-3 py-1.5 rounded-lg text-[11px] font-medium transition-all duration-500 ${
+                  <div className={`px-2 sm:px-3 py-1.5 rounded-lg text-[10px] sm:text-[11px] font-medium transition-all duration-500 ${
                     i < pipelineStep
                       ? 'bg-emerald-100 text-emerald-700 shadow-sm'
                       : i === pipelineStep
@@ -764,28 +800,28 @@ export function CvDrop() {
 
       {/* Result card with score ring, animated counter, confetti */}
       {result && !loading && (
-        <Card className={`border-2 shadow-md overflow-hidden animate-card-enter relative ${
-          isInvite ? 'border-emerald-200' : 'border-red-200'
+        <Card className={`border-2 shadow-md overflow-hidden animate-result-enter relative ${
+          isInvite ? 'border-emerald-200 dark:border-emerald-800' : 'border-red-200 dark:border-red-800'
         }`}>
           <ConfettiParticles active={showConfetti} />
-          {/* Color bar at top */}
-          <div className={`h-2 ${isInvite ? 'bg-gradient-to-r from-emerald-400 via-emerald-500 to-teal-400' : 'bg-gradient-to-r from-red-400 via-red-500 to-rose-400'}`} />
+          {/* Color bar at top — animated gradient */}
+          <div className={`h-2 ${isInvite ? 'animate-gradient-bar-invite' : 'animate-gradient-bar-reject'}`} />
           <CardContent className="p-6 space-y-5">
             {/* Header */}
-            <div className="flex items-start justify-between">
-              <div className="flex items-center gap-4">
-                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm ${
-                  isInvite ? 'bg-gradient-to-br from-emerald-50 to-emerald-100 ring-1 ring-emerald-200/50' : 'bg-gradient-to-br from-red-50 to-red-100 ring-1 ring-red-200/50'
+            <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
+              <div className="flex items-center gap-3 sm:gap-4">
+                <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center shadow-sm ${
+                  isInvite ? 'bg-gradient-to-br from-emerald-50 to-emerald-100 dark:from-emerald-900/30 dark:to-emerald-800/20 ring-1 ring-emerald-200/50 dark:ring-emerald-700/30' : 'bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900/30 dark:to-red-800/20 ring-1 ring-red-200/50 dark:ring-red-700/30'
                 }`}>
                   {isInvite ? (
-                    <CheckCircle2 className="w-7 h-7 text-emerald-500" />
+                    <CheckCircle2 className="w-7 h-7 text-emerald-500 dark:text-emerald-400" />
                   ) : (
-                    <XCircle className="w-7 h-7 text-red-500" />
+                    <XCircle className="w-7 h-7 text-red-500 dark:text-red-400" />
                   )}
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-slate-800">{result.name}</h3>
-                  <p className="text-sm text-slate-500 mt-0.5 flex items-center gap-2">
+                  <h3 className="text-xl font-bold text-slate-800 dark:text-slate-100">{result.name}</h3>
+                  <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5 flex items-center gap-2">
                     <span>{result.target_role}</span>
                     <span className="text-slate-300">•</span>
                     <span className="text-xs">{result.stage === 'hard_filter' ? 'Filtre éliminatoire' : 'Modèle ML'}</span>
@@ -793,6 +829,13 @@ export function CvDrop() {
                 </div>
               </div>
               <div className="flex items-center gap-2 flex-shrink-0 flex-wrap justify-end">
+                {/* Time badge showing analysis duration */}
+                {analysisDuration !== null && (
+                  <div className="time-badge flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium text-slate-500 dark:text-slate-400">
+                    <Clock className="w-3 h-3" />
+                    <span>{(analysisDuration / 1000).toFixed(1)}s</span>
+                  </div>
+                )}
                 {result.fairness_adjusted && (
                   <Badge className="bg-emerald-50 text-emerald-700 border border-emerald-100 hover:bg-emerald-50 gap-1">
                     <Shield className="w-3 h-3" />
@@ -813,8 +856,8 @@ export function CvDrop() {
                 )}
                 <Badge className={`text-sm font-bold px-3 py-1 border-0 shadow-sm ${
                   isInvite
-                    ? 'bg-gradient-to-r from-emerald-100 to-emerald-50 text-emerald-700'
-                    : 'bg-gradient-to-r from-red-100 to-red-50 text-red-700'
+                    ? 'bg-gradient-to-r from-emerald-100 to-emerald-50 text-emerald-700 decision-badge-glow-invite'
+                    : 'bg-gradient-to-r from-red-100 to-red-50 text-red-700 decision-badge-glow-reject'
                 }`}>
                   {result.label}
                 </Badge>
@@ -822,13 +865,13 @@ export function CvDrop() {
             </div>
 
             {/* Confidence highlight with Score Ring */}
-            <div className={`p-4 rounded-xl ${isInvite ? 'bg-emerald-50/60 border border-emerald-100' : 'bg-red-50/60 border border-red-100'}`}>
-              <div className="flex items-center gap-4">
+            <div className={`p-4 rounded-xl ${isInvite ? 'bg-emerald-50/60 dark:bg-emerald-900/20 border border-emerald-100 dark:border-emerald-800/30' : 'bg-red-50/60 dark:bg-red-900/20 border border-red-100 dark:border-red-800/30'}`}>
+              <div className="flex flex-col sm:flex-row items-center gap-4">
                 <ScoreRing value={result.confidence} isInvite={isInvite} />
-                <div className="flex-1">
+                <div className="flex-1 w-full sm:w-auto">
                   <div className="flex items-center justify-between mb-2.5">
                     <span className="text-sm font-semibold text-slate-700">Niveau de confiance</span>
-                    <span className={`text-2xl font-bold ${isInvite ? 'text-emerald-600' : 'text-red-600'}`}>
+                    <span className={`text-2xl font-bold confidence-glow ${isInvite ? 'text-emerald-600 dark:text-emerald-400' : 'text-red-600 dark:text-red-400'}`}>
                       {animatedConfidence.toFixed(1)}%
                     </span>
                   </div>
@@ -887,18 +930,18 @@ export function CvDrop() {
               </div>
             )}
 
-            {/* Top 3 SHAP features */}
+            {/* Top 3 SHAP features — enhanced visual separation */}
             {result.stage === 'ml_model' && result.explanation && (
-              <div className="p-4 bg-slate-50/80 border border-slate-200/60 rounded-xl">
+              <div className="shap-section-divider p-3 sm:p-4 bg-slate-50/80 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/50 rounded-xl">
                 <div className="flex items-center gap-2 mb-3">
-                  <div className="w-6 h-6 rounded-lg bg-emerald-50 flex items-center justify-center">
-                    <Sparkles className="w-3.5 h-3.5 text-emerald-500" />
+                  <div className="w-6 h-6 rounded-lg bg-emerald-50 dark:bg-emerald-900/30 flex items-center justify-center">
+                    <Sparkles className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400" />
                   </div>
-                  <h4 className="text-sm font-semibold text-slate-700">Facteurs principaux de la décision</h4>
+                  <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-200">Facteurs principaux de la décision</h4>
                 </div>
                 <ShapTopFeatures shapValues={result.explanation.shap_values} label={result.label} />
-                <div className="mt-3 pt-3 border-t border-slate-200/60">
-                  <p className="text-xs text-slate-500 leading-relaxed">
+                <div className="mt-3 pt-3 border-t border-slate-200/60 dark:border-slate-700/50">
+                  <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
                     {result.explanation.decision_drivers}
                   </p>
                 </div>
@@ -1032,18 +1075,18 @@ export function CvDrop() {
 
       {/* Drop zone with enhanced animations */}
       {!loading && (
-        <Card className={`border-2 border-dashed transition-all duration-300 shadow-sm overflow-hidden relative drop-zone-glow ${
+        <Card className={`border-2 border-dashed transition-all duration-300 shadow-sm overflow-hidden relative drop-zone-glow drop-zone-hover-scale ${
           dragInvalidType
             ? 'drop-zone-invalid'
             : dragActive
-              ? 'border-emerald-400 bg-emerald-50/50 drop-zone-active scale-[1.01]'
+              ? 'border-emerald-400 bg-emerald-50/50 dark:bg-emerald-900/20 drop-zone-active scale-[1.01]'
               : result
-                ? 'border-slate-200 bg-slate-50/30 hover:border-slate-300'
-                : 'border-slate-300 bg-white hover:border-emerald-300 hover:bg-emerald-50/20'
+                ? 'border-slate-200 dark:border-slate-700 bg-slate-50/30 dark:bg-slate-800/30 hover:border-slate-300'
+                : 'border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800/50 hover:border-emerald-300 hover:bg-emerald-50/20 dark:hover:bg-emerald-900/10'
         }`}>
           {/* Emerald gradient at top of drop zone when no result */}
           {!result && (
-            <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-emerald-50/60 to-transparent pointer-events-none" />
+            <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-emerald-50/60 dark:from-emerald-900/20 to-transparent pointer-events-none" />
           )}
           {/* Dot pattern background when no result */}
           {!result && (
@@ -1058,96 +1101,122 @@ export function CvDrop() {
           {/* Invalid format overlay */}
           {dragInvalidType && (
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
-              <div className="bg-red-50 border border-red-200 rounded-xl px-4 py-2 shadow-lg">
-                <p className="text-sm font-semibold text-red-600 flex items-center gap-2">
+              <div className="bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-800/30 rounded-xl px-4 py-2 shadow-lg">
+                <p className="text-sm font-semibold text-red-600 dark:text-red-400 flex items-center gap-2">
                   <AlertTriangle className="w-4 h-4" />
                   Format non supporté — fichiers .txt uniquement
                 </p>
               </div>
             </div>
           )}
+          {/* Hidden file input — always in DOM so ref works even after result */}
+          <input ref={fileInputRef} type="file" accept=".txt" onChange={handleFileSelect} className="hidden" aria-label="Sélectionner un fichier CV" />
           <CardContent className={`flex flex-col items-center justify-center text-center transition-all duration-300 relative ${
             result ? 'p-8' : 'p-12 sm:p-20'
           }`}
             onDragOver={handleDragOver}
             onDragLeave={handleDragLeave}
             onDrop={handleDrop}
+            tabIndex={0}
+            role="button"
+            aria-label="Zone de dépôt de CV — glissez un fichier ou appuyez sur Entrée pour parcourir"
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                fileInputRef.current?.click();
+              }
+            }}
           >
-            <div className={`rounded-2xl flex items-center justify-center mb-5 transition-all duration-300 relative ${
-              result
-                ? 'w-14 h-14 bg-slate-50'
-                : dragActive
-                  ? 'w-24 h-24 bg-gradient-to-br from-emerald-100 to-emerald-50 scale-110'
-                  : 'w-20 h-20 bg-gradient-to-br from-emerald-50 to-emerald-100/50'
-            }`}>
-              {result ? (
-                <FileUp className="w-7 h-7 text-slate-400" />
-              ) : (
-                <div className="animate-float relative">
-                  <Upload className={`transition-all duration-300 ${dragActive ? 'w-12 h-12 text-emerald-600' : 'w-10 h-10 text-emerald-500'}`} />
-                  {/* Pulsing ring when idle */}
-                  {!dragActive && (
-                    <div className="absolute inset-0 rounded-full border-2 border-emerald-400/40 animate-upload-pulse" />
-                  )}
-                </div>
-              )}
-            </div>
-
             {!result ? (
               <>
-                <p className="text-lg font-semibold text-slate-700">
+                <div className={`rounded-2xl flex items-center justify-center mb-5 transition-all duration-300 relative ${
+                  dragActive
+                    ? 'w-24 h-24 bg-gradient-to-br from-emerald-100 to-emerald-50 dark:from-emerald-900/40 dark:to-emerald-800/30 scale-110'
+                    : 'w-20 h-20 bg-gradient-to-br from-emerald-50 to-emerald-100/50 dark:from-emerald-900/20 dark:to-emerald-800/20'
+                }`}>
+                  <div className="animate-float relative">
+                    <Upload className={`transition-all duration-300 ${dragActive ? 'w-12 h-12 text-emerald-600 dark:text-emerald-400' : 'w-10 h-10 text-emerald-500 dark:text-emerald-400'}`} />
+                    {/* Pulsing ring when idle */}
+                    {!dragActive && (
+                      <div className="absolute inset-0 rounded-full border-2 border-emerald-400/40 animate-upload-pulse" />
+                    )}
+                  </div>
+                </div>
+
+                <p className="text-lg font-semibold text-slate-700 dark:text-slate-200">
                   {dragInvalidType ? 'Format non supporté' : dragActive ? 'Déposez votre CV' : 'Glissez votre CV ici'}
                 </p>
-                <p className="text-sm text-slate-400 mt-1">
+                <p className="text-sm text-slate-400 dark:text-slate-500 mt-1">
                   {dragInvalidType
                     ? 'Veuillez déposer un fichier .txt uniquement'
                     : 'Analyse instantanée avec explications SHAP et correction d\'équité'
                   }
                 </p>
-                <div className="flex items-center gap-3 mt-3">
-                  <div className="h-px w-8 bg-slate-200" />
-                  <span className="text-sm text-slate-400">ou</span>
-                  <div className="h-px w-8 bg-slate-200" />
+
+                {/* 3-Step process illustration — simpler/smaller on mobile */}
+                {!dragActive && !dragInvalidType && (
+                  <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 mt-5 drop-zone-illustration-step">
+                    <div className="drop-zone-step flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-50/80 dark:bg-slate-700/30 border border-slate-100 dark:border-slate-600/50">
+                      <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-emerald-50 dark:bg-emerald-900/40 flex items-center justify-center">
+                        <Upload className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-500 dark:text-emerald-400" />
+                      </div>
+                      <span className="text-[10px] font-medium text-slate-500 dark:text-slate-400">Glissez</span>
+                    </div>
+                    <ArrowRight className="w-4 h-4 text-slate-300 dark:text-slate-500 drop-zone-step-arrow hidden sm:block" />
+                    <div className="w-px h-2 bg-slate-300 dark:bg-slate-600 sm:hidden" aria-hidden="true" />
+                    <div className="drop-zone-step flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-50/80 dark:bg-slate-700/30 border border-slate-100 dark:border-slate-600/50">
+                      <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-emerald-50 dark:bg-emerald-900/40 flex items-center justify-center">
+                        <Brain className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-500 dark:text-emerald-400" />
+                      </div>
+                      <span className="text-[10px] font-medium text-slate-500 dark:text-slate-400">Analyse</span>
+                    </div>
+                    <ArrowRight className="w-4 h-4 text-slate-300 dark:text-slate-500 drop-zone-step-arrow hidden sm:block" style={{ animationDelay: '0.3s' }} />
+                    <div className="w-px h-2 bg-slate-300 dark:bg-slate-600 sm:hidden" aria-hidden="true" />
+                    <div className="drop-zone-step flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-50/80 dark:bg-slate-700/30 border border-slate-100 dark:border-slate-600/50">
+                      <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-emerald-50 dark:bg-emerald-900/40 flex items-center justify-center">
+                        <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-500 dark:text-emerald-400" />
+                      </div>
+                      <span className="text-[10px] font-medium text-slate-500 dark:text-slate-400">Résultat</span>
+                    </div>
+                  </div>
+                )}
+
+                <div className="flex items-center gap-3 mt-4">
+                  <div className="h-px w-8 bg-slate-200 dark:bg-slate-600" />
+                  <span className="text-sm text-slate-400 dark:text-slate-500">ou</span>
+                  <div className="h-px w-8 bg-slate-200 dark:bg-slate-600" />
                 </div>
-                <label className="mt-3 inline-block cursor-pointer">
-                  <input ref={fileInputRef} type="file" accept=".txt" onChange={handleFileSelect} className="hidden" />
-                  <Button className="bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-700 hover:to-emerald-600 text-white shadow-md shadow-emerald-200/50 transition-all duration-200">
-                    <FileText className="w-4 h-4 mr-2" />
-                    Parcourir les fichiers
-                  </Button>
-                </label>
-                <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-6 text-xs text-slate-400">
-                  <span className="flex items-center gap-1.5 px-2.5 py-1.5 bg-white rounded-full border border-slate-100 shadow-sm">
-                    <FileText className="w-3.5 h-3.5 text-slate-500" />
-                    Fichiers .txt
-                  </span>
-                  <span className="flex items-center gap-1.5 px-2.5 py-1.5 bg-white rounded-full border border-slate-100 shadow-sm">
-                    <Shield className="w-3.5 h-3.5 text-emerald-500" />
-                    Correction d&apos;équité
-                  </span>
-                  <span className="flex items-center gap-1.5 px-2.5 py-1.5 bg-white rounded-full border border-slate-100 shadow-sm">
-                    <Sparkles className="w-3.5 h-3.5 text-amber-500" />
-                    Explication SHAP
-                  </span>
-                </div>
+                <Button
+                  onClick={() => fileInputRef.current?.click()}
+                  className="mt-3 min-h-[44px] px-6 sm:px-8 bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-700 hover:to-emerald-600 text-white shadow-md shadow-emerald-200/50 dark:shadow-emerald-900/30 transition-all duration-200 hover:scale-105 hover:shadow-lg active:scale-95"
+                >
+                  <FileText className="w-4 h-4 mr-2" />
+                  Parcourir les fichiers
+                </Button>
+                <p className="text-xs text-slate-400/70 dark:text-slate-500/60 mt-2 browse-hint-pulse">
+                  ou appuyez sur Parcourir
+                </p>
+
                 {/* Keyboard shortcut hint */}
-                <p className="text-[10px] text-slate-300 mt-4 hidden sm:block">
+                <p className="text-[10px] text-slate-300 dark:text-slate-600 mt-3 hidden sm:block">
                   <Keyboard className="w-3 h-3 inline mr-1" />
-                  Raccourci : <kbd className="px-1 py-0.5 bg-slate-100 rounded text-slate-500 font-mono">Ctrl+O</kbd> pour ouvrir • <kbd className="px-1 py-0.5 bg-slate-100 rounded text-slate-500 font-mono">?</kbd> pour l&apos;aide
+                  Raccourci : <kbd className="px-1 py-0.5 bg-slate-100 dark:bg-slate-700 rounded text-slate-500 dark:text-slate-400 font-mono">Ctrl+O</kbd> pour ouvrir • <kbd className="px-1 py-0.5 bg-slate-100 dark:bg-slate-700 rounded text-slate-500 dark:text-slate-400 font-mono">?</kbd> pour l&apos;aide
                 </p>
               </>
             ) : (
               <>
-                <p className="text-sm font-medium text-slate-600">
+                <p className="text-sm font-medium text-slate-600 dark:text-slate-300">
                   Glissez un autre CV pour réanalyser
                 </p>
-                <label className="mt-2 inline-block cursor-pointer">
-                  <input type="file" accept=".txt" onChange={handleFileSelect} className="hidden" />
-                  <Button variant="outline" size="sm" className="border-emerald-200 text-emerald-600 hover:bg-emerald-50 mt-2">
-                    <FileText className="w-4 h-4 mr-1.5" />
-                    Parcourir
-                  </Button>
-                </label>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => fileInputRef.current?.click()}
+                  className="border-emerald-200 dark:border-emerald-700 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 mt-2"
+                >
+                  <FileText className="w-4 h-4 mr-1.5" />
+                  Parcourir
+                </Button>
               </>
             )}
           </CardContent>
@@ -1278,15 +1347,15 @@ export function CvDrop() {
 
       {/* Analysis Comparison Modal */}
       {showComparison && analysisHistory.length >= 2 && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-overlay-enhanced" onClick={() => setShowComparison(false)}>
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 animate-overlay-enhanced" onClick={() => setShowComparison(false)} role="dialog" aria-modal="true" aria-label="Comparaison d&#39;analyses">
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" />
-          <div className="relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[80vh] overflow-y-auto custom-scrollbar animate-comparison-slide" onClick={(e) => e.stopPropagation()}>
+          <div className="relative bg-white dark:bg-slate-800 rounded-2xl shadow-2xl max-w-2xl w-full max-h-[95vh] sm:max-h-[80vh] overflow-y-auto custom-scrollbar animate-comparison-slide" onClick={(e) => e.stopPropagation()}>
             <div className="sticky top-0 bg-white/95 backdrop-blur-md border-b border-slate-100 p-4 flex items-center justify-between rounded-t-2xl z-10">
               <h3 className="text-lg font-bold text-slate-800 flex items-center gap-2">
                 <GitCompare className="w-5 h-5 text-emerald-500" />
                 Comparaison d&apos;analyses
               </h3>
-              <Button variant="ghost" size="sm" onClick={() => setShowComparison(false)} className="close-btn-hover h-8 w-8 p-0 rounded-full">
+              <Button variant="ghost" size="sm" onClick={() => setShowComparison(false)} className="close-btn-hover h-8 w-8 min-w-[44px] min-h-[44px] p-0 rounded-full" aria-label="Fermer la comparaison">
                 <X className="w-4 h-4" />
               </Button>
             </div>
@@ -1389,15 +1458,15 @@ export function CvDrop() {
 
       {/* Keyboard shortcuts overlay with enhanced animation */}
       {showShortcuts && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-overlay-enhanced" onClick={() => setShowShortcuts(false)}>
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 animate-overlay-enhanced" onClick={() => setShowShortcuts(false)} role="dialog" aria-modal="true" aria-label="Raccourcis clavier">
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" />
-          <div className="relative bg-white rounded-2xl shadow-2xl max-w-sm w-full p-6 animate-modal-enhanced" onClick={(e) => e.stopPropagation()}>
+          <div className="relative bg-white dark:bg-slate-800 rounded-2xl shadow-2xl max-w-sm w-full p-4 sm:p-6 animate-modal-enhanced" onClick={(e) => e.stopPropagation()}>
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-bold text-slate-800 flex items-center gap-2">
                 <Keyboard className="w-5 h-5 text-emerald-500" />
                 Raccourcis clavier
               </h3>
-              <Button variant="ghost" size="sm" onClick={() => setShowShortcuts(false)} className="close-btn-hover h-8 w-8 p-0 rounded-full">
+              <Button variant="ghost" size="sm" onClick={() => setShowShortcuts(false)} className="close-btn-hover h-8 w-8 min-w-[44px] min-h-[44px] p-0 rounded-full" aria-label="Fermer les raccourcis">
                 <X className="w-4 h-4" />
               </Button>
             </div>
@@ -1416,7 +1485,7 @@ export function CvDrop() {
                 </div>
               ))}
             </div>
-            <Button variant="outline" size="sm" onClick={() => setShowShortcuts(false)} className="mt-5 w-full border-emerald-200 text-emerald-600 hover:bg-emerald-50">
+            <Button variant="outline" size="sm" onClick={() => setShowShortcuts(false)} className="mt-5 w-full min-h-[44px] border-emerald-200 text-emerald-600 hover:bg-emerald-50 active:scale-95">
               Fermer
             </Button>
           </div>

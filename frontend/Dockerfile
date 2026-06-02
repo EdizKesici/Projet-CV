@@ -21,6 +21,7 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 RUN npx prisma generate
+RUN npx prisma db push --skip-generate
 
 ENV NEXT_PUBLIC_FLASK_API_URL=/flask-api
 # Default for local Docker Compose; override in Railway with env var

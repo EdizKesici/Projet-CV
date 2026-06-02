@@ -479,7 +479,7 @@ export function CvDrop({ onAnalysisSaved }: { onAnalysisSaved?: () => void }) {
         saved,
         cvPreview: cvTextContent.substring(0, 200),
         notes: '',
-        status: 'archived',
+        status: 'archived' as const,
       }, ...prev].slice(0, 10));
 
       toast.success(data.label === 'Invite' ? 'Candidat invité' : 'Candidat rejeté', {

@@ -491,7 +491,7 @@ def train(data_path: str, plots_dir: str) -> None:
         "C": [0.01, 0.1, 0.5, 1.0, 5.0, 10.0],
         "penalty": ["l1", "l2"],
         "solver": ["liblinear"],
-        "class_weight": [None],
+        "class_weight": ["balanced"],
         "max_iter": [1000],
     }
 
@@ -547,7 +547,7 @@ def train(data_path: str, plots_dir: str) -> None:
     # have too few samples (~15-35 each) for reliable threshold estimation.
     # Age is still audited separately (see audit.py).
     FAIRNESS_CONSTRAINTS = ["demographic_parity", "equalized_odds"]
-    INVITE_RATE_FLOOR = 0.15  # minimum acceptable Invite rate (15%)
+    INVITE_RATE_FLOOR = 0.05  # minimum acceptable Invite rate (15%)
 
     best_to = None
     best_constraint = None

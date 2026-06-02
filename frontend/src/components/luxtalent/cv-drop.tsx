@@ -455,8 +455,11 @@ export function CvDrop() {
           description: `${data.name} — ${data.target_role}`,
           icon: <Save className="w-4 h-4" />,
         });
-      } catch {
-        // Silently fail
+      } catch (saveErr) {
+        console.error('Erreur sauvegarde DB :', saveErr);
+        toast.error('Erreur de sauvegarde', {
+          description: 'L\'analyse n\'a pas pu être sauvegardée dans la base de données.',
+        });
       }
 
       setAnalysisHistory((prev) => [{

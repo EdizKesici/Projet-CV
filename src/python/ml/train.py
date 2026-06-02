@@ -491,7 +491,7 @@ def train(data_path: str, plots_dir: str) -> None:
         "C": [0.01, 0.1, 0.5, 1.0, 5.0, 10.0],
         "penalty": ["l1", "l2"],
         "solver": ["liblinear"],
-        "class_weight": ["balanced"],
+        "class_weight": ["None"],
         "max_iter": [1000],
     }
 

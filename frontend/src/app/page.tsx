@@ -24,6 +24,11 @@ export default function Home() {
   const [tabTransitionKey, setTabTransitionKey] = useState(0);
   const { theme, setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [fairnessRefreshKey, setFairnessRefreshKey] = useState(0);
+
+  const handleAnalysisSaved = useCallback(() => {
+    setFairnessRefreshKey((prev) => prev + 1);
+  }, []);
 
   useEffect(() => {
     // next-themes needs mounted check to avoid hydration mismatch
@@ -180,10 +185,10 @@ export default function Home() {
       <main className="flex-1 bg-main-gradient" role="main">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
           <div key={tabTransitionKey} className="animate-tab-enter" style={{ display: activeTab === 'cv-drop' ? 'block' : 'none' }}>
-            <CvDrop />
+            <CvDrop onAnalysisSaved={handleAnalysisSaved} />
           </div>
           <div style={{ display: activeTab === 'fairness' ? 'block' : 'none' }}>
-            <FairnessHistory />
+            <FairnessHistory refreshKey={fairnessRefreshKey} />
           </div>
         </div>
       </main>

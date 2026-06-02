@@ -59,7 +59,7 @@ const STATUS_CONFIG: Record<string, { label: string; cssClass: string; dotColor:
   'Embauché': { label: 'Embauché', cssClass: 'status-embauche', dotColor: 'bg-teal-400' },
 };
 
-export function FairnessHistory() {
+export function FairnessHistory({ refreshKey }: { refreshKey?: number }) {
   const [metrics, setMetrics] = useState<FairnessMetricsResponse | null>(null);
   const [logEntries, setLogEntries] = useState<ScreeningLogEntry[]>([]);
   const [metricsLoading, setMetricsLoading] = useState(false);
@@ -154,7 +154,7 @@ export function FairnessHistory() {
       });
 
     loadMetrics();
-  }, []);
+  }, [refreshKey]);
 
   const loadMetrics = async () => {
     setMetricsLoading(true);

@@ -219,7 +219,7 @@ function ConfettiParticles({ active }: { active: boolean }) {
   );
 }
 
-export function CvDrop() {
+export function CvDrop({ onAnalysisSaved }: { onAnalysisSaved?: () => void }) {
   const [dragActive, setDragActive] = useState(false);
   const [dragInvalidType, setDragInvalidType] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -252,12 +252,18 @@ export function CvDrop() {
 
   // Load history from DB on mount
   const [historyLoading, setHistoryLoading] = useState(true);
+  const [dbTotalCount, setDbTotalCount] = useState(0);
+  const [dbInviteCount, setDbInviteCount] = useState(0);
+  const [dbFairnessCount, setDbFairnessCount] = useState(0);
 
   useEffect(() => {
     setHistoryLoading(true);
     fetchSavedAnalyses()
       .then((records) => {
         if (records.length > 0) {
+          setDbTotalCount(records.length);
+          setDbInviteCount(records.filter((r) => r.label === 'Invite').length);
+          setDbFairnessCount(records.filter((r) => r.fairnessAdjusted).length);
           const restoredHistory: AnalysisRecord[] = records.map((r) => ({
             result: {
               name: r.candidateName,
@@ -451,12 +457,19 @@ export function CvDrop() {
       try {
         await saveAnalysis(data, filename);
         saved = true;
+        setDbTotalCount((prev) => prev + 1);
+        if (data.label === 'Invite') setDbInviteCount((prev) => prev + 1);
+        if (data.fairness_adjusted) setDbFairnessCount((prev) => prev + 1);
+        onAnalysisSaved?.();
         toast.success('Analyse sauvegardée dans la base', {
           description: `${data.name} — ${data.target_role}`,
           icon: <Save className="w-4 h-4" />,
         });
-      } catch {
-        // Silently fail
+      } catch (saveErr) {
+        console.error('Erreur sauvegarde DB :', saveErr);
+        toast.error('Erreur de sauvegarde', {
+          description: 'L\'analyse n\'a pas pu être sauvegardée dans la base de données.',
+        });
       }
 
       setAnalysisHistory((prev) => [{
@@ -655,8 +668,8 @@ export function CvDrop() {
           <div className="flex items-end justify-between">
             <div>
               <div className="flex items-center gap-1.5">
-                <p className="text-2xl font-bold text-slate-800 dark:text-slate-100">{analysisHistory.length}</p>
-                {analysisHistory.length > 0 && <TrendingUp className="w-3.5 h-3.5 trend-arrow-up" />}
+                <p className="text-2xl font-bold text-slate-800 dark:text-slate-100">{dbTotalCount}</p>
+                {dbTotalCount > 0 && <TrendingUp className="w-3.5 h-3.5 trend-arrow-up" />}
               </div>
               <p className="text-[10px] text-slate-400 dark:text-slate-500 mt-0.5">analyses</p>
             </div>
@@ -673,8 +686,8 @@ export function CvDrop() {
           <div className="flex items-end justify-between">
             <div>
               <div className="flex items-center gap-1.5">
-                <p className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">{analysisHistory.filter((a) => a.result.label === 'Invite').length}</p>
-                {analysisHistory.filter((a) => a.result.label === 'Invite').length > 0 && <TrendingUp className="w-3.5 h-3.5 trend-arrow-up" />}
+                <p className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">{dbInviteCount}</p>
+                {dbInviteCount > 0 && <TrendingUp className="w-3.5 h-3.5 trend-arrow-up" />}
               </div>
               <p className="text-[10px] text-slate-400 dark:text-slate-500 mt-0.5">candidats</p>
             </div>
@@ -691,8 +704,8 @@ export function CvDrop() {
           <div className="flex items-end justify-between">
             <div>
               <div className="flex items-center gap-1.5">
-                <p className="text-2xl font-bold text-red-500 dark:text-red-400">{analysisHistory.filter((a) => a.result.label === 'Reject').length}</p>
-                {analysisHistory.filter((a) => a.result.label === 'Reject').length > 0 && <TrendingDown className="w-3.5 h-3.5 trend-arrow-down" />}
+                <p className="text-2xl font-bold text-red-500 dark:text-red-400">{dbTotalCount - dbInviteCount}</p>
+                {(dbTotalCount - dbInviteCount) > 0 && <TrendingDown className="w-3.5 h-3.5 trend-arrow-down" />}
               </div>
               <p className="text-[10px] text-slate-400 dark:text-slate-500 mt-0.5">candidats</p>
             </div>
@@ -709,8 +722,8 @@ export function CvDrop() {
           <div className="flex items-end justify-between">
             <div>
               <div className="flex items-center gap-1.5">
-                <p className="text-2xl font-bold text-slate-800 dark:text-slate-100">{analysisHistory.length > 0 ? Math.round((analysisHistory.filter((a) => a.result.fairness_adjusted).length / analysisHistory.length) * 100) : 0}%</p>
-                {analysisHistory.filter((a) => a.result.fairness_adjusted).length > 0 && <TrendingUp className="w-3.5 h-3.5 trend-arrow-up" />}
+                <p className="text-2xl font-bold text-slate-800 dark:text-slate-100">{dbTotalCount > 0 ? Math.round((dbFairnessCount / dbTotalCount) * 100) : 0}%</p>
+                {dbFairnessCount > 0 && <TrendingUp className="w-3.5 h-3.5 trend-arrow-up" />}
               </div>
               <p className="text-[10px] text-slate-400 dark:text-slate-500 mt-0.5">ajustés</p>
             </div>

@@ -123,13 +123,16 @@ export interface DbAnalysisRecord {
   createdAt: string;
 }
 
-// Fetch saved analyses from database (always uses Next.js API route)
 export async function fetchSavedAnalyses(): Promise<DbAnalysisRecord[]> {
   try {
     const res = await fetch('/api/analyses');
-    if (!res.ok) return [];
+    if (!res.ok) {
+      console.error('fetchSavedAnalyses: HTTP', res.status);
+      return [];
+    }
     return res.json();
-  } catch {
+  } catch (err) {
+    console.error('fetchSavedAnalyses error:', err);
     return [];
   }
 }

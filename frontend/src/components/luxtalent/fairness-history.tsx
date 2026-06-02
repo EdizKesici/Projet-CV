@@ -1135,7 +1135,7 @@ export function FairnessHistory({ refreshKey }: { refreshKey?: number }) {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4">
                 {/* Role Distribution Chart — Horizontal Bar Chart (inline SVG) */}
                 <Card className="shadow-sm dark:bg-slate-800/50 dark:border-slate-700/50">
                   <CardHeader className="pb-3">

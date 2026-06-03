@@ -342,35 +342,81 @@ def extract_has_management_experience(text: str) -> int:
     return int(any(kw in exp_section for kw in keywords))
 
 
-# Lookup: country -> languages commonly spoken there
 COUNTRY_LANGUAGES: dict[str, list[str]] = {
-    "usa": ["english"],
-    "india": ["english", "hindi"],
-    "netherlands": ["dutch", "english"],
-    "poland": ["polish", "english"],
+    # ── Europe de l'Ouest ──
+    "france": ["french", "english"],
     "germany": ["german", "english"],
     "italy": ["italian", "english"],
-    "ireland": ["english", "irish"],
-    "portugal": ["portuguese", "english"],
-    "france": ["french", "english"],
-    "nigeria": ["english"],
-    "colombia": ["spanish", "english"],
     "spain": ["spanish", "english"],
-    "china": ["chinese", "mandarin", "english"],
-    "japan": ["japanese", "english"],
-    "brazil": ["portuguese", "english"],
-    "mexico": ["spanish", "english"],
-    "canada": ["english", "french"],
+    "portugal": ["portuguese", "english"],
+    "netherlands": ["dutch", "english"],
+    "belgium": ["french", "dutch", "german", "english"],
+    "luxembourg": ["french", "german", "luxembourgish", "english"],
+    "switzerland": ["german", "french", "italian", "english"],
+    "austria": ["german", "english"],
+    "ireland": ["english", "irish"],
     "uk": ["english"],
     "united kingdom": ["english"],
-    "australia": ["english"],
-    "singapore": ["english", "mandarin", "chinese"],
+    # ── Europe du Nord ──
+    "sweden": ["swedish", "english"],
+    "norway": ["norwegian", "english"],
+    "denmark": ["danish", "english"],
+    "finland": ["finnish", "swedish", "english"],
+    "iceland": ["icelandic", "english"],
+    # ── Europe de l'Est ──
+    "poland": ["polish", "english"],
+    "czech republic": ["czech", "english"],
+    "czechia": ["czech", "english"],
+    "romania": ["romanian", "english"],
+    "hungary": ["hungarian", "english"],
+    "ukraine": ["ukrainian", "english"],
+    "russia": ["russian", "english"],
+    # ── Europe du Sud ──
+    "greece": ["greek", "english"],
+    "croatia": ["croatian", "english"],
+    "serbia": ["serbian", "english"],
+    # ── Amérique du Nord ──
+    "usa": ["english"],
+    "united states": ["english"],
+    "canada": ["english", "french"],
+    "mexico": ["spanish", "english"],
+    # ── Amérique du Sud ──
+    "brazil": ["portuguese", "english"],
+    "colombia": ["spanish", "english"],
+    "argentina": ["spanish", "english"],
+    "chile": ["spanish", "english"],
+    "peru": ["spanish", "english"],
+    # ── Asie de l'Est ──
+    "china": ["chinese", "mandarin", "english"],
+    "japan": ["japanese", "english"],
     "south korea": ["korean", "english"],
-    "luxembourg": ["french", "german", "luxembourgish", "english"],
-    "belgium": ["french", "dutch", "german", "english"],
-    "switzerland": ["german", "french", "italian", "english"],
+    "taiwan": ["mandarin", "chinese", "english"],
+    # ── Asie du Sud-Est ──
+    "singapore": ["english", "mandarin", "chinese"],
+    "malaysia": ["malay", "english"],
+    "thailand": ["thai", "english"],
+    "vietnam": ["vietnamese", "english"],
+    "indonesia": ["indonesian", "english"],
+    "philippines": ["filipino", "english"],
+    # ── Asie du Sud ──
+    "india": ["english", "hindi"],
+    "pakistan": ["urdu", "english"],
+    # ── Moyen-Orient ──
+    "uae": ["arabic", "english"],
+    "united arab emirates": ["arabic", "english"],
+    "saudi arabia": ["arabic", "english"],
+    "israel": ["hebrew", "english"],
+    "turkey": ["turkish", "english"],
+    # ── Afrique ──
+    "nigeria": ["english"],
+    "south africa": ["english", "afrikaans"],
+    "morocco": ["arabic", "french", "english"],
+    "egypt": ["arabic", "english"],
+    "kenya": ["english", "swahili"],
+    # ── Océanie ──
+    "australia": ["english"],
+    "new zealand": ["english"],
 }
-
 
 def _detect_work_country(text: str) -> str | None:
     """

@@ -29,7 +29,7 @@ export function exportAnalysisPDF(
 
   doc.setFontSize(9);
   doc.setFont('helvetica', 'normal');
-  doc.text('Rapport d\'analyse CV — V2', margin, 21);
+  doc.text('Rapport d\'analyse CV', margin, 21);
 
   doc.setFontSize(8);
   doc.text(new Date().toLocaleString('fr-FR'), pageWidth - margin, 21, { align: 'right' });

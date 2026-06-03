@@ -114,7 +114,30 @@ export interface FairnessTrendPoint {
 
 export type ExportFormat = 'txt' | 'csv' | 'json' | 'pdf';
 
-export type TabId = 'cv-drop' | 'fairness';
+export type TabId = 'cv-drop' | 'fairness' | 'configuration';
+
+export interface FilterConfig {
+  id?: string;
+  name: string;
+  requiredLanguages: string[];
+  requiredSkills: string[];
+  minEducationLevel: number | null;
+  minYearsExperience: number | null;
+  minNbPositions: number | null;
+  isActive: boolean;
+  createdAt?: string;
+  updatedAt?: string;
+}
+
+export const DEFAULT_FILTER_CONFIG: FilterConfig = {
+  name: 'default',
+  requiredLanguages: [],
+  requiredSkills: [],
+  minEducationLevel: 2,
+  minYearsExperience: 0,
+  minNbPositions: 0,
+  isActive: true,
+};
 
 // French labels for features
 export const FEATURE_LABELS: Record<string, string> = {

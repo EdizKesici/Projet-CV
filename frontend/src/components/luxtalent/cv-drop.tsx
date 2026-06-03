@@ -5,7 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
-import { predictCV, saveAnalysis, fetchSavedAnalyses } from '@/lib/api';
+import { predictCV, saveAnalysis, fetchSavedAnalyses, fetchFilterConfig } from '@/lib/api';
 import type { DbAnalysisRecord } from '@/lib/api';
 import { exportAnalysisPDF } from '@/lib/pdf-export';
 import { ShapTopFeatures } from './shap-waterfall';
@@ -447,7 +447,26 @@ export function CvDrop({ onAnalysisSaved }: { onAnalysisSaved?: () => void }) {
     analysisStartRef.current = performance.now();
 
     try {
-      const data = await predictCV(cvTextContent, filename);
+      // Load active filter config and pass to prediction
+      let jobConfig: Record<string, unknown> | undefined;
+      try {
+        const filterConfig = await fetchFilterConfig();
+        if (filterConfig.isActive) {
+          jobConfig = {
+            required_languages: filterConfig.requiredLanguages || [],
+            required_skills: filterConfig.requiredSkills || [],
+            min_education_level: filterConfig.minEducationLevel ?? null,
+            min_years_experience: filterConfig.minYearsExperience ?? null,
+            min_nb_positions: filterConfig.minNbPositions ?? null,
+          };
+        } else {
+          jobConfig = {}; // Filter disabled — all candidates pass
+        }
+      } catch {
+        // If config can't be loaded, proceed without it (Flask will use defaults)
+      }
+
+      const data = await predictCV(cvTextContent, filename, jobConfig);
       const elapsed = performance.now() - analysisStartRef.current;
       setAnalysisDuration(elapsed);
       setResult(data);
@@ -479,7 +498,7 @@ export function CvDrop({ onAnalysisSaved }: { onAnalysisSaved?: () => void }) {
         saved,
         cvPreview: cvTextContent.substring(0, 200),
         notes: '',
-        status: 'archived' as const,
+        status: 'archived',
       }, ...prev].slice(0, 10));
 
       toast.success(data.label === 'Invite' ? 'Candidat invité' : 'Candidat rejeté', {

@@ -7,6 +7,7 @@ import type {
   PredictionResponse,
   FairnessMetricsResponse,
   ScreeningLogEntry,
+  FilterConfig,
 } from './types';
 
 // In Docker: NEXT_PUBLIC_FLASK_API_URL=/flask-api (proxied by Next.js rewrites)
@@ -53,11 +54,15 @@ export async function fetchHealth(): Promise<HealthResponse> {
   return apiFetch<HealthResponse>('/health');
 }
 
-export async function predictCV(cvText: string, filename: string): Promise<PredictionResponse> {
+export async function predictCV(cvText: string, filename: string, jobConfig?: Record<string, unknown>): Promise<PredictionResponse> {
+  const body: Record<string, unknown> = { text: cvText, filename };
+  if (jobConfig) {
+    body.job_config = jobConfig;
+  }
   return apiFetch<PredictionResponse>('/predict', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ text: cvText, filename }),
+    body: JSON.stringify(body),
   });
 }
 
@@ -121,6 +126,23 @@ export interface DbAnalysisRecord {
   decisionDrivers: string;
   version: string;
   createdAt: string;
+}
+
+// Filter config (always uses Next.js API route)
+export async function fetchFilterConfig(): Promise<FilterConfig> {
+  const res = await fetch('/api/filter-config');
+  if (!res.ok) throw new Error('Erreur lors du chargement de la configuration');
+  return res.json();
+}
+
+export async function saveFilterConfig(config: FilterConfig): Promise<FilterConfig> {
+  const res = await fetch('/api/filter-config', {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(config),
+  });
+  if (!res.ok) throw new Error('Erreur lors de la sauvegarde de la configuration');
+  return res.json();
 }
 
 export async function fetchSavedAnalyses(): Promise<DbAnalysisRecord[]> {

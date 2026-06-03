@@ -3,12 +3,14 @@
 import { useState, useEffect, useCallback } from 'react';
 import { CvDrop } from '@/components/luxtalent/cv-drop';
 import { FairnessHistory } from '@/components/luxtalent/fairness-history';
+import { FilterConfigPanel } from '@/components/luxtalent/filter-config';
 import { fetchHealth, fetchScreeningLog } from '@/lib/api';
 import type { TabId, HealthResponse } from '@/lib/types';
 import { useTheme } from 'next-themes';
 import {
   FileText,
   Scale,
+  Settings,
   Wifi,
   WifiOff,
   Loader2,
@@ -73,6 +75,7 @@ export default function Home() {
   const tabs: { id: TabId; label: string; icon: React.ElementType; description: string }[] = [
     { id: 'cv-drop', label: 'Analyse CV', icon: FileText, description: 'Glissez un CV pour analyse' },
     { id: 'fairness', label: 'Fairness & Historique', icon: Scale, description: 'Métriques d\'équité et historique' },
+    { id: 'configuration', label: 'Configuration', icon: Settings, description: 'Filtre éliminatoire et paramètres' },
   ];
 
   const handleTabChange = useCallback((tab: TabId) => {
@@ -189,6 +192,9 @@ export default function Home() {
           </div>
           <div style={{ display: activeTab === 'fairness' ? 'block' : 'none' }}>
             <FairnessHistory refreshKey={fairnessRefreshKey} />
+          </div>
+          <div style={{ display: activeTab === 'configuration' ? 'block' : 'none' }}>
+            <FilterConfigPanel />
           </div>
         </div>
       </main>

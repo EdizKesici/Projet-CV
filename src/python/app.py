@@ -124,8 +124,11 @@ def predict_cv():
                 "stage": "hard_filter",
                 "passed": False,
                 "label": "Reject",
-                "reasons": filter_result["reasons"],
+                "confidence": 0.0,
+                "probabilities": {"Invite": 0.0, "Reject": 100.0},
+                "model_name": "hard_filter",
                 "fairness_adjusted": False,
+                "hard_filter_reasons": filter_result["reasons"],
             }
             log_result({**response, "filename": data.get("filename", "")}, LOG_PATH)
             return jsonify(response)
@@ -193,7 +196,7 @@ def explain_cv():
                 "target_role": features.get("target_role"),
                 "label": "Reject",
                 "stage": "hard_filter",
-                "reasons": filter_result["reasons"],
+                "hard_filter_reasons": filter_result["reasons"],
                 "explanation": None,
                 "message": "Candidate rejected by hard filter — no ML explanation available.",
             })
@@ -313,7 +316,7 @@ def process_inbox():
                 result.update({
                     "stage": "hard_filter",
                     "label": "Reject",
-                    "reasons": filter_result["reasons"],
+                    "hard_filter_reasons": filter_result["reasons"],
                     "status": "processed",
                     "fairness_adjusted": False,
                 })

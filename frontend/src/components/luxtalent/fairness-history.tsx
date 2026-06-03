@@ -1469,17 +1469,6 @@ export function FairnessHistory({ refreshKey }: { refreshKey?: number }) {
               </div>
             </div>
 
-            {/* Version info bar */}
-            <div className="flex items-center gap-3 px-4 py-3 bg-white dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700/50 shadow-sm">
-              <Badge className="bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 border border-emerald-100 dark:border-emerald-800/30 hover:bg-emerald-50">{metrics.version}</Badge>
-              <div className="h-4 w-px bg-slate-200 dark:bg-slate-700" />
-              <span className="text-sm text-slate-600 dark:text-slate-300">Contrainte : <strong className="text-slate-800 dark:text-slate-100">{metrics.fairness_constraint === 'equalized_odds' ? 'Égalité des chances' : metrics.fairness_constraint}</strong></span>
-              <div className="ml-auto flex items-center gap-2 text-xs text-slate-400 dark:text-slate-500">
-                <BarChart3 className="w-3.5 h-3.5" />
-                <span>Dernier entraînement</span>
-              </div>
-            </div>
-
             {/* Fair model metrics */}
             <Card className="border-emerald-200 dark:border-emerald-800/30 shadow-sm">
               <CardHeader className="pb-3">

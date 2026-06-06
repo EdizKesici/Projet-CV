@@ -4,14 +4,17 @@ LuxTalent Advisory Group — CV Pre-Screening API V2 (Fairness-Aware)
 Flask REST API exposing the two-stage CV screening pipeline with
 fairness and explainability features.
 
-V2 New Endpoints
-----------------
-- GET  /fairness-metrics  : View fairness audit results (EPD, RID, Delta-TPR)
-- POST /explain           : SHAP explanation for a single candidate
-
-V2 Modified Endpoints
----------------------
-- POST /predict           : Now includes SHAP explanation and fairness_adjusted flag
+Endpoints
+---------
+- GET  /health
+- POST /parse                : Extract features from a CV without prediction
+- POST /predict              : Full pipeline (hard filter → ML → SHAP)
+- POST /explain              : SHAP explanation for a single candidate
+- GET  /fairness-metrics     : Fairness audit results (EPD, RID, Delta-TPR)
+- POST /process-inbox        : Batch-process all CVs in the inbox directory
+- GET  /screening-log        : Return the screening log as JSON
+- GET  /processed-files      : List processed files from the registry
+- DELETE /processed-files/<f>: Remove a file from the registry
 """
 
 import csv
@@ -106,7 +109,7 @@ def predict_cv():
     try:
         features = extract_features(data["text"], filename=data.get("filename", ""))
         job_config = data.get("job_config")  # None if not provided -> uses DEFAULT_JOB_CONFIG
-        explain = data.get("explain", True)  # V2: SHAP explanation by default
+        explain = data.get("explain", True)
 
         # --- Stage 1: Hard filter ---
         filter_result = hard_filter.apply(features, job_config)
@@ -158,7 +161,6 @@ def predict_cv():
             "fairness_adjusted": ml_result.get("fairness_adjusted", False),
         }
 
-        # V2: Include SHAP explanation if available
         if "explanation" in ml_result and ml_result["explanation"] is not None:
             response["explanation"] = ml_result["explanation"]
 
@@ -176,8 +178,8 @@ def predict_cv():
 @app.route("/explain", methods=["POST"])
 def explain_cv():
     """
-    V2 endpoint: Get a SHAP explanation for a single candidate.
-    Returns the same as /predict but with emphasis on explainability.
+    Get a SHAP explanation for a single candidate.
+    Returns the same payload as /predict with emphasis on explainability.
     """
     data = request.get_json(silent=True)
     if not data or "text" not in data:
@@ -227,8 +229,8 @@ def explain_cv():
 @app.route("/fairness-metrics", methods=["GET"])
 def fairness_metrics():
     """
-    V2 endpoint: View fairness audit results computed during training.
-    Returns EPD, RID, Delta-TPR for both base and fair models.
+    Return fairness audit results computed during training.
+    Includes EPD, RID, and Delta-TPR for both base and fair models.
     """
     metrics = get_fairness_metrics()
     if metrics is None:
@@ -256,10 +258,6 @@ def fairness_metrics():
 
     result = {
         "version": "V2",
-        # Read the constraint actually applied during training from model_meta.pkl.
-        # A hardcoded string would become incorrect whenever the training fallback
-        # selects a different constraint — this ensures accurate traceability
-        # as required by AI Act art. 12.
         "fairness_constraint": get_fairness_constraint(),
         "base_model": _convert(metrics.get("base_model")),
         "fair_model": _convert(metrics.get("fair_model")),
@@ -321,7 +319,7 @@ def process_inbox():
                     "fairness_adjusted": False,
                 })
             elif model_is_ready():
-                ml_result = predict(features, explain=False)  # Skip SHAP for batch
+                ml_result = predict(features, explain=False)
                 result.update({
                     "stage": "ml_model",
                     "label": ml_result["label"],
@@ -366,10 +364,7 @@ def process_inbox():
 
 @app.route("/screening-log", methods=["GET"])
 def screening_log():
-    """
-    V2 endpoint: Return the screening log as JSON.
-    Reads the CSV log file and returns each row as a dict.
-    """
+    """Return the screening log as JSON (reads the CSV log file)."""
     if not os.path.exists(LOG_PATH):
         return jsonify([])
 

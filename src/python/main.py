@@ -1,32 +1,23 @@
 """
-CV Pre-Screening Application V2 — Unified Entry Point
-======================================================
-Fairness-aware version with ThresholdOptimizer and SHAP explainability.
-
+CV Pre-Screening Application — Unified Entry Point
+===================================================
 Single command-line entry point for the LuxTalent Advisory Group CV
-pre-screening system.  Provides access to data preparation, model
-training, the Flask API server, and the file-watcher daemon — all
-from one script.
+pre-screening system. Provides access to data preparation, model
+training, the Flask API server, and the file-watcher daemon.
 
 Usage
 -----
     python main.py prepare          # Prepare training data
-    python main.py train            # Train the V2 ML model (fairness-aware)
+    python main.py train            # Train the ML model (fairness-aware)
     python main.py serve            # Start Flask API server
     python main.py watch            # Start the watcher daemon
     python main.py all              # Prepare + Train + Serve + Watch
-
-V2 Changes
-----------
-    - gender excluded from ML features (kept as metadata for audit)
-    - Fairlearn ThresholdOptimizer for fairness adjustment
-    - SHAP explainability for individual predictions
-    - Fairness audit metrics (EPD, RID, Delta-TPR)
 """
 
 import argparse
 import os
 import sys
+import traceback
 import threading
 from pathlib import Path
 
@@ -112,7 +103,6 @@ def cmd_prepare(args: argparse.Namespace) -> int:
         return exc.code if exc.code else 1
     except Exception as exc:
         _error(f"Unexpected error during preparation: {exc}")
-        import traceback
         traceback.print_exc()
         return 1
 
@@ -128,7 +118,6 @@ def cmd_train(args: argparse.Namespace) -> int:
 
     print(f"  Labeled data   : {labeled_csv}")
     print(f"  Plots directory: {plots_dir}")
-    print(f"  Version        : V2 (gender excluded, ThresholdOptimizer, SHAP)")
     print()
 
     try:
@@ -142,7 +131,6 @@ def cmd_train(args: argparse.Namespace) -> int:
         return exc.code if exc.code else 1
     except Exception as exc:
         _error(f"Unexpected error during training: {exc}")
-        import traceback
         traceback.print_exc()
         return 1
 
@@ -170,7 +158,6 @@ def cmd_serve(args: argparse.Namespace) -> int:
         return 0
     except Exception as exc:
         _error(f"Flask server crashed: {exc}")
-        import traceback
         traceback.print_exc()
         return 1
 
@@ -206,7 +193,6 @@ def cmd_watch(args: argparse.Namespace) -> int:
         return 0
     except Exception as exc:
         _error(f"Watcher crashed: {exc}")
-        import traceback
         traceback.print_exc()
         return 1
 

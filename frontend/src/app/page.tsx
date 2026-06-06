@@ -38,24 +38,13 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    fetchHealth()
-      .then((data) => {
-        setHealth(data);
-        setHealthError(false);
-      })
-      .catch(() => {
-        setHealthError(true);
-      });
-
-    const interval = setInterval(() => {
+    const refreshHealth = () =>
       fetchHealth()
-        .then((data) => {
-          setHealth(data);
-          setHealthError(false);
-        })
+        .then((data) => { setHealth(data); setHealthError(false); })
         .catch(() => setHealthError(true));
-    }, 30000);
 
+    refreshHealth();
+    const interval = setInterval(refreshHealth, 30000);
     return () => clearInterval(interval);
   }, []);
 
@@ -183,8 +172,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Main content with tab transition */}
-      {/* Both components stay mounted (hidden via CSS) to preserve state across tab switches */}
+      {/* Main content */}
       <main className="flex-1 bg-main-gradient" role="main">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
           <div key={tabTransitionKey} className="animate-tab-enter" style={{ display: activeTab === 'cv-drop' ? 'block' : 'none' }}>

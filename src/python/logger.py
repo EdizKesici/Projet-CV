@@ -1,9 +1,11 @@
 # src/python/logger.py
 """
-Screening Logger
-================
+Screening Logger — V2
+=====================
 Appends screening results to a persistent CSV log file.
 Used by both the Flask API and the Watcher daemon.
+
+V2: Added 'fairness_adjusted' and 'top_driver' columns.
 """
 
 import csv
@@ -43,7 +45,7 @@ def log_result(result_dict: dict, log_path: str) -> None:
     if isinstance(reasons, list):
         reasons = "; ".join(reasons)
 
-    # Extract top SHAP driver if explanation is present
+    # V2: Extract top SHAP driver if explanation is present
     top_driver = ""
     explanation = result_dict.get("explanation")
     if explanation and isinstance(explanation, dict):

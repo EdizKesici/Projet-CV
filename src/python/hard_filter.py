@@ -7,7 +7,16 @@ Applies binary, configurable rules to a candidate's extracted features
 BEFORE the ML model runs. Any unmet mandatory criterion immediately
 rejects the candidate — the ML model is never called.
 
+Enabling / disabling
+--------------------
 Set HARD_FILTER_ENABLED = False to bypass this stage entirely.
+All candidates will pass through directly to the ML model.
+
+Default job configuration (development / no-frontend mode)
+-----------------------------------------------------------
+When no job_config is provided in the request body, DEFAULT_JOB_CONFIG
+is used instead. This allows testing the hard filter without a frontend.
+Remove or replace this block once the frontend is integrated.
 
 Job configuration format
 ------------------------
@@ -22,8 +31,6 @@ The frontend passes a `job_config` dict in the request body:
     }
 
 All keys are optional. Omitted criteria are not evaluated.
-If job_config is None, DEFAULT_JOB_CONFIG is used as a fallback.
-An empty dict {} means "no criteria" — all candidates pass.
 
 Education level scale
 ---------------------
@@ -53,11 +60,11 @@ HARD_FILTER_ENABLED: bool = True
 # (development mode / no frontend). Remove once the frontend is integrated.
 # ---------------------------------------------------------------------------
 DEFAULT_JOB_CONFIG: dict = {
-    "required_languages":  [],
-    "required_skills":     [],
-    "min_education_level": 2,
-    "min_years_experience": 0.0,
-    "min_nb_positions": 0,
+    "required_languages":  [],               # No required language by default (dev mode)
+    "required_skills"   : [],               # No required skills by default
+    "min_education_level": 2,               # Associate degree minimum
+    "min_years_experience": 0.0,             # No minimum experience by default
+    "min_nb_positions": 0,                  # No minimum positions by default
 }
 
 # ---------------------------------------------------------------------------

@@ -4,28 +4,30 @@ CV Feature Extractor — V2 (Fairness-Aware)
 Parses raw CV text files and extracts structured numeric features
 ready for machine learning training and inference.
 
-Gender is extracted as METADATA ONLY — not used by the ML model.
-It is kept for fairness audit and the ThresholdOptimizer post-processing step.
+V2 Change: gender is extracted as METADATA ONLY (not used by the ML model).
+It is kept for audit, fairness metrics, and the ThresholdOptimizer
+post-processing step.
 
 Feature schema
 --------------
-Metadata (not fed to the ML model):
+Metadata (not used by the ML model):
   - filename        : source file name
   - name            : candidate full name
   - target_role     : job role the candidate is applying for
   - languages_list  : list of language names (used by the hard filter only)
   - skills_list     : list of skill names (used by the hard filter only)
-  - gender          : 0=Female, 1=Male, -1=unknown (fairness audit only)
+  - gender          : candidate gender (0=Female, 1=Male, -1=unknown)
+                       ** V2: used ONLY for fairness audit and ThresholdOptimizer **
 
-ML features (numeric):
-  - age                        : candidate age in years (-1 if unparseable)
-  - years_experience           : total work experience in decimal years
-  - education_level            : highest degree, mapped to 1–5
-  - nb_certifications          : number of professional certifications
-  - nb_extra_languages         : languages beyond the required baseline
-  - nb_extra_skills            : total number of skills listed
-  - has_management_experience  : 1 if team management detected, else 0
-  - has_international_experience : 1 if candidate speaks a non-native language
+ML features (numeric — V2: gender excluded):
+  - age                 : candidate age in years (-1 if unparseable)
+  - years_experience    : total work experience in decimal years
+  - education_level     : highest degree, mapped to 1-5 scale
+  - nb_certifications   : number of professional certifications
+  - nb_extra_languages  : number of languages beyond the required ones
+  - nb_extra_skills     : total number of skills listed
+  - has_management_experience : 1 if team management detected, 0 otherwise
+  - has_international_experience : 1 if candidate speaks a language not native to their work country
 
 Usage
 -----
@@ -65,7 +67,7 @@ CSV_COLUMNS = [
     "nb_extra_languages", "nb_extra_skills",
     "has_management_experience",
     "has_international_experience",
-    "gender",  # metadata only — NOT in ML features
+    "gender",  # V2: kept for audit/ThresholdOptimizer, NOT in ML features
 ]
 
 
@@ -307,8 +309,9 @@ def extract_gender(text: str) -> int:
     """
     Extract the candidate's gender from the 'Gender: ...' field.
 
-    Used ONLY for fairness audit and ThresholdOptimizer post-processing —
-    not included in the ML model's feature set.
+    V2 NOTE: This feature is used ONLY for fairness audit and
+    ThresholdOptimizer post-processing. It is NOT included in the
+    ML model's feature set.
 
     Returns:
         1  if Male
@@ -470,12 +473,15 @@ def extract_features(cv_text: str, filename: str = "") -> dict:
     """
     Extract all features from raw CV text.
 
+    V2 NOTE: gender is classified as METADATA and is NOT used by the
+    ML model. It is kept for fairness audit and ThresholdOptimizer.
+
     Returns
     -------
     dict
         Metadata fields (excluded from ML):
             filename, name, target_role, languages_list, skills_list, gender
-        ML-ready numeric features:
+        ML-ready numeric features (V2 — no gender):
             age, years_experience, education_level,
             nb_certifications, nb_extra_languages, nb_extra_skills,
             has_management_experience, has_international_experience
@@ -487,11 +493,11 @@ def extract_features(cv_text: str, filename: str = "") -> dict:
         "filename": filename,
         "name": extract_name(cv_text),
         "target_role": extract_target_role(cv_text),
-        "languages_list": lang_features["languages_list"],
-        "skills_list": extract_skills_list(cv_text),
-        "nb_positions": extract_nb_positions(cv_text),
+        "languages_list": lang_features["languages_list"],  # hard_filter only
+        "skills_list": extract_skills_list(cv_text),  # hard_filter only
+        "nb_positions": extract_nb_positions(cv_text),  # hard_filter only
 
-        # --- ML features ---
+        # --- ML features (V2: gender excluded) ---
         "age": extract_age(cv_text),
         "years_experience": extract_years_experience(cv_text),
         "education_level": extract_education_level(cv_text),
@@ -501,7 +507,7 @@ def extract_features(cv_text: str, filename: str = "") -> dict:
         "has_management_experience": extract_has_management_experience(cv_text),
         "has_international_experience": extract_has_international_experience(cv_text),
 
-        # --- Metadata for fairness audit (NOT in ML features) ---
+        # --- Metadata for fairness audit (V2: NOT in ML features) ---
         "gender": extract_gender(cv_text),
     }
 

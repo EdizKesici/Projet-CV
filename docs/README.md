@@ -5,7 +5,7 @@
 Système IA de pré-sélection de CV avec audit de fairness, explicabilité SHAP et dashboard Next.js.
 
 > 📄 **Documentation complète** : [`docs/LuxTalent_Documentation.docx`](./LuxTalent_Documentation.docx)
-> 📄 **Analyse ThresholdOptimizer** : [`docs/THRESHOLD_OPTIMIZER_ANALYSE.md`](./THRESHOLD_OPTIMIZER_ANALYSE.md)
+> 📄 **Analyse ThresholdOptimizer** : [`docs/THRESHOLD_OPTIMIZER_ANALYSE.md`](./threshold_optimizer_analyse.md)
 
 ---
 

@@ -21,7 +21,7 @@ La V2 est une refonte centrée sur l'éthique, l'explicabilité et la transparen
 
 | Aspect | V1 | V2 | Justification |
 |---|---|---|---|
-| Hyperparamètres | GridSearchCV (C, penalty) | GridSearchCV + C=0.5, L2 fixé | Meilleur compromis performance/régularisation identifié |
+| Hyperparamètres | GridSearchCV (C, penalty) | GridSearchCV + C=1.0, L1 fixé | Meilleur compromis performance/régularisation identifié |
 | Fairness | Aucun | Audit EPD, RID, Delta-TPR + analyse proxy | Détection et surveillance des biais résiduels |
 | Explicabilité | Aucune | SHAP LinearExplainer | Conformité AI Act art. 13 — chaque décision doit être explicable |
 | Artefacts | model.pkl, scaler.pkl, model_meta.pkl | + shap_explainer.pkl, fairness_metrics.pkl, model_v1/ | SHAP pré-calculé + métriques de fairness persistées + référence V1 |

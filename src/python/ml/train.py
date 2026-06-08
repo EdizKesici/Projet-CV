@@ -693,9 +693,9 @@ def train(data_path: str, plots_dir: str) -> None:
         age_features=age_group_test,
         X_df=pd.DataFrame(X_test, columns=FEATURE_COLUMNS),
         plots_dir=None,
-        version_label="V2.2 (with ThresholdOptimizer)",
+        version_label=f"V2.2 (constraint: {best_constraint})",
     )
-    print("\n  Fair Model Gender Fairness Metrics (with ThresholdOptimizer):")
+    print(f"\n  Fair Model Gender Fairness Metrics (constraint: {best_constraint}):")
     print(f"    EPD        : {audit_fair['metrics']['epd']:.1f} pts {'[ALERT]' if audit_fair['metrics']['epd_alert'] else '[OK]'}")
     print(f"    RID        : {audit_fair['metrics']['rid']:.3f} {'[ALERT]' if audit_fair['metrics']['rid_alert'] else '[WARN]' if audit_fair['metrics']['rid_warn'] else '[OK]'}")
     print(f"    Delta TPR  : {audit_fair['metrics']['delta_tpr']:.1f} pts {'[ALERT]' if audit_fair['metrics']['delta_tpr_alert'] else '[OK]'}")
@@ -783,6 +783,11 @@ def train(data_path: str, plots_dir: str) -> None:
     plot_metrics_summary(acc_fair, auc_base, f1i_fair, f1r_fair, THRESHOLD, cv_scores, model_name, plots_dir)
 
     # V2: Fairness audit plots
+    plot_version = (
+        f"V2.2 (ThresholdOptimizer: {best_constraint})"
+        if threshold_optimizer is not None
+        else "V2.2 (base model — no ThresholdOptimizer)"
+    )
     run_audit(
         y_true=y_test,
         y_pred=y_pred_fair,
@@ -790,7 +795,7 @@ def train(data_path: str, plots_dir: str) -> None:
         age_features=age_group_test,
         X_df=pd.DataFrame(X_test, columns=FEATURE_COLUMNS),
         plots_dir=plots_dir,
-        version_label="V2.2 (with ThresholdOptimizer)",
+        version_label=plot_version,
     )
 
     # V2: SHAP summary plot

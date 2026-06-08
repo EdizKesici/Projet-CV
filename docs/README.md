@@ -1,11 +1,11 @@
-# LuxTalent - Système de pré-sélection automatique de CV
+ LuxTalent - Système de pré-sélection automatique de CV
 
 **LuxTalent Advisory Group S.A.**
 
 Système IA de pré-sélection de CV avec audit de fairness, explicabilité SHAP et dashboard Next.js.
 
 > 📄 **Documentation complète** : [`docs/LuxTalent_Documentation.docx`](./LuxTalent_Documentation.docx)
-> 📄 **Analyse ThresholdOptimizer** : [`docs/THRESHOLD_OPTIMIZER_ANALYSE.md`](./threshold_optimizer_analyse.md)
+> 📄 **Analyse ThresholdOptimizer** : [`docs/threshold_optimizer_analyse.md`](./threshold_optimizer_analyse.md)
 
 ---
 
@@ -28,7 +28,7 @@ docker compose up --build
 ## Architecture
 
 ```
-Browser ──HTTPS──> Next.js (8080) ──HTTP──> Flask API (8000)
+Browser ──HTTPS──> Next.js (3000) ──HTTP──> Flask API (8000)
                        │                        │
                    NextAuth JWT            ML Pipeline
                    Supabase PgSQL          CSV Logger
@@ -44,7 +44,7 @@ Browser ──HTTPS──> Next.js (8080) ──HTTP──> Flask API (8000)
 
 1. **Extraction** — 7 features NLP (sans `gender`, sans `age`)
 2. **Hard filter** — élimination sur compétences et expérience
-3. **Prédiction** — Logistic Regression (C=0.5, class_weight=balanced)
+3. **Prédiction** — Logistic Regression (C=1.0, penalty=l1, class_weight=balanced)
 4. **Explicabilité** — SHAP LinearExplainer (contribution par feature)
 5. **Audit** — Métriques EPD, RID, Delta-TPR + analyse proxy
 
@@ -85,7 +85,7 @@ Projet-CV/
 | GET | `/fairness-metrics` | Métriques EPD, RID, Delta-TPR + proxy |
 | GET | `/screening-log` | Historique CSV des décisions |
 | GET | `/processed-files` | Registre SHA-256 des fichiers traités |
-| DELETE | `/processed-files/<name>` | Retirer du registre |
+| DELETE | `/processed-files/<filename>` | Retirer du registre |
 
 ---
 
@@ -102,7 +102,7 @@ docker compose up --build
 | Service | Port | Variables clés |
 |---|---|---|
 | `api` | 8000 | `INBOX_DIR`, `PROCESSED_DIR`, `LOG_PATH` |
-| `frontend` | 8080 | `FLASK_API_URL`, `DATABASE_URL`, `AUTH_PASSWORD`, `NEXTAUTH_SECRET` |
+| `frontend` | 3000 | `FLASK_API_URL`, `DATABASE_URL`, `AUTH_PASSWORD`, `NEXTAUTH_SECRET` |
 
 URL publique : `https://frontend-production-922c6.up.railway.app`
 Réseau interne : `http://projet-cv.railway.internal:8000`

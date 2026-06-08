@@ -335,7 +335,7 @@ def compute_age_fairness_metrics(
         mask = groups_v == group_idx
         n = int(mask.sum())
         if n == 0:
-            group_stats[group_name] = {"n": 0, "invite_rate": 0.0, "tpr": 0.0, "fpr": 0.0}
+            group_stats[group_name] = {"n": 0, "invite_rate": None, "tpr": None, "fpr": None}
             continue
 
         y_t = y_true_v[mask]
@@ -393,6 +393,13 @@ def compute_age_fairness_metrics(
     max_epd       = max((p["epd"]       for p in pairwise), default=0.0)
     min_rid       = min((p["rid"]       for p in pairwise), default=1.0)
     max_delta_tpr = max((p["delta_tpr"] for p in pairwise), default=0.0)
+
+    # Warn when some age groups have no data — metrics are incomplete
+    empty_groups = [name for name, s in group_stats.items() if s["n"] == 0]
+    if empty_groups:
+        print(f"[WARN] Age fairness audit: empty groups detected: {empty_groups}. "
+              f"Pairwise metrics are incomplete and may understate disparities. "
+              f"Regenerate training data with broader age coverage.")
 
     return {
         "group_stats":    group_stats,
@@ -537,40 +544,59 @@ def plot_age_fairness_report(
     os.makedirs(plots_dir, exist_ok=True)
 
     group_names  = [AGE_GROUP_LABELS[k] for k in sorted(AGE_GROUP_LABELS)]
-    invite_rates = [group_stats.get(g, {}).get("invite_rate", 0) for g in group_names]
-    tpr_values   = [group_stats.get(g, {}).get("tpr", 0)         for g in group_names]
-    n_values     = [group_stats.get(g, {}).get("n", 0)            for g in group_names]
+    invite_rates = [group_stats.get(g, {}).get("invite_rate") for g in group_names]
+    tpr_values   = [group_stats.get(g, {}).get("tpr")         for g in group_names]
+    n_values     = [group_stats.get(g, {}).get("n", 0)         for g in group_names]
 
     fig, axes = plt.subplots(1, 2, figsize=(13, 5))
     colors = ["#4A90D9", "#52A0E0", "#88C1F0"]
 
     # --- Invite Rate by Age Group ---
     ax = axes[0]
-    bars = ax.bar(group_names, invite_rates, color=colors, width=0.5,
+    # Use 0 for bars (needed for plotting), but track which groups are empty
+    bar_rates = [r if r is not None else 0 for r in invite_rates]
+    bar_colors = [c if n > 0 else "#CCCCCC" for c, n in zip(colors, n_values)]
+    bars = ax.bar(group_names, bar_rates, color=bar_colors, width=0.5,
                   edgecolor="white", linewidth=1.5)
     for bar, rate, n in zip(bars, invite_rates, n_values):
-        ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + 0.5,
-                f"{rate:.1f}%\n(n={n})", ha="center", va="bottom", fontsize=10, fontweight="bold")
+        if n == 0:
+            bar.set_hatch("//")
+            ax.text(bar.get_x() + bar.get_width() / 2, 0.5,
+                    "N/A\n(no data)", ha="center", va="center",
+                    fontsize=10, fontstyle="italic", color="gray")
+        else:
+            ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + 0.5,
+                    f"{rate:.1f}%\n(n={n})", ha="center", va="bottom",
+                    fontsize=10, fontweight="bold")
     ax.set_title(f"Invite Rate by Age Group\nMax EPD = {age_metrics['max_epd']:.1f} pts",
                  fontsize=12, fontweight="bold",
                  color="#FF6B35" if age_metrics["max_epd"] > EPD_ALERT_THRESHOLD else "#2C3E50")
     ax.set_ylabel("Invite Rate (%)")
-    ax.set_ylim(0, max(invite_rates + [10]) * 1.35)
+    ax.set_ylim(0, max(bar_rates + [10]) * 1.35)
 
     # --- TPR by Age Group ---
     ax = axes[1]
-    bars = ax.bar(group_names, tpr_values, color=colors, width=0.5,
+    bar_tprs = [t if t is not None else 0 for t in tpr_values]
+    bar_colors_tpr = [c if n > 0 else "#CCCCCC" for c, n in zip(colors, n_values)]
+    bars = ax.bar(group_names, bar_tprs, color=bar_colors_tpr, width=0.5,
                   edgecolor="white", linewidth=1.5)
     for bar, tpr, n in zip(bars, tpr_values, n_values):
-        ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + 0.5,
-                f"{tpr:.1f}%\n(n={n})", ha="center", va="bottom", fontsize=10, fontweight="bold")
+        if n == 0:
+            bar.set_hatch("//")
+            ax.text(bar.get_x() + bar.get_width() / 2, 0.5,
+                    "N/A\n(no data)", ha="center", va="center",
+                    fontsize=10, fontstyle="italic", color="gray")
+        else:
+            ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + 0.5,
+                    f"{tpr:.1f}%\n(n={n})", ha="center", va="bottom",
+                    fontsize=10, fontweight="bold")
     ax.set_title(
         f"True Positive Rate (Recall) by Age Group\nMax ΔRecall = {age_metrics['max_delta_tpr']:.1f} pts",
         fontsize=12, fontweight="bold",
         color="#FF6B35" if age_metrics["max_delta_tpr"] > TPR_ALERT_THRESHOLD else "#2C3E50",
     )
     ax.set_ylabel("TPR (%)")
-    ax.set_ylim(0, max(tpr_values + [10]) * 1.35)
+    ax.set_ylim(0, max(bar_tprs + [10]) * 1.35)
 
     fig.suptitle(
         f"Age Group Fairness Audit — {version_label}\n"
